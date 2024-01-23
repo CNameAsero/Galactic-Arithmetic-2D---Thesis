@@ -1,14 +1,4 @@
-res://Scenes/levels/level_1.tscn
-res://Scenes/levels/level1_TileSet2dPixel.tres
 res://Scenes/levels/16x16Tileset.tres
-res://Scenes/Player/slime_player_joystick.gdshader
-res://Scenes/levels/level_2.tscn
-res://Scenes/levels/level_3.tscn
-res://Scenes/levels/level_6.tscn
-res://Scenes/Enemies/blowfish.tscn
-res://Scenes/levels/Game Obstacles/spike.tscn
-res://Scenes/Enemies/shark.tscn
-res://Scenes/Enemies/octopus.tscn
-res://Scenes/levels/level_4.tscn
-res://Scenes/levels/level_5.tscn
-res://Scenes/Enemies/wasp_enemy.tscn
+res://Scenes/levels/level_11.tscn
+res://Scenes/levels/World_3_Tileset.tres
+res://Scenes/levels/level_10.tscn
