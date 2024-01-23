@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://br07jfb1mddff"]
+
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/HeartCollectible.png" id="1_qqeld"]
+
+[sub_resource type="Animation" id="Animation_q0k2q"]
+resource_name = "Health"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_wljxb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3a243"]
+_data = {
+"Health": SubResource("Animation_q0k2q"),
+"RESET": SubResource("Animation_wljxb")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5e5ek"]
+size = Vector2(99.25, 100.5)
+
+[node name="Health_item" type="Node2D"]
+position = Vector2(823, 473)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-10, -4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-1, -1)
+texture = ExtResource("1_qqeld")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D/Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_3a243")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -2)
+shape = SubResource("RectangleShape2D_5e5ek")

@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyvtdhajlwyx8"]
+
+[ext_resource type="Script" path="res://Scripts/health_system.gd" id="1_33p3b"]
+[ext_resource type="Texture2D" uid="uid://66snsfexycjo" path="res://Galactic Arithmetic Assets/hp/hp.png" id="2_afuim"]
+
+[sub_resource type="Animation" id="Animation_2takf"]
+resource_name = "hp 0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_lo0ce"]
+resource_name = "hp 1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_t1vjb"]
+resource_name = "hp 2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_bq1mo"]
+resource_name = "hp 3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0tfsy"]
+_data = {
+"hp 0": SubResource("Animation_2takf"),
+"hp 1": SubResource("Animation_lo0ce"),
+"hp 2": SubResource("Animation_t1vjb"),
+"hp 3": SubResource("Animation_bq1mo")
+}
+
+[node name="health_system" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_33p3b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1856, 1055)
+texture = ExtResource("2_afuim")
+hframes = 4
+frame = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0tfsy")
+}

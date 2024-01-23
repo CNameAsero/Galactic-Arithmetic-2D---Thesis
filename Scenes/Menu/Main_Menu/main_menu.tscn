@@ -1,0 +1,260 @@
+[gd_scene load_steps=24 format=3 uid="uid://soo0hsnba7u2"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_jiph4"]
+[ext_resource type="Texture2D" uid="uid://dhkuasdxhkh50" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Main Menu.png" id="2_mwb3q"]
+[ext_resource type="Texture2D" uid="uid://c6em0u7xjw8t3" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Game Title Galactic Arithmetic.png" id="3_x6twr"]
+[ext_resource type="Texture2D" uid="uid://cjcgs1qjwjvh2" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/startfinal.png" id="4_qf0oa"]
+[ext_resource type="Texture2D" uid="uid://bs3pd4kynpky7" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/startfinal_Violet.png" id="5_cdw2j"]
+[ext_resource type="Texture2D" uid="uid://b106dxl5rhbp2" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/optionfinal.png" id="6_orju7"]
+[ext_resource type="Texture2D" uid="uid://i61kidp3lu6l" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/optionfinal_violets.png" id="7_x5xg2"]
+[ext_resource type="Texture2D" uid="uid://rsb0nssuxxl0" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/exitfinal.png" id="8_i3csh"]
+[ext_resource type="Texture2D" uid="uid://d11c8l6qd803n" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/exitfinal_Violet.png" id="9_7u05j"]
+[ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="10_bbp8e"]
+[ext_resource type="Texture2D" uid="uid://cbep5o18tpbwt" path="res://Galactic Arithmetic Assets/Settings_Assets/Setting_centerBGG.png" id="11_7ylra"]
+[ext_resource type="Texture2D" uid="uid://p2ylv4csbhsn" path="res://Sprites/Options.png" id="12_ffdqx"]
+[ext_resource type="Texture2D" uid="uid://td6i7an01jfk" path="res://Galactic Arithmetic Assets/Settings_Assets/About_Us_Button.png" id="13_mas4n"]
+[ext_resource type="Texture2D" uid="uid://bnkq41m4oi25e" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/Music_Text1.png" id="14_hytc5"]
+[ext_resource type="Texture2D" uid="uid://iylhgtpabd10" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/SliderButton1.png" id="14_lg8po"]
+[ext_resource type="Texture2D" uid="uid://cvcednf1taquc" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/SliderButton.png" id="14_lo177"]
+[ext_resource type="Texture2D" uid="uid://drv0ulr4sfgf" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/Bar.png" id="15_owpue"]
+[ext_resource type="Texture2D" uid="uid://cya0mfenptxfa" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/OutlineSlider.png" id="16_bkasx"]
+[ext_resource type="Texture2D" uid="uid://ckr8hhaw424sk" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/SFX_Assets/SFX_Text1.png" id="16_jj6u7"]
+[ext_resource type="Texture2D" uid="uid://dkfldh6yw52xd" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Back.png" id="18_j1jfs"]
+[ext_resource type="Texture2D" uid="uid://u0umsqtlk1dh" path="res://Galactic Arithmetic Assets/Settings_Assets/Back_Violet.png" id="19_xf4ay"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kcoy"]
+texture = ExtResource("16_bkasx")
+texture_margin_left = 5.0
+expand_margin_top = 20.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cpx81"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+texture = ExtResource("15_owpue")
+texture_margin_left = 15.0
+expand_margin_top = 30.0
+expand_margin_bottom = 32.0
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jiph4")
+
+[node name="Main_Menu_Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mwb3q")
+expand_mode = 1
+
+[node name="Game_Title" type="TextureRect" parent="Main_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -750.0
+offset_right = 750.0
+offset_bottom = 500.0
+grow_horizontal = 2
+texture = ExtResource("3_x6twr")
+expand_mode = 1
+
+[node name="Play_Button" type="TextureButton" parent="Main_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -90.0
+offset_right = 250.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_qf0oa")
+texture_pressed = ExtResource("5_cdw2j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Option_Button" type="TextureButton" parent="Main_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 110.0
+offset_right = 250.0
+offset_bottom = 310.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_orju7")
+texture_pressed = ExtResource("7_x5xg2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Exit_Button" type="TextureButton" parent="Main_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 310.0
+offset_right = 250.0
+offset_bottom = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_i3csh")
+texture_pressed = ExtResource("9_7u05j")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Option_Menu_Bg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("10_bbp8e")
+expand_mode = 1
+
+[node name="Inside_BG" type="TextureRect" parent="Option_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -350.0
+offset_right = 500.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_7ylra")
+expand_mode = 1
+
+[node name="Setting_Text" type="TextureRect" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 238.0
+offset_right = 740.0
+offset_bottom = 320.0
+texture = ExtResource("12_ffdqx")
+
+[node name="About_Us_Button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 603.0
+offset_right = 919.0
+offset_bottom = 666.0
+texture_normal = ExtResource("13_mas4n")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="bg_music" type="TextureRect" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 350.0
+offset_right = 397.0
+offset_bottom = 535.0
+scale = Vector2(2.50714, 0.336937)
+texture = ExtResource("15_owpue")
+expand_mode = 1
+
+[node name="music_slider" type="HSlider" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 350.0
+offset_right = 875.0
+offset_bottom = 413.0
+theme_override_constants/grabber_offset = 0
+theme_override_icons/grabber = ExtResource("14_lg8po")
+theme_override_icons/grabber_highlight = ExtResource("14_lo177")
+theme_override_icons/grabber_disabled = ExtResource("14_lo177")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6kcoy")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_cpx81")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_cpx81")
+min_value = -30.0
+max_value = 0.0
+
+[node name="bg_sfx" type="TextureRect" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 500.0
+offset_right = 397.0
+offset_bottom = 685.0
+scale = Vector2(2.50714, 0.336937)
+texture = ExtResource("15_owpue")
+expand_mode = 1
+
+[node name="sfx_slider" type="HSlider" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 375.0
+offset_top = 500.0
+offset_right = 875.0
+offset_bottom = 563.0
+theme_override_constants/grabber_offset = 0
+theme_override_icons/grabber = ExtResource("14_lg8po")
+theme_override_icons/grabber_highlight = ExtResource("14_lo177")
+theme_override_icons/grabber_disabled = ExtResource("14_lo177")
+theme_override_styles/slider = SubResource("StyleBoxTexture_6kcoy")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_cpx81")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_cpx81")
+min_value = -30.0
+max_value = 0.0
+step = 0.0
+
+[node name="Music" type="TextureRect" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 338.0
+offset_right = 322.0
+offset_bottom = 438.0
+texture = ExtResource("14_hytc5")
+expand_mode = 1
+
+[node name="SFX" type="TextureRect" parent="Option_Menu_Bg/Inside_BG"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 481.0
+offset_right = 322.0
+offset_bottom = 581.0
+texture = ExtResource("16_jj6u7")
+expand_mode = 1
+
+[node name="Back_Button_OptionMenu" type="TextureButton" parent="Option_Menu_Bg"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 220.0
+texture_normal = ExtResource("18_j1jfs")
+texture_pressed = ExtResource("19_xf4ay")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="Main_Menu_Bg/Play_Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/Option_Button" to="." method="_on_option_button_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/Exit_Button" to="." method="_on_exit_pressed"]
+[connection signal="value_changed" from="Option_Menu_Bg/Inside_BG/music_slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Option_Menu_Bg/Inside_BG/sfx_slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="Option_Menu_Bg/Back_Button_OptionMenu" to="." method="_on_back_button_option_menu_pressed"]

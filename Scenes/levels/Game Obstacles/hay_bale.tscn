@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4v6dvs8et748"]
+
+[ext_resource type="Texture2D" uid="uid://cdrpfw0sj0m42" path="res://Sprites/Obstacles/Hay_bale.png" id="1_1bj6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eadam"]
+size = Vector2(102, 75)
+
+[node name="Hay_bale" type="StaticBody2D"]
+position = Vector2(899, 502)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1bj6x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_eadam")

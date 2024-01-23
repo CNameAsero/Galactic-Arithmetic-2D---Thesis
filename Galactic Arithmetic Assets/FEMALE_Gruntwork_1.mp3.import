@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgal10rd2b03u"
+path="res://.godot/imported/FEMALE_Gruntwork_1.mp3-acc50710addfde67c2933517ee9be459.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/FEMALE_Gruntwork_1.mp3"
+dest_files=["res://.godot/imported/FEMALE_Gruntwork_1.mp3-acc50710addfde67c2933517ee9be459.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

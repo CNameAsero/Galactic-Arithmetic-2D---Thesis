@@ -1,0 +1,428 @@
+[gd_scene load_steps=27 format=3 uid="uid://rrfg6wxb2eae"]
+
+[ext_resource type="Script" path="res://Scripts/level_Menu.gd" id="1_v21kn"]
+[ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="2_0ga8v"]
+[ext_resource type="Texture2D" uid="uid://bbx0v3vktlbgu" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/left_button.png" id="3_qmtix"]
+[ext_resource type="Texture2D" uid="uid://mm4i66yihu4d" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/right_button.png" id="4_34vlh"]
+[ext_resource type="Texture2D" uid="uid://bgkobl0bk7re3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/left_button_50.png" id="4_o18gn"]
+[ext_resource type="Texture2D" uid="uid://gvgntfx8i5fx" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/right_button_50.png" id="6_si3jo"]
+[ext_resource type="Texture2D" uid="uid://dkfldh6yw52xd" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Back.png" id="7_uao7h"]
+[ext_resource type="Texture2D" uid="uid://u0umsqtlk1dh" path="res://Galactic Arithmetic Assets/Settings_Assets/Back_Violet.png" id="8_4oy0f"]
+[ext_resource type="Texture2D" uid="uid://bwjjno1pnni37" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Level_1_BG 1.png" id="8_v354u"]
+[ext_resource type="PackedScene" uid="uid://dikyi515jidoo" path="res://Scenes/Menu/Main_Menu/levels_sub_menu.tscn" id="9_47w8l"]
+[ext_resource type="Texture2D" uid="uid://r7ot8i210g06" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1.png" id="9_qkb7f"]
+[ext_resource type="Texture2D" uid="uid://r3lrw36oiu3f" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1-area-50.png" id="10_xcwnw"]
+[ext_resource type="Texture2D" uid="uid://bf1hn0ioa5ooj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/Chest_with_Bolt.png" id="11_deh37"]
+[ext_resource type="Texture2D" uid="uid://cyiy7osj3i4uc" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2.png" id="11_ownny"]
+[ext_resource type="Texture2D" uid="uid://d2dp2utfjtfwg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3.png" id="12_05r3n"]
+[ext_resource type="Texture2D" uid="uid://st5agbgp1ssj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area.png" id="13_l1pe1"]
+[ext_resource type="Texture2D" uid="uid://b6h83itdguvs7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4.png" id="13_w0gct"]
+[ext_resource type="Texture2D" uid="uid://ccopvqjgxmycv" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area-50.png" id="14_2lijg"]
+[ext_resource type="Texture2D" uid="uid://78v73yhqtlqs" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5.png" id="14_svs62"]
+[ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="16_5mng4"]
+[ext_resource type="Texture2D" uid="uid://dakd01ngska0k" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area.png" id="16_m7t2t"]
+[ext_resource type="Texture2D" uid="uid://bofoy8b5gd8b7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area-50.png" id="17_hwl2e"]
+[ext_resource type="Texture2D" uid="uid://p8ngd6i21qbo" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area.png" id="19_lmgwv"]
+[ext_resource type="Texture2D" uid="uid://c3ee6n0a7rpje" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area-50.png" id="20_ab0r7"]
+[ext_resource type="Texture2D" uid="uid://spua6m6y6n12" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area50.png" id="22_c67cx"]
+[ext_resource type="Texture2D" uid="uid://dd0fb8wu06ygb" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area.png" id="23_njvr4"]
+
+[node name="level_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v21kn")
+
+[node name="Level_Menu_Bg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_0ga8v")
+expand_mode = 1
+
+[node name="Picture_Border_Level" type="TextureRect" parent="Level_Menu_Bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -290.0
+offset_right = 325.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="Left_Button" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -125.0
+offset_right = -75.0
+offset_bottom = 125.0
+grow_vertical = 2
+texture_normal = ExtResource("3_qmtix")
+texture_pressed = ExtResource("4_o18gn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Right_Button" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = -125.0
+offset_right = 278.0
+offset_bottom = 125.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("4_34vlh")
+texture_pressed = ExtResource("6_si3jo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="world1_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -255.0
+offset_right = 308.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_v354u")
+texture_pressed = ExtResource("10_xcwnw")
+stretch_mode = 0
+
+[node name="w1_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 289.5
+offset_right = 379.0
+offset_bottom = 437.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_qkb7f")
+
+[node name="levels_sub_menu" parent="Level_Menu_Bg/Picture_Border_Level/world1_area" instance=ExtResource("9_47w8l")]
+visible = false
+layout_mode = 1
+offset_top = 54.5
+offset_bottom = 54.5
+scale = Vector2(1.25, 1.158)
+
+[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
+position = Vector2(1129, -99.5)
+texture = ExtResource("11_deh37")
+hframes = 6
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/chest"]
+self_modulate = Color(1, 1, 1, 0.607843)
+offset_left = -93.0
+offset_top = -81.0
+offset_right = 105.0
+offset_bottom = 70.0
+texture_normal = ExtResource("16_5mng4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="world2_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -255.0
+offset_right = 308.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("13_l1pe1")
+texture_pressed = ExtResource("14_2lijg")
+stretch_mode = 0
+
+[node name="w2_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 289.5
+offset_right = 379.0
+offset_bottom = 437.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ownny")
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -258.5
+offset_right = 307.0
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16_5mng4")
+stretch_mode = 3
+
+[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
+position = Vector2(1129, -99.5)
+texture = ExtResource("11_deh37")
+hframes = 6
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world2_area/chest"]
+self_modulate = Color(1, 1, 1, 0.607843)
+offset_left = -93.0
+offset_top = -81.0
+offset_right = 105.0
+offset_bottom = 70.0
+texture_normal = ExtResource("16_5mng4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="world3_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -255.0
+offset_right = 308.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16_m7t2t")
+texture_pressed = ExtResource("17_hwl2e")
+stretch_mode = 0
+
+[node name="w3_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 289.5
+offset_right = 379.0
+offset_bottom = 437.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_05r3n")
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -258.5
+offset_right = 307.0
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16_5mng4")
+stretch_mode = 3
+
+[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
+position = Vector2(1129, -99.5)
+texture = ExtResource("11_deh37")
+hframes = 6
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world3_area/chest"]
+self_modulate = Color(1, 1, 1, 0.607843)
+offset_left = -93.0
+offset_top = -81.0
+offset_right = 105.0
+offset_bottom = 70.0
+texture_normal = ExtResource("16_5mng4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="world4_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -255.0
+offset_right = 308.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("19_lmgwv")
+texture_pressed = ExtResource("20_ab0r7")
+stretch_mode = 0
+
+[node name="w4_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 289.5
+offset_right = 379.0
+offset_bottom = 437.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_w0gct")
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -258.5
+offset_right = 307.0
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16_5mng4")
+stretch_mode = 3
+
+[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
+position = Vector2(1129, -99.5)
+texture = ExtResource("11_deh37")
+hframes = 6
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world4_area/chest"]
+self_modulate = Color(1, 1, 1, 0.607843)
+offset_left = -93.0
+offset_top = -81.0
+offset_right = 105.0
+offset_bottom = 70.0
+texture_normal = ExtResource("16_5mng4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="world5_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -255.0
+offset_right = 308.0
+offset_bottom = 266.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_njvr4")
+texture_pressed = ExtResource("22_c67cx")
+stretch_mode = 0
+
+[node name="w5_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 289.5
+offset_right = 379.0
+offset_bottom = 437.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_svs62")
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -258.5
+offset_right = 307.0
+offset_bottom = 259.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16_5mng4")
+stretch_mode = 3
+
+[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
+position = Vector2(1129, -99.5)
+texture = ExtResource("11_deh37")
+hframes = 6
+
+[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world5_area/chest"]
+self_modulate = Color(1, 1, 1, 0.607843)
+offset_left = -93.0
+offset_top = -81.0
+offset_right = 105.0
+offset_bottom = 70.0
+texture_normal = ExtResource("16_5mng4")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Back_Button_LevelMenu" type="TextureButton" parent="Level_Menu_Bg"]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 300.0
+offset_bottom = 220.0
+texture_normal = ExtResource("7_uao7h")
+texture_pressed = ExtResource("8_4oy0f")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(958, 538)
+
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/Left_Button" to="." method="_on_left_button_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/Right_Button" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area" to="." method="_on_world_1_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world2_area" to="." method="_on_world_2_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world3_area" to="." method="_on_world_3_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world4_area" to="." method="_on_world_4_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world5_area" to="." method="_on_world_5_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Back_Button_LevelMenu" to="." method="_on_back_button_level_menu_pressed"]

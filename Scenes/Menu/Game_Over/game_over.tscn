@@ -1,0 +1,177 @@
+[gd_scene load_steps=13 format=3 uid="uid://e7racty6r3dv"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="1_74t4w"]
+[ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="1_aslb8"]
+[ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="2_5uxww"]
+[ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="2_522vs"]
+[ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="2_qvt66"]
+[ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="3_6ghnr"]
+[ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="5_y2wvy"]
+[ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="7_ekqwy"]
+[ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="8_b1w8v"]
+[ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="9_slc28"]
+[ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="10_sfkft"]
+[ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="12_wo5qb"]
+
+[node name="game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_74t4w")
+
+[node name="game_over_menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="game_over_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_aslb8")
+
+[node name="planet_destroyed_design" type="TextureRect" parent="game_over_menu/bg"]
+layout_mode = 1
+offset_left = -188.0
+offset_top = -150.0
+offset_right = 197.0
+offset_bottom = 165.0
+texture = ExtResource("2_522vs")
+
+[node name="crashed_ufo_design" type="TextureRect" parent="game_over_menu/bg"]
+layout_mode = 1
+offset_left = 522.0
+offset_top = 236.0
+offset_right = 907.0
+offset_bottom = 551.0
+texture = ExtResource("3_6ghnr")
+expand_mode = 1
+
+[node name="game_over_text" type="TextureRect" parent="game_over_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -316.875
+offset_right = 341.0
+offset_bottom = -166.875
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qvt66")
+
+[node name="bg_inside" type="TextureRect" parent="game_over_menu/bg"]
+modulate = Color(1, 1, 1, 0.862745)
+self_modulate = Color(1, 1, 1, 0.862745)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -150.0
+offset_right = 303.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("2_5uxww")
+
+[node name="sad_slimey" type="TextureRect" parent="game_over_menu/bg/bg_inside"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -496.825
+offset_top = -233.814
+offset_right = 510.175
+offset_bottom = 269.186
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("7_ekqwy")
+expand_mode = 1
+
+[node name="button_holder" type="TextureRect" parent="game_over_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 125.0
+offset_right = 300.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("5_y2wvy")
+expand_mode = 1
+
+[node name="restart_button" type="TextureButton" parent="game_over_menu/bg/button_holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -37.5
+offset_right = 175.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_b1w8v")
+texture_pressed = ExtResource("10_sfkft")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="home_button" type="TextureButton" parent="game_over_menu/bg/button_holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -37.5
+offset_right = -100.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_slc28")
+texture_pressed = ExtResource("12_wo5qb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="game_over_menu/bg/button_holder/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="game_over_menu/bg/button_holder/home_button" to="." method="_on_home_button_pressed"]

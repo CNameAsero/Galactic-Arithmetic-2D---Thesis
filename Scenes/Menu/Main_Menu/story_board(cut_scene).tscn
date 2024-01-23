@@ -1,0 +1,170 @@
+[gd_scene load_steps=22 format=3 uid="uid://bmfhh7p20loci"]
+
+[ext_resource type="Script" path="res://Scripts/story_board(cut_scene).gd" id="1_wha3u"]
+[ext_resource type="Texture2D" uid="uid://b2qvjggsqakse" path="res://Galactic Arithmetic Assets/Story_Board_Assets/4.png" id="2_a1grl"]
+[ext_resource type="Texture2D" uid="uid://bl14ccm7mgpuk" path="res://Galactic Arithmetic Assets/Story_Board_Assets/5.png" id="3_n0oat"]
+[ext_resource type="Texture2D" uid="uid://kp12sw2eb8a8" path="res://Galactic Arithmetic Assets/Story_Board_Assets/6.png" id="4_eba3m"]
+[ext_resource type="Texture2D" uid="uid://c2c727kqwpe8r" path="res://Galactic Arithmetic Assets/Story_Board_Assets/7.png" id="5_djy7m"]
+[ext_resource type="Texture2D" uid="uid://csfdyl4namp7l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/8.png" id="6_4yq5y"]
+[ext_resource type="Texture2D" uid="uid://cco8y4wg1bd6g" path="res://Galactic Arithmetic Assets/Story_Board_Assets/9.png" id="7_q4shu"]
+[ext_resource type="Texture2D" uid="uid://bdcp1ih8eujg" path="res://Galactic Arithmetic Assets/Story_Board_Assets/10.png" id="8_clid5"]
+[ext_resource type="Texture2D" uid="uid://dcj6jyactsj38" path="res://Galactic Arithmetic Assets/Story_Board_Assets/11.png" id="9_gjshw"]
+[ext_resource type="Texture2D" uid="uid://xhisalga5nji" path="res://Galactic Arithmetic Assets/Story_Board_Assets/12.png" id="10_gnomk"]
+[ext_resource type="Texture2D" uid="uid://we5er01k3eid" path="res://Galactic Arithmetic Assets/Story_Board_Assets/13.png" id="11_21vxn"]
+[ext_resource type="Texture2D" uid="uid://c0y3qhp58wswe" path="res://Galactic Arithmetic Assets/Story_Board_Assets/14.png" id="12_ra6rs"]
+[ext_resource type="Texture2D" uid="uid://ydmli7wkw5qg" path="res://Galactic Arithmetic Assets/Story_Board_Assets/15.png" id="13_sl0pn"]
+[ext_resource type="Texture2D" uid="uid://da4qdqnmc0jfh" path="res://Galactic Arithmetic Assets/Story_Board_Assets/16.png" id="14_cw8to"]
+[ext_resource type="Texture2D" uid="uid://sh13rouhucd5" path="res://Galactic Arithmetic Assets/Story_Board_Assets/17.png" id="15_dgyqx"]
+[ext_resource type="Texture2D" uid="uid://ce0ia6qhwxtna" path="res://Galactic Arithmetic Assets/Story_Board_Assets/18.png" id="16_uiiqr"]
+[ext_resource type="Texture2D" uid="uid://ddy166bgnuldl" path="res://Galactic Arithmetic Assets/Story_Board_Assets/19.png" id="17_ppfcf"]
+[ext_resource type="Texture2D" uid="uid://cgng5rj8osckw" path="res://Galactic Arithmetic Assets/Story_Board_Assets/20.png" id="18_1sqgu"]
+[ext_resource type="Texture2D" uid="uid://c0se40t02remo" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_To_Continue....png" id="19_infji"]
+[ext_resource type="Script" path="res://Scripts/Tap_To_Continue.gd" id="20_7x7yu"]
+[ext_resource type="AudioStream" uid="uid://b37c7a36kli65" path="res://Galactic Arithmetic Assets/Audio_Assets/Button Click.mp3" id="21_hkivx"]
+
+[node name="Story_Board(CutScene)" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wha3u")
+
+[node name="Page1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_a1grl")
+
+[node name="Page2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_n0oat")
+
+[node name="Page3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_eba3m")
+
+[node name="Page4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_djy7m")
+
+[node name="Page5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_4yq5y")
+
+[node name="Page6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_q4shu")
+
+[node name="Page7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_clid5")
+
+[node name="Page8" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_gjshw")
+
+[node name="Page9" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("10_gnomk")
+
+[node name="Page10" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("11_21vxn")
+
+[node name="Page11" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("12_ra6rs")
+
+[node name="Page12" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("13_sl0pn")
+
+[node name="Page13" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("14_cw8to")
+
+[node name="Page14" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("15_dgyqx")
+
+[node name="Page15" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("16_uiiqr")
+
+[node name="Page16" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("17_ppfcf")
+
+[node name="Page17" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("18_1sqgu")
+
+[node name="Tap_To_Continue" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+action_mode = 0
+texture_normal = ExtResource("19_infji")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("20_7x7yu")
+
+[node name="Sound_Manager" type="Node" parent="."]
+
+[node name="Button_Click_SFX" type="AudioStreamPlayer" parent="Sound_Manager"]
+stream = ExtResource("21_hkivx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(957, 541)
+
+[connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]

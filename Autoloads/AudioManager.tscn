@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://81h4f2tmbwfp"]
+
+[ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
+[ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
+[ext_resource type="AudioStream" uid="uid://b37c7a36kli65" path="res://Galactic Arithmetic Assets/Audio_Assets/Button Click.mp3" id="3_aeqlm"]
+[ext_resource type="AudioStream" uid="uid://b3l3dmx1kikie" path="res://Galactic Arithmetic Assets/Audio_Assets/Level 1 - Grass.wav" id="4_1id1u"]
+[ext_resource type="AudioStream" uid="uid://b3ivhtebesg6l" path="res://Galactic Arithmetic Assets/Audio_Assets/Death sound.mp3" id="5_crlbh"]
+[ext_resource type="AudioStream" uid="uid://bmcmyea614roy" path="res://Galactic Arithmetic Assets/Audio_Assets/SlimeWalk.mp3" id="6_5l0s8"]
+[ext_resource type="AudioStream" uid="uid://7w6wu2qducod" path="res://Galactic Arithmetic Assets/Audio_Assets/Item Collect.mp3" id="7_cj0vk"]
+[ext_resource type="AudioStream" uid="uid://d0ql4gyx76r87" path="res://Galactic Arithmetic Assets/Audio_Assets/button_collect.mp3" id="8_y41oi"]
+[ext_resource type="AudioStream" uid="uid://t1yki7j3xxv8" path="res://Galactic Arithmetic Assets/Audio_Assets/level_complete_sfx.wav" id="9_27e31"]
+[ext_resource type="AudioStream" uid="uid://bgal10rd2b03u" path="res://Galactic Arithmetic Assets/FEMALE_Gruntwork_1.mp3" id="10_6wgx1"]
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_n0fra")
+
+[node name="BG_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_l0pdd")
+bus = &"music"
+
+[node name="Level1_Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_1id1u")
+bus = &"music"
+
+[node name="Button_SFX" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("3_aeqlm")
+bus = &"sfx"
+
+[node name="death_sfx" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("5_crlbh")
+bus = &"sfx"
+
+[node name="slime_walk" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("6_5l0s8")
+volume_db = -15.0
+pitch_scale = 0.8
+bus = &"sfx"
+
+[node name="item_collect" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("7_cj0vk")
+bus = &"sfx"
+
+[node name="operator_collect" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("8_y41oi")
+bus = &"sfx"
+
+[node name="level_complete_sfx" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("9_27e31")
+bus = &"sfx"
+
+[node name="slime_hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_6wgx1")

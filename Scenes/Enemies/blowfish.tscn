@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://br0575d74v2ro"]
+
+[ext_resource type="Script" path="res://Scripts/blowfish.gd" id="1_6n8pm"]
+[ext_resource type="Texture2D" uid="uid://du57ju053jre5" path="res://Sprites/Enemies/Blowfish.png" id="1_kdv5g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cp2wy"]
+radius = 28.0179
+
+[sub_resource type="Animation" id="Animation_sgfif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ndaon"]
+resource_name = "blowfish_spike"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kyhn"]
+_data = {
+"RESET": SubResource("Animation_sgfif"),
+"blowfish_spike": SubResource("Animation_ndaon")
+}
+
+[node name="blowfish" type="Area2D"]
+position = Vector2(590, 370)
+script = ExtResource("1_6n8pm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kdv5g")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cp2wy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.06
+libraries = {
+"": SubResource("AnimationLibrary_5kyhn")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
