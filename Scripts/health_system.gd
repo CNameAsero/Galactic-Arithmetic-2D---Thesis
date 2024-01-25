@@ -15,10 +15,10 @@ func display_healthui():
 		animation_player.play("hp 2")
 	elif _health == 1:
 		animation_player.play("hp 1")
-	elif _health == 0:
+	elif _health <= 0:
 		animation_player.play("hp 0")
-		await get_tree().create_timer(0.1).timeout
 		AudioManager.play_deathsfx()
+		await get_tree().create_timer(0.39).timeout
 		game_over.show()
 		get_tree().paused = true
 

@@ -13,6 +13,8 @@ var item_collect_sfx: AudioStreamPlayer
 var operator_collect: AudioStreamPlayer
 var level_complete_sfx: AudioStreamPlayer
 var slime_hurt : AudioStreamPlayer
+var octopus : AudioStreamPlayer
+
 
 var is_music_muted = false #bg music menu
 var is_level1music_muted = false #bg music level1
@@ -29,6 +31,7 @@ func _ready():
 	operator_collect = $operator_collect
 	level_complete_sfx = $level_complete_sfx
 	slime_hurt = $slime_hurt
+	octopus = $octopus_shot
 
 func play_button_sfx():
 	button_sfx.play()
@@ -50,3 +53,6 @@ func play_operator_collect():
 
 func player_hurt():
 	slime_hurt.play()
+
+func octopus_shot():
+	octopus.play()

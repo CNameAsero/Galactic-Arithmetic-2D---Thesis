@@ -13,7 +13,7 @@ func _ready():
 			i.visible = false
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") && !access_manager.last_item_was_number:
 		AudioManager.play_operator_collect()
 		access_bool.isDestroy = true
 		access_manager.collect_operator(operator_to_display)

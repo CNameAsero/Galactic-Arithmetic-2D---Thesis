@@ -13,7 +13,7 @@ func player_hurt():
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.1
-	var total_blink_time = 2.0
+	var total_blink_time = 1.5
 	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)
@@ -28,7 +28,6 @@ func player_hurt():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		player_hurt()
-		#put sfx for health reduction
 
 func update_collision():
 	if animationplayer.current_animation == "Spike_activation" and animationplayer.current_animation_position > 0.1:

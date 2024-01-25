@@ -4,6 +4,7 @@ extends Node2D
 @onready var collected_operators := []
 @onready var current_expression := ""
 @onready var isDestroy = $"bool_handler"
+@onready var last_item_was_number = true
 
 #UI
 @onready var game_over = $"../menus/game_over"
@@ -51,24 +52,28 @@ func _ready():
 	pass
 
 func collect_number(num):
-	if isDestroy.isDestroy:
+	# Only collect the number if the last item was not a number
+	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
 		num_counter += 1
 		if num_counter == 1:
 			current_num = num2
 		elif num_counter == 2:
 			current_num = num3
+		last_item_was_number = false  # Update the flag
 	update_expression()
 	check_final_answer()
 
 func collect_operator(oper):
-	if isDestroy.isDestroy:
+	# Only collect the operator if the last item was a number
+	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
 		oper_counter += 1
 		#if oper_counter == 1:
 			#current_oper = op2
 		#elif oper_counter == 2:
 			#pass
+		last_item_was_number = true  # Update the flag
 	update_expression()
 	check_final_answer()
 

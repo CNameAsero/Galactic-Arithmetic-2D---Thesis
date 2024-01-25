@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddu3jvnqbl4jw"
+path="res://.godot/imported/Octopus_shot.mp3-246cd0c6b0ca90daa2b6f8111f0c1b22.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/Octopus_shot.mp3"
+dest_files=["res://.godot/imported/Octopus_shot.mp3-246cd0c6b0ca90daa2b6f8111f0c1b22.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -4,14 +4,19 @@ extends Control
 @export var buff_selected : String
 @export var hp_buff : int
 @export var speed_buff : float
-@export var time_buff : int
+@export var time_buff : float
 #access hp system/movespeed/timer
 @onready var hp_system = $"../health_system"
 @onready var player = $"../slime_player_joystick/slime_player_joystik"
-@onready var timer = $"../game_manager/timer"
+
+@onready var timer = $"../game_manager/timer/Timer"
+@onready var timer_ui = $"../game_manager/timer"
 
 @onready var speed_buff_timer = $Area2D/speed/speed_buff_timer
 @onready var animation_player = $Area2D/AnimationPlayer
+
+var old_time
+var new_time
 
 func _ready():
 	animation()
@@ -46,17 +51,17 @@ func _on_area_2d_body_entered(body):
 
 func add_hp():
 	hp_system._health += hp_buff
-	print(hp_system._health)
 
 func add_speed():
 	player.speed += speed_buff
-	print(player.speed)
 	$"Area2D".num = 1
 	await get_tree().create_timer(10).timeout
 	player.speed -= speed_buff
-	print(player.speed)
 
 func add_time():
-	timer.time_left += time_buff
-	print(timer.time_left)
-
+	old_time = timer.time_left
+	new_time = old_time + time_buff
+	timer_ui.time_left += time_buff
+	timer.stop()
+	timer.wait_time = new_time
+	timer.start()

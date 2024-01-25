@@ -7,7 +7,6 @@ func _on_restart_button_pressed():
 	AudioManager.play_button_sfx()
 	get_tree().paused = false
 
-
 func _on_home_button_pressed():
 	game_manager.reset_hp()
 	AudioManager.play_button_sfx()

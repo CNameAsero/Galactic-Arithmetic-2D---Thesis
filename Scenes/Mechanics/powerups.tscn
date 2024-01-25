@@ -133,7 +133,7 @@ grow_vertical = 2
 script = ExtResource("1_htv8d")
 hp_buff = 1
 speed_buff = 300.0
-time_buff = 15
+time_buff = 15.0
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2(0.3, 0.3)

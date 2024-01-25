@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqxrs4asm625s"]
+[gd_scene load_steps=15 format=3 uid="uid://dqxrs4asm625s"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_r1wch"]
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_7oxo1"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_a3lvb"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_o08xo"]
+[ext_resource type="PackedScene" uid="uid://dk0trij6hevr6" path="res://Scenes/Enemies/shark.tscn" id="5_3jgl7"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="6_dnee0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4uvgf"]
 radius = 27.0185
@@ -179,3 +181,12 @@ libraries = {
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_o08xo")]
 position = Vector2(242, 881)
 scale = Vector2(1.85, 1.85)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="shark" parent="Enemies" instance=ExtResource("5_3jgl7")]
+position = Vector2(1121, 275)
+move_speed = 30.0
+move_direction = Vector2(50, 0)
+
+[node name="health_system" parent="." instance=ExtResource("6_dnee0")]

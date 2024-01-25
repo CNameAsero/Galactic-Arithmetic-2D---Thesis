@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://du1bqh1bfa85j"
+path="res://.godot/imported/slime_hurt.mp3-6636ea8a483b5a0282254e2852b01f6a.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/slime_hurt.mp3"
+dest_files=["res://.godot/imported/slime_hurt.mp3-6636ea8a483b5a0282254e2852b01f6a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
