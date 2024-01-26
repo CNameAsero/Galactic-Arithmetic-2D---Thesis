@@ -15,3 +15,5 @@ res://Scripts/blowfish.gd
 res://Scenes/levels/levels_script/game_manager_lvl5.gd
 res://Scenes/Mechanics/powerups.tscn
 res://Scripts/powerups.gd
+res://Scenes/levels/World_3_Tileset.tres
+res://Scenes/levels/level_11.tscn

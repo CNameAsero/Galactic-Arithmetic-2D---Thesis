@@ -38,14 +38,21 @@ func select_buff():
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
-		AudioManager.play_item_collect()
 		match buff_selected:
 			"health":
-				add_hp()
-				queue_free()
+				if hp_system._health >= 3:
+					$Area2D/health.modulate = Color(1,1,1,0.25)
+					await get_tree().create_timer(1.5).timeout
+					$Area2D/health.modulate = Color(1,1,1,1)
+				else:
+					AudioManager.play_item_collect()
+					add_hp()
+					queue_free()
 			"speed":
+				AudioManager.play_item_collect()
 				add_speed()
 			"time":
+				AudioManager.play_item_collect()
 				add_time()
 				queue_free()
 

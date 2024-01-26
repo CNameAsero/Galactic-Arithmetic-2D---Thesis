@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cdkqag2h1uca0"]
+[gd_scene load_steps=13 format=3 uid="uid://c2qkq2dc455at"]
 
-[ext_resource type="TileSet" uid="uid://k8diy2b01vg0" path="res://Scenes/levels/World_3_Tileset.tres" id="1_cimep"]
+[ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_cimep"]
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_gfwbr"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_le1up"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_shkhj"]
