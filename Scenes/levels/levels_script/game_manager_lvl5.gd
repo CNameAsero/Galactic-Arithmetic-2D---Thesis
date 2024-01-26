@@ -4,6 +4,7 @@ extends Node2D
 @onready var collected_operators := []
 @onready var current_expression := ""
 @onready var isDestroy = $"bool_handler"
+@onready var last_item_was_number = true
 
 #UI
 @onready var game_over = $"../menus/game_over"
@@ -21,25 +22,24 @@ extends Node2D
 
 #numbers
 #@onready var num0 = $"Numbers/set_number"
-@onready var num1 = $"Number_16/16"
-@onready var num2 = $"Number_12/12"
-@onready var num3 = $"Number_9/9"
+@onready var num1 = $"Number_2/2"
+@onready var num2 = $"Number_2_2/2"
+@onready var num3 = $"Number_4/4"
 @onready var num4 = $"Number_5/5"
 @onready var num5 = $"Number_6/6"
-@onready var num6 = $"Number_10/10"
+@onready var num6 = $"Number_3/3"
 #@onready var num7 = $"Numbers/set_number"
 #@onready var num8 = $"Numbers/set_number"
 #@onready var num9 = $"Numbers/set_number"
 
 #operators
-@onready var op1 = $"operator_+/+"
-@onready var op2 = $"operator_-/-"
-#@onready var op3 = $"operator_x/x"
+#@onready var op1 = $"operator_+/+"
+#@onready var op2 = $"operator_-/-"
+@onready var op3 = $"operator_x/x"
 #@onready var op4 = $"operator_d/d"
 
 #counters
 @onready var current_num = num1
-@onready var current_oper = op2
 @onready var num_counter = 0
 @onready var oper_counter = 0
 
@@ -50,24 +50,22 @@ func _ready():
 	pass
 	
 func collect_number(num):
-	if isDestroy.isDestroy:
+	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
 		num_counter += 1
 		if num_counter == 1:
 			current_num = num2
 		elif num_counter == 2:
 			current_num = num3
+		last_item_was_number = false
 	update_expression()
 	check_final_answer()
 
 func collect_operator(oper):
-	if isDestroy.isDestroy:
+	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
 		oper_counter += 1
-#		if oper_counter == 1:
-#			current_oper = op2
-#		elif oper_counter == 2:
-#			pass
+		last_item_was_number = true
 	update_expression()
 	check_final_answer()
 
@@ -116,7 +114,7 @@ func calculate_expression():
 				result += number
 			"-":
 				result -= number
-			"*":
+			"x":
 				result *= number
 			"/":
 				if number != 0:
@@ -157,7 +155,6 @@ func reset_for_next_level():
 	num_counter = 0
 	oper_counter = 0
 	current_num = num1
-	current_oper = op2
 
 func _on_timer_timeout():
 	AudioManager.play_deathsfx()
