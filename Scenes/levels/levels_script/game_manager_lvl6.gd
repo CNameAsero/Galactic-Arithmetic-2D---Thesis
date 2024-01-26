@@ -34,14 +34,14 @@ extends Node2D
 #@onready var num9 = $"Numbers/set_number"
 
 #operators
-@onready var op1 = $"operator_+/+"
+#@onready var op1 = $"operator_+/+"
 #@onready var op2 = $"operator_-/-"
-#@onready var op3 = $"operator_x/x"
+@onready var op3 = $"operator_x/x"
 #@onready var op4 = $"operator_d/d"
 
 #counters
 @onready var current_num = num1
-@onready var current_oper = op1
+#@onready var current_oper = op3
 @onready var num_counter = 0
 @onready var oper_counter = 0
 
@@ -69,10 +69,6 @@ func collect_operator(oper):
 	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
 		oper_counter += 1
-		#if oper_counter == 1:
-			#current_oper = op2
-		#elif oper_counter == 2:
-			#pass
 		last_item_was_number = true  # Update the flag
 	update_expression()
 	check_final_answer()
@@ -142,7 +138,7 @@ func calculate_expression():
 				result += number
 			"-":
 				result -= number
-			"*":
+			"x":
 				result *= number
 			"/":
 				if number != 0:
@@ -183,7 +179,6 @@ func reset_for_next_level():
 	num_counter = 0
 	oper_counter = 0
 	current_num = num1
-	current_oper = op1
 
 func _on_timer_timeout():
 	AudioManager.play_deathsfx()

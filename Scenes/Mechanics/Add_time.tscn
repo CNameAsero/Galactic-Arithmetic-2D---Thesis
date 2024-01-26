@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://4nu2hjrop81k"]
 
-[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/AddedTime.png" id="1_spt5y"]
+[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="1_spt5y"]
+
 
 [sub_resource type="Animation" id="Animation_w7cmo"]
 resource_name = "Timer"

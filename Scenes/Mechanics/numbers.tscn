@@ -1,21 +1,34 @@
-[gd_scene load_steps=63 format=3 uid="uid://mhcc6jvxkvlt"]
+[gd_scene load_steps=74 format=3 uid="uid://mhcc6jvxkvlt"]
 
 [ext_resource type="Script" path="res://Scripts/Numbers.gd" id="1_rk7vo"]
-[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/Zero.png" id="2_1a1rv"]
-[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/five.png" id="2_6jhlu"]
-[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/Four.png" id="3_fe4hi"]
-[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/Two.png" id="4_t4s7l"]
-[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/One.png" id="4_y24bx"]
-[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/Three.png" id="5_7fpck"]
-[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/Six.png" id="8_nlyy1"]
-[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/Seven.png" id="9_y5pas"]
-[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/8.png" id="10_pd2vj"]
-[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/Nine.png" id="11_j54ps"]
-[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/Seventeen.png" id="12_a1u0s"]
-[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/Ten.png" id="12_ulg1t"]
-[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/Twelve.png" id="12_xyd7q"]
-[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/Sixteen.png" id="13_4xh10"]
-[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/Nineteen.png" id="13_mfery"]
+[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="2_t6f27"]
+[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="3_xv552"]
+[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/numbers/Two.png" id="4_ai6dl"]
+[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/numbers/Three.png" id="5_48s8j"]
+[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/numbers/Four.png" id="6_xwn5r"]
+[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/numbers/five.png" id="7_aotpg"]
+[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/numbers/Six.png" id="8_vr7ax"]
+[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/numbers/Seven.png" id="9_3vb36"]
+[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/numbers/8.png" id="10_0qysk"]
+[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="11_np18y"]
+[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/numbers/Ten.png" id="12_3h2ow"]
+[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/numbers/Twelve.png" id="13_n6j8l"]
+[ext_resource type="Texture2D" uid="uid://bsle4qkpsyof4" path="res://Sprites/Collectibles/numbers/Thirteen.png" id="14_1pxys"]
+[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/numbers/Sixteen.png" id="14_pvuwo"]
+[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/numbers/Seventeen.png" id="15_kgcat"]
+[ext_resource type="Texture2D" uid="uid://dn80bl04kib27" path="res://Sprites/Collectibles/numbers/Fourteen.png" id="15_kw2td"]
+[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/numbers/Nineteen.png" id="16_0gs3s"]
+[ext_resource type="Texture2D" uid="uid://bd6vxipjlid17" path="res://Sprites/Collectibles/numbers/Twenty.png" id="19_mejsf"]
+[ext_resource type="Texture2D" uid="uid://75s7yrvvev8k" path="res://Sprites/Collectibles/numbers/twenty-four.png" id="20_x2nlw"]
+[ext_resource type="Texture2D" uid="uid://dxgvg3rba1bc8" path="res://Sprites/Collectibles/numbers/Thirty.png" id="21_qmod5"]
+[ext_resource type="Texture2D" uid="uid://cvad01ij51hf4" path="res://Sprites/Collectibles/numbers/Fifty-four.png" id="22_0m1r2"]
+[ext_resource type="Texture2D" uid="uid://c1grv2c33og60" path="res://Sprites/Collectibles/numbers/Fifty-six.png" id="23_plaek"]
+
+[sub_resource type="GDScript" id="GDScript_s62f4"]
+script/source = "extends Node2D
+
+@export var number : int
+"
 
 [sub_resource type="Animation" id="Animation_jcqmo"]
 length = 0.001
@@ -472,6 +485,44 @@ _data = {
 "Shining": SubResource("Animation_mb0su")
 }
 
+[sub_resource type="Animation" id="Animation_1nmhk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_vy57x"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wvhd"]
+_data = {
+"RESET": SubResource("Animation_1nmhk"),
+"Shining": SubResource("Animation_vy57x")
+}
+
 [sub_resource type="Animation" id="Animation_jt8ol"]
 length = 0.001
 tracks/0/type = "value"
@@ -592,16 +643,17 @@ height = 106.996
 
 [node name="Numbers" type="Node2D" groups=["numbers"]]
 position = Vector2(100, 100)
-scale = Vector2(1.2, 1.2)
+scale = Vector2(0.45, 0.45)
+script = SubResource("GDScript_s62f4")
 
 [node name="set_number" type="Area2D" parent="."]
+scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("1_rk7vo")
-number_to_display = 5
 
 [node name="0" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("2_1a1rv")
+texture = ExtResource("2_t6f27")
 hframes = 2
 frame = 1
 
@@ -614,7 +666,7 @@ libraries = {
 [node name="1" type="Sprite2D" parent="set_number"]
 visible = false
 scale = Vector2(1, 1.236)
-texture = ExtResource("4_y24bx")
+texture = ExtResource("3_xv552")
 hframes = 2
 frame = 1
 
@@ -626,7 +678,7 @@ libraries = {
 
 [node name="2" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("4_t4s7l")
+texture = ExtResource("4_ai6dl")
 hframes = 2
 frame = 1
 
@@ -639,7 +691,7 @@ libraries = {
 
 [node name="3" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("5_7fpck")
+texture = ExtResource("5_48s8j")
 hframes = 2
 frame = 1
 
@@ -653,7 +705,7 @@ libraries = {
 [node name="4" type="Sprite2D" parent="set_number"]
 visible = false
 scale = Vector2(1, 1.2)
-texture = ExtResource("3_fe4hi")
+texture = ExtResource("6_xwn5r")
 hframes = 2
 frame = 1
 
@@ -666,7 +718,7 @@ libraries = {
 [node name="5" type="Sprite2D" parent="set_number"]
 visible = false
 scale = Vector2(1, 1.2)
-texture = ExtResource("2_6jhlu")
+texture = ExtResource("7_aotpg")
 hframes = 2
 frame = 1
 
@@ -678,7 +730,7 @@ libraries = {
 
 [node name="6" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("8_nlyy1")
+texture = ExtResource("8_vr7ax")
 hframes = 2
 frame = 1
 
@@ -691,7 +743,7 @@ libraries = {
 
 [node name="7" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("9_y5pas")
+texture = ExtResource("9_3vb36")
 hframes = 2
 frame = 1
 
@@ -704,7 +756,7 @@ libraries = {
 
 [node name="8" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("10_pd2vj")
+texture = ExtResource("10_0qysk")
 hframes = 2
 frame = 1
 
@@ -717,7 +769,7 @@ libraries = {
 
 [node name="9" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("11_j54ps")
+texture = ExtResource("11_np18y")
 hframes = 2
 frame = 1
 
@@ -729,7 +781,8 @@ libraries = {
 }
 
 [node name="10" type="Sprite2D" parent="set_number"]
-texture = ExtResource("12_ulg1t")
+visible = false
+texture = ExtResource("12_3h2ow")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/10"]
@@ -740,7 +793,7 @@ libraries = {
 
 [node name="12" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("12_xyd7q")
+texture = ExtResource("13_n6j8l")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/12"]
@@ -749,9 +802,33 @@ libraries = {
 "": SubResource("AnimationLibrary_v2gw7")
 }
 
+[node name="13" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("14_1pxys")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/13"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="14" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("15_kw2td")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/14"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
 [node name="16" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("13_4xh10")
+texture = ExtResource("14_pvuwo")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/16"]
@@ -762,7 +839,7 @@ libraries = {
 
 [node name="17" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("12_a1u0s")
+texture = ExtResource("15_kgcat")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/17"]
@@ -773,13 +850,73 @@ libraries = {
 
 [node name="19" type="Sprite2D" parent="set_number"]
 visible = false
-texture = ExtResource("13_mfery")
+texture = ExtResource("16_0gs3s")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/19"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_io3y2")
+}
+
+[node name="20" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("19_mejsf")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/20"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="24" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("20_x2nlw")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/24"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="30" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("21_qmod5")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/30"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="54" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("22_0m1r2")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/54"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="56" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("23_plaek")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/56"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="set_number"]

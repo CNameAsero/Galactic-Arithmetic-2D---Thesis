@@ -1,11 +1,11 @@
 Node2D
+AnimationPlayer
+Sprite2D
 AudioStreamPlayer
 CollisionShape2D
-AnimationPlayer
 Timer
 RayCast2D
 VisibleOnScreenNotifier2D
-Sprite2D
 Area2D
 Camera2D
 TileMap

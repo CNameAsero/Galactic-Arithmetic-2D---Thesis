@@ -4,52 +4,52 @@
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_t31ck"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_hrbwc"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_hu1ba"]
-[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl5.gd" id="5_ifqf3"]
+[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl6.gd" id="5_5qx4b"]
 [ext_resource type="PackedScene" uid="uid://br0575d74v2ro" path="res://Scenes/Enemies/blowfish.tscn" id="5_nnolj"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_8i6i7"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="6_u4rfj"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="7_k1ye7"]
 [ext_resource type="Script" path="res://Scripts/operators.gd" id="7_s4g5n"]
-[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Operators/Add.png" id="8_rexwe"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="8_rexwe"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="8_xrya5"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="9_rismx"]
-[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Operators/Minus.png" id="9_s3bcj"]
-[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Operators/Multiplication.png" id="10_56mwy"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="9_s3bcj"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="10_56mwy"]
 [ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="10_x24fu"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="11_1sbeh"]
-[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Operators/Division.png" id="11_ahx61"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="11_ahx61"]
 [ext_resource type="Script" path="res://Scripts/Numbers.gd" id="12_03o2g"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="12_q7gqe"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="13_txqck"]
-[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/Zero.png" id="13_wnsyo"]
+[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="13_wnsyo"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="14_d5nho"]
-[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/One.png" id="14_xoqr0"]
-[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/Two.png" id="15_cmyj4"]
+[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="14_xoqr0"]
+[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/numbers/Two.png" id="15_cmyj4"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="15_k5nao"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="16_ddr41"]
-[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/Three.png" id="16_mgtj8"]
-[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/Four.png" id="17_mefea"]
+[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/numbers/Three.png" id="16_mgtj8"]
+[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/numbers/Four.png" id="17_mefea"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="17_xrser"]
 [ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="18_7jym0"]
-[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/five.png" id="18_djrc2"]
+[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/numbers/five.png" id="18_djrc2"]
 [ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="19_hhdfj"]
-[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/Six.png" id="19_xfhob"]
+[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/numbers/Six.png" id="19_xfhob"]
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="20_h8nox"]
-[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/Seven.png" id="20_p2b5n"]
-[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/8.png" id="21_cjmgk"]
+[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/numbers/Seven.png" id="20_p2b5n"]
+[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/numbers/8.png" id="21_cjmgk"]
 [ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="21_lf8v0"]
-[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/Nine.png" id="22_0it7e"]
+[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="22_0it7e"]
 [ext_resource type="Script" path="res://Scripts/level_complete_menu.gd" id="22_q2ott"]
-[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/Twelve.png" id="23_hj7v8"]
+[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/numbers/Twelve.png" id="23_hj7v8"]
 [ext_resource type="Texture2D" uid="uid://crhbjfi262iqx" path="res://Galactic Arithmetic Assets/level_complete_asset/UFO.png" id="23_jk5vc"]
-[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/Sixteen.png" id="24_uytgt"]
+[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/numbers/Sixteen.png" id="24_uytgt"]
 [ext_resource type="Texture2D" uid="uid://gg2meb0btp0l" path="res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png" id="24_y333v"]
 [ext_resource type="Texture2D" uid="uid://bfsdm20oqx2gq" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png" id="25_jyqc3"]
-[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/Seventeen.png" id="25_r4n84"]
+[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/numbers/Seventeen.png" id="25_r4n84"]
 [ext_resource type="Texture2D" uid="uid://dowgmef2b80jh" path="res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png" id="26_jo5y7"]
-[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/Nineteen.png" id="26_yr5me"]
+[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/numbers/Nineteen.png" id="26_yr5me"]
 [ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="27_yde5x"]
-[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/Ten.png" id="27_yhnna"]
+[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/numbers/Ten.png" id="27_yhnna"]
 [ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="28_i326d"]
 [ext_resource type="Script" path="res://Scenes/timer.gd" id="28_xh1n8"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="29_5up5e"]
@@ -1395,13 +1395,13 @@ position = Vector2(242, 881)
 scale = Vector2(1.85, 1.85)
 
 [node name="game_manager" type="Node2D" parent="."]
-script = ExtResource("5_ifqf3")
+script = ExtResource("5_5qx4b")
 
 [node name="bool_handler" type="Node2D" parent="game_manager"]
 script = ExtResource("6_8i6i7")
 
 [node name="operator_x" type="Node2D" parent="game_manager"]
-position = Vector2(178, 693)
+position = Vector2(1458, 548)
 scale = Vector2(2, 2)
 
 [node name="x" type="Area2D" parent="game_manager/operator_x"]
@@ -2625,7 +2625,7 @@ vertical_alignment = 1
 
 [node name="final_answer" parent="game_manager" instance=ExtResource("32_bg4uy")]
 position = Vector2(1345, 601)
-final_answer = 32
+final_answer = 24
 
 [node name="Enemies" type="Node2D" parent="."]
 

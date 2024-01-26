@@ -4,7 +4,7 @@ extends Node2D
 @onready var collected_operators := []
 @onready var current_expression := ""
 @onready var isDestroy = $"bool_handler"
-
+@onready var last_item_was_number = true
 #player
 @onready var player_pos = $"../slime_player_joystick/slime_player_joystik".position
 
@@ -42,24 +42,26 @@ func _ready():
 	pass
 	
 func collect_number(num):
-	if isDestroy.isDestroy:
+	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
 		num_counter += 1
 		if num_counter == 1:
 			current_num = num2
 		elif num_counter == 2:
 			current_num = num3
+		last_item_was_number = false
 	update_expression()
 	check_final_answer()
 
 func collect_operator(oper):
-	if isDestroy.isDestroy:
+	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
 		oper_counter += 1
 		if oper_counter == 1:
 			current_oper = op2
 		elif oper_counter == 2:
 			pass
+		last_item_was_number = true
 	update_expression()
 	check_final_answer()
 

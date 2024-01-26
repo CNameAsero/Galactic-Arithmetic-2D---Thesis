@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cr1fx3dft3s7x"]
 
-[ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/19chest.png" id="1_a8b7a"]
+[ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="1_a8b7a"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhf8e"]
 

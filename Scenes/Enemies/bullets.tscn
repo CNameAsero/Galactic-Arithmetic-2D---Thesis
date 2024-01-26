@@ -1,22 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqcvo4prrpwyk"]
+[gd_scene load_steps=5 format=3 uid="uid://bqcvo4prrpwyk"]
 
 [ext_resource type="Script" path="res://Scripts/bullets.gd" id="1_d3g3j"]
 [ext_resource type="Texture2D" uid="uid://dmq0mk0t7nj5x" path="res://Sprites/Enemies/Octopus_projectile.png" id="2_tjxv4"]
 
+[sub_resource type="GDScript" id="GDScript_hcx1j"]
+script/source = "extends Sprite2D
+
+@onready var  num = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	checknum()
+
+
+func checknum():
+	if num == 1:
+		queue_free()
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8lojj"]
-size = Vector2(33, 15)
+size = Vector2(12, 12)
 
 [node name="bullets" type="Area2D"]
 position = Vector2(37, 57)
 script = ExtResource("1_d3g3j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_tjxv4")
 hframes = 4
-frame = 1
+script = SubResource("GDScript_hcx1j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6.5, 1.5)
 shape = SubResource("RectangleShape2D_8lojj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

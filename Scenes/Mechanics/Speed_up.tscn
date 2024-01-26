@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://duan0ce6ldmpg"]
 
-[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/Movement Speed.png" id="1_m4fpy"]
+[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="1_m4fpy"]
+
 
 [sub_resource type="Animation" id="Animation_iao8p"]
 resource_name = "Movement"

@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://yf3wh3871xps"]
 
-[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/Chest_AnimationWithFinalAns10.png" id="1_ntr1q"]
+[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="1_ntr1q"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_esu78"]
 size = Vector2(32, 24)

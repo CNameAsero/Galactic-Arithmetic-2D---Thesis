@@ -1,40 +1,48 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8wpqokks1cqb"]
+[gd_scene load_steps=8 format=3 uid="uid://c8wpqokks1cqb"]
 
 [ext_resource type="Script" path="res://Scripts/operators.gd" id="1_b0p0j"]
-[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Operators/Add.png" id="2_unlo1"]
-[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Operators/Minus.png" id="3_cponw"]
-[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Operators/Multiplication.png" id="4_l7dor"]
-[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Operators/Division.png" id="5_r6e6q"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="2_unlo1"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="3_cponw"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="4_l7dor"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="5_r6e6q"]
+
+[sub_resource type="GDScript" id="GDScript_lfiyq"]
+script/source = "extends Node2D
+
+@export var oper : String
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ief75"]
-radius = 17.0294
+radius = 7.63538
 
 [node name="operators" type="Node2D"]
 position = Vector2(100, 100)
 scale = Vector2(2, 2)
+script = SubResource("GDScript_lfiyq")
 
 [node name="set_operator" type="Area2D" parent="."]
+scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("1_b0p0j")
 
 [node name="+" type="Sprite2D" parent="set_operator"]
 visible = false
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_unlo1")
 
 [node name="-" type="Sprite2D" parent="set_operator"]
 visible = false
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_cponw")
 
-[node name="x" type="Sprite2D" parent="set_operator"]
+[node name="×" type="Sprite2D" parent="set_operator"]
 visible = false
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_l7dor")
 
-[node name="d" type="Sprite2D" parent="set_operator"]
+[node name="÷" type="Sprite2D" parent="set_operator"]
 visible = false
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("5_r6e6q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="set_operator"]

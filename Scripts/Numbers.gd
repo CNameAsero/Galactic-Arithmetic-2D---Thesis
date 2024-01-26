@@ -1,7 +1,7 @@
 extends Area2D
 class_name Number
 
-@export var number_to_display : int
+@onready var number_to_display = $"..".number
 @onready var access_manager = $"../../"
 @onready var access_bool = $"../../bool_handler"
 
@@ -46,6 +46,12 @@ func _ready():
 				12:
 					var animationplayer12 = $"12/AnimationPlayer"
 					animationplayer12.play("Shining")
+				13:
+					var animationplayer13 = $"13/AnimationPlayer"
+					animationplayer13.play("Shining")
+				14:
+					var animationplayer14 = $"14/AnimationPlayer"
+					animationplayer14.play("Shining")
 				16:
 					var animationplayer16 = $"16/AnimationPlayer"
 					animationplayer16.play("Shining")
@@ -55,6 +61,21 @@ func _ready():
 				19:
 					var animationplayer19 = $"19/AnimationPlayer"
 					animationplayer19.play("Shining")
+				20:
+					var animationplayer20 = $"20/AnimationPlayer"
+					animationplayer20.play("Shining")
+				24:
+					var animationplayer24 = $"24/AnimationPlayer"
+					animationplayer24.play("Shining")
+				30:
+					var animationplayer30 = $"30/AnimationPlayer"
+					animationplayer30.play("Shining")
+				54:
+					var animationplayer54 = $"54/AnimationPlayer"
+					animationplayer54.play("Shining")
+				56:
+					var animationplayer56 = $"56/AnimationPlayer"
+					animationplayer56.play("Shining")
 		else:
 			i.visible = false
 

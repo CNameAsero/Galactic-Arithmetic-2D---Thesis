@@ -1,6 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://br07jfb1mddff"]
 
-[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/HeartCollectible.png" id="1_qqeld"]
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="1_qqeld"]
+
 
 [sub_resource type="Animation" id="Animation_q0k2q"]
 resource_name = "Health"

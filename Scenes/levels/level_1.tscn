@@ -6,29 +6,29 @@
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="4_8iome"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_jaea1"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="5_onym2"]
-[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/five.png" id="5_p5myx"]
-[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/Four.png" id="6_tsaab"]
+[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/numbers/five.png" id="5_p5myx"]
+[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/numbers/Four.png" id="6_tsaab"]
 [ext_resource type="Script" path="res://Scripts/operators.gd" id="7_rlfrx"]
-[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/One.png" id="7_ypbat"]
-[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/Zero.png" id="9_w63qq"]
-[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/Two.png" id="10_wi58g"]
-[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/Three.png" id="11_v1jva"]
-[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/Six.png" id="12_puifb"]
+[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="7_ypbat"]
+[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="9_w63qq"]
+[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/numbers/Two.png" id="10_wi58g"]
+[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/numbers/Three.png" id="11_v1jva"]
+[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/numbers/Six.png" id="12_puifb"]
 [ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="12_ubpnk"]
-[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/Seven.png" id="13_emfw7"]
+[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/numbers/Seven.png" id="13_emfw7"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="13_fynea"]
-[ext_resource type="Texture2D" uid="uid://b3o2tntsp7f8y" path="res://Sprites/Collectibles/Eight.png" id="14_hsd6b"]
+[ext_resource type="Texture2D" uid="uid://b3o2tntsp7f8y" path="res://Sprites/Collectibles/numbers/Eight.png" id="14_hsd6b"]
 [ext_resource type="Script" path="res://Scenes/levels/tutorial/Numbers_tutorial.gd" id="14_ybkyw"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="15_dejvd"]
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="15_vcb78"]
-[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/Nine.png" id="15_yfcm4"]
+[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="15_yfcm4"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="16_6b3n7"]
-[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Operators/Add.png" id="17_egfla"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="17_egfla"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="17_w6ui0"]
-[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Operators/Minus.png" id="18_fid3p"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="18_fid3p"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="18_ydvd7"]
-[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Operators/Multiplication.png" id="19_nh2gf"]
-[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Operators/Division.png" id="20_g8t6l"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="19_nh2gf"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="20_g8t6l"]
 [ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="27_ksyb5"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="28_huo8u"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="29_lw3j1"]
@@ -37,12 +37,12 @@
 [ext_resource type="Script" path="res://Scripts/powerups.gd" id="31_dgdo3"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="31_mabie"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="31_y0qct"]
-[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/HeartCollectible.png" id="32_0lw40"]
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="32_0lw40"]
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="32_ecply"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="32_skq6l"]
-[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/Movement Speed.png" id="33_wcq8o"]
+[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="33_wcq8o"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="34_5d8p4"]
-[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/AddedTime.png" id="34_qy447"]
+[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="34_qy447"]
 [ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="35_brgsv"]
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="36_8f003"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="37_clg2m"]
@@ -1309,7 +1309,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("3_ywgyd")
-number_to_display = 6
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_6/6"]
 visible = false
@@ -1453,7 +1452,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("3_ywgyd")
-number_to_display = 9
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_9/9"]
 visible = false
@@ -1879,7 +1877,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("7_rlfrx")
-operator_to_display = "+"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_+/+"]
 visible = false

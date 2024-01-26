@@ -1,7 +1,7 @@
 extends Area2D
 class_name operator
 
-@export var operator_to_display : String
+@onready var operator_to_display = $"..".oper
 @onready var access_manager = $"../../"
 @onready var access_bool = $"../../bool_handler"
 
