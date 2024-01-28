@@ -1,4 +1,4 @@
-[gd_scene load_steps=160 format=3 uid="uid://dqxrs4asm625s"]
+[gd_scene load_steps=85 format=3 uid="uid://dqxrs4asm625s"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_r1wch"]
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_7oxo1"]
@@ -11,48 +11,23 @@
 [ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl7.gd" id="5_vm3bi"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="6_dnee0"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_e4g5u"]
-[ext_resource type="Script" path="res://Scripts/operators.gd" id="7_6ivsu"]
 [ext_resource type="Script" path="res://Scripts/final_answer.gd" id="7_nxfc0"]
-[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="8_8skmv"]
 [ext_resource type="Texture2D" uid="uid://02dg06mgelq5" path="res://Sprites/Collectibles/final answers/3_chest.png" id="8_edtp5"]
-[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="9_1f3hp"]
 [ext_resource type="Texture2D" uid="uid://0sufo7g35isy" path="res://Sprites/Collectibles/final answers/1.png" id="9_ombw1"]
-[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="10_7dlv6"]
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="10_biymq"]
-[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="11_2k1ev"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="11_i8761"]
-[ext_resource type="Script" path="res://Scripts/Numbers.gd" id="12_fmmj5"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="12_rkgsi"]
-[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/numbers/Nineteen.png" id="13_dxk77"]
-[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="13_pkv8w"]
 [ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="13_vqi6u"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="14_0pftb"]
-[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="14_guaml"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="15_4e610"]
-[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/numbers/Two.png" id="15_uhyp7"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="16_256bi"]
-[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/numbers/Three.png" id="16_ijli2"]
-[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/numbers/Four.png" id="17_i5uxn"]
-[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/numbers/five.png" id="18_3gw05"]
-[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/numbers/Six.png" id="19_e80d4"]
-[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/numbers/Seven.png" id="20_espxq"]
-[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/numbers/8.png" id="21_lmwdm"]
-[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="22_ern47"]
-[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/numbers/Twelve.png" id="23_s471l"]
-[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/numbers/Sixteen.png" id="24_2vq1o"]
-[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/numbers/Seventeen.png" id="25_bj3te"]
-[ext_resource type="Texture2D" uid="uid://bsle4qkpsyof4" path="res://Sprites/Collectibles/numbers/Thirteen.png" id="26_bfxk8"]
-[ext_resource type="Texture2D" uid="uid://dn80bl04kib27" path="res://Sprites/Collectibles/numbers/Fourteen.png" id="27_dmv1j"]
-[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/numbers/Ten.png" id="27_l7151"]
+[ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="25_f3cty"]
+[ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="26_xqlyn"]
+[ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="28_im3gm"]
 [ext_resource type="Script" path="res://Scenes/timer.gd" id="28_o5reo"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="29_73d7g"]
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="30_ua7rd"]
-[ext_resource type="Texture2D" uid="uid://bd6vxipjlid17" path="res://Sprites/Collectibles/numbers/Twenty.png" id="31_cb0vk"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="31_nfmue"]
-[ext_resource type="Texture2D" uid="uid://75s7yrvvev8k" path="res://Sprites/Collectibles/numbers/twenty-four.png" id="32_rnt0v"]
-[ext_resource type="Texture2D" uid="uid://dxgvg3rba1bc8" path="res://Sprites/Collectibles/numbers/Thirty.png" id="33_6vi8k"]
-[ext_resource type="Texture2D" uid="uid://cvad01ij51hf4" path="res://Sprites/Collectibles/numbers/Fifty-four.png" id="34_v585g"]
-[ext_resource type="Texture2D" uid="uid://c1grv2c33og60" path="res://Sprites/Collectibles/numbers/Fifty-six.png" id="35_l86k2"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="35_peu4s"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="36_cl85e"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="37_0s255"]
@@ -79,160 +54,6 @@
 [ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="58_gcxqq"]
 [ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="59_rk543"]
 [ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="60_nl68f"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_cp2wy"]
-radius = 28.0179
-
-[sub_resource type="Animation" id="Animation_sgfif"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_ndaon"]
-resource_name = "blowfish_spike"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [1, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kyhn"]
-_data = {
-"RESET": SubResource("Animation_sgfif"),
-"blowfish_spike": SubResource("Animation_ndaon")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_4uvgf"]
-radius = 27.0185
-
-[sub_resource type="Animation" id="Animation_f0vww"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [9]
-}
-
-[sub_resource type="Animation" id="Animation_msutp"]
-resource_name = "down"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [16, 17, 18, 19]
-}
-
-[sub_resource type="Animation" id="Animation_l1mk5"]
-resource_name = "idle"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_tbqmg"]
-resource_name = "left"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.199466, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_6hker"]
-resource_name = "right"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 15]
-}
-
-[sub_resource type="Animation" id="Animation_g04ig"]
-resource_name = "up"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [20, 21, 22, 23]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_26ojo"]
-_data = {
-"RESET": SubResource("Animation_f0vww"),
-"down": SubResource("Animation_msutp"),
-"idle": SubResource("Animation_l1mk5"),
-"left": SubResource("Animation_tbqmg"),
-"right": SubResource("Animation_6hker"),
-"up": SubResource("Animation_g04ig")
-}
 
 [sub_resource type="Animation" id="Animation_qe8cb"]
 length = 0.001
@@ -410,617 +231,6 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8y4e"]
 size = Vector2(26, 20)
 
-[sub_resource type="Animation" id="Animation_jcqmo"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_gyyyy"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ft7jf"]
-_data = {
-"RESET": SubResource("Animation_jcqmo"),
-"Shining": SubResource("Animation_gyyyy")
-}
-
-[sub_resource type="Animation" id="Animation_lvfvd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_gxp0h"]
-resource_name = "shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qx8ra"]
-_data = {
-"RESET": SubResource("Animation_lvfvd"),
-"Shining": SubResource("Animation_gxp0h")
-}
-
-[sub_resource type="Animation" id="Animation_s6b47"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../2:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_ysf8r"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../2:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qreo"]
-_data = {
-"RESET": SubResource("Animation_s6b47"),
-"Shining": SubResource("Animation_ysf8r")
-}
-
-[sub_resource type="Animation" id="Animation_asxc7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../3:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_8ceib"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../3:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7ugx"]
-_data = {
-"RESET": SubResource("Animation_asxc7"),
-"Shining": SubResource("Animation_8ceib")
-}
-
-[sub_resource type="Animation" id="Animation_oop65"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_bmykv"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqc7e"]
-_data = {
-"RESET": SubResource("Animation_oop65"),
-"Shining": SubResource("Animation_bmykv")
-}
-
-[sub_resource type="Animation" id="Animation_pfc6u"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_t411h"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qhjx"]
-_data = {
-"RESET": SubResource("Animation_pfc6u"),
-"Shining": SubResource("Animation_t411h")
-}
-
-[sub_resource type="Animation" id="Animation_nqynp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../6:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_vjuy8"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../6:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hifse"]
-_data = {
-"RESET": SubResource("Animation_nqynp"),
-"Shining": SubResource("Animation_vjuy8")
-}
-
-[sub_resource type="Animation" id="Animation_l4cy4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../7:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_55qdc"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../7:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pwse"]
-_data = {
-"RESET": SubResource("Animation_l4cy4"),
-"Shining": SubResource("Animation_55qdc")
-}
-
-[sub_resource type="Animation" id="Animation_0ryhs"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../8:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_26k0a"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../8:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtfe5"]
-_data = {
-"RESET": SubResource("Animation_0ryhs"),
-"Shining": SubResource("Animation_26k0a")
-}
-
-[sub_resource type="Animation" id="Animation_nvo8c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../9:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_rt3m0"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../9:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbqsg"]
-_data = {
-"RESET": SubResource("Animation_nvo8c"),
-"Shining": SubResource("Animation_rt3m0")
-}
-
-[sub_resource type="Animation" id="Animation_7ytc8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_ctgn4"]
-resource_name = "Shining"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_43xt3"]
-_data = {
-"RESET": SubResource("Animation_7ytc8"),
-"Shining": SubResource("Animation_ctgn4")
-}
-
-[sub_resource type="Animation" id="Animation_wowpd"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_mb0su"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2gw7"]
-_data = {
-"RESET": SubResource("Animation_wowpd"),
-"Shining": SubResource("Animation_mb0su")
-}
-
-[sub_resource type="Animation" id="Animation_1nmhk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_vy57x"]
-resource_name = "shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wvhd"]
-_data = {
-"RESET": SubResource("Animation_1nmhk"),
-"shining": SubResource("Animation_vy57x")
-}
-
-[sub_resource type="Animation" id="Animation_jt8ol"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_tp54i"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tfarb"]
-_data = {
-"RESET": SubResource("Animation_jt8ol"),
-"Shining": SubResource("Animation_tp54i")
-}
-
-[sub_resource type="Animation" id="Animation_tx375"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_ftw82"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjcp7"]
-_data = {
-"RESET": SubResource("Animation_tx375"),
-"Shining": SubResource("Animation_ftw82")
-}
-
-[sub_resource type="Animation" id="Animation_u5326"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_cechx"]
-resource_name = "Shining"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_io3y2"]
-_data = {
-"RESET": SubResource("Animation_u5326"),
-"Shining": SubResource("Animation_cechx")
-}
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gbrp3"]
-radius = 53.4979
-height = 106.996
-
 [sub_resource type="Animation" id="Animation_sd1pg"]
 length = 0.001
 tracks/0/type = "value"
@@ -1059,8 +269,159 @@ _data = {
 "timer": SubResource("Animation_820pq")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ief75"]
-radius = 17.0294
+[sub_resource type="CircleShape2D" id="CircleShape2D_cp2wy"]
+radius = 28.0179
+
+[sub_resource type="Animation" id="Animation_sgfif"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ndaon"]
+resource_name = "blowfish_spike"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5kyhn"]
+_data = {
+"RESET": SubResource("Animation_sgfif"),
+"blowfish_spike": SubResource("Animation_ndaon")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4uvgf"]
+radius = 27.0185
+
+[sub_resource type="Animation" id="Animation_f0vww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_msutp"]
+resource_name = "down"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_l1mk5"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_tbqmg"]
+resource_name = "left"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.199466, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_6hker"]
+resource_name = "right"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_g04ig"]
+resource_name = "up"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [20, 21, 22, 23]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_26ojo"]
+_data = {
+"RESET": SubResource("Animation_f0vww"),
+"down": SubResource("Animation_msutp"),
+"idle": SubResource("Animation_l1mk5"),
+"left": SubResource("Animation_tbqmg"),
+"right": SubResource("Animation_6hker"),
+"up": SubResource("Animation_g04ig")
+}
 
 [node name="world2_lvl2" type="Node2D"]
 
@@ -1093,104 +454,6 @@ layer_3/tile_data = PackedInt32Array(524290, 327684, 12, 589826, 327684, 13, 524
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 542)
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="shark" parent="Enemies" instance=ExtResource("5_3jgl7")]
-position = Vector2(1588, 929)
-move_direction = Vector2(150, 0)
-
-[node name="blowfish" type="Area2D" parent="Enemies"]
-position = Vector2(554, 683)
-script = ExtResource("3_uviin")
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/blowfish"]
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("4_wxsl1")
-hframes = 2
-frame = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/blowfish"]
-shape = SubResource("CircleShape2D_cp2wy")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/blowfish"]
-speed_scale = 0.06
-libraries = {
-"": SubResource("AnimationLibrary_5kyhn")
-}
-
-[node name="blowfish2" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(600, 683)
-
-[node name="blowfish3" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(553, 409)
-
-[node name="blowfish4" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(601, 408)
-
-[node name="shark3" parent="Enemies" instance=ExtResource("5_3jgl7")]
-position = Vector2(901, 253)
-move_direction = Vector2(150, 0)
-
-[node name="blowfish5" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1128, 614)
-
-[node name="blowfish6" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1054, 537)
-
-[node name="blowfish7" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1135, 481)
-
-[node name="blowfish8" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1077, 591)
-
-[node name="blowfish9" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1083, 497)
-
-[node name="blowfish10" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1368, 481)
-
-[node name="blowfish11" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1369, 618)
-
-[node name="blowfish12" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1433, 541)
-
-[node name="blowfish13" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1418, 592)
-
-[node name="blowfish14" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1411, 501)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(371, 543)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("2_7oxo1")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_a3lvb")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_4uvgf")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_o08xo")]
-position = Vector2(242, 881)
-scale = Vector2(1.85, 1.85)
 
 [node name="game_manager" type="Node2D" parent="."]
 script = ExtResource("5_vm3bi")
@@ -1313,2253 +576,6 @@ visible = false
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_p8y4e")
 
-[node name="Numbers_2" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(432, 310)
-scale = Vector2(0.45, 0.45)
-
-[node name="2" type="Area2D" parent="game_manager/Numbers_2"]
-position = Vector2(-6.6665, 8.88892)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_2/2"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2/2/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_2/2"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_2_2" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(634, 250)
-scale = Vector2(0.45, 0.45)
-
-[node name="2" type="Area2D" parent="game_manager/Numbers_2_2"]
-position = Vector2(-17.7776, -2.22217)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_2_2/2"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2/2/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_2_2/2"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_2_2_2" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(1113, 543)
-scale = Vector2(0.45, 0.45)
-
-[node name="2" type="Area2D" parent="game_manager/Numbers_2_2_2"]
-position = Vector2(-4.16675, -4.16663)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_2_2_2/2"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_2_2_2/2/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_2_2_2/2"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_3" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(591, 746)
-scale = Vector2(0.45, 0.45)
-
-[node name="3" type="Area2D" parent="game_manager/Numbers_3"]
-position = Vector2(-11.1111, -11.1111)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_3/3"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3/3/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_3/3"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_3_3" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(1589, 828)
-scale = Vector2(0.45, 0.45)
-
-[node name="3" type="Area2D" parent="game_manager/Numbers_3_3"]
-position = Vector2(4.44446, -4.44446)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_3_3/3"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_3_3/3/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_3_3/3"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_4" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(1381, 543)
-scale = Vector2(0.45, 0.45)
-
-[node name="4" type="Area2D" parent="game_manager/Numbers_4"]
-position = Vector2(0, -5)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_4/4"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_4/4/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_4/4"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_6" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(460, 871)
-scale = Vector2(0.45, 0.45)
-
-[node name="6" type="Area2D" parent="game_manager/Numbers_6"]
-position = Vector2(-2.22217, -8.88889)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_6/6"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_6/6/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_6/6"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
-[node name="Numbers_8" type="Node2D" parent="game_manager" groups=["numbers"]]
-position = Vector2(897, 160)
-scale = Vector2(0.45, 0.45)
-
-[node name="8" type="Area2D" parent="game_manager/Numbers_8"]
-position = Vector2(2.22217, 0)
-scale = Vector2(1.08, 1.08)
-collision_layer = 2
-script = ExtResource("12_fmmj5")
-
-[node name="0" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("13_pkv8w")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/0"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_ft7jf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-scale = Vector2(1, 1.236)
-texture = ExtResource("14_guaml")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qx8ra")
-}
-
-[node name="2" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("15_uhyp7")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/2"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_7qreo")
-}
-
-[node name="3" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("16_ijli2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/3"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_m7ugx")
-}
-
-[node name="4" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("17_i5uxn")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/4"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_bqc7e")
-}
-
-[node name="5" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-scale = Vector2(1, 1.2)
-texture = ExtResource("18_3gw05")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/5"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_0qhjx")
-}
-
-[node name="6" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("19_e80d4")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/6"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_hifse")
-}
-
-[node name="7" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("20_espxq")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/7"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_2pwse")
-}
-
-[node name="8" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-self_modulate = Color(1.18, 0.98, 35.5, 1)
-texture = ExtResource("21_lmwdm")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/8"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_qtfe5")
-}
-
-[node name="9" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("22_ern47")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/9"]
-root_node = NodePath("../../0")
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_wbqsg")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("27_l7151")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/10"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_43xt3")
-}
-
-[node name="12" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("23_s471l")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/12"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_v2gw7")
-}
-
-[node name="13" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("26_bfxk8")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/13"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="14" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("27_dmv1j")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/14"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="16" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("24_2vq1o")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/16"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_tfarb")
-}
-
-[node name="17" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("25_bj3te")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/17"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_vjcp7")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("13_dxk77")
-hframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/19"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_io3y2")
-}
-
-[node name="20" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("31_cb0vk")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/20"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("32_rnt0v")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="30" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("33_6vi8k")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/30"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="54" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("34_v585g")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/54"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="56" type="Sprite2D" parent="game_manager/Numbers_8/8"]
-visible = false
-texture = ExtResource("35_l86k2")
-hframes = 2
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/Numbers_8/8/56"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_4wvhd")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/Numbers_8/8"]
-shape = SubResource("CapsuleShape2D_gbrp3")
-
 [node name="timer" type="Node2D" parent="game_manager"]
 position = Vector2(62, 65)
 scale = Vector2(0.5, 0.5)
@@ -3618,39 +634,193 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="operator_x" type="Node2D" parent="game_manager"]
-position = Vector2(201, 537)
-scale = Vector2(2, 2)
+[node name="2" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(1383, 546)
+number = 2
 
-[node name="x" type="Area2D" parent="game_manager/operator_x"]
-position = Vector2(2, -0.5)
-scale = Vector2(1.35, 1.35)
-collision_layer = 2
-script = ExtResource("7_6ivsu")
+[node name="2_2nd" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(1104, 546)
+number = 2
 
-[node name="+" type="Sprite2D" parent="game_manager/operator_x/x"]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("8_8skmv")
+[node name="2-3rd" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(1590, 821)
+number = 2
 
-[node name="-" type="Sprite2D" parent="game_manager/operator_x/x"]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("9_1f3hp")
+[node name="3" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(895, 171)
+number = 3
 
-[node name="x" type="Sprite2D" parent="game_manager/operator_x/x"]
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("10_7dlv6")
+[node name="3_2nd" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(588, 743)
+number = 3
 
-[node name="d" type="Sprite2D" parent="game_manager/operator_x/x"]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("11_2k1ev")
+[node name="4" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(470, 866)
+number = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/operator_x/x"]
-shape = SubResource("CircleShape2D_ief75")
+[node name="6" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(596, 253)
+number = 6
+
+[node name="8" parent="game_manager" instance=ExtResource("25_f3cty")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(438, 280)
+number = 8
+
+[node name="x" parent="game_manager" instance=ExtResource("26_xqlyn")]
+position = Vector2(225, 546)
+oper = "×"
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="shark" parent="Enemies" instance=ExtResource("5_3jgl7")]
+position = Vector2(1588, 929)
+move_speed = 90.0
+move_direction = Vector2(-150, 0)
+
+[node name="blowfish" type="Area2D" parent="Enemies"]
+position = Vector2(554, 683)
+script = ExtResource("3_uviin")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/blowfish"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_wxsl1")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/blowfish"]
+shape = SubResource("CircleShape2D_cp2wy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/blowfish"]
+speed_scale = 0.06
+libraries = {
+"": SubResource("AnimationLibrary_5kyhn")
+}
+
+[node name="blowfish2" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(600, 683)
+
+[node name="blowfish3" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(553, 409)
+
+[node name="blowfish4" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(601, 408)
+
+[node name="shark3" parent="Enemies" instance=ExtResource("5_3jgl7")]
+position = Vector2(901, 253)
+move_speed = 90.0
+move_direction = Vector2(150, 0)
+
+[node name="blowfish5" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1128, 614)
+
+[node name="blowfish6" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1054, 537)
+
+[node name="blowfish7" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1135, 481)
+
+[node name="blowfish8" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1077, 591)
+
+[node name="blowfish9" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1083, 497)
+
+[node name="blowfish10" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1368, 481)
+
+[node name="blowfish11" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1369, 618)
+
+[node name="blowfish12" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1433, 541)
+
+[node name="blowfish13" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1418, 592)
+
+[node name="blowfish14" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1411, 501)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(371, 543)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("2_7oxo1")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("3_a3lvb")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_4uvgf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_o08xo")]
+position = Vector2(242, 881)
+scale = Vector2(1.85, 1.85)
 
 [node name="health_system" parent="." instance=ExtResource("6_dnee0")]
+
+[node name="health_buff" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 1501.0
+offset_top = 859.0
+offset_right = 1501.0
+offset_bottom = 859.0
+buff_selected = "health"
+
+[node name="health_buff2" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 993.0
+offset_top = 204.0
+offset_right = 993.0
+offset_bottom = 204.0
+buff_selected = "health"
+
+[node name="time_buff" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 506.0
+offset_top = 240.0
+offset_right = 506.0
+offset_bottom = 240.0
+buff_selected = "time"
+
+[node name="time_buff2" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 411.0
+offset_top = 827.0
+offset_right = 411.0
+offset_bottom = 827.0
+buff_selected = "time"
+
+[node name="speed_buff" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 1251.0
+offset_top = 738.0
+offset_right = 1251.0
+offset_bottom = 738.0
+buff_selected = "speed"
+
+[node name="speed_buff2" parent="." instance=ExtResource("28_im3gm")]
+offset_left = 1249.0
+offset_top = 373.0
+offset_right = 1249.0
+offset_bottom = 373.0
+buff_selected = "speed"
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
@@ -4025,17 +1195,8 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="body_entered" from="Enemies/blowfish" to="Enemies/blowfish" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_2/2" to="game_manager/Numbers_2/2" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_2_2/2" to="game_manager/Numbers_2_2/2" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_2_2_2/2" to="game_manager/Numbers_2_2_2/2" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_3/3" to="game_manager/Numbers_3/3" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_3_3/3" to="game_manager/Numbers_3_3/3" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_4/4" to="game_manager/Numbers_4/4" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_6/6" to="game_manager/Numbers_6/6" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Numbers_8/8" to="game_manager/Numbers_8/8" method="_on_body_entered" flags=18]
 [connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
-[connection signal="body_entered" from="game_manager/operator_x/x" to="game_manager/operator_x/x" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Enemies/blowfish" to="Enemies/blowfish" method="_on_body_entered" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

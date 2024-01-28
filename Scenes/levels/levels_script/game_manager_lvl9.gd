@@ -45,8 +45,8 @@ func collect_operator(oper):
 	check_final_answer()
 
 func update_expression():
-	var numbers = ["_", "_", "_"]
-	var operators = ["_", "_"]
+	var numbers = ["_", "_", "_", "_"]
+	var operators = ["_", "_", "_"]
 
 	for i in range(min(collected_numbers.size(), 3)):
 		numbers[i] = str(collected_numbers[i])
@@ -61,6 +61,10 @@ func update_expression():
 		current_expression += " _ _"
 	if operators[1] != "_":
 		current_expression += " " + operators[1] + " " + numbers[2]
+	else:
+		current_expression += " _ _"
+	if operators[2] != "_":
+		current_expression += " " + operators[2] + " " + numbers[3]
 	else:
 		current_expression += " _ _"
 
@@ -105,7 +109,7 @@ func check_final_answer():
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		get_tree().paused = true
-	elif collected_numbers.size() == 3 || current_result != calculate_expression():
+	elif collected_numbers.size() == 4 || current_result != calculate_expression():
 		AudioManager.play_deathsfx()
 		reset_for_next_level()
 		game_over.show()

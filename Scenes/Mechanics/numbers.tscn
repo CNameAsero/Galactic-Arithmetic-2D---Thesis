@@ -665,7 +665,6 @@ libraries = {
 
 [node name="1" type="Sprite2D" parent="set_number"]
 visible = false
-scale = Vector2(1, 1.236)
 texture = ExtResource("3_xv552")
 hframes = 2
 frame = 1
@@ -704,7 +703,6 @@ libraries = {
 
 [node name="4" type="Sprite2D" parent="set_number"]
 visible = false
-scale = Vector2(1, 1.2)
 texture = ExtResource("6_xwn5r")
 hframes = 2
 frame = 1
@@ -717,7 +715,6 @@ libraries = {
 
 [node name="5" type="Sprite2D" parent="set_number"]
 visible = false
-scale = Vector2(1, 1.2)
 texture = ExtResource("7_aotpg")
 hframes = 2
 frame = 1

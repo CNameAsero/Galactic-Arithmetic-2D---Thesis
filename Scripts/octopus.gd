@@ -6,7 +6,7 @@ extends Node2D
 @export var ammo : PackedScene
 @export var rect_radius : float
 
-@onready var player = $"../slime_player_joystick/slime_player_joystik"
+@onready var player = $"../../slime_player_joystick/slime_player_joystik"
 @onready var animation_player = $Area2D/AnimationPlayer
 
 var target = null

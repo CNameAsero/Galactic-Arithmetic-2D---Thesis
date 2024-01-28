@@ -21,26 +21,7 @@ extends Node2D
 #final answer
 @onready var final_answer = $final_answer.final_answer
 
-#numbers
-#@onready var num0 = $"Numbers/set_number"
-@onready var num1 = $"Number_5/5"
-@onready var num2 = $"Number_4/4"
-@onready var num3 = $"Number_1/1"
-@onready var num4 = $"Number_6/6"
-@onready var num5 = $"Number_9/9"
-#@onready var num6 = $"Numbers/set_number"
-#@onready var num7 = $"Numbers/set_number"
-#@onready var num8 = $"Numbers/set_number"
-#@onready var num9 = $"Numbers/set_number"
-
-#operators
-#@onready var op1 = $"operator_+/+"
-#@onready var op2 = $"operator_-/-"
-@onready var op3 = $"operator_x/x"
-#@onready var op4 = $"operator_d/d"
-
 #counters
-@onready var current_num = num1
 #@onready var current_oper = op3
 @onready var num_counter = 0
 @onready var oper_counter = 0
@@ -56,10 +37,6 @@ func collect_number(num):
 	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
 		num_counter += 1
-		if num_counter == 1:
-			current_num = num2
-		elif num_counter == 2:
-			current_num = num3
 		last_item_was_number = false  # Update the flag
 	update_expression()
 	check_final_answer()
@@ -138,9 +115,9 @@ func calculate_expression():
 				result += number
 			"-":
 				result -= number
-			"x":
+			"×":
 				result *= number
-			"/":
+			"÷":
 				if number != 0:
 					result /= number
 				else:
@@ -178,7 +155,6 @@ func reset_for_next_level():
 	collected_operators.clear()
 	num_counter = 0
 	oper_counter = 0
-	current_num = num1
 
 func _on_timer_timeout():
 	AudioManager.play_deathsfx()

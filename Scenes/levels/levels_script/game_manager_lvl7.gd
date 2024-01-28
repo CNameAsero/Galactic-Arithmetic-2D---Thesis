@@ -91,9 +91,9 @@ func calculate_expression():
 				result += number
 			"-":
 				result -= number
-			"x":
+			"×":
 				result *= number
-			"/":
+			"÷":
 				if number != 0:
 					result /= number
 				else:
