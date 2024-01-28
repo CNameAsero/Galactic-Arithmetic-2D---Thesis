@@ -1128,6 +1128,68 @@ position = Vector2(959, 540)
 rotation = 3.14159
 scale = Vector2(41.7878, 37.8454)
 
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Spike" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(525, 303)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike2" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1542, 378)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike3" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(909, 237)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike4" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1161, 417)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike5" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1619, 566)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike6" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1272, 604)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike7" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(886, 490)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike8" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(945, 752)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike9" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1034, 620)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike10" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(248, 514)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike11" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1446, 705)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike12" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(1755, 906)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike13" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(151, 815)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike14" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(441, 910)
+scale = Vector2(0.64, 0.542)
+
+[node name="Spike15" parent="Enemy" instance=ExtResource("15_vcb78")]
+position = Vector2(822, 857)
+scale = Vector2(0.64, 0.542)
+
 [node name="slime_player_joystick" type="Node2D" parent="." groups=["player"]]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
@@ -1647,7 +1709,6 @@ libraries = {
 }
 
 [node name="4" type="Sprite2D" parent="game_manager/Number_4/4"]
-visible = false
 texture = ExtResource("6_tsaab")
 hframes = 2
 frame = 1
@@ -2018,68 +2079,6 @@ root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_vfhg0")
 }
-
-[node name="Enemy" type="Node2D" parent="."]
-
-[node name="Spike" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(525, 303)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike2" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1542, 378)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike3" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(909, 237)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike4" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1161, 417)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike5" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1619, 566)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike6" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1272, 604)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike7" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(886, 490)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike8" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(945, 752)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike9" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1034, 620)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike10" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(248, 514)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike11" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1446, 705)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike12" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(1755, 906)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike13" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(151, 815)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike14" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(441, 910)
-scale = Vector2(0.64, 0.542)
-
-[node name="Spike15" parent="Enemy" instance=ExtResource("15_vcb78")]
-position = Vector2(822, 857)
-scale = Vector2(0.64, 0.542)
 
 [node name="health_system" parent="." instance=ExtResource("56_blqqh")]
 

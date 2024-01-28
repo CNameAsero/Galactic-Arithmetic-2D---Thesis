@@ -65,6 +65,104 @@
 [ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="36_gjtqh"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="64_gljot"]
 
+[sub_resource type="Animation" id="Animation_a4h0f"]
+resource_name = "Back_fly"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_ax8ae"]
+resource_name = "Fly_frony"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_oan2h"]
+resource_name = "Left_fly"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_30qr7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ovdl6"]
+resource_name = "Right_fly"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g6jwu"]
+_data = {
+"Back_fly": SubResource("Animation_a4h0f"),
+"Fly_frony": SubResource("Animation_ax8ae"),
+"Left_fly": SubResource("Animation_oan2h"),
+"RESET": SubResource("Animation_30qr7"),
+"Right_fly": SubResource("Animation_ovdl6")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4fii"]
+radius = 8.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_krfbi"]
+size = Vector2(21, 20)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_tv306"]
 radius = 27.0185
 
@@ -1329,104 +1427,6 @@ _data = {
 "timer": SubResource("Animation_820pq")
 }
 
-[sub_resource type="Animation" id="Animation_a4h0f"]
-resource_name = "Back_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_ax8ae"]
-resource_name = "Fly_frony"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_oan2h"]
-resource_name = "Left_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_30qr7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_ovdl6"]
-resource_name = "Right_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g6jwu"]
-_data = {
-"Back_fly": SubResource("Animation_a4h0f"),
-"Fly_frony": SubResource("Animation_ax8ae"),
-"Left_fly": SubResource("Animation_oan2h"),
-"RESET": SubResource("Animation_30qr7"),
-"Right_fly": SubResource("Animation_ovdl6")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_k4fii"]
-radius = 8.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_krfbi"]
-size = Vector2(21, 20)
-
 [node name="level_5" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1473,6 +1473,162 @@ layer_5/tile_data = PackedInt32Array(1966100, 2, 9, 2031636, 2, 10, 1966101, 655
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 543)
 
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Fox_enemy" parent="Enemies" instance=ExtResource("33_26lhg")]
+position = Vector2(1119, 399)
+move_speed = 40.0
+move_direction = Vector2(230, -190)
+
+[node name="Fox_enemy2" parent="Enemies" instance=ExtResource("33_26lhg")]
+position = Vector2(252, 435)
+move_speed = 40.0
+move_direction = Vector2(0, 260)
+
+[node name="Fox_enemy3" parent="Enemies" instance=ExtResource("33_26lhg")]
+position = Vector2(1767, 723)
+move_speed = 40.0
+move_direction = Vector2(-210, 200)
+
+[node name="Spike" parent="Enemies" instance=ExtResource("34_jj1gf")]
+position = Vector2(209, 437)
+rotation = -1.5708
+scale = Vector2(0.64, 0.64)
+
+[node name="Spike2" parent="Enemies" instance=ExtResource("34_jj1gf")]
+position = Vector2(209, 711)
+rotation = -1.5708
+scale = Vector2(0.64, 0.64)
+
+[node name="Spike3" parent="Enemies" instance=ExtResource("34_jj1gf")]
+position = Vector2(209, 507)
+rotation = -1.5708
+scale = Vector2(0.64, 0.64)
+
+[node name="Spike4" parent="Enemies" instance=ExtResource("34_jj1gf")]
+position = Vector2(209, 576)
+rotation = -1.5708
+scale = Vector2(0.64, 0.64)
+
+[node name="Spike5" parent="Enemies" instance=ExtResource("34_jj1gf")]
+position = Vector2(209, 643)
+rotation = -1.5708
+scale = Vector2(0.64, 0.64)
+
+[node name="Wasp_enemy" type="Node2D" parent="Enemies"]
+position = Vector2(1457, 236)
+
+[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy"]
+position = Vector2(4.66666, 0)
+collision_layer = 8
+collision_mask = 25
+script = ExtResource("35_rp85w")
+rect_radius = 320.0
+enemy_speed = 130.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-5, -2)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("36_gjtqh")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy/CharacterBody2D"]
+speed_scale = 0.8
+libraries = {
+"": SubResource("AnimationLibrary_g6jwu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
+position = Vector2(-4.66666, 2)
+shape = SubResource("CircleShape2D_k4fii")
+one_way_collision_margin = 2.0
+
+[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy"]
+
+[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy/area_det"]
+shape = SubResource("RectangleShape2D_krfbi")
+debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
+
+[node name="Wasp_enemy2" type="Node2D" parent="Enemies"]
+position = Vector2(1463, 870)
+
+[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy2"]
+position = Vector2(4.66666, 0)
+collision_layer = 8
+collision_mask = 25
+script = ExtResource("35_rp85w")
+rect_radius = 320.0
+enemy_speed = 130.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-5, -2)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("36_gjtqh")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
+speed_scale = 0.8
+libraries = {
+"": SubResource("AnimationLibrary_g6jwu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
+position = Vector2(-4.66666, 2)
+shape = SubResource("CircleShape2D_k4fii")
+one_way_collision_margin = 2.0
+
+[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy2"]
+
+[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/area_det"]
+shape = SubResource("RectangleShape2D_krfbi")
+debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
+
+[node name="Wasp_enemy3" type="Node2D" parent="Enemies"]
+position = Vector2(1075, 574)
+
+[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy3"]
+position = Vector2(4.66666, 0)
+collision_layer = 8
+collision_mask = 25
+script = ExtResource("35_rp85w")
+rect_radius = 350.0
+enemy_speed = 130.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-5, -2)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("36_gjtqh")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
+speed_scale = 0.8
+libraries = {
+"": SubResource("AnimationLibrary_g6jwu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
+position = Vector2(-4.66666, 2)
+shape = SubResource("CircleShape2D_k4fii")
+one_way_collision_margin = 2.0
+
+[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy3"]
+
+[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/area_det"]
+shape = SubResource("RectangleShape2D_krfbi")
+debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
+
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
@@ -1518,7 +1674,6 @@ position = Vector2(1, 0)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("7_bjli1")
-operator_to_display = "+"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_+/+"]
 visible = false
@@ -1552,7 +1707,6 @@ position = Vector2(1, 0)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("7_bjli1")
-operator_to_display = "-"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_-/-"]
 visible = false
@@ -1585,7 +1739,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 16
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_16/16"]
 visible = false
@@ -1771,7 +1924,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 12
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_12/12"]
 visible = false
@@ -1958,7 +2110,6 @@ position = Vector2(0, 2.22217)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 9
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_9/9"]
 visible = false
@@ -2145,7 +2296,6 @@ position = Vector2(-2.22217, 2.22205)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 5
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_5/5"]
 visible = false
@@ -2332,7 +2482,6 @@ position = Vector2(-8.88879, 2.22241)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 6
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_6/6"]
 visible = false
@@ -2519,7 +2668,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("6_rifv6")
-number_to_display = 10
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_10/10"]
 visible = false
@@ -2769,162 +2917,6 @@ vertical_alignment = 1
 [node name="final_answer" parent="game_manager" instance=ExtResource("27_t3hmm")]
 position = Vector2(1345, 601)
 final_answer = 32
-
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Fox_enemy" parent="Enemies" instance=ExtResource("33_26lhg")]
-position = Vector2(1119, 399)
-move_speed = 40.0
-move_direction = Vector2(230, -190)
-
-[node name="Fox_enemy2" parent="Enemies" instance=ExtResource("33_26lhg")]
-position = Vector2(252, 435)
-move_speed = 40.0
-move_direction = Vector2(0, 260)
-
-[node name="Fox_enemy3" parent="Enemies" instance=ExtResource("33_26lhg")]
-position = Vector2(1767, 723)
-move_speed = 40.0
-move_direction = Vector2(-210, 200)
-
-[node name="Spike" parent="Enemies" instance=ExtResource("34_jj1gf")]
-position = Vector2(209, 437)
-rotation = -1.5708
-scale = Vector2(0.64, 0.64)
-
-[node name="Spike2" parent="Enemies" instance=ExtResource("34_jj1gf")]
-position = Vector2(209, 711)
-rotation = -1.5708
-scale = Vector2(0.64, 0.64)
-
-[node name="Spike3" parent="Enemies" instance=ExtResource("34_jj1gf")]
-position = Vector2(209, 507)
-rotation = -1.5708
-scale = Vector2(0.64, 0.64)
-
-[node name="Spike4" parent="Enemies" instance=ExtResource("34_jj1gf")]
-position = Vector2(209, 576)
-rotation = -1.5708
-scale = Vector2(0.64, 0.64)
-
-[node name="Spike5" parent="Enemies" instance=ExtResource("34_jj1gf")]
-position = Vector2(209, 643)
-rotation = -1.5708
-scale = Vector2(0.64, 0.64)
-
-[node name="Wasp_enemy" type="Node2D" parent="Enemies"]
-position = Vector2(1457, 236)
-
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("35_rp85w")
-rect_radius = 320.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("36_gjtqh")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
-
-[node name="Wasp_enemy2" type="Node2D" parent="Enemies"]
-position = Vector2(1463, 870)
-
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy2"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("35_rp85w")
-rect_radius = 320.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("36_gjtqh")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy2"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
-
-[node name="Wasp_enemy3" type="Node2D" parent="Enemies"]
-position = Vector2(1075, 574)
-
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy3"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("35_rp85w")
-rect_radius = 350.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("36_gjtqh")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy3"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
 
 [node name="health_system" parent="." instance=ExtResource("32_3rubg")]
 
@@ -3339,15 +3331,6 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="body_entered" from="game_manager/operator_+/+" to="game_manager/operator_+/+" method="_on_body_entered"]
-[connection signal="body_entered" from="game_manager/operator_-/-" to="game_manager/operator_-/-" method="_on_body_entered"]
-[connection signal="body_entered" from="game_manager/Number_16/16" to="game_manager/Number_16/16" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Number_12/12" to="game_manager/Number_12/12" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Number_9/9" to="game_manager/Number_9/9" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Number_5/5" to="game_manager/Number_5/5" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Number_6/6" to="game_manager/Number_6/6" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="game_manager/Number_10/10" to="game_manager/Number_10/10" method="_on_body_entered" flags=18]
-[connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/area_det" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
@@ -3360,6 +3343,15 @@ vertical_alignment = 1
 [connection signal="body_exited" from="Enemies/Wasp_enemy3/CharacterBody2D" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Enemies/Wasp_enemy3/area_det" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
 [connection signal="body_exited" from="Enemies/Wasp_enemy3/area_det" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
+[connection signal="body_entered" from="game_manager/operator_+/+" to="game_manager/operator_+/+" method="_on_body_entered"]
+[connection signal="body_entered" from="game_manager/operator_-/-" to="game_manager/operator_-/-" method="_on_body_entered"]
+[connection signal="body_entered" from="game_manager/Number_16/16" to="game_manager/Number_16/16" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="game_manager/Number_12/12" to="game_manager/Number_12/12" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="game_manager/Number_9/9" to="game_manager/Number_9/9" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="game_manager/Number_5/5" to="game_manager/Number_5/5" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="game_manager/Number_6/6" to="game_manager/Number_6/6" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="game_manager/Number_10/10" to="game_manager/Number_10/10" method="_on_body_entered" flags=18]
+[connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

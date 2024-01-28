@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/blowfish.gd" id="1_6n8pm"]
 [ext_resource type="Texture2D" uid="uid://du57ju053jre5" path="res://Sprites/Enemies/world2_enemies/Blowfish.png" id="1_kdv5g"]
 
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_cp2wy"]
 radius = 28.0179
 
@@ -50,6 +49,7 @@ position = Vector2(590, 370)
 script = ExtResource("1_6n8pm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_kdv5g")
 hframes = 2
 frame = 1

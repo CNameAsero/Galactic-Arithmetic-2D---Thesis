@@ -109,6 +109,7 @@ rect_radius = 300.0
 [node name="Area2" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2"]
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_pnn3n")
 hframes = 4
 vframes = 2

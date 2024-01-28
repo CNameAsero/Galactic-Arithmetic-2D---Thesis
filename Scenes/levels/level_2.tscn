@@ -651,7 +651,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("7_yvifj")
-operator_to_display = "+"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_+/+"]
 visible = false
@@ -684,7 +683,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 9
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_9/9"]
 visible = false
@@ -826,7 +824,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 7
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_7/7"]
 visible = false
@@ -968,7 +965,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 8
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_8/8"]
 visible = false
@@ -1110,7 +1106,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 3
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_3/3"]
 visible = false
@@ -1252,7 +1247,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 5
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_5/5"]
 visible = false
@@ -1393,7 +1387,6 @@ scale = Vector2(0.45, 0.45)
 scale = Vector2(1.08, 1.08)
 collision_layer = 2
 script = ExtResource("15_vkpkk")
-number_to_display = 5
 
 [node name="0" type="Sprite2D" parent="game_manager/Number_5-2nd/5"]
 visible = false

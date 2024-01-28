@@ -1625,7 +1625,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("16_3tpx2")
-operator_to_display = "+"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_+/+"]
 visible = false
@@ -1658,7 +1657,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("16_3tpx2")
-operator_to_display = "-"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_-/-"]
 visible = false
@@ -1690,7 +1688,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("16_3tpx2")
-operator_to_display = "*"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_x/x"]
 visible = false
@@ -1723,7 +1720,6 @@ scale = Vector2(2, 2)
 scale = Vector2(1.35, 1.35)
 collision_layer = 2
 script = ExtResource("16_3tpx2")
-operator_to_display = "\\"
 
 [node name="+" type="Sprite2D" parent="game_manager/operator_d/d"]
 visible = false
