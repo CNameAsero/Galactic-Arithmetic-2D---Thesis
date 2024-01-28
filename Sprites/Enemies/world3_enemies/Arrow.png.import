@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjd10v6ag6s0j"
-path="res://.godot/imported/Fox_Pixel.png-8f437edafa1201ccadc7e0272d03462b.ctex"
+uid="uid://du3rous1vyhcv"
+path="res://.godot/imported/Arrow.png-86b54c08ca3de3bf91fd949c01e497bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Fox_Pixel.png"
-dest_files=["res://.godot/imported/Fox_Pixel.png-8f437edafa1201ccadc7e0272d03462b.ctex"]
+source_file="res://Sprites/Enemies/world3_enemies/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-86b54c08ca3de3bf91fd949c01e497bf.ctex"]
 
 [params]
 

@@ -62,7 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://c3ptn3115rf3t" path="res://Scenes/Enemies/fox_enemy.tscn" id="33_26lhg"]
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="34_jj1gf"]
 [ext_resource type="Script" path="res://Scripts/wasp_enemy.gd" id="35_rp85w"]
-[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/Wasp.png" id="36_gjtqh"]
+[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="36_gjtqh"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="64_gljot"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tv306"]

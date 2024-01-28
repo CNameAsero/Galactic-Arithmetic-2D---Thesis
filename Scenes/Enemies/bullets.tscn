@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bqcvo4prrpwyk"]
 
 [ext_resource type="Script" path="res://Scripts/bullets.gd" id="1_d3g3j"]
-[ext_resource type="Texture2D" uid="uid://dmq0mk0t7nj5x" path="res://Sprites/Enemies/Octopus_projectile.png" id="2_tjxv4"]
+[ext_resource type="Texture2D" uid="uid://dmq0mk0t7nj5x" path="res://Sprites/Enemies/world2_enemies/Octopus_projectile.png" id="2_tjxv4"]
 
 [sub_resource type="GDScript" id="GDScript_hcx1j"]
 script/source = "extends Sprite2D

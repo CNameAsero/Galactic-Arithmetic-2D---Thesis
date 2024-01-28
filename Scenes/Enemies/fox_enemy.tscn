@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c3ptn3115rf3t"]
 
-[ext_resource type="Texture2D" uid="uid://dypx8mxn57tgv" path="res://Sprites/Enemies/Fox_last.png" id="1_k1goc"]
+[ext_resource type="Texture2D" uid="uid://dypx8mxn57tgv" path="res://Sprites/Enemies/world1_enemies/Fox_last.png" id="1_k1goc"]
 [ext_resource type="Script" path="res://Scripts/fox_enemy.gd" id="1_yn8un"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tbhfm"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmq0mk0t7nj5x"
-path="res://.godot/imported/Octopus_projectile.png-937f2b9a64c57ae8c7cc20a2bf2fa908.ctex"
+uid="uid://cjw6ojh6tgq6v"
+path="res://.godot/imported/Lava_tile.png-e882b51066ee53bb8241d609c19a6e58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Octopus_projectile.png"
-dest_files=["res://.godot/imported/Octopus_projectile.png-937f2b9a64c57ae8c7cc20a2bf2fa908.ctex"]
+source_file="res://Sprites/Enemies/world3_enemies/Lava_tile.png"
+dest_files=["res://.godot/imported/Lava_tile.png-e882b51066ee53bb8241d609c19a6e58.ctex"]
 
 [params]
 

@@ -24,13 +24,8 @@ func _ready():
 func _process(delta):
 	if patrol:
 		shark_patrol(delta)
-
 	if chasing and target:
 		chase_player(delta)
-
-	if !chasing and !patrol:
-		return_pos(delta)
-
 
 func shark_patrol(delta):
 	var distance_to_target = global_position.distance_to(target_pos)

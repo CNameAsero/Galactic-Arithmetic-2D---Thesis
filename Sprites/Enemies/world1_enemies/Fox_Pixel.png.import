@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpr0cs8jjfgc1"
-path="res://.godot/imported/Enemy_Fox2.png-41d7140339fdd5197c7fe90d07d10419.ctex"
+uid="uid://cjd10v6ag6s0j"
+path="res://.godot/imported/Fox_Pixel.png-9dc2881e19e191ac1a76768b54cae38a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Enemy_Fox2.png"
-dest_files=["res://.godot/imported/Enemy_Fox2.png-41d7140339fdd5197c7fe90d07d10419.ctex"]
+source_file="res://Sprites/Enemies/world1_enemies/Fox_Pixel.png"
+dest_files=["res://.godot/imported/Fox_Pixel.png-9dc2881e19e191ac1a76768b54cae38a.ctex"]
 
 [params]
 

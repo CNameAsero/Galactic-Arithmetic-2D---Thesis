@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dk0trij6hevr6"]
 
 [ext_resource type="Script" path="res://Scripts/shark.gd" id="1_lg7u7"]
-[ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/ViciousShark.png" id="1_pnn3n"]
+[ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/world2_enemies/ViciousShark.png" id="1_pnn3n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7cyq"]
 radius = 9.0

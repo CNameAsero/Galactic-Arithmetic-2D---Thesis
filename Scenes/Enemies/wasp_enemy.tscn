@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://brr55dgynt6pf"]
 
 [ext_resource type="Script" path="res://Scripts/wasp_enemy.gd" id="1_fwbjq"]
-[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/Wasp.png" id="1_ma3h2"]
+[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="1_ma3h2"]
 
 [sub_resource type="Animation" id="Animation_a4h0f"]
 resource_name = "Back_fly"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7cbls0xth6mx"
-path="res://.godot/imported/Octopus.png-16284990ae4448bc228773abe6ad694f.ctex"
+uid="uid://dmq0mk0t7nj5x"
+path="res://.godot/imported/Octopus_projectile.png-2c2cbac51f83f56b296f16d21019c50e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Octopus.png"
-dest_files=["res://.godot/imported/Octopus.png-16284990ae4448bc228773abe6ad694f.ctex"]
+source_file="res://Sprites/Enemies/world2_enemies/Octopus_projectile.png"
+dest_files=["res://.godot/imported/Octopus_projectile.png-2c2cbac51f83f56b296f16d21019c50e.ctex"]
 
 [params]
 

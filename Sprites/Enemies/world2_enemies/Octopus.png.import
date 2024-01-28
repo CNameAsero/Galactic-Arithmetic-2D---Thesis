@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://du57ju053jre5"
-path="res://.godot/imported/Blowfish.png-6ccdb153077dcc6de9ea383b6758ecea.ctex"
+uid="uid://b7cbls0xth6mx"
+path="res://.godot/imported/Octopus.png-b5b3f67877e6876a3f94b7fa2c6814c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/Blowfish.png"
-dest_files=["res://.godot/imported/Blowfish.png-6ccdb153077dcc6de9ea383b6758ecea.ctex"]
+source_file="res://Sprites/Enemies/world2_enemies/Octopus.png"
+dest_files=["res://.godot/imported/Octopus.png-b5b3f67877e6876a3f94b7fa2c6814c2.ctex"]
 
 [params]
 

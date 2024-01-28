@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4k7v6bfckk1y"
-path="res://.godot/imported/ViciousShark.png-fcc2676cce8705b65b4f137868e4b0dd.ctex"
+uid="uid://du57ju053jre5"
+path="res://.godot/imported/Blowfish.png-caca8a51474ef3c8feaeb67d7e8e540f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/ViciousShark.png"
-dest_files=["res://.godot/imported/ViciousShark.png-fcc2676cce8705b65b4f137868e4b0dd.ctex"]
+source_file="res://Sprites/Enemies/world2_enemies/Blowfish.png"
+dest_files=["res://.godot/imported/Blowfish.png-caca8a51474ef3c8feaeb67d7e8e540f.ctex"]
 
 [params]
 

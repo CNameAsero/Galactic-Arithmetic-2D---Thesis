@@ -1,9 +1,37 @@
-[gd_scene load_steps=13 format=3 uid="uid://dmyl7dmuee7qy"]
+[gd_scene load_steps=41 format=3 uid="uid://dmyl7dmuee7qy"]
 
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="1_g213v"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="2_cmriv"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="3_u6ruk"]
-[ext_resource type="PackedScene" uid="uid://cctb0dww2joqb" path="res://Scenes/Enemies/octopus.tscn" id="4_28ibn"]
+[ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="5_j3xn1"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="6_y7qea"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="7_x1nos"]
+[ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="8_s8iff"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="9_85g5s"]
+[ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="9_s5we0"]
+[ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="10_gjkrv"]
+[ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="11_f2doy"]
+[ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="12_2aq4y"]
+[ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="13_a2ke5"]
+[ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="14_hhwm4"]
+[ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="15_rr1y2"]
+[ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="16_o4med"]
+[ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="17_eto5d"]
+[ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="18_gnt3w"]
+[ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="19_66x7r"]
+[ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="20_4cjti"]
+[ext_resource type="Script" path="res://Scripts/level_complete_menu.gd" id="21_1iak1"]
+[ext_resource type="Texture2D" uid="uid://crhbjfi262iqx" path="res://Galactic Arithmetic Assets/level_complete_asset/UFO.png" id="22_vn58n"]
+[ext_resource type="Texture2D" uid="uid://gg2meb0btp0l" path="res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png" id="23_mdcgn"]
+[ext_resource type="Texture2D" uid="uid://bfsdm20oqx2gq" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png" id="24_dwuns"]
+[ext_resource type="Texture2D" uid="uid://dowgmef2b80jh" path="res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png" id="25_tbyjd"]
+[ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="26_xlm77"]
+[ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="27_qa5rt"]
+[ext_resource type="Texture2D" uid="uid://y7l37jl0o23c" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png" id="28_0d4gs"]
+[ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="29_7x823"]
+[ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="30_u614l"]
+[ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="31_jptoe"]
+[ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="32_fxsl1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv4f4"]
 radius = 27.0185
@@ -148,5 +176,397 @@ libraries = {
 position = Vector2(189, 898)
 scale = Vector2(1.85, 1.85)
 
-[node name="octopus" parent="." instance=ExtResource("4_28ibn")]
-position = Vector2(221, 180)
+[node name="world3_enemies" parent="." instance=ExtResource("5_j3xn1")]
+position = Vector2(764, 459)
+enemy_type = "skeleton"
+move_direction = Vector2(250, 0)
+
+[node name="world3_enemies2" parent="." instance=ExtResource("5_j3xn1")]
+position = Vector2(1144, 189)
+move_direction = Vector2(250, 0)
+
+[node name="world3_enemies3" parent="." instance=ExtResource("5_j3xn1")]
+position = Vector2(270, 281)
+enemy_type = "lava"
+move_direction = Vector2(250, 0)
+
+[node name="health_system" parent="." instance=ExtResource("9_85g5s")]
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("6_y7qea")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_x1nos")
+
+[node name="game_paused" parent="menus" instance=ExtResource("8_s8iff")]
+visible = false
+layout_mode = 1
+offset_left = -915.0
+offset_top = 495.0
+offset_right = -915.0
+offset_bottom = 495.0
+
+[node name="game_over" type="Control" parent="menus"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -915.5
+offset_top = 494.5
+offset_right = -915.5
+offset_bottom = 494.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_s5we0")
+
+[node name="game_over_menu" type="Panel" parent="menus/game_over"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bg" type="TextureRect" parent="menus/game_over/game_over_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_gjkrv")
+
+[node name="planet_destroyed_design" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
+layout_mode = 1
+offset_left = -188.0
+offset_top = -150.0
+offset_right = 197.0
+offset_bottom = 165.0
+texture = ExtResource("11_f2doy")
+
+[node name="crashed_ufo_design" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
+layout_mode = 1
+offset_left = 522.0
+offset_top = 236.0
+offset_right = 907.0
+offset_bottom = 551.0
+texture = ExtResource("12_2aq4y")
+expand_mode = 1
+
+[node name="game_over_text" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -316.875
+offset_right = 341.0
+offset_bottom = -166.875
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_a2ke5")
+
+[node name="bg_inside" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
+modulate = Color(1, 1, 1, 0.862745)
+self_modulate = Color(1, 1, 1, 0.862745)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -150.0
+offset_right = 303.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("14_hhwm4")
+
+[node name="sad_slimey" type="TextureRect" parent="menus/game_over/game_over_menu/bg/bg_inside"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -495.774
+offset_top = -264.813
+offset_right = 505.226
+offset_bottom = 299.187
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("15_rr1y2")
+expand_mode = 1
+
+[node name="button_holder" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 125.0
+offset_right = 300.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.00162061
+texture = ExtResource("16_o4med")
+expand_mode = 1
+
+[node name="restart_button" type="TextureButton" parent="menus/game_over/game_over_menu/bg/button_holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -37.5
+offset_right = 175.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("17_eto5d")
+texture_pressed = ExtResource("18_gnt3w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="home_button" type="TextureButton" parent="menus/game_over/game_over_menu/bg/button_holder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -37.5
+offset_right = -100.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("19_66x7r")
+texture_pressed = ExtResource("20_4cjti")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level_complete_menu" type="Control" parent="menus"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -915.5
+offset_top = 494.5
+offset_right = -915.5
+offset_bottom = 494.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("21_1iak1")
+
+[node name="Panel" type="Panel" parent="menus/level_complete_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ufo" type="TextureRect" parent="menus/level_complete_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -580.0
+offset_right = 325.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("22_vn58n")
+
+[node name="slime" type="TextureRect" parent="menus/level_complete_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.0
+offset_top = -416.0
+offset_right = 312.0
+offset_bottom = -227.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("23_mdcgn")
+
+[node name="bg" type="TextureRect" parent="menus/level_complete_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -250.0
+offset_right = 375.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("24_dwuns")
+
+[node name="button_placeholder" type="TextureRect" parent="menus/level_complete_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.5
+offset_top = 100.0
+offset_right = 323.5
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("25_tbyjd")
+
+[node name="next_level_button" type="TextureButton" parent="menus/level_complete_menu/bg/button_placeholder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 126.5
+offset_top = -37.5
+offset_right = 201.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("26_xlm77")
+texture_pressed = ExtResource("27_qa5rt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="restart_button" type="TextureButton" parent="menus/level_complete_menu/bg/button_placeholder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.5
+offset_top = -37.5
+offset_right = -123.5
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("28_0d4gs")
+texture_pressed = ExtResource("18_gnt3w")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="TextureRect" parent="menus/level_complete_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -303.0
+offset_top = -251.0
+offset_right = 307.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("29_7x823")
+
+[node name="timer" type="TextureRect" parent="menus/level_complete_menu/bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = -20.0
+offset_right = -107.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("30_u614l")
+expand_mode = 1
+
+[node name="time_holder" type="TextureRect" parent="menus/level_complete_menu/bg/timer"]
+self_modulate = Color(1, 1, 1, 0.607843)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 58.5
+offset_top = -37.5
+offset_right = 263.5
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("31_jptoe")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="menus/level_complete_menu/bg/timer"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 5.0
+offset_right = 303.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(0.521569, 0.172549, 0.721569, 0.643137)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("32_fxsl1")
+theme_override_font_sizes/font_size = 95
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
+[connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]
+[connection signal="pressed" from="menus/level_complete_menu/bg/button_placeholder/next_level_button" to="menus/level_complete_menu" method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="menus/level_complete_menu/bg/button_placeholder/restart_button" to="menus/level_complete_menu" method="_on_restart_button_pressed"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cctb0dww2joqb"]
 
 [ext_resource type="Script" path="res://Scripts/octopus.gd" id="1_dagf2"]
-[ext_resource type="Texture2D" uid="uid://b7cbls0xth6mx" path="res://Sprites/Enemies/Octopus.png" id="1_du6ru"]
+[ext_resource type="Texture2D" uid="uid://b7cbls0xth6mx" path="res://Sprites/Enemies/world2_enemies/Octopus.png" id="1_du6ru"]
 [ext_resource type="PackedScene" uid="uid://bqcvo4prrpwyk" path="res://Scenes/Enemies/bullets.tscn" id="2_fc7ku"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_inxqy"]

@@ -39,7 +39,7 @@
 [ext_resource type="Script" path="res://Scripts/wasp_enemy.gd" id="31_ob2n0"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="31_symrn"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="32_iq2fh"]
-[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/Wasp.png" id="32_nbrto"]
+[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="32_nbrto"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="33_b2gg0"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="34_ktmu3"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="35_s6nqf"]
