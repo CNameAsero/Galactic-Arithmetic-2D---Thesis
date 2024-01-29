@@ -4,10 +4,10 @@
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_a2xxi"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_jxity"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_8bdfm"]
+[ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="4_p8uan"]
 [ext_resource type="PackedScene" uid="uid://c3ptn3115rf3t" path="res://Scenes/Enemies/fox_enemy.tscn" id="5_uxr7y"]
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="6_kasoa"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="7_jpb32"]
-[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl2.gd" id="7_rqqp2"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="8_7le6u"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="8_hvatq"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="9_kcltd"]
@@ -201,21 +201,21 @@ layer_5/tile_data = PackedInt32Array(1310773, 720898, 6, 1376309, 720898, 7, 144
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 539)
 
-[node name="game_manager" type="Node2D" parent="."]
-script = ExtResource("7_rqqp2")
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("4_p8uan")]
+num_term = 3
 
-[node name="bool_handler" type="Node2D" parent="game_manager"]
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
 script = ExtResource("8_hvatq")
 
-[node name="final_answer" parent="game_manager" instance=ExtResource("27_fyurx")]
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("27_fyurx")]
 position = Vector2(833, 214)
 scale = Vector2(1.85, 1.85)
 final_answer = 19
 
-[node name="timer" parent="game_manager" instance=ExtResource("28_rhj7q")]
+[node name="timer" parent="game_manager_world_1-2" instance=ExtResource("28_rhj7q")]
 position = Vector2(62, 65)
 
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager"]
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
 offset_left = 576.0
 offset_top = -17.0
 offset_right = 1342.0
@@ -227,31 +227,31 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="9" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(815, 874)
 number = 9
 
-[node name="7" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="7" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(1274, 870)
 number = 7
 
-[node name="8" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="8" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(1265, 267)
 number = 8
 
-[node name="3" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="3" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(1486, 721)
 number = 3
 
-[node name="5" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="5" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(658, 697)
 number = 5
 
-[node name="5_2nd" parent="game_manager" instance=ExtResource("10_uowya")]
+[node name="5_2nd" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
 position = Vector2(1104, 391)
 number = 5
 
-[node name="+" parent="game_manager" instance=ExtResource("11_hk7rs")]
+[node name="+" parent="game_manager_world_1-2" instance=ExtResource("11_hk7rs")]
 position = Vector2(623, 383)
 oper = "+"
 

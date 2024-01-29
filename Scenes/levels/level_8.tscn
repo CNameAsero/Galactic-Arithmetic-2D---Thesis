@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_nqt34"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_xwxw6"]
 [ext_resource type="PackedScene" uid="uid://cctb0dww2joqb" path="res://Scenes/Enemies/octopus.tscn" id="5_74ad0"]
-[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl8.gd" id="5_f54aj"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_3uiii"]
 [ext_resource type="Script" path="res://Scripts/final_answer.gd" id="11_dgbus"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="12_0jx8w"]
@@ -48,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://b7cbls0xth6mx" path="res://Sprites/Enemies/world2_enemies/Octopus.png" id="52_8cts0"]
 [ext_resource type="Texture2D" uid="uid://bfsdm20oqx2gq" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png" id="53_rjlsu"]
 [ext_resource type="Texture2D" uid="uid://dowgmef2b80jh" path="res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png" id="54_up7lu"]
+[ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="55_bre4v"]
 [ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="55_n53wn"]
 [ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="56_thfg8"]
 [ext_resource type="Texture2D" uid="uid://y7l37jl0o23c" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png" id="57_een3l"]
@@ -514,38 +514,38 @@ layer_3/tile_data = PackedInt32Array(1048582, 851974, 3, 1114118, 851974, 4, 117
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 541)
 
-[node name="game_manager" type="Node2D" parent="."]
-script = ExtResource("5_f54aj")
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("55_bre4v")]
+num_term = 3
 
-[node name="bool_handler" type="Node2D" parent="game_manager"]
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
 script = ExtResource("6_3uiii")
 
-[node name="timer" type="Node2D" parent="game_manager"]
+[node name="timer" type="Node2D" parent="game_manager_world_1-2"]
 position = Vector2(62, 65)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("28_s8lo8")
 
-[node name="Sprite2D" type="Sprite2D" parent="game_manager/timer"]
+[node name="Sprite2D" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 texture = ExtResource("29_blv35")
 hframes = 4
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/timer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/timer"]
 speed_scale = 0.1
 libraries = {
 "": SubResource("AnimationLibrary_kxgoo")
 }
 
-[node name="Timer" type="Timer" parent="game_manager/timer"]
+[node name="Timer" type="Timer" parent="game_manager_world_1-2/timer"]
 wait_time = 180.0
 autostart = true
 
-[node name="timer_placeholder" type="Sprite2D" parent="game_manager/timer"]
+[node name="timer_placeholder" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 position = Vector2(4, 158)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("30_8g2ku")
 
-[node name="timer_label" type="Label" parent="game_manager/timer/timer_placeholder"]
+[node name="timer_label" type="Label" parent="game_manager_world_1-2/timer/timer_placeholder"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -566,7 +566,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager"]
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
 offset_left = 576.0
 offset_top = -17.0
 offset_right = 1342.0
@@ -578,7 +578,7 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="final_answer" type="CharacterBody2D" parent="game_manager"]
+[node name="final_answer" type="CharacterBody2D" parent="game_manager_world_1-2"]
 position = Vector2(1345, 601)
 scale = Vector2(1.8, 1.8)
 collision_layer = 4
@@ -586,145 +586,145 @@ collision_mask = 25
 script = ExtResource("11_dgbus")
 final_answer = 3
 
-[node name="3" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="3" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 position = Vector2(-212.778, -6.66669)
 texture = ExtResource("12_i4bnf")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/3"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="1" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="1" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("13_h5hqc")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/1"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/1"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="48" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="48" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("14_qrwvl")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/48"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/48"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="72" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="72" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("15_7ufph")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/72"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/72"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="24" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="24" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("16_me4so")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/24"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/24"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="10" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="10" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("17_5b680")
 hframes = 5
 vframes = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/10"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/10"]
 libraries = {
 "": SubResource("AnimationLibrary_bhy63")
 }
 
-[node name="11" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="11" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("18_708yx")
 hframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/11"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/11"]
 libraries = {
 "": SubResource("AnimationLibrary_65hcj")
 }
 
-[node name="19" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="19" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("19_qf4p2")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/19"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/19"]
 speed_scale = 0.5
 libraries = {
 "": SubResource("AnimationLibrary_jlcnm")
 }
 
-[node name="32" type="Sprite2D" parent="game_manager/final_answer"]
+[node name="32" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 texture = ExtResource("20_ax7qx")
 hframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/final_answer/32"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/32"]
 libraries = {
 "": SubResource("AnimationLibrary_kfyue")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/final_answer"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager_world_1-2/final_answer"]
 visible = false
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_p8y4e")
 
-[node name="54" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="54" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(1351, 819)
 number = 54
 
-[node name="24" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="24" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(585, 785)
 number = 24
 
-[node name="9" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(1444, 370)
 number = 9
 
-[node name="4" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="4" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(1336, 549)
 number = 4
 
-[node name="2" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="2" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(570, 555)
 number = 2
 
-[node name="8" parent="game_manager" instance=ExtResource("12_0jx8w")]
+[node name="8" parent="game_manager_world_1-2" instance=ExtResource("12_0jx8w")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(270, 334)
 number = 8
 
-[node name="d" parent="game_manager" instance=ExtResource("13_rlyif")]
+[node name="d" parent="game_manager_world_1-2" instance=ExtResource("13_rlyif")]
 position = Vector2(1014, 542)
 oper = "÷"
 
@@ -1221,7 +1221,7 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
+[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="timeout" from="enemies/octopus4/Area2D/Timer" to="enemies/octopus4" method="_on_timer_timeout" flags=18]
 [connection signal="body_entered" from="enemies/octopus4/det" to="enemies/octopus4" method="_on_det_body_entered" flags=18]
 [connection signal="body_exited" from="enemies/octopus4/det" to="enemies/octopus4" method="_on_det_body_exited" flags=18]

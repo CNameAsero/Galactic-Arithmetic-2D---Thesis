@@ -54,7 +54,6 @@ func _ready():
 			elif enemy_type == "bat":
 				area_radius_bat()
 				if i.name == "bat":
-					print("bat")
 					$lava.queue_free()
 					$skeleton.queue_free()
 			elif enemy_type == "skeleton":

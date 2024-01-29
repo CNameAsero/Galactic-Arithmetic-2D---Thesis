@@ -2,9 +2,9 @@
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_qk2v4"]
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_18qre"]
+[ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_ehkhw"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_t24df"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_qwug5"]
-[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl3.gd" id="6_kv6c3"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_ndf8r"]
 [ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="6_rn0n7"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="12_ib1s5"]
@@ -339,17 +339,17 @@ layer_5/tile_data = PackedInt32Array(1441804, 262146, 0, 1507340, 262146, 1, 157
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 543)
 
-[node name="game_manager" type="Node2D" parent="."]
-script = ExtResource("6_kv6c3")
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("2_ehkhw")]
+num_term = 3
 
-[node name="bool_handler" type="Node2D" parent="game_manager"]
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
 script = ExtResource("6_ndf8r")
 
-[node name="final_answer" parent="game_manager" instance=ExtResource("6_rn0n7")]
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("6_rn0n7")]
 position = Vector2(959, 533)
 final_answer = 3
 
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager"]
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
 offset_left = 576.0
 offset_top = -17.0
 offset_right = 1342.0
@@ -361,32 +361,32 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="timer" type="Node2D" parent="game_manager"]
+[node name="timer" type="Node2D" parent="game_manager_world_1-2"]
 position = Vector2(62, 65)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("27_6nhas")
 
-[node name="Sprite2D" type="Sprite2D" parent="game_manager/timer"]
+[node name="Sprite2D" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 texture = ExtResource("28_jb84i")
 hframes = 4
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/timer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/timer"]
 speed_scale = 0.1
 libraries = {
 "": SubResource("AnimationLibrary_kxgoo")
 }
 
-[node name="Timer" type="Timer" parent="game_manager/timer"]
+[node name="Timer" type="Timer" parent="game_manager_world_1-2/timer"]
 wait_time = 180.0
 autostart = true
 
-[node name="timer_placeholder" type="Sprite2D" parent="game_manager/timer"]
+[node name="timer_placeholder" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 position = Vector2(4, 158)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("29_hmudw")
 
-[node name="timer_label" type="Label" parent="game_manager/timer/timer_placeholder"]
+[node name="timer_label" type="Label" parent="game_manager_world_1-2/timer/timer_placeholder"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -407,27 +407,27 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="8" parent="game_manager" instance=ExtResource("12_ib1s5")]
+[node name="8" parent="game_manager_world_1-2" instance=ExtResource("12_ib1s5")]
 position = Vector2(1392, 485)
 number = 8
 
-[node name="9" parent="game_manager" instance=ExtResource("12_ib1s5")]
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("12_ib1s5")]
 position = Vector2(1766, 726)
 number = 9
 
-[node name="6" parent="game_manager" instance=ExtResource("12_ib1s5")]
+[node name="6" parent="game_manager_world_1-2" instance=ExtResource("12_ib1s5")]
 position = Vector2(965, 664)
 number = 6
 
-[node name="2" parent="game_manager" instance=ExtResource("12_ib1s5")]
+[node name="2" parent="game_manager_world_1-2" instance=ExtResource("12_ib1s5")]
 position = Vector2(962, 340)
 number = 2
 
-[node name="4" parent="game_manager" instance=ExtResource("12_ib1s5")]
+[node name="4" parent="game_manager_world_1-2" instance=ExtResource("12_ib1s5")]
 position = Vector2(387, 356)
 number = 4
 
-[node name="-" parent="game_manager" instance=ExtResource("13_fl458")]
+[node name="-" parent="game_manager_world_1-2" instance=ExtResource("13_fl458")]
 position = Vector2(1544, 925)
 oper = "-"
 
@@ -592,9 +592,6 @@ offset_top = 630.0
 offset_right = 258.0
 offset_bottom = 630.0
 buff_selected = "speed"
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
 
 [node name="time_buff" parent="." instance=ExtResource("57_7jjpe")]
 offset_left = 1670.0
@@ -983,7 +980,7 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
+[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/area_det" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_area_det_body_entered" flags=18]

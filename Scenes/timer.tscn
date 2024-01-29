@@ -44,7 +44,7 @@ _data = {
 }
 
 [node name="timer" type="Node2D"]
-position = Vector2(277, 160)
+position = Vector2(79, 77)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_k6sgc")
 

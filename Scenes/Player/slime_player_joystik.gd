@@ -32,3 +32,14 @@ func _physics_process(_delta):
 		velocity = Vector2(0, 0)
 		
 	move_and_slide()
+
+func do_teleport(area):
+	for portal in get_tree().get_nodes_in_group("portal"):
+		if (portal != area and portal.id == area.id and not portal.lock_portal):
+			area.do_lock()
+			self.global_position = portal.global_position
+
+func _on_area_2d_area_entered(area):
+	if (area.is_in_group("portal")):
+		if(not area.lock_portal):
+			do_teleport(area)

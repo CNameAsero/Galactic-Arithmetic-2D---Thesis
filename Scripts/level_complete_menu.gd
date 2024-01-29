@@ -1,8 +1,8 @@
 extends Control
 
 @onready var label = $bg/timer/Label
-@onready var timer = $"../../game_manager/timer"
-@onready var game_manager = $"../../game_manager"
+@onready var timer = $"../../game_manager_world_1-2/timer"
+@onready var game_manager = $"../../game_manager_world_1-2"
 
 func _on_next_level_button_pressed():
 	AudioManager.play_button_sfx()

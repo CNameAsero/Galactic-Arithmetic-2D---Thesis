@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_4pr1q"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_dhcrn"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_68m0x"]
-[ext_resource type="Script" path="res://Scenes/levels/levels_script/game_manager_lvl5.gd" id="5_602ys"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="5_bnjni"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="5_imsl6"]
 [ext_resource type="Script" path="res://Scenes/timer.gd" id="6_lhdxf"]
@@ -44,6 +43,7 @@
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="34_jj1gf"]
 [ext_resource type="Script" path="res://Scripts/wasp_enemy.gd" id="35_rp85w"]
 [ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="36_gjtqh"]
+[ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="46_rbhug"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="64_gljot"]
 
 [sub_resource type="Animation" id="Animation_sd1pg"]
@@ -341,38 +341,38 @@ layer_5/tile_data = PackedInt32Array(1966100, 2, 9, 2031636, 2, 10, 1966101, 655
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 543)
 
-[node name="game_manager" type="Node2D" parent="."]
-script = ExtResource("5_602ys")
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("46_rbhug")]
+num_term = 4
 
-[node name="bool_handler" type="Node2D" parent="game_manager"]
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
 script = ExtResource("5_imsl6")
 
-[node name="timer" type="Node2D" parent="game_manager"]
+[node name="timer" type="Node2D" parent="game_manager_world_1-2"]
 position = Vector2(62, 65)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("6_lhdxf")
 
-[node name="Sprite2D" type="Sprite2D" parent="game_manager/timer"]
+[node name="Sprite2D" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 texture = ExtResource("7_odrjo")
 hframes = 4
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager/timer"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/timer"]
 speed_scale = 0.1
 libraries = {
 "": SubResource("AnimationLibrary_kxgoo")
 }
 
-[node name="Timer" type="Timer" parent="game_manager/timer"]
+[node name="Timer" type="Timer" parent="game_manager_world_1-2/timer"]
 wait_time = 180.0
 autostart = true
 
-[node name="timer_placeholder" type="Sprite2D" parent="game_manager/timer"]
+[node name="timer_placeholder" type="Sprite2D" parent="game_manager_world_1-2/timer"]
 position = Vector2(4, 158)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("8_xybyk")
 
-[node name="timer_label" type="Label" parent="game_manager/timer/timer_placeholder"]
+[node name="timer_label" type="Label" parent="game_manager_world_1-2/timer/timer_placeholder"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -393,7 +393,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager"]
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
 offset_left = 576.0
 offset_top = -17.0
 offset_right = 1342.0
@@ -405,39 +405,39 @@ theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="final_answer" parent="game_manager" instance=ExtResource("27_t3hmm")]
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("27_t3hmm")]
 position = Vector2(1345, 601)
 final_answer = 32
 
-[node name="16" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="16" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1723, 936)
 number = 16
 
-[node name="12" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="12" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1160, 275)
 number = 12
 
-[node name="9" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1600, 534)
 number = 9
 
-[node name="5" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="5" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1308, 537)
 number = 5
 
-[node name="6" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="6" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1454, 396)
 number = 6
 
-[node name="10" parent="game_manager" instance=ExtResource("16_hqchf")]
+[node name="10" parent="game_manager_world_1-2" instance=ExtResource("16_hqchf")]
 position = Vector2(1459, 707)
 number = 10
 
-[node name="+" parent="game_manager" instance=ExtResource("17_irer3")]
+[node name="+" parent="game_manager_world_1-2" instance=ExtResource("17_irer3")]
 position = Vector2(183, 435)
 oper = "+"
 
-[node name="-" parent="game_manager" instance=ExtResource("17_irer3")]
+[node name="-" parent="game_manager_world_1-2" instance=ExtResource("17_irer3")]
 position = Vector2(187, 709)
 oper = "-"
 
@@ -663,9 +663,6 @@ offset_top = 575.0
 offset_right = 1247.0
 offset_bottom = 575.0
 buff_selected = "speed"
-
-[node name="Timer" type="Timer" parent="."]
-wait_time = 10.0
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
@@ -1040,7 +1037,7 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="game_manager/timer/Timer" to="game_manager/timer" method="_on_timer_timeout"]
+[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Enemies/Wasp_enemy/area_det" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_area_det_body_entered" flags=18]

@@ -17,111 +17,57 @@ extends Node2D
 #player_health
 @onready var health_system = $"../health_system"
 
-
 #final answer
 @onready var final_answer = $final_answer.final_answer
-
-#numbers
-#@onready var num0 = $"Numbers/set_number"
-@onready var num1 = $"Number_5/5"
-@onready var num2 = $"Number_4/4"
-@onready var num3 = $"Number_1/1"
-@onready var num4 = $"Number_6/6"
-@onready var num5 = $"Number_9/9"
-#@onready var num6 = $"Numbers/set_number"
-#@onready var num7 = $"Numbers/set_number"
-#@onready var num8 = $"Numbers/set_number"
-#@onready var num9 = $"Numbers/set_number"
-
-#operators
-@onready var op1 = $"operator_+/+"
-#@onready var op2 = $"operator_-/-"
-#@onready var op3 = $"operator_x/x"
-#@onready var op4 = $"operator_d/d"
-
-#counters
-@onready var current_num = num1
-@onready var current_oper = op1
-@onready var num_counter = 0
-@onready var oper_counter = 0
-
 #levels
 @onready var currentlevel = 0
+
+@export_category("how many terms?")
+@export var num_term : int
+@export var oper_term : int
 
 func _ready():
 	pass
 
 func collect_number(num):
-	# Only collect the number if the last item was not a number
 	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
-		num_counter += 1
-		if num_counter == 1:
-			current_num = num2
-		elif num_counter == 2:
-			current_num = num3
-		last_item_was_number = false  # Update the flag
+		last_item_was_number = false
 	update_expression()
 	check_final_answer()
 
 func collect_operator(oper):
-	# Only collect the operator if the last item was a number
 	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
-		oper_counter += 1
-		#if oper_counter == 1:
-			#current_oper = op2
-		#elif oper_counter == 2:
-			#pass
-		last_item_was_number = true  # Update the flag
+		last_item_was_number = true
 	update_expression()
 	check_final_answer()
 
 func update_expression():
-	var numbers = ["_", "_", "_"]
-	var operators = ["_", "_"]
+	var numbers = []
+	var operators = []
+	
+	for i in range(num_term):
+		numbers.append("_")
+	for i in range(oper_term):
+		operators.append("_")
 
-	for i in range(min(collected_numbers.size(), 3)):
+	for i in range(min(collected_numbers.size(), num_term)):
 		numbers[i] = str(collected_numbers[i])
 
-	for i in range(min(collected_operators.size(), 2)):
+	for i in range(min(collected_operators.size(), oper_term)):
 		operators[i] = str(collected_operators[i])
 
 	current_expression = numbers[0]
-	if operators[0] != "_":
-		current_expression += " " + operators[0] + " " + numbers[1]
-	else:
-		current_expression += " _ _"
-	if operators[1] != "_":
-		current_expression += " " + operators[1] + " " + numbers[2]
-	else:
-		current_expression += " _ _"
+	for i in range(1, num_term):
+		if i <= collected_operators.size() and operators[i-1] != "_":
+			current_expression += " " + operators[i-1] + " " + numbers[i]
+		elif i < collected_numbers.size():
+			current_expression += " _ " + numbers[i]
+		else:
+			current_expression += " _ _"
 
 	$CurrentExpressionLabel.text = current_expression + " = " + str(calculate_expression())
-
-#func update_expression():
-#	var numbers = ["_", "_", "_"]
-#	var operators = ["_", "_"]
-#
-#	for i in range(collected_numbers.size()):
-#		numbers[i] = str(collected_numbers[i])
-#
-#	for i in range(collected_operators.size()):
-#		operators[i] = str(collected_operators[i])
-#
-#	current_expression = numbers[0] + " " + operators[0] + " " + numbers[1] + " " + operators[1] + " " + numbers[2]
-#
-#	$CurrentExpressionLabel.text = current_expression + " = " + str(calculate_expression())
-
-#func update_expression():
-#	current_expression = " "
-#	for i in range (collected_numbers.size()):
-#		if i < collected_operators.size():
-#			current_expression += " " + str(collected_numbers[i])
-#			current_expression += " " + str(collected_operators[i])
-#		else:
-#			current_expression += str(collected_numbers[i])
-#	$CurrentExpressionLabel.text = current_expression + " = " + str(calculate_expression())
 
 func calculate_expression():
 	if collected_numbers.size() == 0: #if array no value then return 0
@@ -142,15 +88,75 @@ func calculate_expression():
 				result += number
 			"-":
 				result -= number
-			"*":
+			"×":
 				result *= number
-			"/":
+			"÷":
 				if number != 0:
 					result /= number
 				else:
 					print("Division by zero error")
 					return 0
 	return result
+
+#func pemdas_expression():
+#	if collected_numbers.size() == 0: #if array no value then return 0
+#		return 0
+#
+#	var numbers_stack = []
+#	var operators_stack = []
+#
+#	for i in range(collected_numbers.size()):
+#		var number = collected_numbers[i]
+#		numbers_stack.append(number)
+#
+#		if i < collected_operators.size():
+#			var oper = collected_operators[i]
+#
+#			while operators_stack.size() > 0 and precedence(oper) <= precedence(operators_stack[-1]):
+#				if numbers_stack.size() < 2:
+#					print("Error: Not enough numbers for operation")
+#					return 0
+#				var num2 = numbers_stack.pop_back()
+#				var num1 = numbers_stack.pop_back()
+#				var op = operators_stack.pop_back()
+#				numbers_stack.append(apply_operator(op, num1, num2))
+#
+#			operators_stack.append(oper)
+#
+#	while operators_stack.size() > 0:
+#		if numbers_stack.size() < 2:
+#			print("Error: Not enough numbers for operation")
+#			return 0
+#		var num2 = numbers_stack.pop_back()
+#		var num1 = numbers_stack.pop_back()
+#		var op = operators_stack.pop_back()
+#		numbers_stack.append(apply_operator(op, num1, num2))
+#
+#	return numbers_stack[0]
+#func precedence(oper):
+#	match oper:
+#		"+", "-":
+#			return 1
+#		"×", "÷":
+#			return 2
+#		_:
+#			return 0
+#
+#func apply_operator(oper, num1, num2):
+#	match oper:
+#		"+":
+#			return num1 + num2
+#		"-":
+#			return num1 - num2
+#		"×":
+#			return num1 * num2
+#		"÷":
+#			if num2 != 0:
+#				return num1 / num2
+#			else:
+#				print("Division by zero error")
+#				return 0
+
 
 func check_final_answer():
 	var current_result = calculate_expression()
@@ -162,11 +168,27 @@ func check_final_answer():
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		get_tree().paused = true
-	elif collected_numbers.size() == 3 || current_result != calculate_expression():
+	elif collected_numbers.size() == num_term || current_result != calculate_expression():
 		AudioManager.play_deathsfx()
 		reset_for_next_level()
 		game_over.show()
 		get_tree().paused = true
+
+#func check_final_answer_pemdas():
+#	var current_result = pemdas_expression()
+#	if current_result == final_answer:
+#		AudioManager.level_complete_sfx.play()
+#		GameSettings.grasscurrentlevel[currentlevel + 1] = true
+#		reset_for_next_level()
+#		time_elapsed = $timer.get_elapsed_time()
+#		level_complete_menu.label.text = time_elapsed
+#		level_complete_menu.show()
+#		get_tree().paused = true
+#	elif collected_numbers.size() == num_term || current_result != pemdas_expression():
+#		AudioManager.play_deathsfx()
+#		reset_for_next_level()
+#		game_over.show()
+#		get_tree().paused = true
 
 func reset_player_position():
 	$"../Slime_player".position = player_pos
@@ -180,10 +202,6 @@ func reset_for_next_level():
 	reset_hp()
 	collected_numbers.clear()
 	collected_operators.clear()
-	num_counter = 0
-	oper_counter = 0
-	current_num = num1
-	current_oper = op1
 
 func _on_timer_timeout():
 	AudioManager.play_deathsfx()

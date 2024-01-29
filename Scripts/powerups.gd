@@ -9,8 +9,8 @@ extends Control
 @onready var hp_system = $"../health_system"
 @onready var player = $"../slime_player_joystick/slime_player_joystik"
 
-@onready var timer = $"../game_manager/timer/Timer"
-@onready var timer_ui = $"../game_manager/timer"
+@onready var timer = $"../game_manager_world_1-2/timer/Timer"
+@onready var timer_ui = $"../game_manager_world_1-2/timer"
 
 @onready var speed_buff_timer = $Area2D/speed/speed_buff_timer
 @onready var animation_player = $Area2D/AnimationPlayer
