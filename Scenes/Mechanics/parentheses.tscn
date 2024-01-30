@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dweql68le4mvj"]
+
+[ext_resource type="Texture2D" uid="uid://dq52pcnt2cd4a" path="res://Sprites/Collectibles/parentheses/(.png" id="1_fasnh"]
+[ext_resource type="Texture2D" uid="uid://vea7dvua3odb" path="res://Sprites/Collectibles/parentheses/).png" id="2_mbbfl"]
+
+[sub_resource type="GDScript" id="GDScript_co0yx"]
+script/source = "extends Node2D
+
+@export var parentheses_to_display : String
+@onready var animation_player = $AnimationPlayer
+@onready var set_parentheses = $set_parentheses
+
+@onready var access_manager = $\"..\"
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	for i in set_parentheses.get_children():
+		if i is Sprite2D and i.name == parentheses_to_display:
+			i.visible = true
+			match parentheses_to_display:
+				\"(\":
+					pass #play animation
+				\")\":
+					pass #play animation
+		else:
+			i.visible = false
+
+func _on_set_parentheses_body_entered(body):
+	if body.is_in_group(\"player\"):
+		if parentheses_to_display == \"(\" and !access_manager.last_item_was_number:
+			AudioManager.play_item_collect()
+			access_manager.isDestroy = true
+			access_manager.collect_open_parenthesis(parentheses_to_display)
+			queue_free()
+		elif parentheses_to_display == \")\" and access_manager.last_item_was_number and access_manager.open and access_manager.collected_items.size() > 1:
+			AudioManager.play_item_collect()
+			access_manager.isDestroy = true
+			access_manager.collect_close_parenthesis(parentheses_to_display)
+			queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d606e"]
+
+[node name="parentheses" type="Node2D"]
+script = SubResource("GDScript_co0yx")
+
+[node name="set_parentheses" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="(" type="Sprite2D" parent="set_parentheses"]
+visible = false
+texture = ExtResource("1_fasnh")
+
+[node name=")" type="Sprite2D" parent="set_parentheses"]
+visible = false
+texture = ExtResource("2_mbbfl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_parentheses"]
+shape = SubResource("CircleShape2D_d606e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[connection signal="body_entered" from="set_parentheses" to="." method="_on_set_parentheses_body_entered"]

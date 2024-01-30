@@ -1,11 +1,11 @@
+AnimationPlayer
+CollisionShape2D
+Area2D
+Sprite2D
 Label
 Node2D
 AudioStreamPlayer
 RichTextLabel
-Area2D
-AnimationPlayer
-Sprite2D
-CollisionShape2D
 Timer
 RayCast2D
 VisibleOnScreenNotifier2D

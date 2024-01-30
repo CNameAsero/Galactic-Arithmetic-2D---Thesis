@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkqj023564c8v"]
+
+[ext_resource type="Script" path="res://Scripts/operators_test.gd" id="1_4oodn"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="2_k4bdj"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="3_giudn"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="4_2yius"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="5_l2v1w"]
+[ext_resource type="Texture2D" uid="uid://bl7m3ayljpply" path="res://Sprites/Collectibles/Operators/^.png" id="6_skxf5"]
+
+[sub_resource type="GDScript" id="GDScript_lfiyq"]
+script/source = "extends Node2D
+
+@export var oper : String
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ief75"]
+radius = 7.63538
+
+[node name="operators" type="Node2D"]
+position = Vector2(100, 100)
+scale = Vector2(2, 2)
+script = SubResource("GDScript_lfiyq")
+
+[node name="set_operator" type="Area2D" parent="."]
+scale = Vector2(1.35, 1.35)
+collision_layer = 2
+script = ExtResource("1_4oodn")
+
+[node name="+" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_k4bdj")
+
+[node name="-" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_giudn")
+
+[node name="×" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_2yius")
+
+[node name="÷" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_l2v1w")
+
+[node name="^" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_skxf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_operator"]
+shape = SubResource("CircleShape2D_ief75")
+
+[connection signal="body_entered" from="set_operator" to="set_operator" method="_on_body_entered"]
