@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dikyi515jidoo"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu.gd" id="1_10ffj"]
+[ext_resource type="Script" path="res://Scripts/levels_sub_menu.gd" id="1_10ffj"]
 [ext_resource type="Texture2D" uid="uid://6hubjjyotw4s" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/bg.png" id="1_yc5b4"]
 [ext_resource type="Texture2D" uid="uid://gjmxwqq17iyp" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/ewan.png" id="2_ejrb4"]
 [ext_resource type="Texture2D" uid="uid://b6whjkdysyeg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/grass_holder.png" id="3_qne23"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://1mgvi8hjck03" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/level3_tap.png" id="11_gu1qg"]
 [ext_resource type="Texture2D" uid="uid://cbwnar20vbvi6" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/close.png" id="13_jftyu"]
 [ext_resource type="Texture2D" uid="uid://dh2us3h2p4v80" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/exit_button_tap.png" id="14_hesmp"]
+
 
 [node name="levels_sub_menu" type="Control"]
 layout_mode = 3

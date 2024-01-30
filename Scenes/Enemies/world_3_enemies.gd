@@ -19,7 +19,7 @@ var speed = 0.1 * PI / 180
 @export var ammo_skeleton : PackedScene
 @export var move_direction : Vector2
 
-@onready var player = $"../slime_player_joystick/slime_player_joystik"
+@onready var player = $"../../slime_player_joystick/slime_player_joystik"
 @onready var ray_cast_2d = $skeleton/RayCast2D
 @onready var timer = $skeleton/Timer
 
@@ -37,7 +37,7 @@ var target = null
 var chasing = false
 var patrol = true
 
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../../health_system"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -206,7 +206,7 @@ func player_hurt():
 	AudioManager.player_hurt()
 	var blink_duration = 0.1
 	var total_blink_time = 2.0
-	var sprite = $"../slime_player_joystick/slime_player_joystik/Sprite2D"
+	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
 
 	sprite.modulate = Color(1, 1, 1, 0.5)
 

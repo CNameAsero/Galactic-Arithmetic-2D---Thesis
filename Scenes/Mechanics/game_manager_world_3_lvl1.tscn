@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://drxxc2tehvpik"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager_world_3.gd" id="1_gjroo"]
+[ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="2_ta8uv"]
+
+[sub_resource type="GDScript" id="GDScript_ekoa0"]
+script/source = "extends Node2D
+
+@onready var isDestroy = false
+"
+
+[node name="game_manager_world_3_lvl1" type="Node2D"]
+script = ExtResource("1_gjroo")
+
+[node name="bool_handler" type="Node2D" parent="."]
+script = SubResource("GDScript_ekoa0")
+
+[node name="CurrentExpressionLabel" type="Label" parent="."]
+offset_left = 576.0
+offset_top = -17.0
+offset_right = 1342.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_ta8uv")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1

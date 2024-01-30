@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=13 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://t1yki7j3xxv8" path="res://Galactic Arithmetic Assets/Audio_Assets/level_complete_sfx.wav" id="9_27e31"]
 [ext_resource type="AudioStream" uid="uid://du1bqh1bfa85j" path="res://Galactic Arithmetic Assets/Audio_Assets/slime_hurt.mp3" id="10_fe16u"]
 [ext_resource type="AudioStream" uid="uid://ddu3jvnqbl4jw" path="res://Galactic Arithmetic Assets/Audio_Assets/Octopus_shot.mp3" id="11_tkjrb"]
+[ext_resource type="AudioStream" uid="uid://c30xwwrqe1v0g" path="res://Galactic Arithmetic Assets/Audio_Assets/Warp_teleport.mp3" id="12_hq4iy"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0fra")
@@ -60,3 +61,6 @@ stream = ExtResource("10_fe16u")
 
 [node name="octopus_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_tkjrb")
+
+[node name="teleport" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_hq4iy")

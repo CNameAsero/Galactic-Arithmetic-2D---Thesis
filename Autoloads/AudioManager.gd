@@ -14,7 +14,7 @@ var operator_collect: AudioStreamPlayer
 var level_complete_sfx: AudioStreamPlayer
 var slime_hurt : AudioStreamPlayer
 var octopus : AudioStreamPlayer
-
+var teleport : AudioStreamPlayer
 
 var is_music_muted = false #bg music menu
 var is_level1music_muted = false #bg music level1
@@ -32,6 +32,7 @@ func _ready():
 	level_complete_sfx = $level_complete_sfx
 	slime_hurt = $slime_hurt
 	octopus = $octopus_shot
+	teleport = $teleport
 
 func play_button_sfx():
 	button_sfx.play()
@@ -56,3 +57,6 @@ func player_hurt():
 
 func octopus_shot():
 	octopus.play()
+
+func tele():
+	teleport.play()

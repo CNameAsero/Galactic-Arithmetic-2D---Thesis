@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://uid2j5pbua11"]
 
-[ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="1_o2bs7"]
+[ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="1_o2bs7"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="2_6c7be"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="3_vw6rq"]
 
@@ -122,6 +122,7 @@ _data = {
 [node name="slime_player_joystik" type="CharacterBody2D" parent="." groups=["player"]]
 position = Vector2(480, 798)
 scale = Vector2(0.57, 0.57)
+collision_mask = 28
 platform_on_leave = 2
 script = ExtResource("1_o2bs7")
 

@@ -1,7 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://v5j124l7qxsn"]
 
-[ext_resource type="Script" path="res://Scenes/Player/slime_player.gd" id="1_5hmm0"]
+[ext_resource type="Script" path="res://Scripts/slime_player.gd" id="1_5hmm0"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="1_g5mma"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_a5lxp"]
 radius = 27.0185

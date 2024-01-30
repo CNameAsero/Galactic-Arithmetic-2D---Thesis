@@ -1,96 +1,97 @@
-[gd_scene load_steps=37 format=3 uid="uid://dmyl7dmuee7qy"]
+[gd_scene load_steps=38 format=3 uid="uid://dmyl7dmuee7qy"]
 
-[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_ffa3i"]
-[ext_resource type="PackedScene" uid="uid://cx6ms5v5vdqce" path="res://Scenes/Mechanics/game_manager.tscn" id="4_5salc"]
-[ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="5_j3xn1"]
-[ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="5_kik7j"]
-[ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="6_7m36i"]
-[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="6_y7qea"]
-[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="7_6nub1"]
-[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="7_x1nos"]
-[ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="8_s8iff"]
-[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="9_85g5s"]
-[ext_resource type="PackedScene" uid="uid://bvu8kvnxtxkqp" path="res://Scenes/timer.tscn" id="9_beccn"]
-[ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="9_s5we0"]
-[ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="10_gjkrv"]
-[ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="11_f2doy"]
-[ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="12_2aq4y"]
-[ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="13_a2ke5"]
-[ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="14_hhwm4"]
-[ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="15_rr1y2"]
-[ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="16_o4med"]
-[ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="17_eto5d"]
-[ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="18_gnt3w"]
-[ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="19_66x7r"]
-[ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="20_4cjti"]
-[ext_resource type="Script" path="res://Scripts/level_complete_menu.gd" id="21_1iak1"]
-[ext_resource type="Texture2D" uid="uid://crhbjfi262iqx" path="res://Galactic Arithmetic Assets/level_complete_asset/UFO.png" id="22_vn58n"]
-[ext_resource type="Texture2D" uid="uid://gg2meb0btp0l" path="res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png" id="23_mdcgn"]
-[ext_resource type="Texture2D" uid="uid://bfsdm20oqx2gq" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png" id="24_dwuns"]
-[ext_resource type="Texture2D" uid="uid://dowgmef2b80jh" path="res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png" id="25_tbyjd"]
-[ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="26_xlm77"]
-[ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="27_qa5rt"]
-[ext_resource type="Texture2D" uid="uid://y7l37jl0o23c" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png" id="28_0d4gs"]
-[ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="29_7x823"]
-[ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="30_u614l"]
-[ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="31_jptoe"]
-[ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="32_fxsl1"]
-[ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="38_shqu0"]
+[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_5j7v1"]
+[ext_resource type="PackedScene" uid="uid://cx6ms5v5vdqce" path="res://Scenes/Mechanics/game_manager.tscn" id="2_fiwc2"]
+[ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="3_15wgt"]
+[ext_resource type="Script" path="res://Scripts/game_manager_world_3.gd" id="3_o5e3v"]
+[ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="4_k68ik"]
+[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="5_qytg7"]
+[ext_resource type="PackedScene" uid="uid://bvu8kvnxtxkqp" path="res://Scenes/timer.tscn" id="6_6ive0"]
+[ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="7_t534h"]
+[ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="8_kqlkj"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="9_inmmb"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="10_l8ovq"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="11_exey7"]
+[ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="12_pdh1b"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="13_ypeaa"]
+[ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="14_yb653"]
+[ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="15_ipxhw"]
+[ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="16_34lpg"]
+[ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="17_wt1ot"]
+[ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="18_x7fmp"]
+[ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="19_0gimi"]
+[ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="20_5603w"]
+[ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="21_bnead"]
+[ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="22_wpp3v"]
+[ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="23_kpm5v"]
+[ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="24_drwvr"]
+[ext_resource type="Script" path="res://Scripts/level_complete_menu.gd" id="25_wdo6t"]
+[ext_resource type="Texture2D" uid="uid://crhbjfi262iqx" path="res://Galactic Arithmetic Assets/level_complete_asset/UFO.png" id="26_bn0rw"]
+[ext_resource type="Texture2D" uid="uid://gg2meb0btp0l" path="res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png" id="27_2ubef"]
+[ext_resource type="Texture2D" uid="uid://bfsdm20oqx2gq" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png" id="28_ulv3i"]
+[ext_resource type="Texture2D" uid="uid://dowgmef2b80jh" path="res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png" id="29_dcakl"]
+[ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="30_t1wk7"]
+[ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="31_46ywk"]
+[ext_resource type="Texture2D" uid="uid://y7l37jl0o23c" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png" id="32_22pke"]
+[ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="33_scx2w"]
+[ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="34_xp6ri"]
+[ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="35_1tj6d"]
+[ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="36_d1w0q"]
 
 [node name="test" type="Node2D"]
 
-[node name="slime_player_joystick" parent="." instance=ExtResource("1_ffa3i")]
+[node name="slime_player_joystick" parent="." instance=ExtResource("1_5j7v1")]
 
-[node name="game_manager" parent="." instance=ExtResource("4_5salc")]
-num_term = 3
-oper_term = 2
+[node name="game_manager" parent="." instance=ExtResource("2_fiwc2")]
+script = ExtResource("3_o5e3v")
+num_term = 5
 
-[node name="Numbers" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(791, 877)
 number = 5
 
-[node name="Numbers2" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers2" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(1127, 711)
 number = 4
 
-[node name="Numbers3" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers3" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(564, 631)
 number = 1
 
-[node name="Numbers4" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers4" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(622, 469)
 number = 7
 
-[node name="Numbers5" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers5" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(947, 472)
 number = 8
 
-[node name="Numbers6" parent="game_manager" instance=ExtResource("5_kik7j")]
+[node name="Numbers6" parent="game_manager" instance=ExtResource("3_15wgt")]
 position = Vector2(816, 285)
 number = 3
 
-[node name="operators" parent="game_manager" instance=ExtResource("6_7m36i")]
+[node name="operators" parent="game_manager" instance=ExtResource("4_k68ik")]
 position = Vector2(1372, 808)
 oper = "+"
 
-[node name="operators2" parent="game_manager" instance=ExtResource("6_7m36i")]
+[node name="operators2" parent="game_manager" instance=ExtResource("4_k68ik")]
 position = Vector2(843, 665)
 oper = "-"
 
-[node name="operators3" parent="game_manager" instance=ExtResource("6_7m36i")]
+[node name="operators3" parent="game_manager" instance=ExtResource("4_k68ik")]
 position = Vector2(453, 405)
 oper = "×"
 
-[node name="operators4" parent="game_manager" instance=ExtResource("6_7m36i")]
+[node name="operators4" parent="game_manager" instance=ExtResource("4_k68ik")]
 position = Vector2(1335, 379)
 oper = "÷"
 
-[node name="final_answer" parent="game_manager" instance=ExtResource("7_6nub1")]
+[node name="final_answer" parent="game_manager" instance=ExtResource("5_qytg7")]
 position = Vector2(1547, 540)
 scale = Vector2(3.6, 3.6)
 final_answer = 10
 
-[node name="timer" parent="game_manager" instance=ExtResource("9_beccn")]
+[node name="timer" parent="game_manager" instance=ExtResource("6_6ive0")]
 
 [node name="CurrentExpressionLabel" type="Label" parent="game_manager"]
 offset_left = 576.0
@@ -99,38 +100,38 @@ offset_right = 1342.0
 offset_bottom = 122.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("32_fxsl1")
+theme_override_fonts/font = ExtResource("7_t534h")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="world3_enemies" parent="." instance=ExtResource("5_j3xn1")]
+[node name="world3_enemies" parent="." instance=ExtResource("8_kqlkj")]
 position = Vector2(764, 459)
 enemy_type = "skeleton"
 move_direction = Vector2(250, 0)
 
-[node name="world3_enemies2" parent="." instance=ExtResource("5_j3xn1")]
+[node name="world3_enemies2" parent="." instance=ExtResource("8_kqlkj")]
 position = Vector2(1144, 189)
 move_direction = Vector2(250, 0)
 
-[node name="world3_enemies3" parent="." instance=ExtResource("5_j3xn1")]
+[node name="world3_enemies3" parent="." instance=ExtResource("8_kqlkj")]
 position = Vector2(270, 281)
 enemy_type = "lava"
 move_direction = Vector2(250, 0)
 
-[node name="health_system" parent="." instance=ExtResource("9_85g5s")]
+[node name="health_system" parent="." instance=ExtResource("9_inmmb")]
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
 offset_right = 1913.0
 offset_bottom = 83.0
-texture_normal = ExtResource("6_y7qea")
+texture_normal = ExtResource("10_l8ovq")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("7_x1nos")
+script = ExtResource("11_exey7")
 
-[node name="game_paused" parent="menus" instance=ExtResource("8_s8iff")]
+[node name="game_paused" parent="menus" instance=ExtResource("12_pdh1b")]
 visible = false
 layout_mode = 1
 offset_left = -915.0
@@ -153,7 +154,7 @@ offset_right = -915.5
 offset_bottom = 494.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("9_s5we0")
+script = ExtResource("13_ypeaa")
 
 [node name="game_over_menu" type="Panel" parent="menus/game_over"]
 layout_mode = 1
@@ -182,7 +183,7 @@ offset_right = 375.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("10_gjkrv")
+texture = ExtResource("14_yb653")
 
 [node name="planet_destroyed_design" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
 layout_mode = 1
@@ -190,7 +191,7 @@ offset_left = -188.0
 offset_top = -150.0
 offset_right = 197.0
 offset_bottom = 165.0
-texture = ExtResource("11_f2doy")
+texture = ExtResource("15_ipxhw")
 
 [node name="crashed_ufo_design" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
 layout_mode = 1
@@ -198,7 +199,7 @@ offset_left = 522.0
 offset_top = 236.0
 offset_right = 907.0
 offset_bottom = 551.0
-texture = ExtResource("12_2aq4y")
+texture = ExtResource("16_34lpg")
 expand_mode = 1
 
 [node name="game_over_text" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
@@ -214,7 +215,7 @@ offset_right = 341.0
 offset_bottom = -166.875
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("13_a2ke5")
+texture = ExtResource("17_wt1ot")
 
 [node name="bg_inside" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
 modulate = Color(1, 1, 1, 0.862745)
@@ -232,7 +233,7 @@ offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.00162061
-texture = ExtResource("14_hhwm4")
+texture = ExtResource("18_x7fmp")
 
 [node name="sad_slimey" type="TextureRect" parent="menus/game_over/game_over_menu/bg/bg_inside"]
 layout_mode = 1
@@ -248,7 +249,7 @@ offset_bottom = 299.187
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.00162061
-texture = ExtResource("15_rr1y2")
+texture = ExtResource("19_0gimi")
 expand_mode = 1
 
 [node name="button_holder" type="TextureRect" parent="menus/game_over/game_over_menu/bg"]
@@ -265,7 +266,7 @@ offset_bottom = 225.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.00162061
-texture = ExtResource("16_o4med")
+texture = ExtResource("20_5603w")
 expand_mode = 1
 
 [node name="restart_button" type="TextureButton" parent="menus/game_over/game_over_menu/bg/button_holder"]
@@ -281,8 +282,8 @@ offset_right = 175.0
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("17_eto5d")
-texture_pressed = ExtResource("18_gnt3w")
+texture_normal = ExtResource("21_bnead")
+texture_pressed = ExtResource("22_wpp3v")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -299,8 +300,8 @@ offset_right = -100.0
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("19_66x7r")
-texture_pressed = ExtResource("20_4cjti")
+texture_normal = ExtResource("23_kpm5v")
+texture_pressed = ExtResource("24_drwvr")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -319,7 +320,7 @@ offset_right = -915.5
 offset_bottom = 494.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("21_1iak1")
+script = ExtResource("25_wdo6t")
 
 [node name="Panel" type="Panel" parent="menus/level_complete_menu"]
 layout_mode = 1
@@ -348,7 +349,7 @@ offset_right = 325.0
 offset_bottom = -23.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("22_vn58n")
+texture = ExtResource("26_bn0rw")
 
 [node name="slime" type="TextureRect" parent="menus/level_complete_menu"]
 layout_mode = 1
@@ -363,7 +364,7 @@ offset_right = 312.0
 offset_bottom = -227.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("23_mdcgn")
+texture = ExtResource("27_2ubef")
 
 [node name="bg" type="TextureRect" parent="menus/level_complete_menu"]
 layout_mode = 1
@@ -378,7 +379,7 @@ offset_right = 375.0
 offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("24_dwuns")
+texture = ExtResource("28_ulv3i")
 
 [node name="button_placeholder" type="TextureRect" parent="menus/level_complete_menu/bg"]
 layout_mode = 1
@@ -393,7 +394,7 @@ offset_right = 323.5
 offset_bottom = 201.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("25_tbyjd")
+texture = ExtResource("29_dcakl")
 
 [node name="next_level_button" type="TextureButton" parent="menus/level_complete_menu/bg/button_placeholder"]
 layout_mode = 1
@@ -408,8 +409,8 @@ offset_right = 201.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("26_xlm77")
-texture_pressed = ExtResource("27_qa5rt")
+texture_normal = ExtResource("30_t1wk7")
+texture_pressed = ExtResource("31_46ywk")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -426,8 +427,8 @@ offset_right = -123.5
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("28_0d4gs")
-texture_pressed = ExtResource("18_gnt3w")
+texture_normal = ExtResource("32_22pke")
+texture_pressed = ExtResource("22_wpp3v")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -444,7 +445,7 @@ offset_right = 307.0
 offset_bottom = -62.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("29_7x823")
+texture = ExtResource("33_scx2w")
 
 [node name="timer" type="TextureRect" parent="menus/level_complete_menu/bg"]
 layout_mode = 1
@@ -459,7 +460,7 @@ offset_right = -107.0
 offset_bottom = 55.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("30_u614l")
+texture = ExtResource("34_xp6ri")
 expand_mode = 1
 
 [node name="time_holder" type="TextureRect" parent="menus/level_complete_menu/bg/timer"]
@@ -476,7 +477,7 @@ offset_right = 263.5
 offset_bottom = 34.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("31_jptoe")
+texture = ExtResource("35_1tj6d")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="menus/level_complete_menu/bg/timer"]
@@ -488,15 +489,15 @@ offset_bottom = 76.0
 theme_override_colors/font_color = Color(0.521569, 0.172549, 0.721569, 0.643137)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("32_fxsl1")
+theme_override_fonts/font = ExtResource("7_t534h")
 theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Area2D" parent="." instance=ExtResource("38_shqu0")]
+[node name="Area2D" parent="." instance=ExtResource("36_d1w0q")]
 position = Vector2(1302, 574)
 
-[node name="Area2D2" parent="." instance=ExtResource("38_shqu0")]
+[node name="Area2D2" parent="." instance=ExtResource("36_d1w0q")]
 position = Vector2(516, 284)
 
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

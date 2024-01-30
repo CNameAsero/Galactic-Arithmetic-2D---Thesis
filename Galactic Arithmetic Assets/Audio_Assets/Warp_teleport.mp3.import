@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c30xwwrqe1v0g"
+path="res://.godot/imported/Warp_teleport.mp3-f7ef02e16464892001d6e6b6bd60c699.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/Warp_teleport.mp3"
+dest_files=["res://.godot/imported/Warp_teleport.mp3-f7ef02e16464892001d6e6b6bd60c699.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

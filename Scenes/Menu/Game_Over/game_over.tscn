@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://e7racty6r3dv"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="1_74t4w"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="1_74t4w"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="1_aslb8"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="2_5uxww"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="2_522vs"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="9_slc28"]
 [ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="10_sfkft"]
 [ext_resource type="Texture2D" uid="uid://divuqbrp4awkv" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png" id="12_wo5qb"]
+
 
 [node name="game_over" type="Control"]
 layout_mode = 3

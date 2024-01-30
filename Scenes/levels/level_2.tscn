@@ -1,7 +1,7 @@
 [gd_scene load_steps=50 format=3 uid="uid://dmfc7em2kunvo"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_10ucj"]
-[ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_a2xxi"]
+[ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_a2xxi"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_jxity"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_8bdfm"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="4_p8uan"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="8_7le6u"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="8_hvatq"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="9_kcltd"]
-[ext_resource type="Script" path="res://Scenes/Menu/Game_Over/game_over.gd" id="10_ienhn"]
+[ext_resource type="Script" path="res://Scripts/game_over.gd" id="10_ienhn"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="10_uowya"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="11_hk7rs"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="11_us20m"]

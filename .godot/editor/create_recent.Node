@@ -1,12 +1,13 @@
+Label
+Node2D
+AudioStreamPlayer
+RichTextLabel
 Area2D
 AnimationPlayer
 Sprite2D
 CollisionShape2D
-RichTextLabel
 Timer
 RayCast2D
-Node2D
-AudioStreamPlayer
 VisibleOnScreenNotifier2D
 Camera2D
 TileMap
@@ -18,4 +19,3 @@ HSlider
 CheckButton
 TextureButton
 Panel
-Label

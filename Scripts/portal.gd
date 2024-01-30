@@ -10,6 +10,7 @@ func _ready():
 	animation_player.play("in")
 
 func do_lock():
+	AudioManager.tele()
 	lock_portal = true
 	await get_tree().create_timer(0.3).timeout
 	lock_portal = false
