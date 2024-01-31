@@ -1,8 +1,9 @@
+Label
+TileMap
 AnimationPlayer
 CollisionShape2D
 Area2D
 Sprite2D
-Label
 Node2D
 AudioStreamPlayer
 RichTextLabel
@@ -10,7 +11,6 @@ Timer
 RayCast2D
 VisibleOnScreenNotifier2D
 Camera2D
-TileMap
 TextureRect
 CharacterBody2D
 RigidBody2D

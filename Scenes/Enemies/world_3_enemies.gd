@@ -16,8 +16,9 @@ var speed = 0.1 * PI / 180
 @export_category("skeleton")
 @export var skeleton_speed : float
 @export var rect_radius_skeleton : float
-@export var ammo_skeleton : PackedScene
 @export var move_direction : Vector2
+@export var ammo_skeleton : PackedScene
+
 
 @onready var player = $"../../slime_player_joystick/slime_player_joystik"
 @onready var ray_cast_2d = $skeleton/RayCast2D

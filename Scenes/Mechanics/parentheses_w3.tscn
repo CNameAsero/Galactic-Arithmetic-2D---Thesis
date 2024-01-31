@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://dweql68le4mvj"]
+
+[ext_resource type="Texture2D" uid="uid://dro24qdemkb7q" path="res://Sprites/Collectibles/parentheses/(.png" id="1_lxbt5"]
+[ext_resource type="Texture2D" uid="uid://dnbfgaeo3sklk" path="res://Sprites/Collectibles/parentheses/).png" id="2_juosd"]
+
+[sub_resource type="GDScript" id="GDScript_co0yx"]
+script/source = "extends Node2D
+
+@export var parentheses_to_display : String
+@onready var animation_player = $AnimationPlayer
+@onready var set_parentheses = $set_parentheses
+
+@onready var access_manager = $\"..\"
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	for i in set_parentheses.get_children():
+		if i is Sprite2D and i.name == parentheses_to_display:
+			i.visible = true
+			match parentheses_to_display:
+				\"(\":
+					animation_player.play(\"(\")
+				\")\":
+					animation_player.play(\")\")
+		else:
+			i.visible = false
+
+func _on_set_parentheses_body_entered(body):
+	if body.is_in_group(\"player\"):
+		if parentheses_to_display == \"(\" and !access_manager.last_item_was_number:
+			AudioManager.play_item_collect()
+			access_manager.isDestroy = true
+			access_manager.collect_open_parenthesis(parentheses_to_display)
+			queue_free()
+		elif parentheses_to_display == \")\" and access_manager.last_item_was_number and access_manager.open and access_manager.collected_items.size() > 1:
+			AudioManager.play_item_collect()
+			access_manager.isDestroy = true
+			access_manager.collect_close_parenthesis(parentheses_to_display)
+			queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d606e"]
+radius = 37.037
+
+[sub_resource type="Animation" id="Animation_vgmgf"]
+resource_name = "("
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_parentheses/(:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_fs0ij"]
+resource_name = ")"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_parentheses/):frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6o5o5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_parentheses/(:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("set_parentheses/):frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1pnwa"]
+_data = {
+"(": SubResource("Animation_vgmgf"),
+")": SubResource("Animation_fs0ij"),
+"RESET": SubResource("Animation_6o5o5")
+}
+
+[node name="parentheses" type="Node2D"]
+scale = Vector2(0.45, 0.45)
+script = SubResource("GDScript_co0yx")
+
+[node name="set_parentheses" type="Area2D" parent="."]
+scale = Vector2(1.08, 1.08)
+collision_layer = 2
+
+[node name="(" type="Sprite2D" parent="set_parentheses"]
+texture = ExtResource("1_lxbt5")
+hframes = 2
+frame = 1
+
+[node name=")" type="Sprite2D" parent="set_parentheses"]
+visible = false
+texture = ExtResource("2_juosd")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_parentheses"]
+shape = SubResource("CircleShape2D_d606e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_1pnwa")
+}
+
+[connection signal="body_entered" from="set_parentheses" to="." method="_on_set_parentheses_body_entered"]

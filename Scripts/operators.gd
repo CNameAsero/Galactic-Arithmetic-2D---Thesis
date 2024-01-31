@@ -1,5 +1,4 @@
 extends Area2D
-class_name operator
 
 @onready var operator_to_display = $"..".oper
 @onready var access_manager = $"../../"

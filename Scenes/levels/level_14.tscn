@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://b71a3jxxxc6i4"]
+[gd_scene load_steps=15 format=3 uid="uid://b71a3jxxxc6i4"]
 
 [ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_06cmj"]
 [ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="2_fyylt"]
+[ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_va0hy"]
+[ext_resource type="PackedScene" uid="uid://pc3v0o5lloge" path="res://Scenes/Mechanics/numbers_w3.tscn" id="3_ch8cu"]
+[ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="4_g2shf"]
+[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="5_u838x"]
+[ext_resource type="PackedScene" uid="uid://bbgrhxgrpnqh" path="res://Scenes/timer_w3.tscn" id="6_m3qqj"]
+[ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="8_v6ofa"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="9_wchfq"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="10_rf6ts"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="11_wnprw"]
+[ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="12_pvs6k"]
+[ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="13_xkftf"]
+[ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="14_lrlhe"]
 
 [node name="level_14" type="Node2D"]
 
@@ -49,4 +61,106 @@ layer_5/tile_data = PackedInt32Array(983083, 524293, 6, 1048619, 524293, 6, 9830
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 539)
 
+[node name="gamemanager_pemdas" parent="." instance=ExtResource("2_va0hy")]
+num_term = 4
+
+[node name="6" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(314, 98)
+number = 6
+
+[node name="4" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(543, 181)
+number = 4
+
+[node name="1" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(383, 98)
+number = 1
+
+[node name="2" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(243, 98)
+number = 2
+
+[node name="3" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(174, 98)
+number = 3
+
+[node name="6_6" parent="gamemanager_pemdas" instance=ExtResource("3_ch8cu")]
+position = Vector2(174, 98)
+number = 6
+
+[node name="+" parent="gamemanager_pemdas" instance=ExtResource("4_g2shf")]
+position = Vector2(722, 360)
+oper = "+"
+
+[node name="-" parent="gamemanager_pemdas" instance=ExtResource("4_g2shf")]
+position = Vector2(110, 357)
+oper = "-"
+
+[node name="×" parent="gamemanager_pemdas" instance=ExtResource("4_g2shf")]
+position = Vector2(482, 367)
+oper = "×"
+
+[node name="÷" parent="gamemanager_pemdas" instance=ExtResource("4_g2shf")]
+position = Vector2(362, 331)
+oper = "÷"
+
+[node name="^" parent="gamemanager_pemdas" instance=ExtResource("4_g2shf")]
+position = Vector2(642, 554)
+oper = "^"
+
+[node name="final_answer" parent="gamemanager_pemdas" instance=ExtResource("5_u838x")]
+position = Vector2(405, 512)
+final_answer = 19
+
+[node name="timer" parent="gamemanager_pemdas" instance=ExtResource("6_m3qqj")]
+
 [node name="slime_player_joystick" parent="." instance=ExtResource("2_fyylt")]
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="world3_enemies" parent="enemies" instance=ExtResource("8_v6ofa")]
+position = Vector2(659, 571)
+move_direction = Vector2(100, 0)
+
+[node name="world3_enemies2" parent="enemies" instance=ExtResource("8_v6ofa")]
+position = Vector2(765, 561)
+enemy_type = "lava"
+move_direction = Vector2(100, 0)
+
+[node name="health_system" parent="." instance=ExtResource("9_wchfq")]
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("10_rf6ts")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("11_wnprw")
+
+[node name="game_paused" parent="menus" instance=ExtResource("12_pvs6k")]
+visible = false
+layout_mode = 1
+offset_left = -915.0
+offset_top = 495.0
+offset_right = -915.0
+offset_bottom = 495.0
+
+[node name="game_over" parent="menus" instance=ExtResource("13_xkftf")]
+visible = false
+layout_mode = 1
+offset_left = -915.5
+offset_top = 496.5
+offset_right = -915.5
+offset_bottom = 496.5
+
+[node name="level_complete_menu" parent="menus" instance=ExtResource("14_lrlhe")]
+visible = false
+layout_mode = 1
+offset_left = -915.5
+offset_top = 496.5
+offset_right = -915.5
+offset_bottom = 496.5
+
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

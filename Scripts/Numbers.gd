@@ -1,5 +1,4 @@
 extends Area2D
-class_name Number
 
 @onready var number_to_display = $"..".number
 @onready var access_manager = $"../../"

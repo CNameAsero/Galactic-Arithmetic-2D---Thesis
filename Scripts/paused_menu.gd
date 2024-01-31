@@ -1,5 +1,4 @@
 extends Control
-class_name game_paused
 
 @onready var paused = $".."
 @onready var gamemanager = $"../../game_manager_world_1-2"

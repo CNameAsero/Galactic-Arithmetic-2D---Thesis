@@ -228,7 +228,7 @@ _data = {
 [node name="world3_enemies" type="Node2D"]
 position = Vector2(362, 200)
 script = ExtResource("1_37w4p")
-enemy_type = "bat"
+enemy_type = "skeleton"
 move_speed = 120.0
 rect_radius_bat = 300.0
 skeleton_speed = 45.0

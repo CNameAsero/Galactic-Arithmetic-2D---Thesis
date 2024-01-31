@@ -1,57 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://co0144nx0e41q"]
+[gd_scene load_steps=3 format=3 uid="uid://co0144nx0e41q"]
 
 [ext_resource type="Script" path="res://gamemanager_pemdas.gd" id="1_8seob"]
-[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="2_jjfs1"]
-[ext_resource type="PackedScene" uid="uid://pc3v0o5lloge" path="res://Scenes/Mechanics/numbers_test.tscn" id="3_r2awo"]
-[ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_test.tscn" id="4_llkos"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="5_4qju0"]
-[ext_resource type="PackedScene" uid="uid://dweql68le4mvj" path="res://Scenes/Mechanics/parentheses.tscn" id="6_cc7fl"]
 
 [node name="gamemanager_pemdas" type="Node2D"]
 script = ExtResource("1_8seob")
-num_term = 5
-
-[node name="slime_player_joystick" parent="." instance=ExtResource("2_jjfs1")]
-
-[node name="Numbers" parent="." instance=ExtResource("3_r2awo")]
-position = Vector2(541, 270)
-number = 1
-
-[node name="Numbers2" parent="." instance=ExtResource("3_r2awo")]
-position = Vector2(474, 278)
-number = 2
-
-[node name="Numbers3" parent="." instance=ExtResource("3_r2awo")]
-position = Vector2(406, 275)
-number = 3
-
-[node name="Numbers4" parent="." instance=ExtResource("3_r2awo")]
-position = Vector2(332, 271)
-number = 4
-
-[node name="Numbers5" parent="." instance=ExtResource("3_r2awo")]
-position = Vector2(262, 272)
-number = 5
-
-[node name="operators" parent="." instance=ExtResource("4_llkos")]
-position = Vector2(257, 103)
-oper = "+"
-
-[node name="operators2" parent="." instance=ExtResource("4_llkos")]
-position = Vector2(330, 102)
-oper = "-"
-
-[node name="operators3" parent="." instance=ExtResource("4_llkos")]
-position = Vector2(394, 103)
-oper = "×"
-
-[node name="operators4" parent="." instance=ExtResource("4_llkos")]
-position = Vector2(462, 103)
-oper = "÷"
-
-[node name="operators5" parent="." instance=ExtResource("4_llkos")]
-position = Vector2(135, 104)
-oper = "^"
 
 [node name="CurrentExpressionLabel" type="Label" parent="."]
 offset_left = 576.0
@@ -64,11 +17,3 @@ theme_override_fonts/font = ExtResource("5_4qju0")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="(" parent="." instance=ExtResource("6_cc7fl")]
-position = Vector2(773, 299)
-parentheses_to_display = "("
-
-[node name=")" parent="." instance=ExtResource("6_cc7fl")]
-position = Vector2(948, 300)
-parentheses_to_display = ")"

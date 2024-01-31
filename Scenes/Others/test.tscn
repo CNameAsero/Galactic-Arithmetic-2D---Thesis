@@ -107,11 +107,11 @@ vertical_alignment = 1
 
 [node name="world3_enemies" parent="." instance=ExtResource("8_kqlkj")]
 position = Vector2(764, 459)
-enemy_type = "skeleton"
 move_direction = Vector2(250, 0)
 
 [node name="world3_enemies2" parent="." instance=ExtResource("8_kqlkj")]
 position = Vector2(1144, 189)
+enemy_type = "bat"
 move_direction = Vector2(250, 0)
 
 [node name="world3_enemies3" parent="." instance=ExtResource("8_kqlkj")]

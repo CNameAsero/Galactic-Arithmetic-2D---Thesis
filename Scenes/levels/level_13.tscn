@@ -1,7 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://o6qfx2agd3hj"]
+[gd_scene load_steps=15 format=3 uid="uid://o6qfx2agd3hj"]
 
 [ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_s20ko"]
+[ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_14wx8"]
 [ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="2_a0hel"]
+[ext_resource type="PackedScene" uid="uid://pc3v0o5lloge" path="res://Scenes/Mechanics/numbers_w3.tscn" id="3_qtl28"]
+[ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="4_afpwb"]
+[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="5_bo8qv"]
+[ext_resource type="PackedScene" uid="uid://bbgrhxgrpnqh" path="res://Scenes/timer_w3.tscn" id="7_05mhr"]
+[ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="9_h3pp5"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_8om52"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_wycx1"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_jwy0w"]
+[ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_ah2px"]
+[ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_mrtfw"]
+[ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_xj5en"]
 
 [node name="level_13" type="Node2D"]
 
@@ -35,4 +47,97 @@ layer_3/tile_data = PackedInt32Array(1376261, 589829, 6, 1376262, 655365, 6, 137
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 540)
 
+[node name="gamemanager_pemdas" parent="." instance=ExtResource("2_14wx8")]
+num_term = 4
+
+[node name="9" parent="gamemanager_pemdas" instance=ExtResource("3_qtl28")]
+position = Vector2(314, 98)
+number = 9
+
+[node name="2" parent="gamemanager_pemdas" instance=ExtResource("3_qtl28")]
+position = Vector2(243, 98)
+number = 2
+
+[node name="3" parent="gamemanager_pemdas" instance=ExtResource("3_qtl28")]
+position = Vector2(174, 98)
+number = 3
+
+[node name="4" parent="gamemanager_pemdas" instance=ExtResource("3_qtl28")]
+position = Vector2(543, 181)
+number = 4
+
+[node name="1" parent="gamemanager_pemdas" instance=ExtResource("3_qtl28")]
+position = Vector2(383, 98)
+number = 1
+
+[node name="+" parent="gamemanager_pemdas" instance=ExtResource("4_afpwb")]
+position = Vector2(722, 360)
+oper = "+"
+
+[node name="-" parent="gamemanager_pemdas" instance=ExtResource("4_afpwb")]
+position = Vector2(110, 357)
+oper = "-"
+
+[node name="×" parent="gamemanager_pemdas" instance=ExtResource("4_afpwb")]
+position = Vector2(482, 367)
+oper = "×"
+
+[node name="÷" parent="gamemanager_pemdas" instance=ExtResource("4_afpwb")]
+position = Vector2(266, 358)
+oper = "÷"
+
+[node name="^" parent="gamemanager_pemdas" instance=ExtResource("4_afpwb")]
+position = Vector2(642, 554)
+oper = "^"
+
+[node name="final_answer" parent="gamemanager_pemdas" instance=ExtResource("5_bo8qv")]
+position = Vector2(405, 512)
+final_answer = 19
+
+[node name="timer" parent="gamemanager_pemdas" instance=ExtResource("7_05mhr")]
+
 [node name="slime_player_joystick" parent="." instance=ExtResource("2_a0hel")]
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="world3_enemies" parent="enemies" instance=ExtResource("9_h3pp5")]
+position = Vector2(659, 571)
+move_direction = Vector2(100, 0)
+
+[node name="health_system" parent="." instance=ExtResource("10_8om52")]
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("11_wycx1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("12_jwy0w")
+
+[node name="game_paused" parent="menus" instance=ExtResource("13_ah2px")]
+visible = false
+layout_mode = 1
+offset_left = -915.0
+offset_top = 495.0
+offset_right = -915.0
+offset_bottom = 495.0
+
+[node name="game_over" parent="menus" instance=ExtResource("14_mrtfw")]
+visible = false
+layout_mode = 1
+offset_left = -915.5
+offset_top = 496.5
+offset_right = -915.5
+offset_bottom = 496.5
+
+[node name="level_complete_menu" parent="menus" instance=ExtResource("15_xj5en")]
+visible = false
+layout_mode = 1
+offset_left = -915.5
+offset_top = 496.5
+offset_right = -915.5
+offset_bottom = 496.5
+
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

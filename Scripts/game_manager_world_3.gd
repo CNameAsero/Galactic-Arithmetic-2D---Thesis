@@ -109,7 +109,7 @@ func update_expression():
 		if i == 1:
 			current_expression += ")"
 
-	get_child(1).text = current_expression + " = " + str(pemdas_expression())
+	#get_child(1).text = current_expression + " = " + str(pemdas_expression())
 
 func check_final_answer_pemdas():
 	var current_result = pemdas_expression()

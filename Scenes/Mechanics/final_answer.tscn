@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://s4mb4wtyw15x"]
+[gd_scene load_steps=31 format=3 uid="uid://s4mb4wtyw15x"]
 
 [ext_resource type="Script" path="res://Scripts/final_answer.gd" id="1_spf4c"]
 [ext_resource type="Texture2D" uid="uid://02dg06mgelq5" path="res://Sprites/Collectibles/final answers/3_chest.png" id="3_1vyot"]
@@ -8,8 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="5_mu3fr"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="5_ndgpp"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="6_3iihq"]
+[ext_resource type="Texture2D" uid="uid://bicb5ycgx2jdl" path="res://Sprites/Collectibles/final answers/16_chest.png" id="6_skal8"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="7_6gxot"]
+[ext_resource type="Texture2D" uid="uid://5bsv7s62nav0" path="res://Sprites/Collectibles/final answers/21_chest.png" id="8_qi2tb"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="9_r2qmj"]
+[ext_resource type="Texture2D" uid="uid://c6ts2itmgbcc5" path="res://Sprites/Collectibles/final answers/37_chest.png" id="11_u87vk"]
+[ext_resource type="Texture2D" uid="uid://dnt57ynds5rf3" path="res://Sprites/Collectibles/final answers/38_chest.png" id="12_0tfku"]
+[ext_resource type="Texture2D" uid="uid://cmfr5xxq1srdp" path="res://Sprites/Collectibles/final answers/52_chest.png" id="14_btd3a"]
 
 [sub_resource type="Animation" id="Animation_qe8cb"]
 length = 0.001
@@ -194,18 +199,6 @@ collision_layer = 4
 collision_mask = 25
 script = ExtResource("1_spf4c")
 
-[node name="3" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("3_1vyot")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="3"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
 [node name="1" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_g24hs")
@@ -218,37 +211,13 @@ libraries = {
 "": SubResource("AnimationLibrary_de2hf")
 }
 
-[node name="48" type="Sprite2D" parent="."]
+[node name="3" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_kl01u")
+texture = ExtResource("3_1vyot")
 hframes = 5
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="48"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="72" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("5_ndgpp")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="72"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="24" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("5_6c5b4")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="24"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="3"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_de2hf")
@@ -275,6 +244,18 @@ libraries = {
 "": SubResource("AnimationLibrary_65hcj")
 }
 
+[node name="16" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_skal8")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="16"]
+speed_scale = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_jlcnm")
+}
+
 [node name="19" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("6_3iihq")
@@ -287,6 +268,30 @@ libraries = {
 "": SubResource("AnimationLibrary_jlcnm")
 }
 
+[node name="21" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_qi2tb")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="21"]
+speed_scale = 0.5
+libraries = {
+"": SubResource("AnimationLibrary_jlcnm")
+}
+
+[node name="24" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_6c5b4")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="24"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_de2hf")
+}
+
 [node name="32" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("9_r2qmj")
@@ -295,6 +300,62 @@ hframes = 5
 [node name="AnimationPlayer" type="AnimationPlayer" parent="32"]
 libraries = {
 "": SubResource("AnimationLibrary_kfyue")
+}
+
+[node name="37" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("11_u87vk")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="37"]
+libraries = {
+"": SubResource("AnimationLibrary_kfyue")
+}
+
+[node name="38" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("12_0tfku")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="38"]
+libraries = {
+"": SubResource("AnimationLibrary_kfyue")
+}
+
+[node name="48" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_kl01u")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="48"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_de2hf")
+}
+
+[node name="52" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("14_btd3a")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="52"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_de2hf")
+}
+
+[node name="72" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_ndgpp")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="72"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_de2hf")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
