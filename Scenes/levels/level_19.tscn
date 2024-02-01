@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://8wqe3icew0h"]
 
-[ext_resource type="TileSet" uid="uid://dhd3qcnndeoi5" path="res://World4_Tileset.tres" id="1_xt3g1"]
-[ext_resource type="Script" path="res://Scenes/Player/slime_player_joystik.gd" id="2_wsw31"]
+[ext_resource type="TileSet" uid="uid://d1dx8dh8o5nxq" path="res://World4_Tileset.tres" id="1_xt3g1"]
+[ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_wsw31"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_86c8b"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_17m7p"]
 
