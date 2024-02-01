@@ -236,7 +236,7 @@ rect_radius_skeleton = 450.0
 ammo_skeleton = ExtResource("2_4m0i2")
 
 [node name="lava" type="Area2D" parent="."]
-visible = false
+scale = Vector2(0.7, 0.7)
 
 [node name="Sprite2D" type="Sprite2D" parent="lava"]
 texture = ExtResource("2_4nxdj")
@@ -249,6 +249,7 @@ shape = SubResource("RectangleShape2D_ed62l")
 
 [node name="bat" type="Area2D" parent="."]
 visible = false
+scale = Vector2(0.8, 0.8)
 
 [node name="Sprite2D" type="Sprite2D" parent="bat"]
 texture = ExtResource("3_awb8t")
@@ -267,6 +268,7 @@ debug_color = Color(0.870588, 0, 0.847059, 0.419608)
 
 [node name="skeleton" type="Area2D" parent="."]
 visible = false
+scale = Vector2(0.9, 0.9)
 
 [node name="Sprite2D" type="Sprite2D" parent="skeleton"]
 texture = ExtResource("4_8fu46")

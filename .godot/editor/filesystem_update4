@@ -1,15 +1,3 @@
+res://Scenes/Menu/Main_Menu/main_menu.tscn
 res://Scenes/levels/World_3_Tileset.tres
-res://Scenes/Enemies/world_4_enemies.tscn
-res://Scripts/world_4_enemies.gd
-res://Scenes/levels/level_16.tscn
-res://Scenes/levels/level_17.tscn
-res://Scenes/levels/level_18.tscn
-res://Scenes/levels/level_19.tscn
-res://Scenes/levels/level_20.tscn
-res://Scenes/levels/level_11.tscn
-res://World4_Tileset.tres
-res://Scenes/levels/level_12.tscn
-res://Scenes/levels/level_13.tscn
-res://Scenes/levels/level_14.tscn
-res://Scenes/Enemies/world_3_enemies.tscn
 res://Scenes/levels/level_15.tscn

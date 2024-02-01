@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bldw8dfbyu1x6"]
+[gd_scene load_steps=17 format=3 uid="uid://bldw8dfbyu1x6"]
 
 [ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_xc8p8"]
 [ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_drwe6"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_erq0p"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_qed12"]
 [ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_yb5ac"]
+[ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="16_mjx4k"]
 
 [node name="level_12" type="Node2D"]
 
@@ -48,67 +49,226 @@ layer_3/tile_data = PackedInt32Array(852019, 3, 0, 917554, 2, 0, 1179698, 1, 0, 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(958, 542)
 
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="world3_enemies" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(958, 527)
+enemy_type = "lava"
+
+[node name="world3_enemies28" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 447)
+enemy_type = "lava"
+
+[node name="world3_enemies29" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 483)
+enemy_type = "lava"
+
+[node name="world3_enemies30" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 512)
+enemy_type = "lava"
+
+[node name="world3_enemies31" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 549)
+enemy_type = "lava"
+
+[node name="world3_enemies32" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 581)
+enemy_type = "lava"
+
+[node name="world3_enemies33" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(278, 618)
+enemy_type = "lava"
+
+[node name="world3_enemies2" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(958, 505)
+enemy_type = "lava"
+
+[node name="world3_enemies3" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(936, 505)
+enemy_type = "lava"
+
+[node name="world3_enemies4" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(936, 527)
+enemy_type = "lava"
+
+[node name="world3_enemies5" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(980, 505)
+enemy_type = "lava"
+
+[node name="world3_enemies6" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(980, 527)
+enemy_type = "lava"
+
+[node name="world3_enemies7" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(904, 691)
+enemy_type = "lava"
+
+[node name="world3_enemies8" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(926, 692)
+enemy_type = "lava"
+
+[node name="world3_enemies9" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(926, 655)
+enemy_type = "lava"
+
+[node name="world3_enemies10" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(926, 655)
+enemy_type = "lava"
+
+[node name="world3_enemies11" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(990, 692)
+enemy_type = "lava"
+
+[node name="world3_enemies12" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1012, 692)
+enemy_type = "lava"
+
+[node name="world3_enemies13" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(990, 655)
+enemy_type = "lava"
+
+[node name="world3_enemies14" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1368, 642)
+enemy_type = "lava"
+
+[node name="world3_enemies15" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1400, 642)
+enemy_type = "lava"
+
+[node name="world3_enemies16" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1417, 642)
+enemy_type = "lava"
+
+[node name="world3_enemies17" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1368, 418)
+enemy_type = "lava"
+
+[node name="world3_enemies18" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1395, 418)
+enemy_type = "lava"
+
+[node name="world3_enemies19" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1417, 418)
+enemy_type = "lava"
+
+[node name="world3_enemies20" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(501, 427)
+enemy_type = "lava"
+
+[node name="world3_enemies21" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(531, 427)
+enemy_type = "lava"
+
+[node name="world3_enemies22" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(553, 427)
+enemy_type = "lava"
+
+[node name="world3_enemies23" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(501, 647)
+enemy_type = "lava"
+
+[node name="world3_enemies24" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(533, 647)
+enemy_type = "lava"
+
+[node name="world3_enemies25" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(553, 647)
+enemy_type = "lava"
+
+[node name="world3_enemies26" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(531, 537)
+enemy_type = "bat"
+
+[node name="world3_enemies27" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1395, 528)
+enemy_type = "bat"
+rect_radius_bat = 200.0
+
+[node name="world3_enemies34" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 447)
+enemy_type = "lava"
+
+[node name="world3_enemies35" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 483)
+enemy_type = "lava"
+
+[node name="world3_enemies36" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 512)
+enemy_type = "lava"
+
+[node name="world3_enemies37" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 549)
+enemy_type = "lava"
+
+[node name="world3_enemies38" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 581)
+enemy_type = "lava"
+
+[node name="world3_enemies39" parent="enemies" instance=ExtResource("8_wpq8m")]
+position = Vector2(1636, 618)
+enemy_type = "lava"
+
 [node name="gamemanager_pemdas" parent="." instance=ExtResource("2_drwe6")]
 num_term = 4
 
 [node name="7" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(314, 98)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(1236, 264)
 number = 7
 
-[node name="2" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(243, 98)
-number = 2
+[node name="9" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(1550, 264)
+number = 9
 
 [node name="3" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(174, 98)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(637, 856)
 number = 3
 
 [node name="5" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(543, 181)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(1261, 887)
 number = 5
 
 [node name="1" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(383, 98)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(1519, 721)
 number = 1
 
 [node name="7_7" parent="gamemanager_pemdas" instance=ExtResource("3_nvb41")]
-position = Vector2(375, 243)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(522, 165)
 number = 7
 
 [node name="+" parent="gamemanager_pemdas" instance=ExtResource("4_0fbwh")]
-position = Vector2(722, 360)
+position = Vector2(1012, 691)
 oper = "+"
 
 [node name="-" parent="gamemanager_pemdas" instance=ExtResource("4_0fbwh")]
-position = Vector2(110, 357)
+position = Vector2(904, 691)
 oper = "-"
 
 [node name="×" parent="gamemanager_pemdas" instance=ExtResource("4_0fbwh")]
-position = Vector2(482, 367)
+position = Vector2(839, 427)
 oper = "×"
 
-[node name="÷" parent="gamemanager_pemdas" instance=ExtResource("4_0fbwh")]
-position = Vector2(266, 358)
-oper = "÷"
-
 [node name="final_answer" parent="gamemanager_pemdas" instance=ExtResource("5_jlhwe")]
-position = Vector2(405, 512)
+position = Vector2(998, 315)
 final_answer = 37
 
 [node name="(" parent="gamemanager_pemdas" instance=ExtResource("6_m7b0p")]
-position = Vector2(808, 153)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(522, 375)
 parentheses_to_display = "("
 
 [node name=")" parent="gamemanager_pemdas" instance=ExtResource("6_m7b0p")]
-position = Vector2(717, 233)
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(422, 743)
 parentheses_to_display = ")"
 
 [node name="timer" parent="gamemanager_pemdas" instance=ExtResource("7_i40w2")]
-
-[node name="enemies" type="Node2D" parent="."]
-
-[node name="world3_enemies" parent="enemies" instance=ExtResource("8_wpq8m")]
-position = Vector2(421, 467)
+position = Vector2(62, 65)
 
 [node name="slime_player_joystick" parent="." instance=ExtResource("2_vamxu")]
 
@@ -147,5 +307,54 @@ offset_left = -915.5
 offset_top = 496.5
 offset_right = -915.5
 offset_bottom = 496.5
+
+[node name="health_buff" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 623.0
+offset_top = 553.0
+offset_right = 623.0
+offset_bottom = 553.0
+buff_selected = "health"
+
+[node name="health_buff2" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 1390.0
+offset_top = 527.0
+offset_right = 1390.0
+offset_bottom = 527.0
+buff_selected = "health"
+
+[node name="time_buff" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 1754.0
+offset_top = 406.0
+offset_right = 1754.0
+offset_bottom = 406.0
+buff_selected = "health"
+
+[node name="time_buff3" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 1754.0
+offset_top = 594.0
+offset_right = 1754.0
+offset_bottom = 594.0
+buff_selected = "health"
+
+[node name="time_buff4" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 140.0
+offset_top = 597.0
+offset_right = 140.0
+offset_bottom = 597.0
+buff_selected = "health"
+
+[node name="time_buff2" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 140.0
+offset_top = 398.0
+offset_right = 140.0
+offset_bottom = 398.0
+buff_selected = "health"
+
+[node name="speed_buff" parent="." instance=ExtResource("16_mjx4k")]
+offset_left = 746.0
+offset_top = 692.0
+offset_right = 746.0
+offset_bottom = 692.0
+buff_selected = "speed"
 
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
