@@ -378,12 +378,17 @@ enemy_type = "lava"
 move_direction = Vector2(100, 0)
 
 [node name="world3_enemies4" parent="enemies" instance=ExtResource("9_hhgcy")]
-position = Vector2(531, 854)
+position = Vector2(491, 861)
 enemy_type = "lava"
 move_direction = Vector2(100, 0)
 
-[node name="world3_enemies8" parent="enemies" instance=ExtResource("9_hhgcy")]
-position = Vector2(554, 823)
+[node name="world3_enemies62" parent="enemies" instance=ExtResource("9_hhgcy")]
+position = Vector2(491, 824)
+enemy_type = "lava"
+move_direction = Vector2(100, 0)
+
+[node name="world3_enemies61" parent="enemies" instance=ExtResource("9_hhgcy")]
+position = Vector2(492, 786)
 enemy_type = "lava"
 move_direction = Vector2(100, 0)
 
