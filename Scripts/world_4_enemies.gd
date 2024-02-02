@@ -8,7 +8,7 @@ extends Node2D
 
 
 var angle = 50
-var speed = 0.05 * PI / 180
+var speed = 0.09 * PI / 180
 @export_category("bear")
 @export var move_speed : float
 @export var  radius = 250

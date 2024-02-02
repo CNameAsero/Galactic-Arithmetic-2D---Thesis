@@ -305,8 +305,9 @@ _data = {
 [node name="world_4_enemies" type="Node2D"]
 position = Vector2(603, 462)
 script = ExtResource("1_po0aj")
-enemy_type = "yeti"
-move_speed = 150.0
+enemy_type = "bear"
+move_speed = 75.0
+radius = 200
 rect_radius_bear = 250.0
 yeti_speed = 30.0
 rect_radius_yeti = 300.0
@@ -355,6 +356,7 @@ shape = SubResource("CapsuleShape2D_46pto")
 debug_color = Color(0.498039, 0.482353, 0.858824, 0.419608)
 
 [node name="yeti" type="CharacterBody2D" parent="."]
+visible = false
 collision_layer = 8
 collision_mask = 29
 

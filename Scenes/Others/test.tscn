@@ -9,6 +9,7 @@
 
 [node name="world_4_enemies" parent="." instance=ExtResource("2_m1v8s")]
 position = Vector2(274, 171)
+enemy_type = "yeti"
 move_speed = 20.0
 
 [node name="world_4_enemies2" parent="." instance=ExtResource("2_m1v8s")]
@@ -18,5 +19,3 @@ move_speed = 20.0
 
 [node name="world_4_enemies3" parent="." instance=ExtResource("2_m1v8s")]
 position = Vector2(482, 458)
-enemy_type = "bear"
-move_speed = 20.0
