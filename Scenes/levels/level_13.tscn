@@ -12,12 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="9_loj7k"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_8om52"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_wycx1"]
+[ext_resource type="PackedScene" path="res://Scenes/Mechanics/powerups_w3.tscn" id="12_jol7u"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_jwy0w"]
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_ah2px"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_mrtfw"]
 [ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_xj5en"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="17_m6sae"]
-[ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="18_r2kny"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv4f4"]
 radius = 27.0185
@@ -694,6 +694,62 @@ scale = Vector2(1.85, 1.85)
 
 [node name="health_system" parent="." instance=ExtResource("10_8om52")]
 
+[node name="health_buff" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 108.0
+offset_top = 1033.0
+offset_right = 108.0
+offset_bottom = 1033.0
+buff_selected = "health"
+
+[node name="health_buff2" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 80.0
+offset_top = 1033.0
+offset_right = 80.0
+offset_bottom = 1033.0
+buff_selected = "health"
+
+[node name="health_buff3" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 58.0
+offset_top = 1010.0
+offset_right = 58.0
+offset_bottom = 1010.0
+buff_selected = "health"
+
+[node name="time_buff" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 59.0
+offset_top = 962.0
+offset_right = 59.0
+offset_bottom = 962.0
+buff_selected = "time"
+
+[node name="time_buff2" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 59.0
+offset_top = 938.0
+offset_right = 59.0
+offset_bottom = 938.0
+buff_selected = "time"
+
+[node name="time_buff3" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 59.0
+offset_top = 914.0
+offset_right = 59.0
+offset_bottom = 914.0
+buff_selected = "time"
+
+[node name="speed_buff" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 1208.0
+offset_top = 773.0
+offset_right = 1208.0
+offset_bottom = 773.0
+buff_selected = "speed"
+
+[node name="speed_buff2" parent="." instance=ExtResource("12_jol7u")]
+offset_left = 731.0
+offset_top = 777.0
+offset_right = 731.0
+offset_bottom = 777.0
+buff_selected = "speed"
+
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -745,62 +801,6 @@ position = Vector2(1787, 972)
 [node name="Portal4" parent="." instance=ExtResource("17_m6sae")]
 modulate = Color(3.7, 0.55, 0.15, 1)
 position = Vector2(492, 498)
-
-[node name="health_buff" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 58.0
-offset_top = 1014.0
-offset_right = 58.0
-offset_bottom = 1014.0
-buff_selected = "health"
-
-[node name="health_buff2" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 108.0
-offset_top = 1038.0
-offset_right = 108.0
-offset_bottom = 1038.0
-buff_selected = "health"
-
-[node name="health_buff3" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 79.0
-offset_top = 1038.0
-offset_right = 79.0
-offset_bottom = 1038.0
-buff_selected = "health"
-
-[node name="time_buff3" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 60.0
-offset_top = 933.0
-offset_right = 60.0
-offset_bottom = 933.0
-buff_selected = "time"
-
-[node name="time_buff" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 60.0
-offset_top = 958.0
-offset_right = 60.0
-offset_bottom = 958.0
-buff_selected = "time"
-
-[node name="time_buff2" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 60.0
-offset_top = 909.0
-offset_right = 60.0
-offset_bottom = 909.0
-buff_selected = "time"
-
-[node name="speed_buff" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 708.0
-offset_top = 772.0
-offset_right = 708.0
-offset_bottom = 772.0
-buff_selected = "speed"
-
-[node name="speed_buff2" parent="." instance=ExtResource("18_r2kny")]
-offset_left = 1236.0
-offset_top = 775.0
-offset_right = 1236.0
-offset_bottom = 775.0
-buff_selected = "speed"
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
