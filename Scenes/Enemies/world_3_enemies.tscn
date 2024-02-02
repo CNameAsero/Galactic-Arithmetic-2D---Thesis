@@ -1,7 +1,6 @@
-[gd_scene load_steps=22 format=3 uid="uid://cilquuf1rtf65"]
+[gd_scene load_steps=21 format=3 uid="uid://cilquuf1rtf65"]
 
 [ext_resource type="Script" path="res://Scenes/Enemies/world_3_enemies.gd" id="1_37w4p"]
-[ext_resource type="PackedScene" uid="uid://xetwb531wu41" path="res://Scenes/Enemies/skeleton_arrow.tscn" id="2_4m0i2"]
 [ext_resource type="Texture2D" uid="uid://cjw6ojh6tgq6v" path="res://Sprites/Enemies/world3_enemies/Lava_tile.png" id="2_4nxdj"]
 [ext_resource type="Texture2D" uid="uid://dcego3lve17lg" path="res://Sprites/Enemies/world3_enemies/Bat_cave.png" id="3_awb8t"]
 [ext_resource type="Texture2D" uid="uid://bi68o83hi2tal" path="res://Sprites/Enemies/world3_enemies/Skeleton_enemy.png" id="4_8fu46"]
@@ -10,7 +9,8 @@
 size = Vector2(59, 53)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13ido"]
-height = 24.0
+radius = 8.0
+height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2iou4"]
 
@@ -228,12 +228,11 @@ _data = {
 [node name="world3_enemies" type="Node2D"]
 position = Vector2(362, 200)
 script = ExtResource("1_37w4p")
-enemy_type = "skeleton"
+enemy_type = "bat"
 move_speed = 120.0
 rect_radius_bat = 300.0
 skeleton_speed = 45.0
 rect_radius_skeleton = 450.0
-ammo_skeleton = ExtResource("2_4m0i2")
 
 [node name="lava" type="Area2D" parent="."]
 visible = false
@@ -249,6 +248,7 @@ shape = SubResource("RectangleShape2D_ed62l")
 
 [node name="bat" type="Area2D" parent="."]
 visible = false
+collision_mask = 29
 
 [node name="Sprite2D" type="Sprite2D" parent="bat"]
 texture = ExtResource("3_awb8t")
@@ -257,6 +257,7 @@ vframes = 4
 frame = 1
 
 [node name="CollisionShape" type="CollisionShape2D" parent="bat"]
+visibility_layer = 5
 shape = SubResource("CapsuleShape2D_13ido")
 
 [node name="area_det" type="Area2D" parent="bat"]

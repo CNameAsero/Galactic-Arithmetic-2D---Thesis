@@ -109,6 +109,7 @@ parentheses_to_display = ")"
 
 [node name="world3_enemies" parent="enemies" instance=ExtResource("8_wpq8m")]
 position = Vector2(421, 467)
+enemy_type = "lava"
 
 [node name="slime_player_joystick" parent="." instance=ExtResource("2_vamxu")]
 
