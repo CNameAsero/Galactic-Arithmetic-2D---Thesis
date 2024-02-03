@@ -795,11 +795,11 @@ position = Vector2(143, 95)
 id = 1
 
 [node name="Portal3" parent="." instance=ExtResource("17_m6sae")]
-modulate = Color(3.7, 0.55, 0.15, 1)
+modulate = Color(0.936, 1, 0.04, 1)
 position = Vector2(1787, 972)
 
 [node name="Portal4" parent="." instance=ExtResource("17_m6sae")]
-modulate = Color(3.7, 0.55, 0.15, 1)
+modulate = Color(0.936, 1, 0.04, 1)
 position = Vector2(492, 498)
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
