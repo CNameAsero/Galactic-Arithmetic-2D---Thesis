@@ -1,3 +1,5 @@
+Camera2D
+TileMap
 RichTextLabel
 CollisionShape2D
 Area2D
@@ -8,11 +10,9 @@ Sprite2D
 CharacterBody2D
 StaticBody2D
 Label
-TileMap
 Node2D
 AudioStreamPlayer
 VisibleOnScreenNotifier2D
-Camera2D
 TextureRect
 RigidBody2D
 Button
