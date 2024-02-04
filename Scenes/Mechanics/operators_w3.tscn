@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkqj023564c8v"]
+[gd_scene load_steps=10 format=3 uid="uid://dkqj023564c8v"]
 
 [ext_resource type="Script" path="res://Scripts/operators_w3.gd" id="1_6vbea"]
 [ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="2_iiy8y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="4_m4hgx"]
 [ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="5_3e0cu"]
 [ext_resource type="Texture2D" uid="uid://dol6ek04pgtcl" path="res://Sprites/Collectibles/Operators/^.png" id="6_0aq0l"]
+[ext_resource type="Texture2D" uid="uid://dr3ni0platsp5" path="res://Sprites/Collectibles/Operators/Front-slash.png" id="7_mt1yw"]
 
 [sub_resource type="GDScript" id="GDScript_lfiyq"]
 script/source = "extends Node2D
@@ -50,6 +51,11 @@ texture = ExtResource("5_3e0cu")
 visible = false
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("6_0aq0l")
+
+[node name="d" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_mt1yw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="set_operator"]
 shape = SubResource("CircleShape2D_ief75")

@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="9_loj7k"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_8om52"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_wycx1"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/powerups_w3.tscn" id="12_jol7u"]
+[ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="12_jol7u"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_jwy0w"]
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_ah2px"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_mrtfw"]

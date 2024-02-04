@@ -18,7 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_qnom3"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_7jm3q"]
 [ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_kewde"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/powerups_w3.tscn" id="19_uei7o"]
+[ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="19_uei7o"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv4f4"]
 radius = 27.0185

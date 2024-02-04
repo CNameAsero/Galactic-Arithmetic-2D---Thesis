@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmyl7dmuee7qy"]
+
+[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_5j7v1"]
+[ext_resource type="PackedScene" uid="uid://cdngsmqf0vwbx" path="res://Scenes/Enemies/world_4_enemies.tscn" id="2_m1v8s"]
+[ext_resource type="PackedScene" uid="uid://c6l46jv1tsbb6" path="res://Scenes/Mechanics/gamemanager_fraction.tscn" id="3_mkids"]
+[ext_resource type="PackedScene" uid="uid://pc3v0o5lloge" path="res://Scenes/Mechanics/numbers_w3.tscn" id="4_5cydw"]
+[ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="5_ytera"]
+[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="6_jtwk5"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="7_uvx36"]
+
+[node name="test" type="Node2D"]
+
+[node name="slime_player_joystick" parent="." instance=ExtResource("1_5j7v1")]
+
+[node name="world_4_enemies" parent="." instance=ExtResource("2_m1v8s")]
+position = Vector2(274, 171)
+enemy_type = "yeti"
+move_speed = 20.0
+
+[node name="world_4_enemies2" parent="." instance=ExtResource("2_m1v8s")]
+position = Vector2(686, 235)
+enemy_type = "ice"
+move_speed = 20.0
+
+[node name="world_4_enemies3" parent="." instance=ExtResource("2_m1v8s")]
+position = Vector2(482, 458)
+
+[node name="gamemanager_fraction" parent="." instance=ExtResource("3_mkids")]
+num_term = 5
+
+[node name="Numbers" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+number = 3
+
+[node name="Numbers2" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(389, 86)
+number = 5
+
+[node name="Numbers3" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(176, 414)
+number = 6
+
+[node name="Numbers5" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(100, 258)
+number = 2
+
+[node name="Numbers6" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(476, 403)
+number = 5
+
+[node name="Numbers7" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(193, 587)
+number = 1
+
+[node name="Numbers4" parent="gamemanager_fraction" instance=ExtResource("4_5cydw")]
+position = Vector2(396, 252)
+number = 9
+
+[node name="operators" parent="gamemanager_fraction" instance=ExtResource("5_ytera")]
+position = Vector2(1051, 314)
+oper = "+"
+
+[node name="operators2" parent="gamemanager_fraction" instance=ExtResource("5_ytera")]
+position = Vector2(750, 48)
+oper = "-"
+
+[node name="operators3" parent="gamemanager_fraction" instance=ExtResource("5_ytera")]
+position = Vector2(937, 145)
+oper = "×"
+
+[node name="operators4" parent="gamemanager_fraction" instance=ExtResource("5_ytera")]
+position = Vector2(566, 121)
+oper = "÷"
+
+[node name="final_answer" parent="gamemanager_fraction" instance=ExtResource("6_jtwk5")]
+position = Vector2(434, 159)
+final_answer = 3
+
+[node name="health_system" parent="." instance=ExtResource("7_uvx36")]

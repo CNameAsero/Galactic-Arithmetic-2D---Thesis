@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6l46jv1tsbb6"]
+
+[ext_resource type="Script" path="res://Scripts/gamemanager_fraction.gd" id="1_6nhsq"]
+[ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="1_dxfkd"]
+
+[node name="gamemanager_fraction" type="Node2D"]
+script = ExtResource("1_6nhsq")
+
+[node name="1st_label" type="Label" parent="."]
+offset_left = 575.0
+offset_top = -17.0
+offset_right = 1341.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_dxfkd")
+theme_override_font_sizes/font_size = 100
+text = "3/2 + 6/2 = 9/2 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2nd_label" type="Label" parent="."]
+offset_left = 575.0
+offset_top = 5.0
+offset_right = 1341.0
+offset_bottom = 144.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_dxfkd")
+theme_override_font_sizes/font_size = 100
+
+[node name="3rd_label" type="Label" parent="."]
+offset_left = 575.0
+offset_top = 10.0
+offset_right = 1341.0
+offset_bottom = 149.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("1_dxfkd")
+theme_override_font_sizes/font_size = 100
+vertical_alignment = 2
