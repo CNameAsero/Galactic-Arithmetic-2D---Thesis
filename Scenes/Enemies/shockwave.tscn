@@ -1,7 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://f0pwengecrw"]
+[gd_scene load_steps=8 format=3 uid="uid://f0pwengecrw"]
 
 [ext_resource type="Texture2D" uid="uid://dkufxtnu4xpup" path="res://Sprites/Enemies/world4_enemies/Yeti_shockwave.png" id="1_61m33"]
 [ext_resource type="Script" path="res://Scripts/shockwave.gd" id="1_cvc0x"]
+
+[sub_resource type="GDScript" id="GDScript_njq5d"]
+script/source = "extends Sprite2D
+
+@onready var  num = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	checknum()
+
+
+func checknum():
+	if num == 1:
+		queue_free()
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yedv8"]
 size = Vector2(18, 12)
@@ -53,6 +73,7 @@ texture = ExtResource("1_61m33")
 hframes = 8
 vframes = 2
 frame = 1
+script = SubResource("GDScript_njq5d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(37, 12)
@@ -62,3 +83,5 @@ shape = SubResource("RectangleShape2D_yedv8")
 libraries = {
 "": SubResource("AnimationLibrary_8f2d0")
 }
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

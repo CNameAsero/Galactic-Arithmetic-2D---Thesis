@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://c644bw2xl0qwy"]
+
+[ext_resource type="Script" path="res://Scripts/fly_bullet.gd" id="1_abp5p"]
+[ext_resource type="Texture2D" uid="uid://xcf3f7ropr5o" path="res://Sprites/Enemies/world5_enemies/Fly-attack.png" id="2_md10m"]
+
+[sub_resource type="GDScript" id="GDScript_xx334"]
+script/source = "extends Sprite2D
+
+@onready var num = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	checknum()
+
+func checknum():
+	if num == 1:
+		queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ecrmj"]
+radius = 8.0
+
+[node name="fly_bullet" type="Area2D"]
+script = ExtResource("1_abp5p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_md10m")
+script = SubResource("GDScript_xx334")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_ecrmj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

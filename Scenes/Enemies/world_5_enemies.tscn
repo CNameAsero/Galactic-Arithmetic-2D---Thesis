@@ -1,0 +1,372 @@
+[gd_scene load_steps=28 format=3 uid="uid://cao4j5jl2i7gq"]
+
+[ext_resource type="Script" path="res://Scripts/world_5_enemies.gd" id="1_5nf24"]
+[ext_resource type="PackedScene" uid="uid://c644bw2xl0qwy" path="res://Scenes/Enemies/fly_bullet.tscn" id="2_rbk1j"]
+[ext_resource type="Texture2D" uid="uid://djlslkfagox0i" path="res://Sprites/Enemies/world5_enemies/Fly.png" id="2_vyehq"]
+[ext_resource type="PackedScene" uid="uid://c7iwbfvapp100" path="res://Scenes/Enemies/flea.tscn" id="3_yd2ea"]
+[ext_resource type="Texture2D" uid="uid://cvtfvyhhw8xyg" path="res://Sprites/Enemies/world5_enemies/RatMovement_Attack.png" id="4_6r4mx"]
+[ext_resource type="PackedScene" uid="uid://bvhn0ady5xhmn" path="res://Scenes/Enemies/thief_bullet.tscn" id="4_phtog"]
+[ext_resource type="Texture2D" uid="uid://83lp7i4efe3x" path="res://Sprites/Enemies/world5_enemies/Thief.png" id="6_mxfmm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0gnt6"]
+radius = 14.4285
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cld84"]
+radius = 11.0454
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fl856"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a12ej"]
+radius = 12.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13cgx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3etk8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v8nqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aefx"]
+
+[sub_resource type="Animation" id="Animation_qrakm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fly/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rat/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("thief/Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_wvq7l"]
+resource_name = "fly_left"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fly/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_ghjjy"]
+resource_name = "fly_right"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("fly/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_ydpef"]
+resource_name = "rat_left"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rat/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_c5c3k"]
+resource_name = "rat_left_atk"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rat/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_50tc4"]
+resource_name = "rat_right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rat/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_45ep5"]
+resource_name = "rat_right_atk"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rat/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_hc8sc"]
+resource_name = "shoot_left"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thief/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_rh66d"]
+resource_name = "shoot_right"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thief/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_n3qyu"]
+resource_name = "thief_left"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thief/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_qjtyy"]
+resource_name = "thief_right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("thief/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_at84c"]
+_data = {
+"RESET": SubResource("Animation_qrakm"),
+"fly_left": SubResource("Animation_wvq7l"),
+"fly_right": SubResource("Animation_ghjjy"),
+"rat_left": SubResource("Animation_ydpef"),
+"rat_left_atk": SubResource("Animation_c5c3k"),
+"rat_right": SubResource("Animation_50tc4"),
+"rat_right_atk": SubResource("Animation_45ep5"),
+"shoot_left": SubResource("Animation_hc8sc"),
+"shoot_right": SubResource("Animation_rh66d"),
+"thief_left": SubResource("Animation_n3qyu"),
+"thief_right": SubResource("Animation_qjtyy")
+}
+
+[node name="world_5_enemies" type="Node2D"]
+position = Vector2(275, 196)
+script = ExtResource("1_5nf24")
+enemy_type = "thief"
+fly_speed = 50.0
+rect_radius_fly = 250.0
+fly_bullet = ExtResource("2_rbk1j")
+rat_speed = 50.0
+rect_size_rat = 100.0
+rat_move_direction = Vector2(500, 0)
+flea = ExtResource("3_yd2ea")
+thief_speed = 50.0
+rect_size_thief = 150.0
+thief_move_direction = Vector2(50, 50)
+bullet = ExtResource("4_phtog")
+
+[node name="fly" type="Area2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="fly"]
+texture = ExtResource("2_vyehq")
+hframes = 4
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fly"]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_0gnt6")
+debug_color = Color(0.937255, 0.25098, 0, 0.419608)
+
+[node name="det" type="Area2D" parent="fly"]
+
+[node name="col" type="CollisionShape2D" parent="fly/det"]
+position = Vector2(-2.85718, 0)
+shape = SubResource("CircleShape2D_cld84")
+debug_color = Color(0.784314, 0.282353, 0.827451, 0.419608)
+
+[node name="RayCast2D" type="RayCast2D" parent="fly"]
+
+[node name="Timer" type="Timer" parent="fly"]
+wait_time = 1.75
+
+[node name="rat" type="CharacterBody2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 29
+
+[node name="Sprite2D" type="Sprite2D" parent="rat"]
+texture = ExtResource("4_6r4mx")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rat"]
+position = Vector2(6, -1)
+shape = SubResource("CircleShape2D_fl856")
+
+[node name="areabox" type="Area2D" parent="rat"]
+
+[node name="hitcol" type="CollisionShape2D" parent="rat/areabox"]
+position = Vector2(6, -1)
+shape = SubResource("CircleShape2D_a12ej")
+debug_color = Color(0.764706, 0.447059, 0.00392157, 0.419608)
+
+[node name="det" type="Area2D" parent="rat"]
+
+[node name="col" type="CollisionShape2D" parent="rat/det"]
+shape = SubResource("RectangleShape2D_13cgx")
+debug_color = Color(0.921569, 0, 0.694118, 0.419608)
+
+[node name="Timer" type="Timer" parent="rat"]
+wait_time = 1.5
+
+[node name="thief" type="CharacterBody2D" parent="."]
+collision_layer = 8
+collision_mask = 29
+
+[node name="Sprite2D" type="Sprite2D" parent="thief"]
+texture = ExtResource("6_mxfmm")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="thief"]
+shape = SubResource("CapsuleShape2D_3etk8")
+
+[node name="hitbox" type="Area2D" parent="thief"]
+
+[node name="colbox" type="CollisionShape2D" parent="thief/hitbox"]
+shape = SubResource("CapsuleShape2D_v8nqf")
+debug_color = Color(0.772549, 0.439216, 0.172549, 0.419608)
+
+[node name="det" type="Area2D" parent="thief"]
+
+[node name="col" type="CollisionShape2D" parent="thief/det"]
+shape = SubResource("RectangleShape2D_5aefx")
+debug_color = Color(0.843137, 0, 0.913725, 0.419608)
+
+[node name="RayCast2D" type="RayCast2D" parent="thief"]
+
+[node name="Timer" type="Timer" parent="thief"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_at84c")
+}
+
+[connection signal="body_entered" from="fly" to="." method="hit_fly_entered"]
+[connection signal="body_entered" from="fly/det" to="." method="fly_det_entered"]
+[connection signal="body_exited" from="fly/det" to="." method="fly_det_exited"]
+[connection signal="timeout" from="fly/Timer" to="." method="fly_timeout"]
+[connection signal="body_entered" from="rat/areabox" to="." method="hit_rat_entered"]
+[connection signal="body_entered" from="rat/det" to="." method="rat_det_entered"]
+[connection signal="body_exited" from="rat/det" to="." method="rat_det_exited"]
+[connection signal="timeout" from="rat/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="thief/hitbox" to="." method="thief_hitbox_entered"]
+[connection signal="body_entered" from="thief/det" to="." method="thief_det_entered"]
+[connection signal="body_exited" from="thief/det" to="." method="thief_det_exited"]
+[connection signal="timeout" from="thief/Timer" to="." method="thief_timeout"]

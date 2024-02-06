@@ -1,6 +1,6 @@
 extends Node2D
 
-@export_category("type (lava, bat, skeleton)")
+@export_category("type (ice, bear, yeti)")
 @export var enemy_type : String
 
 #ice

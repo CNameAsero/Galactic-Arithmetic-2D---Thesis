@@ -1,13 +1,13 @@
 extends Node2D
 
 var last_item_was_number = false
+var can_collect_fraction = true
 var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "/": 3,"^": 4, "(": 0}
 
 @onready var collected_parentheses := []
 @onready var collected_items := []
 @onready var isDestroy = false
 @onready var open = false
-
 @onready var label = $"1st_label"
 
 @export_category("how many terms?")
@@ -20,6 +20,8 @@ var parentheses = 2
 @onready var final_answer = $final_answer.final_answer
 @onready var level_complete_menu = $"../menus/level_complete_menu"
 @onready var game_over = $"../menus/game_over"
+
+var final_ans
 
 func collect_number(num):
 	if isDestroy && !last_item_was_number:
@@ -35,7 +37,7 @@ func collect_operator(oper):
 	update_expression()
 	check_final_answer()
 
-func collect_open_parenthesis(paren):
+func collect_open_parenthesis():
 	if isDestroy && !last_item_was_number:
 		collected_items.append("(")
 		last_item_was_number = false
@@ -97,6 +99,9 @@ func decimal_to_nearest_fraction(decimal, limit=36):
 	var divisor = gcd(int(best_numerator), int(best_denominator))
 	best_numerator /= divisor
 	best_denominator /= divisor
+	if best_denominator < 0:
+		best_numerator *= -1
+		best_denominator *= -1
 
 	return str(int(best_numerator)) + "/" + str(int(best_denominator))
 
@@ -126,6 +131,7 @@ func evaluate_rpn(expression):
 			elif token == "/":
 				var result = float(num1) / num2
 				result = round(result * 10000000000000000) / 10000000000000000
+				final_ans = round(result * 100) / 100
 				stack.append(result)
 			elif token == "^":
 				stack.append(pow(num1, num2))
@@ -155,10 +161,11 @@ func update_expression():
 
 func check_final_answer():
 	var current_level = 0.0
-	var current_result = evaluate_rpn(shunting_yard())
-	print("calculation: " + str(evaluate_rpn(shunting_yard())))
-	print("final answer: " + str(final_answer))
-	if str(current_result) == str(final_answer):
+	var current_result = final_ans
+#	print("calculation: " + str(evaluate_rpn(shunting_yard())))
+#	print ("tens: " + str(final_ans))
+#	print("final answer: " + str(final_answer))
+	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
 		GameSettings.grasscurrentlevel[current_level + 1] = true
 		reset_for_next_level()
@@ -166,7 +173,7 @@ func check_final_answer():
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		get_tree().paused = true
-	elif collected_items.size() == terms || current_result != evaluate_rpn(shunting_yard()):
+	elif collected_items.size() == terms || current_result != final_ans:
 		AudioManager.play_deathsfx()
 		reset_for_next_level()
 		game_over.show()

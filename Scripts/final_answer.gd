@@ -1,5 +1,4 @@
 extends CharacterBody2D
-class_name finalanswer
 
 @export var final_answer = 0
 

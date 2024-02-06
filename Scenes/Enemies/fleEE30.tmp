@@ -1,0 +1,147 @@
+[gd_scene load_steps=12 format=3 uid="uid://c7iwbfvapp100"]
+
+[ext_resource type="Texture2D" uid="uid://cghnkenifmeve" path="res://Sprites/Enemies/world5_enemies/fleaspawn.png" id="1_8cb6h"]
+[ext_resource type="Script" path="res://Scenes/Enemies/flea.gd" id="1_ec76g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ah21o"]
+size = Vector2(20, 6)
+
+[sub_resource type="Animation" id="Animation_nupx8"]
+resource_name = "left"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_8fwts"]
+resource_name = "left_death"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_o0rct"]
+resource_name = "right"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_fu3bw"]
+resource_name = "right_death"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [12, 13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_8dv0g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s8emm"]
+_data = {
+"RESET": SubResource("Animation_8dv0g"),
+"left": SubResource("Animation_nupx8"),
+"left_death": SubResource("Animation_8fwts"),
+"right": SubResource("Animation_o0rct"),
+"right_death": SubResource("Animation_fu3bw")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5od1"]
+size = Vector2(24, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_342mc"]
+
+[node name="flea" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 29
+script = ExtResource("1_ec76g")
+flea_speed = 125
+rect_size_flea_x = 5000
+rect_size_flea_y = 2500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8cb6h")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_ah21o")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_s8emm")
+}
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="colbox" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_a5od1")
+debug_color = Color(0.768627, 0.447059, 0, 0.419608)
+
+[node name="det" type="Area2D" parent="."]
+
+[node name="col" type="CollisionShape2D" parent="det"]
+shape = SubResource("RectangleShape2D_342mc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[connection signal="body_entered" from="hitbox" to="." method="hitbox_entered"]
+[connection signal="body_entered" from="det" to="." method="det_entered"]
+[connection signal="body_exited" from="det" to="." method="_on_det_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

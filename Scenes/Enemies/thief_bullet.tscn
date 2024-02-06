@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvhn0ady5xhmn"]
+
+[ext_resource type="Script" path="res://Scripts/thief_bullet.gd" id="1_4gco8"]
+[ext_resource type="Texture2D" uid="uid://chapbaf2peblw" path="res://Sprites/Enemies/world5_enemies/Bullet.png" id="2_ghtnn"]
+
+[sub_resource type="GDScript" id="GDScript_n0hq0"]
+script/source = "extends Sprite2D
+
+@onready var num = 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	checknum()
+
+func checknum():
+	if num == 1:
+		queue_free()
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smv1j"]
+radius = 6.08276
+
+[node name="thief_bullet" type="Area2D"]
+script = ExtResource("1_4gco8")
+speed = 600.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("2_ghtnn")
+script = SubResource("GDScript_n0hq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13, 1)
+shape = SubResource("CircleShape2D_smv1j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
