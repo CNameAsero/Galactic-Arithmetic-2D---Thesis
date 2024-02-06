@@ -1,9 +1,22 @@
-[gd_scene load_steps=13 format=3 uid="uid://8wqe3icew0h"]
+[gd_scene load_steps=26 format=3 uid="uid://8wqe3icew0h"]
 
 [ext_resource type="TileSet" uid="uid://d1dx8dh8o5nxq" path="res://World4_Tileset.tres" id="1_xt3g1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_wsw31"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_86c8b"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_17m7p"]
+[ext_resource type="PackedScene" uid="uid://c6l46jv1tsbb6" path="res://Scenes/Mechanics/gamemanager_fraction.tscn" id="5_kyxrc"]
+[ext_resource type="PackedScene" uid="uid://da2cv6qqt82a2" path="res://Scenes/Mechanics/numbers_w4.tscn" id="6_g0ae5"]
+[ext_resource type="PackedScene" uid="uid://c6qenf481l3o3" path="res://Scenes/Mechanics/operators_w4.tscn" id="7_24wg2"]
+[ext_resource type="PackedScene" uid="uid://c0ug32c0f4tmi" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="8_xtnif"]
+[ext_resource type="PackedScene" uid="uid://20qsvs6f2wea" path="res://Scenes/timer_w4.tscn" id="9_u6m78"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_optns"]
+[ext_resource type="PackedScene" uid="uid://cdngsmqf0vwbx" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_bxlae"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="12_w5ml7"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="13_wewef"]
+[ext_resource type="PackedScene" uid="uid://bkrwfkw8lyn73" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_7oogx"]
+[ext_resource type="PackedScene" uid="uid://bv8w2y4n6rixp" path="res://Scenes/Menu/level_complete_menu_w4.tscn" id="15_3kt88"]
+[ext_resource type="PackedScene" uid="uid://b7tkalqgic7ty" path="res://Scenes/Menu/Game_Over/game_over_w4.tscn" id="16_2moev"]
+[ext_resource type="PackedScene" uid="uid://r5g5crpsi4fk" path="res://Scenes/Mechanics/powerups_w4.tscn" id="17_dj8qk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fb0i0"]
 radius = 27.0185
@@ -186,3 +199,115 @@ libraries = {
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_17m7p")]
 position = Vector2(242, 881)
 scale = Vector2(1.85, 1.85)
+
+[node name="gamemanager_fraction" parent="." instance=ExtResource("5_kyxrc")]
+num_term = 6
+
+[node name="Numbers" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(251, 100)
+number = 1
+
+[node name="Numbers2" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(60, 263)
+number = 1
+
+[node name="Numbers3" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(434, 75)
+number = 3
+
+[node name="Numbers4" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(617, 166)
+number = 1
+
+[node name="Numbers5" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(370, 266)
+number = 1
+
+[node name="Numbers6" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(203, 412)
+number = 2
+
+[node name="Numbers7" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(46, 441)
+number = 4
+
+[node name="Numbers8" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(160, 576)
+number = 3
+
+[node name="Numbers9" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(51, 636)
+number = 4
+
+[node name="Numbers10" parent="gamemanager_fraction" instance=ExtResource("6_g0ae5")]
+position = Vector2(722, 384)
+number = 4
+
+[node name="operators" parent="gamemanager_fraction" instance=ExtResource("7_24wg2")]
+position = Vector2(507, 198)
+oper = "+"
+
+[node name="operators2" parent="gamemanager_fraction" instance=ExtResource("7_24wg2")]
+position = Vector2(732, 232)
+oper = "-"
+
+[node name="operators3" parent="gamemanager_fraction" instance=ExtResource("7_24wg2")]
+oper = "d"
+
+[node name="final_answer_w4" parent="gamemanager_fraction" instance=ExtResource("8_xtnif")]
+num1 = 3.0
+num2 = 4.0
+display = "3over4"
+
+[node name="timer" parent="gamemanager_fraction" instance=ExtResource("9_u6m78")]
+
+[node name="health_system" parent="." instance=ExtResource("10_optns")]
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="world_4_enemies" parent="enemies" instance=ExtResource("11_bxlae")]
+enemy_type = "ice"
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("12_w5ml7")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("13_wewef")
+
+[node name="game_paused" parent="menus" instance=ExtResource("14_7oogx")]
+visible = false
+layout_mode = 1
+offset_left = -915.0
+offset_top = 495.0
+offset_right = -915.0
+offset_bottom = 495.0
+
+[node name="level_complete_menu" parent="menus" instance=ExtResource("15_3kt88")]
+visible = false
+layout_mode = 1
+offset_left = -915.5
+offset_top = 494.5
+offset_right = -915.5
+offset_bottom = 494.5
+
+[node name="game_over" parent="menus" instance=ExtResource("16_2moev")]
+visible = false
+layout_mode = 1
+offset_left = -913.5
+offset_top = 494.5
+offset_right = -913.5
+offset_bottom = 494.5
+
+[node name="powerups_w4" parent="." instance=ExtResource("17_dj8qk")]
+offset_left = 491.0
+offset_top = 870.0
+offset_right = 491.0
+offset_bottom = 870.0
+buff_selected = "time"
+time_buff = 15.0
+
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

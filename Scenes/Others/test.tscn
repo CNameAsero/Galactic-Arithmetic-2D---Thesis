@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmyl7dmuee7qy"]
+[gd_scene load_steps=7 format=3 uid="uid://dmyl7dmuee7qy"]
 
 [ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_5j7v1"]
 [ext_resource type="PackedScene" uid="uid://c6l46jv1tsbb6" path="res://Scenes/Mechanics/gamemanager_fraction.tscn" id="3_mkids"]
 [ext_resource type="PackedScene" uid="uid://da2cv6qqt82a2" path="res://Scenes/Mechanics/numbers_w4.tscn" id="4_7jks2"]
+[ext_resource type="PackedScene" uid="uid://c0ug32c0f4tmi" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="5_awsuw"]
 [ext_resource type="PackedScene" uid="uid://c6qenf481l3o3" path="res://Scenes/Mechanics/operators_w4.tscn" id="5_qamv2"]
-[ext_resource type="PackedScene" uid="uid://b0jcfeqe4jval" path="res://Scenes/Mechanics/final_answer_w4.tscn" id="6_d7hop"]
-[ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="7_tpls2"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="7_uvx36"]
 
 [node name="test" type="Node2D"]
@@ -13,14 +12,10 @@
 [node name="slime_player_joystick" parent="." instance=ExtResource("1_5j7v1")]
 
 [node name="gamemanager_fraction" parent="." instance=ExtResource("3_mkids")]
-num_term = 6
-
-[node name="final_answer" parent="gamemanager_fraction" instance=ExtResource("6_d7hop")]
-position = Vector2(253, 41)
-final_answer = 0.83
+num_term = 4
 
 [node name="Numbers" parent="gamemanager_fraction" instance=ExtResource("4_7jks2")]
-number = 1
+number = 3
 
 [node name="Numbers2" parent="gamemanager_fraction" instance=ExtResource("4_7jks2")]
 position = Vector2(440, 110)
@@ -58,9 +53,9 @@ oper = "÷"
 position = Vector2(98, 220)
 oper = "d"
 
-[node name="health_system" parent="." instance=ExtResource("7_uvx36")]
+[node name="final_answer_w4" parent="gamemanager_fraction" instance=ExtResource("5_awsuw")]
+position = Vector2(646, 176)
+num1 = 5.0
+num2 = 6.0
 
-[node name="world_5_enemies" parent="." instance=ExtResource("7_tpls2")]
-rect_size_rat = 600.0
-rat_move_direction = Vector2(150, 0)
-rect_size_thief = 600.0
+[node name="health_system" parent="." instance=ExtResource("7_uvx36")]

@@ -7,8 +7,6 @@ func _ready():
 		if i is Sprite2D and i.name == str(final_answer):
 			i.visible = true
 			match final_answer:
-				0:
-					pass
 				1:
 					var animationplayer1 = $"1/AnimationPlayer"
 					animationplayer1.play("chest")

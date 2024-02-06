@@ -13,15 +13,12 @@ var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "/": 3,"^": 4, "(": 0}
 @export_category("how many terms?")
 @export var num_term : int
 @onready var oper_term = num_term - 1
-var parentheses = 2
-@onready var terms = num_term + oper_term + parentheses
+@onready var terms = num_term + oper_term
 @onready var health_system = $"../health_system"
 
-@onready var final_answer = $final_answer.final_answer
+@onready var final_answer = $final_answer_w4.final_answer
 @onready var level_complete_menu = $"../menus/level_complete_menu"
 @onready var game_over = $"../menus/game_over"
-
-var final_ans
 
 func collect_number(num):
 	if isDestroy && !last_item_was_number:
@@ -131,7 +128,6 @@ func evaluate_rpn(expression):
 			elif token == "/":
 				var result = float(num1) / num2
 				result = round(result * 10000000000000000) / 10000000000000000
-				final_ans = round(result * 100) / 100
 				stack.append(result)
 			elif token == "^":
 				stack.append(pow(num1, num2))
@@ -140,7 +136,7 @@ func evaluate_rpn(expression):
 func update_expression():
 	var items = []
 
-	for i in range(num_term + oper_term + parentheses):
+	for i in range(num_term + oper_term):
 		if i < collected_items.size():
 			items.append(str(collected_items[i]))
 		else:
@@ -161,11 +157,10 @@ func update_expression():
 
 func check_final_answer():
 	var current_level = 0.0
-	var current_result = final_ans
-#	print("calculation: " + str(evaluate_rpn(shunting_yard())))
-#	print ("tens: " + str(final_ans))
-#	print("final answer: " + str(final_answer))
-	if current_result == final_answer:
+	var current_result = evaluate_rpn(shunting_yard())
+	print("calculation: " + str(evaluate_rpn(shunting_yard())))
+	print("final answer: " + str(final_answer))
+	if str(current_result) == str(final_answer):
 		AudioManager.level_complete_sfx.play()
 		GameSettings.grasscurrentlevel[current_level + 1] = true
 		reset_for_next_level()
@@ -173,7 +168,7 @@ func check_final_answer():
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		get_tree().paused = true
-	elif collected_items.size() == terms || current_result != final_ans:
+	elif collected_items.size() == terms && str(current_result) != str(final_answer):
 		AudioManager.play_deathsfx()
 		reset_for_next_level()
 		game_over.show()

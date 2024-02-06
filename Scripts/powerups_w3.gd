@@ -10,7 +10,7 @@ extends Control
 @onready var player = $"../slime_player_joystick/slime_player_joystik"
 
 @onready var timer = $"../gamemanager_pemdas/timer/Timer"
-@onready var timer_ui = $"../gamemanager_pemdas/timer"
+@onready var timer_ui = $"../gamemanager_f/timer"
 
 @onready var speed_buff_timer = $Area2D/speed/speed_buff_timer
 @onready var animation_player = $Area2D/AnimationPlayer

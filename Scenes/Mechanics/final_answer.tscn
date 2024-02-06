@@ -198,6 +198,7 @@ scale = Vector2(1.8, 1.8)
 collision_layer = 4
 collision_mask = 25
 script = ExtResource("1_spf4c")
+final_answer = 1
 
 [node name="1" type="Sprite2D" parent="."]
 visible = false
