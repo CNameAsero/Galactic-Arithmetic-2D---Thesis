@@ -14,7 +14,7 @@ func _ready():
 			match display:
 				'3over4':
 					animation_player.play("075")
-				'5over6':
+				'5over16':
 					animation_player.play("03125")
 				'7over8':
 					animation_player.play("0875")

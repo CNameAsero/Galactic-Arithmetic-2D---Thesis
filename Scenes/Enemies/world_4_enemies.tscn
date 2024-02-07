@@ -202,7 +202,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_gw015"]
 resource_name = "ice"
-length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -211,7 +210,7 @@ tracks/0/path = NodePath("ice/Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"times": PackedFloat32Array(0.5, 0.6, 0.7, 0.8, 0.9, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 1, 2, 3, 4]
@@ -328,6 +327,7 @@ debug_color = Color(0, 0.639216, 0.392157, 0.419608)
 
 [node name="bear" type="CharacterBody2D" parent="."]
 visible = false
+scale = Vector2(1.8, 1.8)
 collision_layer = 8
 collision_mask = 29
 
@@ -356,6 +356,7 @@ debug_color = Color(0.498039, 0.482353, 0.858824, 0.419608)
 
 [node name="yeti" type="CharacterBody2D" parent="."]
 visible = false
+scale = Vector2(0.9, 0.9)
 collision_layer = 8
 collision_mask = 29
 

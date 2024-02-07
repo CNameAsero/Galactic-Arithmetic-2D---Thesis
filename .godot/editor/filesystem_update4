@@ -16,3 +16,13 @@ res://Scenes/levels/level1_TileSet2dPixel.tres
 res://Scenes/levels/level_5.tscn
 res://Scripts/paused_menu_w3.gd
 res://Scripts/Numbers_w4.gd
+res://Scenes/levels/level_13.tscn
+res://Scenes/Mechanics/final_answer_w_4.tscn
+res://Scenes/Mechanics/numbers_w4.tscn
+res://Scenes/levels/level_14.tscn
+res://Scenes/levels/level_9.tscn
+res://Scenes/Mechanics/operators_w4.tscn
+res://Scenes/Mechanics/final_answer_w_4.gd
+res://Scenes/levels/level_3.tscn
+res://Scenes/levels/level_2.tscn
+res://Scenes/Player/joystick.tscn
