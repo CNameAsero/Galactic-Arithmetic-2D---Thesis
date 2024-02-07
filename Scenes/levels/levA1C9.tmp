@@ -510,11 +510,6 @@ modulate = Color(47.93, 1, 1, 1)
 position = Vector2(869, 253)
 number = 2
 
-[node name="2_2nd" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
-modulate = Color(47.93, 1, 1, 1)
-position = Vector2(907, 638)
-number = 2
-
 [node name="6" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
 modulate = Color(47.93, 1, 1, 1)
 position = Vector2(871, 807)

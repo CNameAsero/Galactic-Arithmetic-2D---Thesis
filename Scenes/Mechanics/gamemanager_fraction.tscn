@@ -7,10 +7,10 @@
 script = ExtResource("1_6nhsq")
 
 [node name="1st_label" type="Label" parent="."]
-offset_left = 575.0
-offset_top = -17.0
-offset_right = 1341.0
-offset_bottom = 122.0
+offset_left = 557.0
+offset_top = -21.0
+offset_right = 1323.0
+offset_bottom = 118.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("1_dxfkd")

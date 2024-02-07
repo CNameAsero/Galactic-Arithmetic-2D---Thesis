@@ -315,7 +315,6 @@ move_direction = Vector2(100, 0)
 shockwave = ExtResource("2_kr7cs")
 
 [node name="ice" type="Area2D" parent="."]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ice"]
 texture = ExtResource("2_o2mrn")
