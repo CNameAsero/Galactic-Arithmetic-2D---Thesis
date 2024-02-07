@@ -1,9 +1,2 @@
-res://Scenes/Others/test.tscn
+res://Scenes/Mechanics/gamemanager_algebra.tscn
 res://World4_Tileset.tres
-res://Scenes/levels/level_16.tscn
-res://Scenes/levels/level_20.tscn
-res://Scenes/levels/level_19.tscn
-res://Scenes/levels/level_18.tscn
-res://Scenes/levels/level_17.tscn
-res://Scenes/Enemies/world_4_enemies.tscn
-res://Scenes/Mechanics/gamemanager_fraction.tscn
