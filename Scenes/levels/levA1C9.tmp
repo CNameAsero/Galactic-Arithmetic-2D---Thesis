@@ -510,11 +510,6 @@ modulate = Color(47.93, 1, 1, 1)
 position = Vector2(869, 253)
 number = 2
 
-[node name="2_2nd" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
-modulate = Color(47.93, 1, 1, 1)
-position = Vector2(907, 638)
-number = 2
-
 [node name="6" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
 modulate = Color(47.93, 1, 1, 1)
 position = Vector2(871, 807)
@@ -676,24 +671,6 @@ offset_right = 641.0
 offset_bottom = 717.0
 buff_selected = "speed"
 
-[node name="portal" parent="." instance=ExtResource("16_x38oi")]
-modulate = Color(3.7, 0.55, 0.15, 1)
-position = Vector2(1227, 162)
-
-[node name="portal2" parent="." instance=ExtResource("16_x38oi")]
-modulate = Color(3.7, 0.55, 0.15, 1)
-position = Vector2(954, 925)
-
-[node name="portal3" parent="." instance=ExtResource("16_x38oi")]
-modulate = Color(0.937255, 1, 0.0392157, 1)
-position = Vector2(1062, 261)
-id = 1
-
-[node name="portal4" parent="." instance=ExtResource("16_x38oi")]
-modulate = Color(0.936, 1, 0.04, 1)
-position = Vector2(671, 925)
-id = 1
-
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -727,6 +704,24 @@ offset_left = -915.5
 offset_top = 496.5
 offset_right = -915.5
 offset_bottom = 496.5
+
+[node name="portal" parent="." instance=ExtResource("16_x38oi")]
+modulate = Color(3.7, 0.55, 0.15, 1)
+position = Vector2(1227, 162)
+
+[node name="portal2" parent="." instance=ExtResource("16_x38oi")]
+modulate = Color(3.7, 0.55, 0.15, 1)
+position = Vector2(954, 925)
+
+[node name="portal3" parent="." instance=ExtResource("16_x38oi")]
+modulate = Color(0.937255, 1, 0.0392157, 1)
+position = Vector2(1062, 261)
+id = 1
+
+[node name="portal4" parent="." instance=ExtResource("16_x38oi")]
+modulate = Color(0.936, 1, 0.04, 1)
+position = Vector2(671, 925)
+id = 1
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
