@@ -1,5 +1,4 @@
 extends Area2D
-class_name operator
 
 @onready var operator_to_display = $"..".oper
 @onready var access_manager = $"../.."
@@ -15,10 +14,8 @@ func _ready():
 			fraction = "/"
 
 func _on_body_entered(body):
-	if body.is_in_group("player") and access_manager.last_item_was_number:
-		AudioManager.play_operator_collect()
+	if body.is_in_group("player"):
 		access_manager.isDestroy = true
-		if operator_to_display == "d":
-			access_manager.collect_operator(fraction)
-		else:
-			access_manager.collect_operator(operator_to_display)
+		AudioManager.play_operator_collect()
+		access_manager.collect_operator(operator_to_display)
+		access_manager.can_collect_fraction = true

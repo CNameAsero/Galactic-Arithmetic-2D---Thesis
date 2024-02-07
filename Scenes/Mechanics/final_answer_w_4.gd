@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export_category("num1/num2")
 @export var num1 : float
 @export var num2 : float

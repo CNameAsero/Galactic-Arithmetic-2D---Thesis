@@ -14,32 +14,30 @@
 [node name="health_system" parent="." instance=ExtResource("7_uvx36")]
 
 [node name="gamemanager_algebra" parent="." instance=ExtResource("3_ybuag")]
-num_term = 3
-var_term = 2
 
-[node name="Numbers" parent="gamemanager_algebra" instance=ExtResource("4_bp2oc")]
+[node name="Numbers" parent="." instance=ExtResource("4_bp2oc")]
 number = 2
 
-[node name="Numbers2" parent="gamemanager_algebra" instance=ExtResource("4_bp2oc")]
+[node name="Numbers2" parent="." instance=ExtResource("4_bp2oc")]
 position = Vector2(579, 175)
 number = 5
 
-[node name="Numbers3" parent="gamemanager_algebra" instance=ExtResource("4_bp2oc")]
+[node name="Numbers3" parent="." instance=ExtResource("4_bp2oc")]
 position = Vector2(290, 195)
 number = 1
 
-[node name="operators" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+[node name="operators" parent="." instance=ExtResource("5_7c88k")]
 position = Vector2(77, 323)
 oper = "+"
 
-[node name="operators2" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+[node name="operators2" parent="." instance=ExtResource("5_7c88k")]
 position = Vector2(113, 222)
 oper = "-"
 
-[node name="variables_w5" parent="gamemanager_algebra" instance=ExtResource("6_ixenb")]
+[node name="variables_w5" parent="." instance=ExtResource("6_ixenb")]
 position = Vector2(250, 59)
 variable_to_display = "x"
 
-[node name="variables_w6" parent="gamemanager_algebra" instance=ExtResource("6_ixenb")]
+[node name="variables_w6" parent="." instance=ExtResource("6_ixenb")]
 position = Vector2(339, 64)
 variable_to_display = "y"

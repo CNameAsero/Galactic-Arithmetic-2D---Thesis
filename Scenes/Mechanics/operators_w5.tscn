@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://quk3dlnbr7sj"]
+
+[ext_resource type="Script" path="res://Scripts/operators_w5.gd" id="1_fq6wo"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="2_mh5rg"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="3_ek38k"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="4_hudqp"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="5_o6enb"]
+[ext_resource type="Texture2D" uid="uid://dol6ek04pgtcl" path="res://Sprites/Collectibles/Operators/^.png" id="6_x3t7t"]
+[ext_resource type="Texture2D" uid="uid://dr3ni0platsp5" path="res://Sprites/Collectibles/Operators/Front-slash.png" id="7_ary2x"]
+
+[sub_resource type="GDScript" id="GDScript_lfiyq"]
+script/source = "extends Node2D
+
+@export var oper : String
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ief75"]
+radius = 7.63538
+
+[node name="operators" type="Node2D"]
+position = Vector2(100, 100)
+scale = Vector2(2, 2)
+script = SubResource("GDScript_lfiyq")
+
+[node name="set_operator" type="Area2D" parent="."]
+scale = Vector2(1.35, 1.35)
+collision_layer = 2
+script = ExtResource("1_fq6wo")
+
+[node name="+" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_mh5rg")
+
+[node name="-" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_ek38k")
+
+[node name="×" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("4_hudqp")
+
+[node name="÷" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("5_o6enb")
+
+[node name="^" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("6_x3t7t")
+
+[node name="d" type="Sprite2D" parent="set_operator"]
+visible = false
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_ary2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_operator"]
+shape = SubResource("CircleShape2D_ief75")
+
+[connection signal="body_entered" from="set_operator" to="set_operator" method="_on_body_entered"]

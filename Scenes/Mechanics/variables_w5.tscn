@@ -1,0 +1,104 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpmaiwavs1dc3"]
+
+[ext_resource type="Texture2D" uid="uid://d2v2cq7s1oijb" path="res://Sprites/Collectibles/variables/x.png" id="1_5a2cf"]
+[ext_resource type="Script" path="res://Scripts/variables_w5.gd" id="1_lcux0"]
+[ext_resource type="Texture2D" uid="uid://ckvflqnuif3hd" path="res://Sprites/Collectibles/variables/y.png" id="2_faq3l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kenu8"]
+radius = 30.9327
+
+[sub_resource type="Animation" id="Animation_kbplv"]
+resource_name = "x"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_variable/x:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_ehqve"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_variable/x:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("set_variable/y:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_d5mem"]
+resource_name = "y"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_variable/y:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5cr8g"]
+_data = {
+"RESET": SubResource("Animation_ehqve"),
+"x": SubResource("Animation_kbplv"),
+"y": SubResource("Animation_d5mem")
+}
+
+[node name="variables_w5" type="Node2D"]
+scale = Vector2(0.45, 0.45)
+script = ExtResource("1_lcux0")
+
+[node name="set_variable" type="Area2D" parent="."]
+scale = Vector2(1.08, 1.08)
+
+[node name="x" type="Sprite2D" parent="set_variable"]
+visible = false
+texture = ExtResource("1_5a2cf")
+hframes = 2
+frame = 1
+
+[node name="y" type="Sprite2D" parent="set_variable"]
+visible = false
+texture = ExtResource("2_faq3l")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_variable"]
+shape = SubResource("CircleShape2D_kenu8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_5cr8g")
+}
