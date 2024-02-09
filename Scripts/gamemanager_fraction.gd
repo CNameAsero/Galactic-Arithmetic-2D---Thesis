@@ -158,8 +158,6 @@ func update_expression():
 func check_final_answer():
 	var current_level = 0.0
 	var current_result = evaluate_rpn(shunting_yard())
-	print("calculation: " + str(evaluate_rpn(shunting_yard())))
-	print("final answer: " + str(final_answer))
 	if str(current_result) == str(final_answer):
 		AudioManager.level_complete_sfx.play()
 		GameSettings.grasscurrentlevel[current_level + 1] = true

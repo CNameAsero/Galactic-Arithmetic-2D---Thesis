@@ -1,11 +1,13 @@
-extends Node2D
+extends CharacterBody2D
 
-@export var move_speed : float = 30.0
-@export var move_direction : Vector2
-@export var rect_radius : float
+@onready var   move_speed
+@onready var move_direction
+@onready var rect_radius_x
+@onready var rect_radius_y
 
 @onready var animation_player = $Area2/AnimationPlayer
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../../health_system"
+@onready var shark = $".."
 
 var target = null
 
@@ -16,12 +18,15 @@ var chasing = false
 var patrol = true
 
 func _ready():
+	move_speed = shark.move_speed
+	move_direction = shark.move_direction
+	rect_radius_x = shark.rect_radius_x
+	rect_radius_y = shark.rect_radius_y
 	start_pos = global_position
 	target_pos = start_pos + move_direction
-
 	area_radius()
 
-func _process(delta):
+func _physics_process(delta):
 	if patrol:
 		shark_patrol(delta)
 	if chasing and target:
@@ -46,7 +51,7 @@ func shark_patrol(delta):
 		animation_player.play("right")
 
 func area_radius():
-	var collision_det = $area_det/col_det
+	var collision_det = $"../area_det/col_det"
 
 	if collision_det:
 		var collision_shape = collision_det
@@ -54,8 +59,8 @@ func area_radius():
 		if collision_shape:
 			if collision_shape.shape is RectangleShape2D:
 				var rect = collision_shape.shape as RectangleShape2D
-				rect.size.x = rect_radius
-				rect.size.y = rect_radius
+				rect.size.x = rect_radius_x
+				rect.size.y = rect_radius_y
 			else:
 				print("The shape is not a rect")
 		else:
@@ -90,7 +95,7 @@ func player_hurt():
 	AudioManager.player_hurt()
 	var blink_duration = 0.1
 	var total_blink_time = 2.0
-	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
+	var sprite = $"../../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)
 	

@@ -14,8 +14,7 @@ func _ready():
 			fraction = "/"
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") && access_manager.last_item_was_number && access_manager.last_item_was_variable:
 		access_manager.isDestroy = true
 		AudioManager.play_operator_collect()
 		access_manager.collect_operator(operator_to_display)
-		access_manager.can_collect_fraction = true

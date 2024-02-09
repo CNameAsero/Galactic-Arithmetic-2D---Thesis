@@ -664,20 +664,26 @@ position = Vector2(1305, 560)
 position = Vector2(290, 349)
 rect_radius = 450.0
 
-[node name="shark" parent="enemies" instance=ExtResource("4_us4ct")]
-position = Vector2(435, 648)
+[node name="shark4" parent="enemies" instance=ExtResource("4_us4ct")]
+position = Vector2(481, 650)
 move_speed = 90.0
 move_direction = Vector2(-290, 0)
+rect_radius_x = 150.0
+rect_radius_y = 50.0
 
-[node name="shark2" parent="enemies" instance=ExtResource("4_us4ct")]
-position = Vector2(1772, 646)
+[node name="shark5" parent="enemies" instance=ExtResource("4_us4ct")]
+position = Vector2(1059, 437)
 move_speed = 90.0
 move_direction = Vector2(-290, 0)
+rect_radius_x = 150.0
+rect_radius_y = 50.0
 
-[node name="shark3" parent="enemies" instance=ExtResource("4_us4ct")]
-position = Vector2(1059, 439)
+[node name="shark6" parent="enemies" instance=ExtResource("4_us4ct")]
+position = Vector2(1772, 644)
 move_speed = 90.0
 move_direction = Vector2(-250, 0)
+rect_radius_x = 450.0
+rect_radius_y = 380.0
 
 [node name="octopus2" parent="enemies" instance=ExtResource("3_473ma")]
 position = Vector2(1632, 372)

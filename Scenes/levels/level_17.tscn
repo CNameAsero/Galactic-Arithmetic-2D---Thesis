@@ -188,10 +188,16 @@ position = Vector2(962, 543)
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="world_4_enemies" parent="enemies" instance=ExtResource("11_cerlr")]
-position = Vector2(1449, 193)
+position = Vector2(1627, 255)
+enemy_type = "bear"
+radius = 150
 
 [node name="world_4_enemies2" parent="enemies" instance=ExtResource("11_cerlr")]
-position = Vector2(1194, 769)
+position = Vector2(976, 810)
+enemy_type = "bear"
+move_speed = 100.0
+radius = 150
+rect_radius_bear = 50.0
 
 [node name="world_4_enemies3" parent="enemies" instance=ExtResource("11_cerlr")]
 position = Vector2(262, 741)

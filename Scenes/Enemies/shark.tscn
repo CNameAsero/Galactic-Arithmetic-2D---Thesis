@@ -1,7 +1,26 @@
-[gd_scene load_steps=11 format=3 uid="uid://dk0trij6hevr6"]
+[gd_scene load_steps=13 format=3 uid="uid://dk0trij6hevr6"]
 
 [ext_resource type="Script" path="res://Scripts/shark.gd" id="1_lg7u7"]
 [ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/world2_enemies/ViciousShark.png" id="1_pnn3n"]
+
+[sub_resource type="GDScript" id="GDScript_c8bq8"]
+script/source = "extends Node2D
+
+@export var move_speed : float = 30.0
+@export var move_direction : Vector2
+@export var rect_radius_x : float
+@export var rect_radius_y : float
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7cyq"]
 radius = 9.0
@@ -99,30 +118,41 @@ _data = {
 "right": SubResource("Animation_m6wqs")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l50ik"]
+size = Vector2(35, 13)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4mgll"]
 
 [node name="shark" type="Node2D"]
 position = Vector2(102, 118)
+script = SubResource("GDScript_c8bq8")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 8
+collision_mask = 29
 script = ExtResource("1_lg7u7")
-rect_radius = 300.0
 
-[node name="Area2" type="Area2D" parent="."]
+[node name="Area2" type="Area2D" parent="CharacterBody2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2"]
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/Area2"]
 scale = Vector2(1.8, 1.8)
 texture = ExtResource("1_pnn3n")
 hframes = 4
 vframes = 2
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2"]
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_g7cyq")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Area2"]
 libraries = {
 "": SubResource("AnimationLibrary_6gjaj")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_l50ik")
 
 [node name="area_det" type="Area2D" parent="."]
 
@@ -130,6 +160,6 @@ libraries = {
 shape = SubResource("RectangleShape2D_4mgll")
 debug_color = Color(0.713726, 0.258824, 1, 0.419608)
 
-[connection signal="body_entered" from="Area2" to="." method="_on_area_2_body_entered"]
-[connection signal="body_entered" from="area_det" to="." method="_on_area_det_body_entered"]
-[connection signal="body_exited" from="area_det" to="." method="_on_area_det_body_exited"]
+[connection signal="body_entered" from="CharacterBody2D/Area2" to="CharacterBody2D" method="_on_area_2_body_entered"]
+[connection signal="body_entered" from="area_det" to="CharacterBody2D" method="_on_area_det_body_entered"]
+[connection signal="body_exited" from="area_det" to="CharacterBody2D" method="_on_area_det_body_exited"]

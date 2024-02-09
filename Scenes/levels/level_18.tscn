@@ -183,21 +183,25 @@ position = Vector2(962, 543)
 [node name="world_4_enemies" parent="enemies" instance=ExtResource("11_m3gl2")]
 position = Vector2(65, 219)
 enemy_type = "yeti"
+rect_radius_yeti = 300.0
 move_direction = Vector2(150, 0)
 
 [node name="world_4_enemies2" parent="enemies" instance=ExtResource("11_m3gl2")]
 position = Vector2(714, 969)
 enemy_type = "yeti"
+rect_radius_yeti = 300.0
 move_direction = Vector2(135, 0)
 
 [node name="world_4_enemies3" parent="enemies" instance=ExtResource("11_m3gl2")]
 position = Vector2(1362, 876)
 enemy_type = "yeti"
+rect_radius_yeti = 300.0
 move_direction = Vector2(400, 0)
 
 [node name="world_4_enemies4" parent="enemies" instance=ExtResource("11_m3gl2")]
 position = Vector2(1483, 663)
 enemy_type = "yeti"
+rect_radius_yeti = 500.0
 move_direction = Vector2(170, 0)
 
 [node name="gamemanager_fraction" parent="." instance=ExtResource("5_3fppu")]

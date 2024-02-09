@@ -236,15 +236,6 @@ enemy_type = "ice"
 position = Vector2(925, 253)
 enemy_type = "ice"
 
-[node name="world_4_enemies11" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(1507, 381)
-enemy_type = "yeti"
-move_direction = Vector2(300, 0)
-
-[node name="world_4_enemies12" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(1317, 851)
-move_direction = Vector2(150, 0)
-
 [node name="world_4_enemies13" parent="enemies" instance=ExtResource("11_sipc5")]
 position = Vector2(677, 776)
 enemy_type = "ice"
@@ -285,20 +276,6 @@ enemy_type = "ice"
 position = Vector2(636, 776)
 enemy_type = "ice"
 
-[node name="world_4_enemies19" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(110, 407)
-enemy_type = "yeti"
-move_direction = Vector2(500, 0)
-
-[node name="world_4_enemies22" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(965, 629)
-enemy_type = "yeti"
-move_direction = Vector2(300, 0)
-
-[node name="world_4_enemies23" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(347, 551)
-move_direction = Vector2(300, 0)
-
 [node name="world_4_enemies20" parent="enemies" instance=ExtResource("11_sipc5")]
 position = Vector2(1764, 818)
 enemy_type = "ice"
@@ -306,6 +283,37 @@ enemy_type = "ice"
 [node name="world_4_enemies21" parent="enemies" instance=ExtResource("11_sipc5")]
 position = Vector2(1723, 818)
 enemy_type = "ice"
+
+[node name="yeti3" parent="enemies" instance=ExtResource("11_sipc5")]
+position = Vector2(110, 407)
+enemy_type = "yeti"
+rect_radius_yeti = 300.0
+move_direction = Vector2(500, 0)
+
+[node name="yeti2" parent="enemies" instance=ExtResource("11_sipc5")]
+position = Vector2(965, 629)
+enemy_type = "yeti"
+rect_radius_yeti = 300.0
+move_direction = Vector2(300, 0)
+
+[node name="yeti_boss" parent="enemies" instance=ExtResource("11_sipc5")]
+position = Vector2(1507, 381)
+enemy_type = "yeti"
+rect_radius_yeti = 450.0
+move_direction = Vector2(300, 0)
+
+[node name="bear2" parent="enemies" instance=ExtResource("11_sipc5")]
+position = Vector2(1321, 866)
+enemy_type = "bear"
+radius = 120
+rect_radius_bear = 50.0
+move_direction = Vector2(150, 0)
+
+[node name="bear_boss" parent="enemies" instance=ExtResource("11_sipc5")]
+position = Vector2(391, 786)
+enemy_type = "bear"
+radius = 75
+rect_radius_bear = 75.0
 
 [node name="gamemanager_fraction" parent="." instance=ExtResource("5_xoyul")]
 num_term = 6

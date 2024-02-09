@@ -5,7 +5,7 @@ extends Node2D
 
 #ice
 @onready var col = $ice/CollisionShape2D
-
+@onready var health_system = $"../../health_system"
 
 var angle = 50
 var speed = 0.09 * PI / 180
@@ -28,7 +28,7 @@ var target = null
 var chasing = false
 @onready var patrol = true
 
-@onready var player = $"../slime_player_joystick/slime_player_joystik"
+@onready var player = $"../../slime_player_joystick/slime_player_joystik"
 @onready var ray_cast_2d = $yeti/RayCast2D
 @onready var timer = $yeti/Timer
 @onready var animation_player = $AnimationPlayer
@@ -45,6 +45,7 @@ func _ready():
 				if i.name == "ice":
 					$bear.queue_free()
 					$yeti.queue_free()
+					$det_bear.queue_free()
 		if i is CharacterBody2D and i.name == enemy_type:
 			i.visible = true
 			if enemy_type == "bear":
@@ -57,10 +58,11 @@ func _ready():
 				if i.name == "yeti":
 					$ice.queue_free()
 					$bear.queue_free()
+					$det_bear.queue_free()
 
 func ice():
 	animation_player.speed_scale = 0.2
-	if animation_player.current_animation == "ice" and animation_player.current_animation_position < 0.5:
+	if animation_player.current_animation == "ice" and animation_player.current_animation_position > 0.5:
 		col.disabled = false
 	else:
 		col.disabled = true
@@ -94,12 +96,15 @@ func bear_patrol():
 
 func bear_chase_player(delta):
 	var direction = (target.global_position - global_position).normalized()
-	global_position += direction * move_speed * delta
 	var is_horizontal = abs(direction.x) > abs(direction.y)
 	
 	var attack_range = 30 
+	var stop_range = 10
 
 	var distance = target.global_position.distance_to(global_position)
+
+	if distance > stop_range:
+		global_position += direction * move_speed * delta
 
 	if distance < attack_range:
 		if is_horizontal:
@@ -125,7 +130,7 @@ func bear_chase_player(delta):
 				animation_player.play("bear_up")
 
 func area_radius_bear():
-	var collision_det = $bear/det/col
+	var collision_det = $det_bear/col
 
 	if collision_det:
 		var collision_shape = collision_det
@@ -218,7 +223,7 @@ func bear_det_exited(body):
 
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player"):
-		print("kill")
+		player_hurt()
 
 func yeti_det_entered(body):
 	target = body
@@ -235,11 +240,33 @@ func shockwave_timeout():
 	if target_detected:
 		yeti_shockwave()
 
+func player_hurt():
+	health_system._health -= 1
+	AudioManager.player_hurt()
+	var blink_duration = 0.1
+	var total_blink_time = 2.0
+	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
+	
+	sprite.modulate = Color(1, 1, 1, 0.5)
+	
+	for i in range(int(total_blink_time / blink_duration)):
+		sprite.visible = !sprite.visible
+		await get_tree().create_timer(0.1).timeout
+	
+	sprite.visible = true
+	sprite.modulate = Color(1, 1, 1, 1)
+
 func _process(delta):
 	if enemy_type == "ice":
 		animation_player.play("ice")
 		ice()
-	elif enemy_type == "bear":
-		bear(delta)
 	elif enemy_type == "yeti":
 		yeti(delta)
+
+func _on_ice_body_entered(body):
+	if body.is_in_group("player"):
+		player_hurt()
+
+func _on_area_yeti_body_entered(body):
+	if body.is_in_group("player"):
+		player_hurt()

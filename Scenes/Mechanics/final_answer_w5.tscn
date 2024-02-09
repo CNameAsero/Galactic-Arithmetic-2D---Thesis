@@ -1,0 +1,226 @@
+[gd_scene load_steps=15 format=3 uid="uid://btmq1lrhtcp0e"]
+
+[ext_resource type="Script" path="res://Scenes/Mechanics/final_answer_w5.gd" id="1_ofle6"]
+[ext_resource type="Texture2D" uid="uid://c0bxfhgqnpnc5" path="res://Sprites/Collectibles/final answers/w5/9x.png" id="2_rdhvr"]
+[ext_resource type="Texture2D" uid="uid://d4lxc8d717und" path="res://Sprites/Collectibles/final answers/w5/12xplusy.png" id="3_mivv2"]
+[ext_resource type="Texture2D" uid="uid://dl1uqayfoyvwi" path="res://Sprites/Collectibles/final answers/w5/2xsquare.png" id="4_frpf8"]
+[ext_resource type="Texture2D" uid="uid://cqbsjqnb023j5" path="res://Sprites/Collectibles/final answers/w5/4xsquarey.png" id="5_hvpju"]
+[ext_resource type="Texture2D" uid="uid://b3oag7jusoho4" path="res://Sprites/Collectibles/final answers/w5/12xsquare.png" id="6_itus0"]
+
+[sub_resource type="Animation" id="Animation_p0rax"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("lvl2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("lvl3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("lvl4:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("lvl4:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("lvl5:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_52535"]
+resource_name = "lvl1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_rsvet"]
+resource_name = "lvl2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_heput"]
+resource_name = "lvl3"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_xxu30"]
+resource_name = "lvl4"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_77m5v"]
+resource_name = "lvl5"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl5:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d4abo"]
+_data = {
+"RESET": SubResource("Animation_p0rax"),
+"lvl1": SubResource("Animation_52535"),
+"lvl2": SubResource("Animation_rsvet"),
+"lvl3": SubResource("Animation_heput"),
+"lvl4": SubResource("Animation_xxu30"),
+"lvl5": SubResource("Animation_77m5v")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bsnka"]
+
+[node name="final_answer_w5" type="CharacterBody2D"]
+position = Vector2(189, 110)
+scale = Vector2(1.8, 1.8)
+collision_layer = 4
+collision_mask = 25
+script = ExtResource("1_ofle6")
+
+[node name="lvl1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_rdhvr")
+hframes = 5
+frame = 1
+
+[node name="lvl2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_mivv2")
+hframes = 5
+frame = 1
+
+[node name="lvl3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_frpf8")
+hframes = 5
+frame = 1
+
+[node name="lvl4" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_hvpju")
+hframes = 5
+frame = 1
+
+[node name="lvl5" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_itus0")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_d4abo")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bsnka")

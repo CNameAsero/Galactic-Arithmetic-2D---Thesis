@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://d37gvcmhvxqw2"]
+
+[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_ppgca"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="2_264cb"]
+[ext_resource type="PackedScene" uid="uid://cq4wtpvvf81wa" path="res://Scripts/gamemanager_new.tscn" id="3_dgrwv"]
+[ext_resource type="PackedScene" uid="uid://b1cwh68wrnd2y" path="res://Scenes/Mechanics/numbers_w5.tscn" id="4_thc2g"]
+[ext_resource type="PackedScene" uid="uid://quk3dlnbr7sj" path="res://Scenes/Mechanics/operators_w5.tscn" id="5_1sby4"]
+[ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="6_nr56u"]
+
+[node name="test" type="Node2D"]
+
+[node name="slime_player_joystick" parent="." instance=ExtResource("1_ppgca")]
+
+[node name="health_system" parent="." instance=ExtResource("2_264cb")]
+
+[node name="gamemanager_new" parent="." instance=ExtResource("3_dgrwv")]
+
+[node name="Numbers" parent="gamemanager_new" instance=ExtResource("4_thc2g")]
+number = 2
+
+[node name="Numbers2" parent="gamemanager_new" instance=ExtResource("4_thc2g")]
+position = Vector2(579, 175)
+number = 5
+
+[node name="Numbers4" parent="gamemanager_new" instance=ExtResource("4_thc2g")]
+position = Vector2(429, 120)
+number = 5
+
+[node name="Numbers3" parent="gamemanager_new" instance=ExtResource("4_thc2g")]
+position = Vector2(290, 195)
+number = 1
+
+[node name="operators" parent="gamemanager_new" instance=ExtResource("5_1sby4")]
+position = Vector2(77, 323)
+oper = "+"
+
+[node name="operators2" parent="gamemanager_new" instance=ExtResource("5_1sby4")]
+position = Vector2(113, 222)
+oper = "-"
+
+[node name="variables_w5" parent="gamemanager_new" instance=ExtResource("6_nr56u")]
+position = Vector2(250, 59)
+variable_to_display = "x"
+
+[node name="variables_w6" parent="gamemanager_new" instance=ExtResource("6_nr56u")]
+position = Vector2(339, 64)
+variable_to_display = "y"

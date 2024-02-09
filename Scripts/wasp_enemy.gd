@@ -11,6 +11,7 @@ var x = 0
 var animation_player
 @onready var health_system = $"../../../health_system"
 
+var can_be_hurt = true
 func _ready():
 	animation_player = $AnimationPlayer
 	original_position = global_position
@@ -85,7 +86,7 @@ func player_hurt():
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.1
-	var total_blink_time = 1.5
+	var total_blink_time = 2.0
 	var sprite = $"../../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)

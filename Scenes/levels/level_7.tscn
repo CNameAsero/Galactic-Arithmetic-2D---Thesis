@@ -681,9 +681,16 @@ oper = "×"
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="shark" parent="Enemies" instance=ExtResource("5_3jgl7")]
-position = Vector2(1588, 929)
+position = Vector2(1251, 831)
 move_speed = 90.0
-move_direction = Vector2(-150, 0)
+move_direction = Vector2(400, 0)
+
+[node name="shark2" parent="Enemies" instance=ExtResource("5_3jgl7")]
+position = Vector2(1239, 181)
+move_speed = 90.0
+move_direction = Vector2(-380, 0)
+rect_radius_x = 750.0
+rect_radius_y = 125.0
 
 [node name="blowfish" type="Area2D" parent="Enemies"]
 position = Vector2(554, 683)
@@ -712,11 +719,6 @@ position = Vector2(553, 409)
 
 [node name="blowfish4" parent="Enemies" instance=ExtResource("3_ks7dh")]
 position = Vector2(601, 408)
-
-[node name="shark3" parent="Enemies" instance=ExtResource("5_3jgl7")]
-position = Vector2(901, 253)
-move_speed = 90.0
-move_direction = Vector2(150, 0)
 
 [node name="blowfish5" parent="Enemies" instance=ExtResource("3_ks7dh")]
 position = Vector2(1128, 614)

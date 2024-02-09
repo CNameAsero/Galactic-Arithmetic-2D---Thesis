@@ -7,23 +7,6 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_kenu8"]
 radius = 30.9327
 
-[sub_resource type="Animation" id="Animation_kbplv"]
-resource_name = "x"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("set_variable/x:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
 [sub_resource type="Animation" id="Animation_ehqve"]
 length = 0.001
 tracks/0/type = "value"
@@ -49,6 +32,23 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_kbplv"]
+resource_name = "x"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("set_variable/x:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 
 [sub_resource type="Animation" id="Animation_d5mem"]
@@ -81,6 +81,7 @@ script = ExtResource("1_lcux0")
 
 [node name="set_variable" type="Area2D" parent="."]
 scale = Vector2(1.08, 1.08)
+collision_layer = 2
 
 [node name="x" type="Sprite2D" parent="set_variable"]
 visible = false
@@ -102,3 +103,5 @@ speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_5cr8g")
 }
+
+[connection signal="body_entered" from="set_variable" to="." method="_on_body_entered"]

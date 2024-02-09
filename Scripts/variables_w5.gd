@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var variable_to_display : String
-@onready var access_manager = $"../.."
+@onready var access_manager = $".."
 @onready var animation_player = $AnimationPlayer
 @onready var set_variable = $set_variable
 
@@ -16,8 +16,9 @@ func _ready():
 					animation_player.play("y")
 
 func _on_body_entered(body):
-	if body.is_in_group("player") && access_manager.last_item_was_number:
+	if body.is_in_group("player") && !access_manager.last_item_was_variable && access_manager.last_item_was_number:
 		AudioManager.play_item_collect()
 		access_manager.isDestroy = true
 		access_manager.collect_variable(variable_to_display)
 		queue_free()
+

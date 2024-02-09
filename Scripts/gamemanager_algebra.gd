@@ -1,53 +1,63 @@
 extends Node2D
 
 var last_item_was_number = false
-var can_collect_fraction = true
-var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2,"^": 3}
+var last_item_was_variable = false
+var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "^": 3}
 
 @onready var collected_variables := []
+@onready var collected_numbers := []
 @onready var collected_items := []
 @onready var isDestroy = false
 @onready var open = false
-@onready var label = $"1st_label"
+@onready var expression_label = $CurrentExpressionLabel
 
 @export_category("how many terms?")
 @export var num_term : int
 @onready var oper_term = num_term - 1
-@export var var_term : int
-@onready var terms = num_term + oper_term
-@onready var health_system = $"../health_system"
+var parentheses = 2
+@onready var terms = num_term + oper_term + parentheses
 
-#@onready var final_answer = $final_answer_w4.final_answer
+@export_category("values")
+@export var x_value : int
+@export var y_value : int
+
+@onready var  variables = {"x": x_value, "y": y_value}
+@onready var health_system = $"../health_system"
+@onready var final_answer = $final_answer_w5.final_answer
 @onready var level_complete_menu = $"../menus/level_complete_menu"
 @onready var game_over = $"../menus/game_over"
 
 func collect_number(num):
 	if isDestroy && !last_item_was_number:
 		collected_items.append(num)
+		collected_numbers.append(num)
 		last_item_was_number = true
 	update_expression()
-#	check_final_answer()
+	check_final_answer()
 
 func collect_operator(oper):
-	if isDestroy && last_item_was_number:
+	if isDestroy && last_item_was_number && last_item_was_variable:
 		collected_items.append(oper)
 		last_item_was_number = false
+		last_item_was_variable = false
 	update_expression()
-#	check_final_answer()
+	check_final_answer()
 
 func collect_variable(varia):
-	if isDestroy && last_item_was_number:
-		collected_items.append(varia)
-		last_item_was_number = true
+	if isDestroy && !last_item_was_variable && last_item_was_number:
+			collected_items.append(varia)
+			collected_variables.append(varia)
+			last_item_was_number = true
+			last_item_was_variable = true
 	update_expression()
-#	check_final_answer()
+	check_final_answer()
 
 func shunting_yard():
 	var output_queue = []
 	var operator_stack = []
 
 	for item in collected_items:
-		if typeof(item) == TYPE_INT or typeof(item) == TYPE_STRING:
+		if typeof(item) == TYPE_INT or item in variables:
 			output_queue.append(item)
 		elif item in precedence:
 			while operator_stack and operator_stack.back() in precedence and precedence[item] <= precedence[operator_stack.back()]:
@@ -59,16 +69,20 @@ func shunting_yard():
 
 	return output_queue
 
-func evaluate_rpn(expression):
+func evaluate_rpn(expression, variables):
 	if expression.size() == 0:
 		return 0
 	var stack = []
 	for token in expression:
 		if typeof(token) == TYPE_INT:
 			stack.append(token)
-		elif typeof(token) == TYPE_STRING:
-			stack.append(collected_variables[token])
-		else:
+		elif token in variables:
+			if !stack.is_empty():
+				var num1 = stack.pop_back()
+				stack.append(num1 * variables[token])
+			else:
+				stack.append(variables[token])
+		elif token in precedence:
 			if stack.size() < 2:
 				return 0
 			var num2 = stack.pop_back()
@@ -80,19 +94,20 @@ func evaluate_rpn(expression):
 			elif token == "×":
 				stack.append(num1 * num2)
 			elif token == "÷":
+				if num2 == 0:
+					return 0
 				stack.append(num1 / num2)
-			elif token == "/":
-				var result = float(num1) / num2
-				result = round(result * 10000000000000000) / 10000000000000000
-				stack.append(result)
 			elif token == "^":
 				stack.append(pow(num1, num2))
-	return stack[0]
+	if stack.size() > 0:
+		return stack[0]
+	else:
+		return 0
 
 func update_expression():
 	var items = []
 
-	for i in range(num_term + oper_term + var_term):
+	for i in range(num_term + oper_term + parentheses):
 		if i < collected_items.size():
 			items.append(str(collected_items[i]))
 		else:
@@ -100,33 +115,26 @@ func update_expression():
 
 	var current_expression = ""
 	for i in range(items.size()):
-		if items[i] == "x" || items[i] || "y":
-			if current_expression.ends_with(" "):
-				current_expression = current_expression.rstrip(" ")
-				current_expression += items[i] + ""
-		else:
-			current_expression += items[i] + " "
-	var result = evaluate_rpn(shunting_yard())
-	label.text = current_expression + " = " + str(result)
+		current_expression += items[i] + " "
 
-#func check_final_answer():
-#	var current_level = 0.0
-#	var current_result = evaluate_rpn(shunting_yard())
-#	print("calculation: " + str(evaluate_rpn(shunting_yard())))
-#	print("final answer: " + str(final_answer))
-#	if str(current_result) == str(final_answer):
-#		AudioManager.level_complete_sfx.play()
-#		GameSettings.grasscurrentlevel[current_level + 1] = true
-#		reset_for_next_level()
-#		var time_elapsed = $timer.get_elapsed_time()
-#		level_complete_menu.label.text = time_elapsed
-#		level_complete_menu.show()
-#		get_tree().paused = true
-#	elif collected_items.size() == terms && str(current_result) != str(final_answer):
-#		AudioManager.play_deathsfx()
-#		reset_for_next_level()
-#		game_over.show()
-#		get_tree().paused = true
+	$"1st_label".text = current_expression + " = " + str(evaluate_rpn(shunting_yard(), variables))
+
+func check_final_answer():
+	var current_level = 0
+	var current_result = evaluate_rpn(shunting_yard(), variables)
+	if str(current_result) == str(final_answer):
+		AudioManager.level_complete_sfx.play()
+		GameSettings.grasscurrentlevel[current_level + 1] = true
+		reset_for_next_level()
+		var time_elapsed = $timer.get_elapsed_time()
+		level_complete_menu.label.text = time_elapsed
+		level_complete_menu.show()
+		get_tree().paused = true
+	elif collected_items.size() == terms || current_result != evaluate_rpn(shunting_yard(), variables):
+		AudioManager.play_deathsfx()
+		reset_for_next_level()
+		game_over.show()
+		get_tree().paused = true
 
 func reset_hp():
 	health_system._health = 3
@@ -139,11 +147,10 @@ func restart():
 func reset_for_next_level():
 	reset_hp()
 	collected_items.clear()
-	collected_variables.clear()
+	collected_numbers.clear()
 
 func _ready():
 	pass
 
 func _process(_delta):
 	update_expression()
-#	check_final_answer()

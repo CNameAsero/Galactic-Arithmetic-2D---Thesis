@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cdngsmqf0vwbx"]
+[gd_scene load_steps=29 format=3 uid="uid://cdngsmqf0vwbx"]
 
 [ext_resource type="Script" path="res://Scripts/world_4_enemies.gd" id="1_po0aj"]
 [ext_resource type="PackedScene" uid="uid://f0pwengecrw" path="res://Scenes/Enemies/shockwave.tscn" id="2_kr7cs"]
@@ -9,12 +9,22 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knc67"]
 size = Vector2(53, 53)
 
+[sub_resource type="GDScript" id="GDScript_f3peg"]
+script/source = "extends CharacterBody2D
+
+@onready var bear = $\"..\"
+
+func _ready():
+	pass
+
+func _process(delta):
+	bear.bear(delta)
+
+"
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bv1eo"]
 radius = 4.0
 height = 18.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_lkwum"]
-radius = 8.06226
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_46pto"]
 radius = 6.0
@@ -301,19 +311,22 @@ _data = {
 "yeti_right": SubResource("Animation_c0fb0")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lkwum"]
+radius = 8.06226
+
 [node name="world_4_enemies" type="Node2D"]
 position = Vector2(603, 462)
 script = ExtResource("1_po0aj")
-enemy_type = "bear"
 move_speed = 75.0
 radius = 200
-rect_radius_bear = 250.0
+rect_radius_bear = 125.0
 yeti_speed = 30.0
-rect_radius_yeti = 300.0
+rect_radius_yeti = 150.0
 move_direction = Vector2(100, 0)
 shockwave = ExtResource("2_kr7cs")
 
 [node name="ice" type="Area2D" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="ice"]
 texture = ExtResource("2_o2mrn")
@@ -330,6 +343,7 @@ visible = false
 scale = Vector2(1.8, 1.8)
 collision_layer = 8
 collision_mask = 29
+script = SubResource("GDScript_f3peg")
 
 [node name="Sprite2D" type="Sprite2D" parent="bear"]
 texture = ExtResource("3_j8yf2")
@@ -340,12 +354,6 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="bear"]
 position = Vector2(3, 1)
 shape = SubResource("CapsuleShape2D_bv1eo")
-
-[node name="det" type="Area2D" parent="bear"]
-position = Vector2(3, 1)
-
-[node name="col" type="CollisionShape2D" parent="bear/det"]
-shape = SubResource("CircleShape2D_lkwum")
 
 [node name="Area2D" type="Area2D" parent="bear"]
 position = Vector2(3, 1)
@@ -393,9 +401,18 @@ libraries = {
 "": SubResource("AnimationLibrary_03aaa")
 }
 
-[connection signal="body_entered" from="bear/det" to="." method="bear_det_entered"]
-[connection signal="body_exited" from="bear/det" to="." method="bear_det_exited"]
+[node name="det_bear" type="Area2D" parent="."]
+position = Vector2(5.40002, 1.79999)
+scale = Vector2(1.8, 1.8)
+
+[node name="col" type="CollisionShape2D" parent="det_bear"]
+shape = SubResource("CircleShape2D_lkwum")
+
+[connection signal="body_entered" from="ice" to="." method="_on_ice_body_entered"]
 [connection signal="body_entered" from="bear/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="yeti/Timer" to="." method="shockwave_timeout"]
 [connection signal="body_entered" from="yeti/det" to="." method="yeti_det_entered"]
 [connection signal="body_exited" from="yeti/det" to="." method="yeti_det_exited"]
+[connection signal="body_entered" from="yeti/Area2D" to="." method="_on_area_yeti_body_entered"]
+[connection signal="body_entered" from="det_bear" to="." method="bear_det_entered"]
+[connection signal="body_exited" from="det_bear" to="." method="bear_det_exited"]
