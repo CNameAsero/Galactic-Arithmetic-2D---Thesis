@@ -1,0 +1,172 @@
+[gd_scene load_steps=12 format=3 uid="uid://c75jlhtaiccoj"]
+
+[ext_resource type="Script" path="res://Scripts/powerups_w5.gd" id="1_mix5w"]
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="2_gv1s7"]
+[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="3_vyxum"]
+[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="4_6vinc"]
+
+[sub_resource type="GDScript" id="GDScript_o3xh8"]
+script/source = "extends Area2D
+
+@onready var num = 0
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	checknum()
+
+func checknum():
+	if num == 1:
+		queue_free()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivmux"]
+size = Vector2(80, 73.3333)
+
+[sub_resource type="Animation" id="Animation_ugkrf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/health:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/speed:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/time:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_rwh21"]
+resource_name = "hp"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/health:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_8hmy1"]
+resource_name = "spd"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/speed:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_tg4dr"]
+resource_name = "time"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/time:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfhg0"]
+_data = {
+"RESET": SubResource("Animation_ugkrf"),
+"hp": SubResource("Animation_rwh21"),
+"spd": SubResource("Animation_8hmy1"),
+"time": SubResource("Animation_tg4dr")
+}
+
+[node name="powerups_w5" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mix5w")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(0.3, 0.3)
+script = SubResource("GDScript_o3xh8")
+
+[node name="health" type="Sprite2D" parent="Area2D"]
+visible = false
+texture = ExtResource("2_gv1s7")
+hframes = 3
+frame = 1
+
+[node name="speed" type="Sprite2D" parent="Area2D"]
+visible = false
+scale = Vector2(1.16667, 1.16667)
+texture = ExtResource("3_vyxum")
+hframes = 2
+frame = 1
+
+[node name="speed_buff_timer" type="Timer" parent="Area2D/speed"]
+
+[node name="time" type="Sprite2D" parent="Area2D"]
+visible = false
+scale = Vector2(1.16667, 1.16667)
+texture = ExtResource("4_6vinc")
+hframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.58946e-06, 3.33333)
+shape = SubResource("RectangleShape2D_ivmux")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_vfhg0")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Area2D/speed/speed_buff_timer" to="." method="_on_speed_buff_timer_timeout"]

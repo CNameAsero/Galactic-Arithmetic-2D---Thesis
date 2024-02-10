@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://Scenes/Mechanics/final_answer_w5.gd" id="1_ofle6"]
 [ext_resource type="Texture2D" uid="uid://c0bxfhgqnpnc5" path="res://Sprites/Collectibles/final answers/w5/9x.png" id="2_rdhvr"]
 [ext_resource type="Texture2D" uid="uid://d4lxc8d717und" path="res://Sprites/Collectibles/final answers/w5/12xplusy.png" id="3_mivv2"]
-[ext_resource type="Texture2D" uid="uid://dl1uqayfoyvwi" path="res://Sprites/Collectibles/final answers/w5/2xsquare.png" id="4_frpf8"]
-[ext_resource type="Texture2D" uid="uid://cqbsjqnb023j5" path="res://Sprites/Collectibles/final answers/w5/4xsquarey.png" id="5_hvpju"]
+[ext_resource type="Texture2D" uid="uid://tltp83xnhocx" path="res://Sprites/Collectibles/final answers/w5/16xsquarey.png" id="5_w8aj8"]
 [ext_resource type="Texture2D" uid="uid://b3oag7jusoho4" path="res://Sprites/Collectibles/final answers/w5/12xsquare.png" id="6_itus0"]
+[ext_resource type="Texture2D" uid="uid://ggio7jo6o2q0" path="res://Sprites/Collectibles/final answers/w5/24xsquare.png" id="6_wdc3o"]
 
 [sub_resource type="Animation" id="Animation_p0rax"]
 length = 0.001
@@ -200,19 +200,19 @@ frame = 1
 
 [node name="lvl3" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("4_frpf8")
+texture = ExtResource("6_itus0")
 hframes = 5
 frame = 1
 
 [node name="lvl4" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("5_hvpju")
+texture = ExtResource("5_w8aj8")
 hframes = 5
 frame = 1
 
 [node name="lvl5" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("6_itus0")
+texture = ExtResource("6_wdc3o")
 hframes = 5
 frame = 1
 

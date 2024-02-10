@@ -1,9 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://bh0613j0lpivj"]
+[gd_scene load_steps=27 format=3 uid="uid://bh0613j0lpivj"]
 
-[ext_resource type="TileSet" uid="uid://dwuxqgihlqjdf" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
+[ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_2gtfy"]
+[ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="2_8egcv"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_l0lhm"]
+[ext_resource type="PackedScene" uid="uid://b1cwh68wrnd2y" path="res://Scenes/Mechanics/numbers_w5.tscn" id="3_y865p"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_lqdom"]
+[ext_resource type="PackedScene" uid="uid://quk3dlnbr7sj" path="res://Scenes/Mechanics/operators_w5.tscn" id="4_uwdel"]
+[ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="5_f1pg2"]
+[ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="5_omsaj"]
+[ext_resource type="PackedScene" uid="uid://btmq1lrhtcp0e" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="6_4n6tb"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="6_54thq"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="7_gppnv"]
+[ext_resource type="PackedScene" uid="uid://0fvidggqf6tt" path="res://Scenes/timer_w5.tscn" id="7_gstfm"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="8_2n45q"]
+[ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="9_i8s00"]
+[ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="10_3gc2v"]
+[ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="11_6epot"]
+[ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="18_hgj08"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7k73l"]
 radius = 27.0185
@@ -164,6 +178,81 @@ layer_5/tile_data = PackedInt32Array(1835025, 1376257, 12, 1900561, 1376257, 13,
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 541)
 
+[node name="gamemanager_algebra" parent="." instance=ExtResource("2_8egcv")]
+num_term = 3
+variable_term = 3
+x_value = 1
+y_value = 3
+
+[node name="4" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(1076, 684)
+number = 4
+
+[node name="4_2" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(838, 693)
+number = 4
+
+[node name="1" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(1277, 901)
+number = 1
+
+[node name="8" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(613, 911)
+number = 8
+
+[node name="2" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(460, 911)
+number = 2
+
+[node name="8_1" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(1622, 916)
+number = 8
+
+[node name="4_3" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
+position = Vector2(1441, 894)
+number = 4
+
+[node name="×" parent="gamemanager_algebra" instance=ExtResource("4_uwdel")]
+position = Vector2(1202, 782)
+oper = "×"
+
+[node name="÷" parent="gamemanager_algebra" instance=ExtResource("4_uwdel")]
+position = Vector2(638, 787)
+oper = "÷"
+
+[node name="x1" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
+position = Vector2(1789, 796)
+variable_to_display = "x"
+
+[node name="x2" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
+position = Vector2(1829, 705)
+variable_to_display = "x"
+
+[node name="y" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
+position = Vector2(1392, 789)
+variable_to_display = "y"
+
+[node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("6_4n6tb")]
+position = Vector2(1120, 405)
+y = 3
+integer = 16
+display_chest = "lvl4"
+
+[node name="timer" parent="gamemanager_algebra" instance=ExtResource("7_gstfm")]
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="fly" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(961, 244)
+enemy_type = "fly"
+
+[node name="rat" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(961, 244)
+enemy_type = "rat"
+
+[node name="thief" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(961, 244)
+
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
@@ -205,4 +294,49 @@ shape = SubResource("CircleShape2D_7k73l")
 position = Vector2(189, 898)
 scale = Vector2(1.85, 1.85)
 
+[node name="time" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 960.0
+offset_top = 703.0
+offset_right = 960.0
+offset_bottom = 703.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="health_system" parent="." instance=ExtResource("6_54thq")]
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("7_gppnv")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_2n45q")
+
+[node name="game_over" parent="menus" instance=ExtResource("9_i8s00")]
+visible = false
+layout_mode = 1
+offset_left = -916.5
+offset_top = 493.5
+offset_right = -916.5
+offset_bottom = 493.5
+
+[node name="level_complete_menu" parent="menus" instance=ExtResource("10_3gc2v")]
+visible = false
+layout_mode = 1
+offset_left = -916.5
+offset_top = 493.5
+offset_right = -916.5
+offset_bottom = 493.5
+
+[node name="game_paused" parent="menus" instance=ExtResource("11_6epot")]
+visible = false
+layout_mode = 1
+offset_left = -916.0
+offset_top = 494.0
+offset_right = -916.0
+offset_bottom = 494.0
+
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

@@ -1,15 +1,15 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1707458414
-gamemanager_new.gd::GDScript::-1::1707447011::0::1::::<>Node2D<>::
+::res://::1707534437
+gamemanager_new.gd::GDScript::-1::1707495200::0::1::::<>Node2D<>::
 gamemanager_pemdas.gd::GDScript::-1::1707458414::0::1::::<>Node2D<>::
 icon.svg::CompressedTexture2D::2665148864812964740::1706016831::1706016831::1::::<><>::
 player.tscn::PackedScene::5026888864342472056::1706016831::0::1::::<><>::res://Player.gd<>uid://bd8au27tme43y
 README.md::TextFile::-1::1706016831::0::1::::<><>::
-World4_Tileset.tres::TileSet::8991820710865768706::1707457508::0::1::::<><>::uid://i7jruyk7735t::::res://Sprites/Tileset/FD_Ground_Tiles.png<>uid://deeqany548p7h::::res://Sprites/Tileset/FD_Winter_Village.png<>uid://dmp5a0yr7h233::::res://Sprites/Tileset/FD_Animated_Water.png<>uid://dijo65w3ucr4s::::res://Sprites/Tileset/FD_Animated_Lava.png<>uid://dg6cmupjswgvl::::res://Sprites/Tileset/FD_Winter_Loots.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png<>uid://dtg7xodoay1or::::res://Sprites/Tileset/weather effects, snow light anim 32x128.png<>uid://ctdmt8lgpm1cn::::res://Sprites/Tileset/weather effects, snow heavy anim 32x128.png
-::res://Autoloads/::1706760607
+World4_Tileset.tres::TileSet::8991820710865768706::1707534437::0::1::::<><>::uid://i7jruyk7735t::::res://Sprites/Tileset/FD_Ground_Tiles.png<>uid://deeqany548p7h::::res://Sprites/Tileset/FD_Winter_Village.png<>uid://dmp5a0yr7h233::::res://Sprites/Tileset/FD_Animated_Water.png<>uid://dijo65w3ucr4s::::res://Sprites/Tileset/FD_Animated_Lava.png<>uid://dg6cmupjswgvl::::res://Sprites/Tileset/FD_Winter_Loots.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png<>uid://dtg7xodoay1or::::res://Sprites/Tileset/weather effects, snow light anim 32x128.png<>uid://ctdmt8lgpm1cn::::res://Sprites/Tileset/weather effects, snow heavy anim 32x128.png
+::res://Autoloads/::1707529956
 AudioManager.gd::GDScript::-1::1706760607::0::1::::<>Node<>::
 AudioManager.tscn::PackedScene::2370382773839074041::1706760607::0::1::::<><>::res://Autoloads/AudioManager.gd<>uid://bayjgoyippie8
-GameSettings.gd::GDScript::-1::1706016830::0::1::::<>Node<>::
+GameSettings.gd::GDScript::-1::1707529956::0::1::::<>Node<>::
 GameSettings.tscn::PackedScene::2925556031369856443::1706724104::0::1::::<><>::res://Autoloads/GameSettings.gd
 ::res://Galactic Arithmetic Assets/::1706760606
 ::res://Galactic Arithmetic Assets/Audio_Assets/::1706760607
@@ -27,13 +27,13 @@ slime_hurt.mp3::AudioStreamMP3::8616802443021271929::1706760607::1706760607::1::
 Warp_teleport.mp3::AudioStreamMP3::6791175393910877052::1706760607::1706760607::1::::<><>::
 ::res://Galactic Arithmetic Assets/Fonts/::1706016831
 Pixeboy-z8XGD.ttf::FontFile::6465246782774761307::1706016831::1706016831::1::::<><>::
-::res://Galactic Arithmetic Assets/Game_Over_Assets/::1707449946
+::res://Galactic Arithmetic Assets/Game_Over_Assets/::1707495200
 button_holder.png::CompressedTexture2D::1978469769706370402::1706016831::1706016831::1::::<><>::
 crashed_ufo_design.png::CompressedTexture2D::2733819334381636593::1706016831::1706016831::1::::<><>::
 game-over-text.png::CompressedTexture2D::6446138886248044954::1706016831::1706016831::1::::<><>::
 gameover sample.png::CompressedTexture2D::5059128608501171821::1706016831::1706016831::1::::<><>::
 gameover_holder.png::CompressedTexture2D::7746173295391117503::1706016831::1706016831::1::::<><>::
-game_manager_lvl3.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
+game_manager_lvl3.gd::GDScript::-1::1707495200::0::1::::<>Node2D<>::
 home-button.png::CompressedTexture2D::5052607630317475931::1706016831::1706016831::1::::<><>::
 menu_bg.png::CompressedTexture2D::8278517693734438::1706016831::1706016831::1::::<><>::
 planet_destroyed_design.png::CompressedTexture2D::3331483107322649854::1706016831::1706016831::1::::<><>::
@@ -218,13 +218,14 @@ SFX_Text_Disabled1.png::CompressedTexture2D::3690595698756866699::1706016831::17
 19.png::CompressedTexture2D::7421009279573257485::1706016831::1706016831::1::::<><>::
 20.png::CompressedTexture2D::5221230124109899202::1706016831::1706016831::1::::<><>::
 Tap_To_Continue....png::CompressedTexture2D::6565017257512072910::1706016831::1706016831::1::::<><>::
-::res://Scenes/::1707241406
+::res://Scenes/::1707533791
 main_menu.tscn::PackedScene::5296118853377864468::1706016831::0::1::::<><>::res://Scenes/main_menu.gd<>uid://dhkuasdxhkh50
 timer.tscn::PackedScene::3903696598017450591::1706760607::0::1::::<><>::res://Scripts/timer.gd<>uid://fn7vueoj36ug
 timer_w3.tscn::PackedScene::72648285334962147::1706760607::0::1::::<><>::res://Scripts/timer_w3.gd<>uid://fn7vueoj36ug
 timer_w4.tscn::PackedScene::1947712970466019432::1707241406::0::1::::<><>::res://Scripts/timer_w4.gd<>uid://fn7vueoj36ug
+timer_w5.tscn::PackedScene::1766332490053547261::1707533791::0::1::::<><>::res://Scripts/timer_w5.gd<>uid://fn7vueoj36ug::::res://Sprites/Objects/Timer.png<>uid://1vcay4nv2q1k::::res://Sprites/Objects/Timer_placeholder.png<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf
 typewriter_text_effect.tscn::PackedScene::8529730532549946149::1706016831::0::1::::<><>::uid://dfn6muurjksf
-::res://Scenes/Enemies/::1707360162
+::res://Scenes/Enemies/::1707533791
 area_detection.tscn::PackedScene::2496763326203544532::1706016831::0::1::::<><>::res://Scripts/area_detection.gd
 bee_enemy.tscn::PackedScene::7650426119649285963::1706016831::0::1::::<><>::res://Scripts/bee_enemy.gd
 blowfish.tscn::PackedScene::3633120706407558644::1706760607::0::1::::<><>::res://Scripts/blowfish.gd<>uid://du57ju053jre5
@@ -234,52 +235,53 @@ flea.tscn::PackedScene::7036737240548792699::1707233648::0::1::::<><>::uid://cgh
 fly_bullet.tscn::PackedScene::7010326251901210588::1707233647::0::1::::<><>::res://Scripts/fly_bullet.gd<>uid://xcf3f7ropr5o
 fox_enemy.tscn::PackedScene::6770273005786136839::1706760607::0::1::::<><>::uid://dypx8mxn57tgv
 octopus.tscn::PackedScene::4952547786421569937::1706760607::0::1::::<><>::res://Scripts/octopus.gd<>uid://b7cbls0xth6mx
-shark.tscn::PackedScene::7913944348178142949::1707360162::0::1::::<><>::res://Scripts/shark.gd<>uid://4k7v6bfckk1y
+shark.tscn::PackedScene::7913944348178142949::1707495200::0::1::::<><>::res://Scripts/shark.gd<>uid://4k7v6bfckk1y
 shockwave.tscn::PackedScene::11867762789793408::1707186299::0::1::::<><>::uid://dkufxtnu4xpup
 skeleton_arrow.tscn::PackedScene::1623793925194762516::1706760607::0::1::::<><>::uid://du3rous1vyhcv
 snake_enemy.tscn::PackedScene::4336056254491450059::1706016831::0::1::::<><>::res://Scripts/snake_enemy.gd<>uid://ck51rvbihh7n
 spider.tscn::PackedScene::3213236882311452309::1706016831::0::1::::<><>::uid://dauaxcuaohmdk
 stone.tscn::PackedScene::4459577518438222110::1706016831::0::1::::<><>::res://Scripts/stone.gd
 thief_bullet.tscn::PackedScene::3875671015889651993::1707233648::0::1::::<><>::res://Scripts/thief_bullet.gd<>uid://chapbaf2peblw
-wasp_enemy.tscn::PackedScene::3616600698906291175::1707320535::0::1::::<><>::res://Scripts/wasp_enemy.gd<>uid://ccb8ilujifnhp
+wasp_enemy.tscn::PackedScene::3616600698906291175::1707493911::0::1::::<><>::res://Scripts/wasp_enemy.gd<>uid://ccb8ilujifnhp
 world_3_enemies.gd::GDScript::-1::1706809735::0::1::::<>Node2D<>::
 world_3_enemies.tscn::PackedScene::5358068518943297400::1707233647::0::1::::<><>::res://Scenes/Enemies/world_3_enemies.gd<>uid://xetwb531wu41
-world_4_enemies.tscn::PackedScene::5010641910608472041::1707360162::0::1::::<><>::res://Scripts/world_4_enemies.gd<>uid://f0pwengecrw
+world_4_enemies.tscn::PackedScene::5010641910608472041::1707533791::0::1::::<><>::res://Scripts/world_4_enemies.gd<>uid://f0pwengecrw::::res://Scenes/Enemies/shockwave.tscn<>uid://co5wxcy6mqwgy::::res://Sprites/Enemies/world4_enemies/Melted_ice.png<>uid://caxs3tb2qg6hu::::res://Sprites/Enemies/world4_enemies/PolarBear4x4Top-Walk_4x4Bottom-Attack.png<>uid://dt3ipykirkyss::::res://Sprites/Enemies/world4_enemies/Yeti.png
 world_5_enemies.tscn::PackedScene::4803521111018376940::1707241872::0::1::::<><>::res://Scripts/world_5_enemies.gd<>uid://c644bw2xl0qwy
-::res://Scenes/levels/::1707457636
-16x16Tileset.tres::TileSet::600067471464206521::1707360012::0::1::::<><>::uid://cvlexuoec6cw4
-level1_TileSet2dPixel.tres::TileSet::1483595625379865838::1707320540::0::1::::<><>::uid://cby1sb62bd48s
+::res://Scenes/levels/::1707535864
+16x16Tileset.tres::TileSet::600067471464206521::1707531611::0::1::::<><>::uid://cvlexuoec6cw4::::res://Sprites/Tileset/Water+.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png<>uid://brtr7hrwuckd8::::res://Sprites/Tileset/tf_A2_atlantis.png<>uid://bhxx3wd0gv0va::::res://Sprites/Tileset/tf_A5_atlantisA.png<>uid://caie12afxnvs1::::res://Sprites/Tileset/tf_A5_atlantisB.png<>uid://skpye6eyt3wv::::res://Sprites/Tileset/tf_B_atlantisA.png<>uid://dr5u547odic5c::::res://Sprites/Tileset/tf_B_atlantisB.png<>uid://cl7ihuq43yymf::::res://Sprites/Tileset/char_bubbles.png
+level1_TileSet2dPixel.tres::TileSet::1483595625379865838::1707493667::0::1::::<><>::uid://cby1sb62bd48s
 level_1.tscn::PackedScene::4214039744241582067::1706760607::0::1::::<><>::uid://vewurj6256fi
 level_2.tscn::PackedScene::8012028872768455468::1706760607::0::1::::<><>::uid://vewurj6256fi
-level_3.tscn::PackedScene::1540750109589060032::1707320540::0::1::::<><>::uid://vewurj6256fi
+level_3.tscn::PackedScene::1540750109589060032::1707494083::0::1::::<><>::uid://vewurj6256fi
 level_4.tscn::PackedScene::4774806587050340152::1706760607::0::1::::<><>::uid://vewurj6256fi
 level_5.tscn::PackedScene::4089427287706670331::1707320535::0::1::::<><>::uid://vewurj6256fi
 level_6.tscn::PackedScene::8700175449380228920::1707320515::0::1::::<><>::uid://isxa2i7h2d4l
-level_7.tscn::PackedScene::8330830094810792690::1707321354::0::1::::<><>::uid://isxa2i7h2d4l
-level_8.tscn::PackedScene::7448721535979055377::1706760607::0::1::::<><>::uid://isxa2i7h2d4l
-level_9.tscn::PackedScene::2432290699454927033::1706760607::0::1::::<><>::uid://isxa2i7h2d4l
-level_10.tscn::PackedScene::7849019684469084997::1706801491::0::1::::<><>::uid://isxa2i7h2d4l
+level_7.tscn::PackedScene::8330830094810792690::1707531612::0::1::::<><>::uid://isxa2i7h2d4l::::res://Scenes/levels/16x16Tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://0luol40q6i1b::::res://Scenes/Mechanics/game_manager_world_1-2.tscn<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://br0575d74v2ro::::res://Scenes/Enemies/blowfish.tscn<>res://Scripts/blowfish.gd<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://du57ju053jre5::::res://Sprites/Enemies/world2_enemies/Blowfish.png<>uid://dk0trij6hevr6::::res://Scenes/Enemies/shark.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>res://Scripts/bool_handler.gd<>res://Scripts/final_answer.gd<>uid://02dg06mgelq5::::res://Sprites/Collectibles/final answers/3_chest.png<>uid://0sufo7g35isy::::res://Sprites/Collectibles/final answers/1.png<>uid://c2f0htdo5dfgm::::res://Sprites/Collectibles/final answers/48.png<>uid://7313yl1xq6ku::::res://Sprites/Collectibles/final answers/72.png<>uid://n6itlm5vl61v::::res://Sprites/Collectibles/final answers/24.png<>uid://c141r1gtcqt2w::::res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png<>uid://bvl6dlpvy7i2s::::res://Sprites/Collectibles/final answers/11_chest.png<>uid://c3uf0qvygard8::::res://Sprites/Collectibles/final answers/19chest.png<>uid://dsknbtmm7seeo::::res://Sprites/Collectibles/final answers/32_chest.png<>uid://mhcc6jvxkvlt::::res://Scenes/Mechanics/numbers.tscn<>uid://c8wpqokks1cqb::::res://Scenes/Mechanics/operators.tscn<>uid://k0molyb4s16e::::res://Scenes/Mechanics/powerups.tscn<>res://Scripts/timer.gd<>uid://fn7vueoj36ug::::res://Sprites/Objects/Timer.png<>uid://1vcay4nv2q1k::::res://Sprites/Objects/Timer_placeholder.png<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://cgr14huq7oye2::::res://Scenes/Menu/Paused_Menu/paused_menu.tscn<>res://Scripts/game_over.gd<>uid://eal07jnthpe::::res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png<>uid://bnp2bmj2lsxb7::::res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png<>uid://be7jutn0xtqjx::::res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png<>uid://cx3s73kplpcec::::res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png<>uid://dimklv4puhep0::::res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png<>uid://bs0uc8jkdriku::::res://Sprites/Character/sad_slimey.png<>uid://3gndw501yox3::::res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png<>uid://bcaoat487emgw::::res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png<>uid://dag8hg0rvi0s4::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png<>uid://cd8ryefiqekn0::::res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png<>uid://divuqbrp4awkv::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png<>res://Scripts/level_complete_menu.gd<>uid://crhbjfi262iqx::::res://Galactic Arithmetic Assets/level_complete_asset/UFO.png<>uid://gg2meb0btp0l::::res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png<>uid://bfsdm20oqx2gq::::res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png<>uid://dowgmef2b80jh::::res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png<>uid://c8by2x8ogpqkx::::res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png<>uid://cjrkhkab5cffa::::res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png<>uid://y7l37jl0o23c::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png<>uid://by47a4pppasyh::::res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png<>uid://dq1dvsfffcq01::::res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png<>uid://cwyywj81m7ajx::::res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png
+level_8.tscn::PackedScene::7448721535979055377::1707491116::0::1::::<><>::uid://isxa2i7h2d4l
+level_9.tscn::PackedScene::2432290699454927033::1707491116::0::1::::<><>::uid://isxa2i7h2d4l
+level_10.tscn::PackedScene::7849019684469084997::1707495200::0::1::::<><>::uid://isxa2i7h2d4l
 level_11.tscn::PackedScene::6701607355203881419::1707057226::0::1::::<><>::uid://duiogmk67uwrf
-level_12.tscn::PackedScene::3166085967385757333::1707057215::0::1::::<><>::uid://duiogmk67uwrf
-level_13.tscn::PackedScene::1047621171917035423::1707457572::0::1::::<><>::uid://duiogmk67uwrf::::res://Scenes/levels/World_3_Tileset.tres<>uid://co0144nx0e41q::::res://Scripts/gamemanager_pemdas.tscn<>uid://pc3v0o5lloge::::res://Scenes/Mechanics/numbers_w3.tscn<>uid://dkqj023564c8v::::res://Scenes/Mechanics/operators_w3.tscn<>uid://s4mb4wtyw15x::::res://Scenes/Mechanics/final_answer.tscn<>uid://bbgrhxgrpnqh::::res://Scenes/timer_w3.tscn<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://cilquuf1rtf65::::res://Scenes/Enemies/world_3_enemies.tscn<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>uid://d0sejgnfj1kbf::::res://Scenes/Mechanics/powerups_w3.tscn<>res://Scripts/paused_menu_button.gd<>uid://cgt5qgbjcmmwt::::res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn<>uid://c1hehmk0e0uq8::::res://Scenes/Menu/Game_Over/game_over_w3.tscn<>uid://b21nilaolt6qs::::res://Scenes/Menu/level_complete_menu_w3.tscn<>uid://cm2sgy57dl0pg::::res://Scenes/Others/portal.tscn
+level_12.tscn::PackedScene::3166085967385757333::1707531612::0::1::::<><>::uid://duiogmk67uwrf::::res://Scenes/levels/World_3_Tileset.tres<>uid://co0144nx0e41q::::res://Scripts/gamemanager_pemdas.tscn<>uid://uid2j5pbua11::::res://Scenes/Player/slime_player_joystick.tscn<>uid://pc3v0o5lloge::::res://Scenes/Mechanics/numbers_w3.tscn<>uid://dkqj023564c8v::::res://Scenes/Mechanics/operators_w3.tscn<>uid://s4mb4wtyw15x::::res://Scenes/Mechanics/final_answer.tscn<>uid://dweql68le4mvj::::res://Scenes/Mechanics/parentheses_w3.tscn<>uid://bbgrhxgrpnqh::::res://Scenes/timer_w3.tscn<>uid://cilquuf1rtf65::::res://Scenes/Enemies/world_3_enemies.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>uid://d0sejgnfj1kbf::::res://Scenes/Mechanics/powerups_w3.tscn<>res://Scripts/paused_menu_button.gd<>uid://cgt5qgbjcmmwt::::res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn<>uid://c1hehmk0e0uq8::::res://Scenes/Menu/Game_Over/game_over_w3.tscn<>uid://b21nilaolt6qs::::res://Scenes/Menu/level_complete_menu_w3.tscn
+level_13.tscn::PackedScene::1047621171917035423::1707489560::0::1::::<><>::uid://duiogmk67uwrf
 level_14.tscn::PackedScene::4686188013261546697::1707057215::0::1::::<><>::uid://duiogmk67uwrf
-level_15.tscn::PackedScene::983167868490620200::1707303088::0::1::::<><>::uid://duiogmk67uwrf
+level_15.tscn::PackedScene::983167868490620200::1707493911::0::1::::<><>::uid://duiogmk67uwrf
 level_16.tscn::PackedScene::1883002372147640480::1707360162::0::1::::<><>::uid://d1dx8dh8o5nxq
-level_17.tscn::PackedScene::119716617710206798::1707360162::0::1::::<><>::uid://d1dx8dh8o5nxq
-level_18.tscn::PackedScene::5313853065821939347::1707457636::0::1::::<><>::uid://d1dx8dh8o5nxq::::res://World4_Tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://c6l46jv1tsbb6::::res://Scenes/Mechanics/gamemanager_fraction.tscn<>uid://da2cv6qqt82a2::::res://Scenes/Mechanics/numbers_w4.tscn<>uid://c6qenf481l3o3::::res://Scenes/Mechanics/operators_w4.tscn<>uid://c0ug32c0f4tmi::::res://Scenes/Mechanics/final_answer_w_4.tscn<>uid://20qsvs6f2wea::::res://Scenes/timer_w4.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://cdngsmqf0vwbx::::res://Scenes/Enemies/world_4_enemies.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://bkrwfkw8lyn73::::res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn<>uid://bv8w2y4n6rixp::::res://Scenes/Menu/level_complete_menu_w4.tscn<>uid://b7tkalqgic7ty::::res://Scenes/Menu/Game_Over/game_over_w4.tscn<>uid://r5g5crpsi4fk::::res://Scenes/Mechanics/powerups_w4.tscn<>uid://cm2sgy57dl0pg::::res://Scenes/Others/portal.tscn
-level_19.tscn::PackedScene::69489066141576945::1707303088::0::1::::<><>::uid://d1dx8dh8o5nxq
-level_20.tscn::PackedScene::7156693649033683513::1707303088::0::1::::<><>::uid://d1dx8dh8o5nxq
-level_21.tscn::PackedScene::4150742593700761082::1707059604::0::1::::<><>::uid://d2frb8bdxrodn
-level_22.tscn::PackedScene::5562114177880417370::1707057226::0::1::::<><>::uid://dwuxqgihlqjdf
-level_23.tscn::PackedScene::4404356259718417483::1707057226::0::1::::<><>::uid://dwuxqgihlqjdf
-level_25.tscn::PackedScene::4874126651298549032::1707057226::0::1::::<><>::uid://dwuxqgihlqjdf
-world5_tileset.tres::TileSet::9065718427730496835::1707059535::0::1::::<><>::uid://b05fv182oblh0
-World_3_Tileset.tres::TileSet::8580415345714907807::1707457431::0::1::::<><>::uid://besp0ma2g3qeb::::res://Sprites/Tileset/rocksmoke1.png<>uid://bjku4m81r5x1h::::res://Sprites/Tileset/rocksmoke2.png<>uid://c5sol1caa0257::::res://Sprites/Tileset/rocksmoke3.png<>uid://b33eeb365mdu3::::res://Sprites/Tileset/rocksmoke4.png<>uid://b7wd36qhid2y8::::res://Sprites/Tileset/mainlevbuild.png<>uid://b4efvay6wv8ec::::res://Sprites/Tileset/decorative_props.png<>uid://cvj2o6i2v4pgm::::res://Sprites/Tileset/volc_bubble1.png<>uid://can6gly280elj::::res://Sprites/Tileset/volc_bubble2.png<>uid://dkn2wdx2nou8u::::res://Sprites/Tileset/other_props.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png
+level_17.tscn::PackedScene::119716617710206798::1707531611::0::1::::<><>::uid://d1dx8dh8o5nxq::::res://World4_Tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://c6l46jv1tsbb6::::res://Scenes/Mechanics/gamemanager_fraction.tscn<>uid://da2cv6qqt82a2::::res://Scenes/Mechanics/numbers_w4.tscn<>uid://c6qenf481l3o3::::res://Scenes/Mechanics/operators_w4.tscn<>uid://c0ug32c0f4tmi::::res://Scenes/Mechanics/final_answer_w_4.tscn<>uid://20qsvs6f2wea::::res://Scenes/timer_w4.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://cdngsmqf0vwbx::::res://Scenes/Enemies/world_4_enemies.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://bkrwfkw8lyn73::::res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn<>uid://bv8w2y4n6rixp::::res://Scenes/Menu/level_complete_menu_w4.tscn<>uid://b7tkalqgic7ty::::res://Scenes/Menu/Game_Over/game_over_w4.tscn<>uid://r5g5crpsi4fk::::res://Scenes/Mechanics/powerups_w4.tscn<>uid://cm2sgy57dl0pg::::res://Scenes/Others/portal.tscn
+level_18.tscn::PackedScene::5313853065821939347::1707495200::0::1::::<><>::uid://d1dx8dh8o5nxq
+level_19.tscn::PackedScene::69489066141576945::1707533791::0::1::::<><>::uid://d1dx8dh8o5nxq::::res://World4_Tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://c6l46jv1tsbb6::::res://Scenes/Mechanics/gamemanager_fraction.tscn<>uid://da2cv6qqt82a2::::res://Scenes/Mechanics/numbers_w4.tscn<>uid://c6qenf481l3o3::::res://Scenes/Mechanics/operators_w4.tscn<>uid://c0ug32c0f4tmi::::res://Scenes/Mechanics/final_answer_w_4.tscn<>uid://20qsvs6f2wea::::res://Scenes/timer_w4.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://cdngsmqf0vwbx::::res://Scenes/Enemies/world_4_enemies.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://bkrwfkw8lyn73::::res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn<>uid://bv8w2y4n6rixp::::res://Scenes/Menu/level_complete_menu_w4.tscn<>uid://b7tkalqgic7ty::::res://Scenes/Menu/Game_Over/game_over_w4.tscn<>uid://r5g5crpsi4fk::::res://Scenes/Mechanics/powerups_w4.tscn<>uid://cm2sgy57dl0pg::::res://Scenes/Others/portal.tscn
+level_20.tscn::PackedScene::7156693649033683513::1707534461::0::1::::<><>::uid://d1dx8dh8o5nxq::::res://World4_Tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://c6l46jv1tsbb6::::res://Scenes/Mechanics/gamemanager_fraction.tscn<>uid://da2cv6qqt82a2::::res://Scenes/Mechanics/numbers_w4.tscn<>uid://c6qenf481l3o3::::res://Scenes/Mechanics/operators_w4.tscn<>uid://c0ug32c0f4tmi::::res://Scenes/Mechanics/final_answer_w_4.tscn<>uid://20qsvs6f2wea::::res://Scenes/timer_w4.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://cdngsmqf0vwbx::::res://Scenes/Enemies/world_4_enemies.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://bkrwfkw8lyn73::::res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn<>uid://bv8w2y4n6rixp::::res://Scenes/Menu/level_complete_menu_w4.tscn<>uid://b7tkalqgic7ty::::res://Scenes/Menu/Game_Over/game_over_w4.tscn<>uid://r5g5crpsi4fk::::res://Scenes/Mechanics/powerups_w4.tscn
+level_21.tscn::PackedScene::4150742593700761082::1707535863::0::1::::<><>::uid://d2frb8bdxrodn::::res://Scenes/levels/world5_tileset.tres<>uid://cao4j5jl2i7gq::::res://Scenes/Enemies/world_5_enemies.tscn<>uid://biv2rge0d24lw::::res://Scenes/Mechanics/gamemanager_algebra.tscn<>uid://b1cwh68wrnd2y::::res://Scenes/Mechanics/numbers_w5.tscn<>uid://quk3dlnbr7sj::::res://Scenes/Mechanics/operators_w5.tscn<>uid://0fvidggqf6tt::::res://Scenes/timer_w5.tscn<>uid://bpmaiwavs1dc3::::res://Scenes/Mechanics/variables_w5.tscn<>uid://btmq1lrhtcp0e::::res://Scenes/Mechanics/final_answer_w5.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>res://Scripts/slime_player_joystik.gd<>uid://dmu5vulghw42o::::res://Scenes/Menu/Game_Over/game_over_w5.tscn<>uid://gw2eueqfp0mu::::res://Scenes/Menu/level_complete_menu_w5.tscn<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://ch8q5858jk70l::::res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn
+level_22.tscn::PackedScene::5562114177880417370::1707535863::0::1::::<><>::uid://d2frb8bdxrodn::::res://Scenes/levels/world5_tileset.tres<>uid://biv2rge0d24lw::::res://Scenes/Mechanics/gamemanager_algebra.tscn<>res://Scripts/slime_player_joystik.gd<>uid://b1cwh68wrnd2y::::res://Scenes/Mechanics/numbers_w5.tscn<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://quk3dlnbr7sj::::res://Scenes/Mechanics/operators_w5.tscn<>uid://bpmaiwavs1dc3::::res://Scenes/Mechanics/variables_w5.tscn<>uid://btmq1lrhtcp0e::::res://Scenes/Mechanics/final_answer_w5.tscn<>uid://0fvidggqf6tt::::res://Scenes/timer_w5.tscn<>uid://cao4j5jl2i7gq::::res://Scenes/Enemies/world_5_enemies.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://dmu5vulghw42o::::res://Scenes/Menu/Game_Over/game_over_w5.tscn<>uid://gw2eueqfp0mu::::res://Scenes/Menu/level_complete_menu_w5.tscn<>uid://ch8q5858jk70l::::res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn
+level_23.tscn::PackedScene::4404356259718417483::1707535864::0::1::::<><>::uid://d2frb8bdxrodn::::res://Scenes/levels/world5_tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn<>uid://cao4j5jl2i7gq::::res://Scenes/Enemies/world_5_enemies.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://dq5ixgt07t2ww::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png<>res://Scripts/paused_menu_button.gd<>uid://dmu5vulghw42o::::res://Scenes/Menu/Game_Over/game_over_w5.tscn<>uid://gw2eueqfp0mu::::res://Scenes/Menu/level_complete_menu_w5.tscn<>uid://ch8q5858jk70l::::res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn<>uid://biv2rge0d24lw::::res://Scenes/Mechanics/gamemanager_algebra.tscn<>uid://b1cwh68wrnd2y::::res://Scenes/Mechanics/numbers_w5.tscn<>uid://quk3dlnbr7sj::::res://Scenes/Mechanics/operators_w5.tscn<>uid://bpmaiwavs1dc3::::res://Scenes/Mechanics/variables_w5.tscn<>uid://btmq1lrhtcp0e::::res://Scenes/Mechanics/final_answer_w5.tscn<>uid://0fvidggqf6tt::::res://Scenes/timer_w5.tscn
+level_24.tscn::PackedScene::2931282176136338427::1707535864::0::1::::<><>::uid://d2frb8bdxrodn::::res://Scenes/levels/world5_tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn
+level_25.tscn::PackedScene::4874126651298549032::1707535864::0::1::::<><>::uid://d2frb8bdxrodn::::res://Scenes/levels/world5_tileset.tres<>res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46::::res://Sprites/Slime-sprite4.png<>uid://dcdiv8v3vcj14::::res://Scenes/Player/joystick.tscn
+world5_tileset.tres::TileSet::9065718427730496835::1707533972::0::1::::<><>::uid://b05fv182oblh0::::res://Sprites/Tileset/FD_Animated_Water_City.png<>uid://s7gdl8fqjvnv::::res://Sprites/Tileset/FD_City.png<>uid://crq05hgarfin4::::res://Sprites/Obstacles/mini-car-76x76.png<>uid://dcsctbi38q46p::::res://Sprites/Obstacles/couple-car-76x76.png<>uid://ca3g5dryycst7::::res://Sprites/Obstacles/cop-big-car-76x76.png<>uid://cddat3t3wjsua::::res://Sprites/Obstacles/ice-cream-car-76x76.png<>uid://rec4lv0eik83::::res://Sprites/Obstacles/couplecar-left.png<>uid://c2fqkeuth828e::::res://Sprites/Obstacles/icecreamtruck-left.png<>uid://kegvvtblnoec::::res://Sprites/Obstacles/minicar-left.png<>uid://cll86gllb4lcu::::res://Sprites/Obstacles/musclecar-lft.png<>uid://bdyiptnaq4irj::::res://Sprites/Obstacles/sedancar-left.png<>uid://deeqany548p7h::::res://Sprites/Tileset/FD_Winter_Village.png<>uid://bjuwd84yw8iqi::::res://Sprites/Tileset/FD_City_Doors.png<>uid://i7jruyk7735t::::res://Sprites/Tileset/FD_Ground_Tiles.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png<>uid://ujcmxi4auhfm::::res://Sprites/Obstacles/cop-car-76x76.png<>uid://b1doj3ckm1o2t::::res://Sprites/Obstacles/bigcopcar-left.png<>uid://dga2ra7u8mt3x::::res://Sprites/Obstacles/copcar-left.png<>uid://b37rkd8igy0b6::::res://Sprites/Obstacles/muscle-car-76x76.png<>uid://dikq2n6o2o6gd::::res://Sprites/Obstacles/sedan-car-76x76.png
+World_3_Tileset.tres::TileSet::8580415345714907807::1707531598::0::1::::<><>::uid://besp0ma2g3qeb::::res://Sprites/Tileset/rocksmoke1.png<>uid://bjku4m81r5x1h::::res://Sprites/Tileset/rocksmoke2.png<>uid://c5sol1caa0257::::res://Sprites/Tileset/rocksmoke3.png<>uid://b33eeb365mdu3::::res://Sprites/Tileset/rocksmoke4.png<>uid://b7wd36qhid2y8::::res://Sprites/Tileset/mainlevbuild.png<>uid://b4efvay6wv8ec::::res://Sprites/Tileset/decorative_props.png<>uid://cvj2o6i2v4pgm::::res://Sprites/Tileset/volc_bubble1.png<>uid://can6gly280elj::::res://Sprites/Tileset/volc_bubble2.png<>uid://dkn2wdx2nou8u::::res://Sprites/Tileset/other_props.png<>uid://bxk17fxijrha0::::res://Sprites/Tileset/Spritesheet_UI_Flat.png
 ::res://Scenes/levels/Game Obstacles/::1706355715
 big_crate.tscn::PackedScene::6617648661194180255::1706016831::0::1::::<><>::uid://bgl5lmwpvjg33
 hay_bale.tscn::PackedScene::6853558482184203251::1706016831::0::1::::<><>::uid://cdrpfw0sj0m42
 spike.tscn::PackedScene::6080255773796487850::1706355715::0::1::::<><>::res://Scripts/spike.gd<>uid://dsikpnrjd4a38
-::res://Scenes/levels/levels_script/::1707449946
+::res://Scenes/levels/levels_script/::1707495200
 game_manager_lvl2.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_lvl4.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_lvl5.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
@@ -287,25 +289,24 @@ game_manager_lvl6.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_lvl7.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_lvl8.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_lvl9.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
-::res://Scenes/levels/tutorial/::1707057226
+::res://Scenes/levels/tutorial/::1707533965
 game_manager_tutorial.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
-level_24.tscn::PackedScene::2931282176136338427::1707057226::0::1::::<><>::uid://dwuxqgihlqjdf
 Numbers_tutorial.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
 spike_tutorial.gd::GDScript::-1::1706016831::0::1::::<>Area2D<>::
 tutorial.gd::GDScript::-1::1706016831::0::1::::<>Node2D<>::
 tutorial.tscn::PackedScene::7275607953018984047::1706760607::0::1::::<><>::uid://vewurj6256fi
-::res://Scenes/Mechanics/::1707481198
+::res://Scenes/Mechanics/::1707536095
 Add_time.tscn::PackedScene::2063576314954907962::1706760607::0::1::::<><>::uid://bb3t0wih6d0r0
 chest2.tscn::PackedScene::6020071664603858959::1706760607::0::1::::<><>::uid://c3uf0qvygard8
 chest.tscn::PackedScene::1696593911807600220::1706760607::0::1::::<><>::uid://c141r1gtcqt2w
 final_answer.tscn::PackedScene::1323998088118511115::1707239265::0::1::::<><>::res://Scripts/final_answer.gd<>uid://02dg06mgelq5
 final_answer_2.tscn::PackedScene::7646248044251753723::1706016831::0::1::::<><>::res://Scripts/final_answer.gd<>uid://2ff6uut5j8c1
-final_answer_w5.gd::GDScript::-1::1707481197::0::1::::<>CharacterBody2D<>::
-final_answer_w5.tscn::PackedScene::3745799752752286194::1707481198::0::1::::<><>::res://Scenes/Mechanics/final_answer_w5.gd<>uid://bvfum4ds6f6w::::res://Sprites/Collectibles/final answers/3 over 4.png<>uid://caimuu3yaqnxx::::res://Sprites/Collectibles/final answers/5 over 16.png<>uid://wts6mg77bp43::::res://Sprites/Collectibles/final answers/7 over 8.png<>uid://bia0upudwp1pd::::res://Sprites/Collectibles/final answers/11 over 16.png<>uid://oaed0uuu1gnj::::res://Sprites/Collectibles/final answers/14 over 15.png
+final_answer_w5.gd::GDScript::-1::1707495200::0::1::::<>CharacterBody2D<>::
+final_answer_w5.tscn::PackedScene::3745799752752286194::1707534654::0::1::::<><>::res://Scenes/Mechanics/final_answer_w5.gd<>uid://c0bxfhgqnpnc5::::res://Sprites/Collectibles/final answers/w5/9x.png<>uid://d4lxc8d717und::::res://Sprites/Collectibles/final answers/w5/12xplusy.png<>uid://tltp83xnhocx::::res://Sprites/Collectibles/final answers/w5/16xsquarey.png<>uid://b3oag7jusoho4::::res://Sprites/Collectibles/final answers/w5/12xsquare.png<>uid://ggio7jo6o2q0::::res://Sprites/Collectibles/final answers/w5/24xsquare.png
 final_answer_w_4.gd::GDScript::-1::1707317031::0::1::::<>CharacterBody2D<>::
 final_answer_w_4.tscn::PackedScene::6569265739967935300::1707303088::0::1::::<><>::uid://bvfum4ds6f6w
-gamemanager_algebra.tscn::PackedScene::2992953405394001448::1707480276::0::1::::<><>::res://Scripts/gamemanager_algebra.gd<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf
-gamemanager_fraction.tscn::PackedScene::6973220334219606917::1707454578::0::1::::<><>::res://Scripts/gamemanager_fraction.gd<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf
+gamemanager_algebra.tscn::PackedScene::2992953405394001448::1707489560::0::1::::<><>::res://Scripts/gamemanager_algebra.gd<>uid://cyd2w1o32jhcd
+gamemanager_fraction.tscn::PackedScene::6973220334219606917::1707454578::0::1::::<><>::res://Scripts/gamemanager_fraction.gd<>uid://cyd2w1o32jhcd
 game_manager.tscn::PackedScene::6451942839172945008::1706760607::0::1::::<><>::res://Scripts/game_manager.gd<>res://Scripts/bool_handler.gd
 game_manager_world_1-2.tscn::PackedScene::1778669210930140141::1706760607::0::1::::<><>::res://Scripts/game_manager_world_1-2.gd
 game_manager_world_3_lvl1.tscn::PackedScene::8401354591364343854::1706760607::0::1::::<><>::res://Scripts/game_manager_world_3.gd<>uid://cyd2w1o32jhcd
@@ -314,44 +315,48 @@ health_system.tscn::PackedScene::8888305579559575951::1706077448::0::1::::<><>::
 numbers.tscn::PackedScene::856843416620541309::1706760607::0::1::::<><>::res://Scripts/Numbers.gd<>uid://0e0veyagjape
 numbers_w3.tscn::PackedScene::1058700323637295696::1706866083::0::1::::<><>::res://Scripts/Numbers_test.gd<>uid://0e0veyagjape
 numbers_w4.tscn::PackedScene::7215160839790863423::1707272699::0::1::::<><>::res://Scripts/Numbers_w4.gd<>uid://0e0veyagjape
-numbers_w5.tscn::PackedScene::4216809328413471666::1707480276::0::1::::<><>::res://Scripts/Numbers_w5.gd<>uid://0e0veyagjape::::res://Sprites/Collectibles/numbers/Zero.png<>uid://dtm8vkwqftoiv::::res://Sprites/Collectibles/numbers/One.png<>uid://chb3lfrjqf8lv::::res://Sprites/Collectibles/numbers/Two.png<>uid://bh24twa5xyt2e::::res://Sprites/Collectibles/numbers/Three.png<>uid://b6slngqk7c7nv::::res://Sprites/Collectibles/numbers/Four.png<>uid://ddrn8q7lfs3yr::::res://Sprites/Collectibles/numbers/five.png<>uid://d1lnhkml050d2::::res://Sprites/Collectibles/numbers/Six.png<>uid://dmhoy68nrh2mg::::res://Sprites/Collectibles/numbers/Seven.png<>uid://dydlvh2lqv3s1::::res://Sprites/Collectibles/numbers/8.png<>uid://c1g5ciwwlkfr5::::res://Sprites/Collectibles/numbers/Nine.png<>uid://cieku7i82y3ix::::res://Sprites/Collectibles/numbers/Ten.png<>uid://dl7v1aqioys4i::::res://Sprites/Collectibles/numbers/Twelve.png<>uid://bsle4qkpsyof4::::res://Sprites/Collectibles/numbers/Thirteen.png<>uid://dn80bl04kib27::::res://Sprites/Collectibles/numbers/Fourteen.png<>uid://bn8wnay60awri::::res://Sprites/Collectibles/numbers/Sixteen.png<>uid://c5f7xoq0vnhbo::::res://Sprites/Collectibles/numbers/Seventeen.png<>uid://b2oyjjaeds4p0::::res://Sprites/Collectibles/numbers/Nineteen.png<>uid://bd6vxipjlid17::::res://Sprites/Collectibles/numbers/Twenty.png<>uid://75s7yrvvev8k::::res://Sprites/Collectibles/numbers/twenty-four.png<>uid://dxgvg3rba1bc8::::res://Sprites/Collectibles/numbers/Thirty.png<>uid://cvad01ij51hf4::::res://Sprites/Collectibles/numbers/Fifty-four.png<>uid://c1grv2c33og60::::res://Sprites/Collectibles/numbers/Fifty-six.png
+numbers_w5.tscn::PackedScene::4216809328413471666::1707535864::0::1::::<><>::res://Scripts/Numbers_w5.gd<>uid://0e0veyagjape::::res://Sprites/Collectibles/numbers/Zero.png<>uid://dtm8vkwqftoiv::::res://Sprites/Collectibles/numbers/One.png<>uid://chb3lfrjqf8lv::::res://Sprites/Collectibles/numbers/Two.png<>uid://bh24twa5xyt2e::::res://Sprites/Collectibles/numbers/Three.png<>uid://b6slngqk7c7nv::::res://Sprites/Collectibles/numbers/Four.png<>uid://ddrn8q7lfs3yr::::res://Sprites/Collectibles/numbers/five.png<>uid://d1lnhkml050d2::::res://Sprites/Collectibles/numbers/Six.png<>uid://dmhoy68nrh2mg::::res://Sprites/Collectibles/numbers/Seven.png<>uid://dydlvh2lqv3s1::::res://Sprites/Collectibles/numbers/8.png<>uid://c1g5ciwwlkfr5::::res://Sprites/Collectibles/numbers/Nine.png<>uid://cieku7i82y3ix::::res://Sprites/Collectibles/numbers/Ten.png<>uid://cfxgvptx5ly47::::res://Sprites/Collectibles/numbers/11_collectible.png<>uid://dl7v1aqioys4i::::res://Sprites/Collectibles/numbers/Twelve.png<>uid://bsle4qkpsyof4::::res://Sprites/Collectibles/numbers/Thirteen.png<>uid://dn80bl04kib27::::res://Sprites/Collectibles/numbers/Fourteen.png<>uid://bn8wnay60awri::::res://Sprites/Collectibles/numbers/Sixteen.png<>uid://devvcbf4r80kg::::res://Sprites/Collectibles/numbers/Fifteen.png<>uid://c5f7xoq0vnhbo::::res://Sprites/Collectibles/numbers/Seventeen.png<>uid://b2oyjjaeds4p0::::res://Sprites/Collectibles/numbers/Nineteen.png<>uid://bd6vxipjlid17::::res://Sprites/Collectibles/numbers/Twenty.png<>uid://75s7yrvvev8k::::res://Sprites/Collectibles/numbers/twenty-four.png<>uid://dxgvg3rba1bc8::::res://Sprites/Collectibles/numbers/Thirty.png<>uid://cvad01ij51hf4::::res://Sprites/Collectibles/numbers/Fifty-four.png<>uid://c1grv2c33og60::::res://Sprites/Collectibles/numbers/Fifty-six.png
 operators.tscn::PackedScene::7135429596878940377::1706760607::0::1::::<><>::res://Scripts/operators.gd<>uid://b25yamwf862bs
 operators_w3.tscn::PackedScene::7894773092097713943::1707288284::0::1::::<><>::res://Scripts/operators_w3.gd<>uid://b25yamwf862bs
 operators_w4.tscn::PackedScene::6981991956472649664::1707062573::0::1::::<><>::res://Scripts/operators_w4.gd<>uid://b25yamwf862bs
-operators_w5.tscn::PackedScene::1164966400602317029::1707480276::0::1::::<><>::res://Scripts/operators_w5.gd<>uid://b25yamwf862bs::::res://Sprites/Collectibles/Operators/Add.png<>uid://d33cxt7ex41dh::::res://Sprites/Collectibles/Operators/Minus.png<>uid://c670wgwnhgxxu::::res://Sprites/Collectibles/Operators/Multiplication.png<>uid://cgctwmavqc4ue::::res://Sprites/Collectibles/Operators/Division.png<>uid://dol6ek04pgtcl::::res://Sprites/Collectibles/Operators/^.png<>uid://dr3ni0platsp5::::res://Sprites/Collectibles/Operators/Front-slash.png
+operators_w5.tscn::PackedScene::1164966400602317029::1707535864::0::1::::<><>::res://Scripts/operators_w5.gd<>uid://b25yamwf862bs::::res://Sprites/Collectibles/Operators/Add.png<>uid://d33cxt7ex41dh::::res://Sprites/Collectibles/Operators/Minus.png<>uid://c670wgwnhgxxu::::res://Sprites/Collectibles/Operators/Multiplication.png<>uid://cgctwmavqc4ue::::res://Sprites/Collectibles/Operators/Division.png<>uid://dol6ek04pgtcl::::res://Sprites/Collectibles/Operators/^.png<>uid://dr3ni0platsp5::::res://Sprites/Collectibles/Operators/Front-slash.png
 parentheses_w3.tscn::PackedScene::8712666917458161611::1707272700::0::1::::<><>::uid://dro24qdemkb7q
 powerups.tscn::PackedScene::754252100176769674::1706760607::0::1::::<><>::res://Scripts/powerups.gd<>uid://b0o71u5mjnwqc
 powerups_w3.tscn::PackedScene::8951401217182194575::1706868929::0::1::::<><>::res://Scripts/powerups_w3.gd<>uid://b0o71u5mjnwqc
 powerups_w4.tscn::PackedScene::1255559682256398376::1707241657::0::1::::<><>::res://Scripts/powerups_w4.gd<>uid://b0o71u5mjnwqc
+powerups_w5.tscn::PackedScene::7081382190118390717::1707536095::0::1::::<><>::res://Scripts/powerups_w4.gd<>uid://b0o71u5mjnwqc::::res://Sprites/Collectibles/power up/HeartCollectible.png<>uid://0qtxb85mrqqt::::res://Sprites/Collectibles/power up/Movement Speed.png<>uid://bb3t0wih6d0r0::::res://Sprites/Collectibles/power up/AddedTime.png
 Speed_up.tscn::PackedScene::8563873002242785372::1706760607::0::1::::<><>::uid://0qtxb85mrqqt
-variables_w5.tscn::PackedScene::3464041314156469884::1707480276::0::1::::<><>::uid://d2v2cq7s1oijb::::res://Sprites/Collectibles/variables/x.png<>res://Scripts/variables_w5.gd<>uid://ckvflqnuif3hd::::res://Sprites/Collectibles/variables/y.png
-::res://Scenes/Menu/::1707241537
+variables_w5.tscn::PackedScene::3464041314156469884::1707495200::0::1::::<><>::uid://d2v2cq7s1oijb
+::res://Scenes/Menu/::1707533341
 level_complete_menu.tscn::PackedScene::606595409245312465::1706016831::0::1::::<><>::uid://crhbjfi262iqx
 level_complete_menu_w3.tscn::PackedScene::4335997469191163190::1706760607::0::1::::<><>::res://Scripts/level_complete_menu_w3.gd<>uid://crhbjfi262iqx
 level_complete_menu_w4.tscn::PackedScene::3929896162244544789::1707241537::0::1::::<><>::res://Scripts/level_complete_menu_w4.gd<>uid://crhbjfi262iqx
-::res://Scenes/Menu/Game_Over/::1707241537
+level_complete_menu_w5.tscn::PackedScene::468196931778311384::1707533341::0::1::::<><>::res://Scripts/level_complete_menu_w5.gd<>uid://crhbjfi262iqx::::res://Galactic Arithmetic Assets/level_complete_asset/UFO.png<>uid://gg2meb0btp0l::::res://Galactic Arithmetic Assets/level_complete_asset/SLIMEYS.png<>uid://bfsdm20oqx2gq::::res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_BG.png<>uid://dowgmef2b80jh::::res://Galactic Arithmetic Assets/level_complete_asset/PLACEHOLDER_BUTTON.png<>uid://c8by2x8ogpqkx::::res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png<>uid://cjrkhkab5cffa::::res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png<>uid://y7l37jl0o23c::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png<>uid://dag8hg0rvi0s4::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png<>uid://by47a4pppasyh::::res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png<>uid://dq1dvsfffcq01::::res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png<>uid://cwyywj81m7ajx::::res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf
+::res://Scenes/Menu/Game_Over/::1707533328
 game_over.tscn::PackedScene::347847787089633699::1706760607::0::1::::<><>::res://Scripts/game_over.gd<>uid://eal07jnthpe
 game_over_w3.tscn::PackedScene::6612457961652345785::1706760607::0::1::::<><>::res://Scripts/game_over_w3.gd<>uid://eal07jnthpe
 game_over_w4.tscn::PackedScene::4672294630122079470::1707241537::0::1::::<><>::res://Scripts/game_over_w4.gd<>uid://eal07jnthpe
-::res://Scenes/Menu/Main_Menu/::1707239265
+game_over_w5.tscn::PackedScene::8044675809014601528::1707533328::0::1::::<><>::res://Scripts/game_over_w5.gd<>uid://eal07jnthpe::::res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png<>uid://bnp2bmj2lsxb7::::res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png<>uid://be7jutn0xtqjx::::res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png<>uid://cx3s73kplpcec::::res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png<>uid://dimklv4puhep0::::res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png<>uid://bs0uc8jkdriku::::res://Sprites/Character/sad_slimey.png<>uid://3gndw501yox3::::res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png<>uid://bcaoat487emgw::::res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png<>uid://dag8hg0rvi0s4::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png<>uid://cd8ryefiqekn0::::res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png<>uid://divuqbrp4awkv::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png
+::res://Scenes/Menu/Main_Menu/::1707533791
 levels_sub_menu.tscn::PackedScene::7742889689142621574::1706760607::0::1::::<><>::res://Scripts/levels_sub_menu.gd<>uid://6hubjjyotw4s
-level_Menu.tscn::PackedScene::1228620726649796956::1706016831::0::1::::<><>::res://Scripts/level_Menu.gd<>uid://bvcjw8dmqfcti
+level_Menu.tscn::PackedScene::1228620726649796956::1707533791::0::1::::<><>::res://Scripts/level_Menu.gd<>uid://bvcjw8dmqfcti::::res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png<>uid://bbx0v3vktlbgu::::res://Galactic Arithmetic Assets/Level_Menu_Assets/left_button.png<>uid://mm4i66yihu4d::::res://Galactic Arithmetic Assets/Level_Menu_Assets/right_button.png<>uid://bgkobl0bk7re3::::res://Galactic Arithmetic Assets/Level_Menu_Assets/left_button_50.png<>uid://gvgntfx8i5fx::::res://Galactic Arithmetic Assets/Level_Menu_Assets/right_button_50.png<>uid://dkfldh6yw52xd::::res://Galactic Arithmetic Assets/Settings_Assets/Settings_Back.png<>uid://u0umsqtlk1dh::::res://Galactic Arithmetic Assets/Settings_Assets/Back_Violet.png<>uid://bwjjno1pnni37::::res://Galactic Arithmetic Assets/Level_Menu_Assets/Level_1_BG 1.png<>uid://dikyi515jidoo::::res://Scenes/Menu/Main_Menu/levels_sub_menu.tscn<>uid://r7ot8i210g06::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w1.png<>uid://r3lrw36oiu3f::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w1-area-50.png<>uid://bf1hn0ioa5ooj::::res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/Chest_with_Bolt.png<>uid://cyiy7osj3i4uc::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w2.png<>uid://d2dp2utfjtfwg::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w3.png<>uid://st5agbgp1ssj::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area.png<>uid://b6h83itdguvs7::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w4.png<>uid://ccopvqjgxmycv::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area-50.png<>uid://78v73yhqtlqs::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w5.png<>uid://da0ujwnsf1l0n::::res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png<>uid://dakd01ngska0k::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area.png<>uid://bofoy8b5gd8b7::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area-50.png<>uid://p8ngd6i21qbo::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area.png<>uid://c3ee6n0a7rpje::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area-50.png<>uid://spua6m6y6n12::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area50.png<>uid://dd0fb8wu06ygb::::res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area.png
 main_menu.tscn::PackedScene::1293195552849737715::1707239265::0::1::::<><>::res://Scripts/main_menu.gd<>uid://dhkuasdxhkh50
 story_board(cut_scene).tscn::PackedScene::3239447920806372364::1706016831::0::1::::<><>::res://Scripts/story_board(cut_scene).gd<>uid://b2qvjggsqakse
-::res://Scenes/Menu/Paused_Menu/::1707241537
+::res://Scenes/Menu/Paused_Menu/::1707533334
 paused_menu.tscn::PackedScene::5230699680198429683::1706016831::0::1::::<><>::res://Scripts/paused_menu.gd<>uid://bg0eeyigtw0l4
 paused_menu_w3.tscn::PackedScene::5235048006123987471::1706760607::0::1::::<><>::res://Scripts/paused_menu_w3.gd<>uid://bg0eeyigtw0l4
 paused_menu_w4.tscn::PackedScene::3124748805437054496::1707241537::0::1::::<><>::res://Scripts/paused_menu_w4.gd<>uid://bg0eeyigtw0l4
-::res://Scenes/Others/::1707480304
+paused_menu_w5.tscn::PackedScene::5333314565564325853::1707533334::0::1::::<><>::res://Scripts/paused_menu_w5.gd<>uid://bg0eeyigtw0l4::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/menu_bg.png<>uid://jnpcwkugfoo1::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/gamepause.png<>uid://fhhf7b0fis4r::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/spaceship.png<>uid://klplgousqsby::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/real-Slime1.png<>uid://yvqoqd7e5n54::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/icon_holder.png<>uid://dk5jyx3pvye2o::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button.png<>uid://divuqbrp4awkv::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/home_button_75.png<>uid://rpw77u45olht::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/restart_button.png<>uid://dag8hg0rvi0s4::::res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png<>uid://bwynkti5fga71::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/resume_button.png<>uid://cbeyt6esfq7s8::::res://Galactic Arithmetic Assets/In-Game_Menu_Assets/resume_button_75.png
+::res://Scenes/Others/::1707495200
 portal.tscn::PackedScene::5671950619398370672::1707360162::0::1::::<><>::res://Scripts/portal.gd<>uid://d1434y2rgs4g8
-test.tscn::PackedScene::8051798450180466200::1707480304::0::1::::<><>::uid://uid2j5pbua11::::res://Scenes/Player/slime_player_joystick.tscn<>uid://biv2rge0d24lw::::res://Scenes/Mechanics/gamemanager_algebra.tscn<>uid://b1cwh68wrnd2y::::res://Scenes/Mechanics/numbers_w5.tscn<>uid://quk3dlnbr7sj::::res://Scenes/Mechanics/operators_w5.tscn<>uid://bpmaiwavs1dc3::::res://Scenes/Mechanics/variables_w5.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn
-testnew.tscn::PackedScene::9191011688634111919::1707447013::0::1::::<><>::uid://uid2j5pbua11::::res://Scenes/Player/slime_player_joystick.tscn<>uid://dyvtdhajlwyx8::::res://Scenes/Mechanics/health_system.tscn<>uid://cq4wtpvvf81wa::::res://Scripts/gamemanager_new.tscn<>uid://b1cwh68wrnd2y::::res://Scenes/Mechanics/numbers_w5.tscn<>uid://quk3dlnbr7sj::::res://Scenes/Mechanics/operators_w5.tscn<>uid://bpmaiwavs1dc3::::res://Scenes/Mechanics/variables_w5.tscn
+test.tscn::PackedScene::8051798450180466200::1707495200::0::1::::<><>::uid://uid2j5pbua11
+testnew.tscn::PackedScene::9191011688634111919::1707495200::0::1::::<><>::uid://uid2j5pbua11
 ::res://Scenes/Player/::1707303088
 joystick.tscn::PackedScene::7306357876243474133::1707303088::0::1::::<><>::res://Scripts/joystick.gd<>uid://twcod2kqdf4f
 player.tscn::PackedScene::6908258537385666327::1706016831::0::1::::<><>::res://Scripts/Player.gd<>uid://bd8au27tme43y
 slime_player.tscn::PackedScene::1536491396069889261::1706760607::0::1::::<><>::res://Scripts/slime_player.gd<>uid://b7gxf0arvvb46
 slime_player_joystick.tscn::PackedScene::1420522781944795934::1707288291::0::1::::<><>::res://Scripts/slime_player_joystik.gd<>uid://b7gxf0arvvb46
-::res://Scripts/::1707480248
+::res://Scripts/::1707534913
 area_detection.gd::GDScript::-1::1706016831::0::1::::<>Area2D<>::
 bee_enemy.gd::GDScript::-1::1706016831::0::1::::bee<>RigidBody2D<>::
 blowfish.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
@@ -360,16 +365,17 @@ bullets.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
 final_answer.gd::GDScript::-1::1707238297::0::1::::<>CharacterBody2D<>::
 fly_bullet.gd::GDScript::-1::1707186858::0::1::::<>Area2D<>::
 fox_enemy.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
-gamemanager_algebra.gd::GDScript::-1::1707480248::0::1::::<>Node2D<>::
-gamemanager_fraction.gd::GDScript::-1::1707457636::0::1::::<>Node2D<>::
-gamemanager_new.tscn::PackedScene::5957100345640807308::1707447012::0::1::::<><>::res://gamemanager_new.gd
-gamemanager_pemdas.tscn::PackedScene::5808726596343546312::1707458425::0::1::::<><>::res://gamemanager_pemdas.gd<>uid://cyd2w1o32jhcd::::res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf
+gamemanager_algebra.gd::GDScript::-1::1707532706::0::1::::<>Node2D<>::
+gamemanager_fraction.gd::GDScript::-1::1707495200::0::1::::<>Node2D<>::
+gamemanager_new.tscn::PackedScene::5957100345640807308::1707495200::0::1::::<><>::res://gamemanager_new.gd
+gamemanager_pemdas.tscn::PackedScene::5808726596343546312::1707458425::0::1::::<><>::res://gamemanager_pemdas.gd<>uid://cyd2w1o32jhcd
 game_manager.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_world_1-2.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_manager_world_3.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 game_over.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 game_over_w3.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 game_over_w4.gd::GDScript::-1::1707241443::0::1::::<>Control<>::
+game_over_w5.gd::GDScript::-1::1707533399::0::1::::<>Control<>::
 health_system.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 joystick.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 knob.gd::GDScript::-1::1706760607::0::1::::<>Sprite2D<>::
@@ -377,28 +383,30 @@ levels_sub_menu.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 level_complete_menu.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 level_complete_menu_w3.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 level_complete_menu_w4.gd::GDScript::-1::1707241435::0::1::::<>Control<>::
+level_complete_menu_w5.gd::GDScript::-1::1707533431::0::1::::<>Control<>::
 level_Menu.gd::GDScript::-1::1706016831::0::1::::<>Control<>::
 main_menu.gd::GDScript::-1::1706016831::0::1::::<>Control<>::
 Music_level.gd::GDScript::-1::1706016831::0::1::::<>TextureButton<>::
 Numbers.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
 Numbers_test.gd::GDScript::-1::1707317031::0::1::::<>Area2D<>::
 Numbers_w4.gd::GDScript::-1::1707287987::0::1::::<>Area2D<>::
-Numbers_w5.gd::GDScript::-1::1707317031::0::1::::<>Area2D<>::
+Numbers_w5.gd::GDScript::-1::1707534913::0::1::::<>Area2D<>::
 octopus.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 operators.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
 operators_w3.gd::GDScript::-1::1707317031::0::1::::operator<>Area2D<>::
 operators_w4.gd::GDScript::-1::1707064381::0::1::::<>Area2D<>::
-operators_w5.gd::GDScript::-1::1707468406::0::1::::<>Area2D<>::
+operators_w5.gd::GDScript::-1::1707495200::0::1::::<>Area2D<>::
 paused_menu.gd::GDScript::-1::1706760607::0::1::::<>Control<>::
 paused_menu_button.gd::GDScript::-1::1706016831::0::1::::<>TextureButton<>::
 paused_menu_w3.gd::GDScript::-1::1707288138::0::1::::<>Control<>::
 paused_menu_w4.gd::GDScript::-1::1707317031::0::1::::<>Control<>::
+paused_menu_w5.gd::GDScript::-1::1707533443::0::1::::<>Control<>::
 Player.gd::GDScript::-1::1706016831::0::1::::Player<>CharacterBody2D<>::
 portal.gd::GDScript::-1::1706760607::0::1::::<>Area2D<>::
 powerups.gd::GDScript::-1::1706866400::0::1::::<>Control<>::
 powerups_w3.gd::GDScript::-1::1707317031::0::1::::<>Control<>::
 powerups_w4.gd::GDScript::-1::1707241857::0::1::::<>Control<>::
-shark.gd::GDScript::-1::1707320908::0::1::::<>Node2D<>::
+shark.gd::GDScript::-1::1707495200::0::1::::<>CharacterBody2D<>::
 shockwave.gd::GDScript::-1::1707186241::0::1::::<>Area2D<>::
 slime_player.gd::GDScript::-1::1706760607::0::1::::slime_player<>CharacterBody2D<>::
 slime_player_joystick.gdshader::Shader::-1::1706760607::0::1::::<><>::
@@ -413,10 +421,11 @@ thief_bullet.gd::GDScript::-1::1707232558::0::1::::<>Area2D<>::
 timer.gd::GDScript::-1::1706760607::0::1::::<>Node2D<>::
 timer_w3.gd::GDScript::-1::1707288176::0::1::::<>Node2D<>::
 timer_w4.gd::GDScript::-1::1707241406::0::1::::<>Node2D<>::
-variables_w5.gd::GDScript::-1::1707479738::0::1::::<>Node2D<>::
-wasp_enemy.gd::GDScript::-1::1707320535::0::1::::<>Area2D<>::
-world_4_enemies.gd::GDScript::-1::1707457572::0::1::::<>Node2D<>::
-world_5_enemies.gd::GDScript::-1::1707233608::0::1::::<>Node2D<>::
+timer_w5.gd::GDScript::-1::1707533387::0::1::::<>Node2D<>::
+variables_w5.gd::GDScript::-1::1707495200::0::1::::<>Node2D<>::
+wasp_enemy.gd::GDScript::-1::1707495200::0::1::::<>Area2D<>::
+world_4_enemies.gd::GDScript::-1::1707495200::0::1::::<>Node2D<>::
+world_5_enemies.gd::GDScript::-1::1707533788::0::1::::<>Node2D<>::
 ::res://Sprites/::1706760608
 Dialogue_box2.png::CompressedTexture2D::9011380697122505381::1706016831::1706016831::1::::<><>::
 Options.png::CompressedTexture2D::1110048853394102709::1706016831::1706016831::1::::<><>::
@@ -425,7 +434,7 @@ Slime-sprite4.png::CompressedTexture2D::4646256680322695573::1706016831::1706016
 ::res://Sprites/Character/::1706016831
 sad_slimey.png::CompressedTexture2D::3702648972105152960::1706016831::1706016831::1::::<><>::
 ::res://Sprites/Collectibles/::1707317031
-::res://Sprites/Collectibles/final answers/::1707483425
+::res://Sprites/Collectibles/final answers/::1707495200
 1.png::CompressedTexture2D::1793103944420601612::1706760607::1706760607::1::::<><>::
 3 over 4.png::CompressedTexture2D::113880752556333312::1707237797::1707237798::1::::<><>::
 3_chest.png::CompressedTexture2D::1810653517578256426::1706760607::1706760607::1::::<><>::
@@ -444,15 +453,17 @@ sad_slimey.png::CompressedTexture2D::3702648972105152960::1706016831::1706016831
 48.png::CompressedTexture2D::6679793463014247140::1706760607::1706760607::1::::<><>::
 52_chest.png::CompressedTexture2D::5626516386837060009::1706760607::1706760607::1::::<><>::
 72.png::CompressedTexture2D::2305475496337949012::1706760607::1706760607::1::::<><>::
-::res://Sprites/Collectibles/final answers/w5/::1707483433
-2xsquare.png::CompressedTexture2D::7986256102583181320::1707483433::1707483433::1::::<><>::
-4xsquarey.png::CompressedTexture2D::5899037081899717896::1707483433::1707483433::1::::<><>::
-9x.png::CompressedTexture2D::6531032633571445982::1707483433::1707483433::1::::<><>::
-12xplusy.png::CompressedTexture2D::9218848473693265901::1707483433::1707483433::1::::<><>::
-12xsquare.png::CompressedTexture2D::4380622004462039781::1707483433::1707483433::1::::<><>::
-::res://Sprites/Collectibles/numbers/::1706760608
+::res://Sprites/Collectibles/final answers/w5/::1707534611
+9x.png::CompressedTexture2D::6531032633571445982::1707495200::1707495200::1::::<><>::
+12xplusy.png::CompressedTexture2D::9218848473693265901::1707495200::1707495200::1::::<><>::
+12xsquare.png::CompressedTexture2D::4380622004462039781::1707495200::1707495200::1::::<><>::
+16xsquarey.png::CompressedTexture2D::1357478371776166011::1707534611::1707534611::1::::<><>::
+24xsquare.png::CompressedTexture2D::434031760737901957::1707534611::1707534611::1::::<><>::
+::res://Sprites/Collectibles/numbers/::1707534852
 8.png::CompressedTexture2D::8850693230141893302::1706760607::1706760607::1::::<><>::
+11_collectible.png::CompressedTexture2D::5171668895835442482::1707534851::1707534852::1::::<><>::
 Eight.png::CompressedTexture2D::4382283595997715326::1706760607::1706760607::1::::<><>::
+Fifteen.png::CompressedTexture2D::7484648048491637046::1707534851::1707534852::1::::<><>::
 Fifty-four.png::CompressedTexture2D::6247035258026382131::1706760607::1706760607::1::::<><>::
 Fifty-six.png::CompressedTexture2D::6611208681578665727::1706760607::1706760607::1::::<><>::
 five.png::CompressedTexture2D::7405772146231797745::1706760608::1706760608::1::::<><>::

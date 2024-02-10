@@ -13,9 +13,9 @@ var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "^": 3}
 
 @export_category("how many terms?")
 @export var num_term : int
+@export var variable_term : int
 @onready var oper_term = num_term - 1
-var parentheses = 2
-@onready var terms = num_term + oper_term + parentheses
+@onready var terms = num_term + oper_term + variable_term
 
 @export_category("values")
 @export var x_value : int
@@ -107,7 +107,7 @@ func evaluate_rpn(expression, variables):
 func update_expression():
 	var items = []
 
-	for i in range(num_term + oper_term + parentheses):
+	for i in range(num_term + oper_term + variable_term):
 		if i < collected_items.size():
 			items.append(str(collected_items[i]))
 		else:

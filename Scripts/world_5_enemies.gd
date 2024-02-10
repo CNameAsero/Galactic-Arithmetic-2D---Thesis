@@ -41,7 +41,7 @@ var speed = 0.09 * PI / 180
 @export var bullet : PackedScene
 
 @onready var animation_player = $AnimationPlayer
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../../health_system"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -363,7 +363,7 @@ func player_hurt():
 	AudioManager.player_hurt()
 	var blink_duration = 0.2
 	var total_blink_time = 1
-	var sprite = $"../slime_player_joystick/slime_player_joystik/Sprite2D"
+	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)
 	

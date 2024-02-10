@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl1uqayfoyvwi"
-path="res://.godot/imported/2xsquare.png-43b78c9ce30ce368e9948cfee1c92b86.ctex"
+uid="uid://tltp83xnhocx"
+path="res://.godot/imported/16xsquarey.png-a1381284dc8d95dfb197a15faa80c63c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Collectibles/final answers/w5/2xsquare.png"
-dest_files=["res://.godot/imported/2xsquare.png-43b78c9ce30ce368e9948cfee1c92b86.ctex"]
+source_file="res://Sprites/Collectibles/final answers/w5/16xsquarey.png"
+dest_files=["res://.godot/imported/16xsquarey.png-a1381284dc8d95dfb197a15faa80c63c.ctex"]
 
 [params]
 

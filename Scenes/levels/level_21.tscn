@@ -1,9 +1,23 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0ewehpefe2oc"]
+[gd_scene load_steps=27 format=3 uid="uid://b0ewehpefe2oc"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_m6f7g"]
+[ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="2_cyekm"]
+[ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="5_pnfyq"]
+[ext_resource type="PackedScene" uid="uid://b1cwh68wrnd2y" path="res://Scenes/Mechanics/numbers_w5.tscn" id="6_4daac"]
+[ext_resource type="PackedScene" uid="uid://quk3dlnbr7sj" path="res://Scenes/Mechanics/operators_w5.tscn" id="7_kalap"]
+[ext_resource type="PackedScene" uid="uid://0fvidggqf6tt" path="res://Scenes/timer_w5.tscn" id="7_vjxnt"]
+[ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="8_hylm7"]
+[ext_resource type="PackedScene" uid="uid://btmq1lrhtcp0e" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="9_pa7j3"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_d1b0s"]
+[ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_nhvvx"]
+[ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_t2mk8"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="13_021y6"]
+[ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="13_x7544"]
+[ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="14_bn6e4"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="14_p3yr7"]
+[ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="15_4o8un"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="15_rgqxl"]
+[ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="18_4pgqc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv4f4"]
 radius = 27.0185
@@ -164,6 +178,65 @@ layer_5/tile_data = PackedInt32Array(458809, 1179649, 10, 524345, 1179649, 11, 5
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 539)
 
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="fly" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(961, 244)
+enemy_type = "fly"
+
+[node name="gamemanager_algebra" parent="." instance=ExtResource("5_pnfyq")]
+num_term = 2
+variable_term = 2
+x_value = 2
+
+[node name="5" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(905, 1031)
+number = 5
+
+[node name="4" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(1015, 1034)
+number = 4
+
+[node name="7" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(1870, 524)
+number = 7
+
+[node name="2" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(75, 522)
+number = 2
+
+[node name="11" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(903, 133)
+number = 11
+
+[node name="2_2" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
+position = Vector2(1012, 138)
+number = 2
+
+[node name="+" parent="gamemanager_algebra" instance=ExtResource("7_kalap")]
+position = Vector2(228, 295)
+oper = "+"
+
+[node name="-" parent="gamemanager_algebra" instance=ExtResource("7_kalap")]
+position = Vector2(1694, 776)
+oper = "-"
+
+[node name="x1" parent="gamemanager_algebra" instance=ExtResource("8_hylm7")]
+position = Vector2(1473, 353)
+variable_to_display = "x"
+
+[node name="x2" parent="gamemanager_algebra" instance=ExtResource("8_hylm7")]
+position = Vector2(334, 656)
+variable_to_display = "x"
+
+[node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("9_pa7j3")]
+position = Vector2(1120, 405)
+x = 2
+integer = 9
+display_chest = "lvl1"
+
+[node name="timer" parent="gamemanager_algebra" instance=ExtResource("7_vjxnt")]
+
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
@@ -205,4 +278,49 @@ shape = SubResource("CircleShape2D_gv4f4")
 position = Vector2(189, 898)
 scale = Vector2(1.85, 1.85)
 
+[node name="health_system" parent="." instance=ExtResource("10_d1b0s")]
+
+[node name="menus" type="TextureButton" parent="."]
+offset_left = 1838.0
+offset_top = 8.0
+offset_right = 1913.0
+offset_bottom = 83.0
+texture_normal = ExtResource("11_nhvvx")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("12_t2mk8")
+
+[node name="game_over" parent="menus" instance=ExtResource("13_x7544")]
+visible = false
+layout_mode = 1
+offset_left = -916.5
+offset_top = 493.5
+offset_right = -916.5
+offset_bottom = 493.5
+
+[node name="level_complete_menu" parent="menus" instance=ExtResource("14_bn6e4")]
+visible = false
+layout_mode = 1
+offset_left = -916.5
+offset_top = 493.5
+offset_right = -916.5
+offset_bottom = 493.5
+
+[node name="game_paused" parent="menus" instance=ExtResource("15_4o8un")]
+visible = false
+layout_mode = 1
+offset_left = -916.0
+offset_top = 494.0
+offset_right = -916.0
+offset_bottom = 494.0
+
+[node name="time" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 960.0
+offset_top = 703.0
+offset_right = 960.0
+offset_bottom = 703.0
+buff_selected = "time"
+time_buff = 15.0
+
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
+[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

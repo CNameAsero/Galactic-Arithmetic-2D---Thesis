@@ -41,6 +41,9 @@ func _ready():
 				10:
 					var animationplayer10 = $"10/AnimationPlayer"
 					animationplayer10.play("Shining")
+				11:
+					var animationplayer11 = $"11/AnimationPlayer"
+					animationplayer11.play("Shining")
 				12:
 					var animationplayer12 = $"12/AnimationPlayer"
 					animationplayer12.play("Shining")
@@ -50,6 +53,9 @@ func _ready():
 				14:
 					var animationplayer14 = $"14/AnimationPlayer"
 					animationplayer14.play("Shining")
+				15:
+					var animationplayer15 = $"15/AnimationPlayer"
+					animationplayer15.play("Shining")
 				16:
 					var animationplayer16 = $"16/AnimationPlayer"
 					animationplayer16.play("Shining")

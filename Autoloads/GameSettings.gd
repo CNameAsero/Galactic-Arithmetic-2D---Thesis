@@ -9,9 +9,13 @@ extends Node
 #for level to proceed to next
 var current_level = 1
 
+
 #this is to check what level the player in the grass area
 @onready var grasscurrentlevel = [true, false, false]
 @onready var watercurrentlevel = [true, false, false]
 @onready var lavacurrentlevel = [true, false, false]
 @onready var icecurrentlevel = [true, false, false]
 @onready var roofcurrentlevel = [true, false, false]
+
+func update_level_completion(level: int):
+	currentlevel[level-1] = true
