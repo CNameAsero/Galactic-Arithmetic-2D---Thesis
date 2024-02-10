@@ -23,6 +23,19 @@ var tutorial5 : AudioStreamPlayer
 var tutorial6 : AudioStreamPlayer
 var tutorial7 : AudioStreamPlayer
 
+var story1 : AudioStreamPlayer
+var story2 : AudioStreamPlayer
+var story3 : AudioStreamPlayer
+var story4 : AudioStreamPlayer
+var story5 : AudioStreamPlayer
+var story6 : AudioStreamPlayer
+var story7 : AudioStreamPlayer
+var story8 : AudioStreamPlayer
+var story9 : AudioStreamPlayer
+var story10 : AudioStreamPlayer
+var story11 : AudioStreamPlayer
+var story12 : AudioStreamPlayer
+
 var is_music_muted = false #bg music menu
 var is_level1music_muted = false #bg music level1
 var is_sfx_muted = false
@@ -40,6 +53,8 @@ func _ready():
 	slime_hurt = $slime_hurt
 	octopus = $octopus_shot
 	teleport = $teleport
+
+	#TUTORIAL
 	tutorial1 = $"6th_tutorial"
 	tutorial2 = $"1st_tutorial"
 	tutorial3 = $"2nd_tutorial"
@@ -47,6 +62,21 @@ func _ready():
 	tutorial5 = $"4th_tutorial"
 	tutorial6 = $"5th_tutorial"
 	tutorial7 = $"7th_tutorial"
+
+	#STORY BOARD
+	story1 = $story1
+	story2 = $story2
+	story3 = $story3
+	story4 = $story4
+	story5 = $story5
+	story6 = $story6
+	story7 = $story7
+	story8 = $story8
+	story9 = $story9
+	story10 = $story10
+	story11 = $story11
+	story12= $story12
+
 func play_button_sfx():
 	button_sfx.play()
 
@@ -104,3 +134,53 @@ func tuto7():
 	tutorial7.play()
 func tuto7_stop():
 	tutorial7.stop()
+
+# STORY BOARD VOICE OVER
+func sto2():
+	story1.play()
+func sto2_stop():
+	story1.stop()
+func sto3():
+	story2.play()
+func sto3_stop():
+	story2.stop()
+func sto4():
+	story3.play()
+func sto4_stop():
+	story3.stop()
+func sto5():
+	story4.play()
+func sto5_stop():
+	story4.stop()
+func sto6():
+	story5.play()
+func sto6_stop():
+	story5.stop()
+func sto7():
+	story6.play()
+func sto7_stop():
+	story6.stop()
+func sto8():
+	story7.play()
+func sto8_stop():
+	story7.stop()
+func sto9():
+	story8.play()
+func sto9_stop():
+	story8.stop()
+func  sto10():
+	story9.play()
+func  sto10_stop():
+	story9.stop()
+func sto11():
+	story10.play()
+func sto11_stop():
+	story10.stop()
+func sto12():
+	story11.play()
+func sto12_stop():
+	story11.stop()
+func sto13():
+	story12.play()
+func sto13_stop():
+	story12.stop()
