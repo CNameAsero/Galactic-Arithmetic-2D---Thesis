@@ -11,30 +11,6 @@ extends Node2D
 #final answer
 @onready var final_answer = $final_answer.final_answer
 
-#numbers
-#@onready var num0 = $"Numbers/set_number"
-@onready var num1 = $"Number_5/5"
-@onready var num2 = $"Number_4/4"
-@onready var num3 = $"Number_1/1"
-@onready var num4 = $"Number_6/6"
-@onready var num5 = $"Number_9/9"
-#@onready var num6 = $"Numbers/set_number"
-#@onready var num7 = $"Numbers/set_number"
-#@onready var num8 = $"Numbers/set_number"
-#@onready var num9 = $"Numbers/set_number"
-
-#operators
-@onready var op1 = $"operator_+/+"
-@onready var op2 = $"operator_-/-"
-@onready var op3 = $"operator_x/x"
-@onready var op4 = $"operator_d/d"
-
-#counters
-@onready var current_num = num1
-@onready var current_oper = op1
-@onready var num_counter = 0
-@onready var oper_counter = 0
-
 #levels
 @onready var currentlevel = 0
 
@@ -44,11 +20,6 @@ func _ready():
 func collect_number(num):
 	if isDestroy.isDestroy && last_item_was_number:
 		collected_numbers.append(num)
-		num_counter += 1
-		if num_counter == 1:
-			current_num = num2
-		elif num_counter == 2:
-			current_num = num3
 		last_item_was_number = false
 	update_expression()
 	check_final_answer()
@@ -56,11 +27,6 @@ func collect_number(num):
 func collect_operator(oper):
 	if isDestroy.isDestroy && !last_item_was_number:
 		collected_operators.append(oper)
-		oper_counter += 1
-		if oper_counter == 1:
-			current_oper = op2
-		elif oper_counter == 2:
-			pass
 		last_item_was_number = true
 	update_expression()
 	check_final_answer()
@@ -124,10 +90,13 @@ func check_final_answer():
 	var current_result = calculate_expression()
 	if current_result == final_answer:
 		end_tutorial_1.hide()
+		AudioManager.tuto7_stop()
+		AudioManager.tuto6()
 		end_tutorial_2.show()
 		animation_player.play("typewriter")
 		GameSettings.tutorialPlayed = true
-		await get_tree().create_timer(5).timeout
+		await get_tree().create_timer(10).timeout
+		AudioManager.tuto6_stop()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
 
 	elif collected_numbers.size() == 3 || current_result != calculate_expression():

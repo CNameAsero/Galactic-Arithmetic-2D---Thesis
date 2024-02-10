@@ -1,3 +1,5 @@
+TextureButton
+Button
 Node2D
 CharacterBody2D
 AnimationPlayer
@@ -15,8 +17,6 @@ AudioStreamPlayer
 VisibleOnScreenNotifier2D
 TextureRect
 RigidBody2D
-Button
 HSlider
 CheckButton
-TextureButton
 Panel

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgeyh0wf7hlm8"
+path="res://.godot/imported/2nd.mp3-5a7df69c5ba04c6356553e8261e9b34a.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/2nd.mp3"
+dest_files=["res://.godot/imported/2nd.mp3-5a7df69c5ba04c6356553e8261e9b34a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

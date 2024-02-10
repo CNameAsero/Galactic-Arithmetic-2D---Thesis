@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bmfhh7p20loci"]
+[gd_scene load_steps=25 format=3 uid="uid://bmfhh7p20loci"]
 
 [ext_resource type="Script" path="res://Scripts/story_board(cut_scene).gd" id="1_wha3u"]
 [ext_resource type="Texture2D" uid="uid://b2qvjggsqakse" path="res://Galactic Arithmetic Assets/Story_Board_Assets/4.png" id="2_a1grl"]
@@ -18,9 +18,12 @@
 [ext_resource type="Texture2D" uid="uid://ce0ia6qhwxtna" path="res://Galactic Arithmetic Assets/Story_Board_Assets/18.png" id="16_uiiqr"]
 [ext_resource type="Texture2D" uid="uid://ddy166bgnuldl" path="res://Galactic Arithmetic Assets/Story_Board_Assets/19.png" id="17_ppfcf"]
 [ext_resource type="Texture2D" uid="uid://cgng5rj8osckw" path="res://Galactic Arithmetic Assets/Story_Board_Assets/20.png" id="18_1sqgu"]
-[ext_resource type="Texture2D" uid="uid://c0se40t02remo" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_To_Continue....png" id="19_infji"]
+[ext_resource type="Texture2D" uid="uid://t8je86kh8q5p" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button.png" id="19_m81f4"]
+[ext_resource type="Texture2D" uid="uid://dqipxxqaot3h1" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button_40Trans.png" id="20_5jey1"]
 [ext_resource type="Script" path="res://Scripts/Tap_To_Continue.gd" id="20_7x7yu"]
+[ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="21_cok0g"]
 [ext_resource type="AudioStream" uid="uid://b37c7a36kli65" path="res://Galactic Arithmetic Assets/Audio_Assets/Button Click.mp3" id="21_hkivx"]
+[ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="22_yqgy5"]
 
 [node name="Story_Board(CutScene)" type="Control"]
 layout_mode = 3
@@ -151,13 +154,28 @@ texture = ExtResource("18_1sqgu")
 
 [node name="Tap_To_Continue" type="TextureButton" parent="."]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
+offset_left = 1500.0
+offset_top = 875.0
+offset_right = 2035.0
+offset_bottom = 1199.0
+scale = Vector2(0.653686, 0.463638)
 action_mode = 0
-texture_normal = ExtResource("19_infji")
+texture_normal = ExtResource("19_m81f4")
+texture_pressed = ExtResource("20_5jey1")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("20_7x7yu")
+
+[node name="skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 75.0
+offset_right = 1850.0
+offset_bottom = 225.0
+texture_normal = ExtResource("21_cok0g")
+texture_pressed = ExtResource("22_yqgy5")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Sound_Manager" type="Node" parent="."]
 
@@ -168,3 +186,4 @@ stream = ExtResource("21_hkivx")
 position = Vector2(957, 541)
 
 [connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

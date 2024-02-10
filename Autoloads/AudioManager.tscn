@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=20 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -12,6 +12,13 @@
 [ext_resource type="AudioStream" uid="uid://du1bqh1bfa85j" path="res://Galactic Arithmetic Assets/Audio_Assets/slime_hurt.mp3" id="10_fe16u"]
 [ext_resource type="AudioStream" uid="uid://ddu3jvnqbl4jw" path="res://Galactic Arithmetic Assets/Audio_Assets/Octopus_shot.mp3" id="11_tkjrb"]
 [ext_resource type="AudioStream" uid="uid://c30xwwrqe1v0g" path="res://Galactic Arithmetic Assets/Audio_Assets/Warp_teleport.mp3" id="12_hq4iy"]
+[ext_resource type="AudioStream" uid="uid://vala12sghwur" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/1st.mp3" id="13_6eser"]
+[ext_resource type="AudioStream" uid="uid://bgeyh0wf7hlm8" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/2nd.mp3" id="14_vppl7"]
+[ext_resource type="AudioStream" uid="uid://c1buupaeqpmnk" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/3rd.mp3" id="15_nflfr"]
+[ext_resource type="AudioStream" uid="uid://cgf7rknjnfih1" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/4th.mp3" id="16_bhitp"]
+[ext_resource type="AudioStream" uid="uid://j33rnqwb6256" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/5TH.mp3" id="17_4s04k"]
+[ext_resource type="AudioStream" uid="uid://b7uxx3a1md2kx" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/1basics.mp3" id="18_gpink"]
+[ext_resource type="AudioStream" uid="uid://uq1tc21egbk4" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/5th-1.mp3" id="19_x3lbo"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0fra")
@@ -64,3 +71,24 @@ stream = ExtResource("11_tkjrb")
 
 [node name="teleport" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_hq4iy")
+
+[node name="1st_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_6eser")
+
+[node name="2nd_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_vppl7")
+
+[node name="3rd_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_nflfr")
+
+[node name="4th_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_bhitp")
+
+[node name="5th_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_4s04k")
+
+[node name="6th_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_gpink")
+
+[node name="7th_tutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("19_x3lbo")

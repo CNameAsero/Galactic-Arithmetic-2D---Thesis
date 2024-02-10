@@ -17,6 +17,8 @@ func _on_level_1_pressed():
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
+	AudioManager.background_music.stop()
+	AudioManager.level1_music.play()
 	if GameSettings.grasscurrentlevel[1]==true:
 		get_tree().change_scene_to_file("res://Scenes/levels/level_2.tscn")
 	else:

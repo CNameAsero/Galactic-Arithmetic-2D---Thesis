@@ -8,8 +8,6 @@ var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "^": 3}
 @onready var collected_numbers := []
 @onready var collected_items := []
 @onready var isDestroy = false
-@onready var open = false
-@onready var expression_label = $CurrentExpressionLabel
 
 @export_category("how many terms?")
 @export var num_term : int
