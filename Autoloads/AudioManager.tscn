@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=36 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -29,8 +29,12 @@
 [ext_resource type="AudioStream" uid="uid://elbfhwlq1tj4" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/8maroon.mp3" id="27_40lxi"]
 [ext_resource type="AudioStream" uid="uid://bmv8j4axrr3jp" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/9maroon-2.mp3" id="28_w8rfv"]
 [ext_resource type="AudioStream" uid="uid://co3v5uwjds866" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/10matcha-green.mp3" id="29_skx5u"]
-[ext_resource type="AudioStream" uid="uid://cl1e7t4roo5v5" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/11gray.mp3" id="30_sul6m"]
-[ext_resource type="AudioStream" uid="uid://bqecvhjdq8l64" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/12light-blue-final.mp3" id="31_1qil0"]
+[ext_resource type="AudioStream" uid="uid://cw6w5axjfv10y" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/12.mp3" id="31_4pibt"]
+[ext_resource type="AudioStream" uid="uid://d2ina1cma0r1w" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/13.mp3" id="32_4fduk"]
+[ext_resource type="AudioStream" uid="uid://03fufki76ic3" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/14.mp3" id="33_oon6m"]
+[ext_resource type="AudioStream" uid="uid://d1bn0uvgab8o5" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/15.mp3" id="34_72sob"]
+[ext_resource type="AudioStream" uid="uid://htqdux7e8r5e" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/16.mp3" id="35_stc1c"]
+[ext_resource type="AudioStream" uid="uid://dbx6l5t58ughw" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/17.mp3" id="36_apcnj"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0fra")
@@ -136,7 +140,19 @@ stream = ExtResource("28_w8rfv")
 stream = ExtResource("29_skx5u")
 
 [node name="story11" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("30_sul6m")
+stream = ExtResource("31_4pibt")
 
 [node name="story12" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_1qil0")
+stream = ExtResource("32_4fduk")
+
+[node name="story13" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("33_oon6m")
+
+[node name="story14" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("34_72sob")
+
+[node name="story15" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_stc1c")
+
+[node name="story16" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("36_apcnj")

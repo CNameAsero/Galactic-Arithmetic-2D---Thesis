@@ -35,7 +35,11 @@ var story9 : AudioStreamPlayer
 var story10 : AudioStreamPlayer
 var story11 : AudioStreamPlayer
 var story12 : AudioStreamPlayer
-
+var story13 : AudioStreamPlayer
+var story14 : AudioStreamPlayer
+var story15 : AudioStreamPlayer
+var story16 : AudioStreamPlayer
+var story17 : AudioStreamPlayer
 var is_music_muted = false #bg music menu
 var is_level1music_muted = false #bg music level1
 var is_sfx_muted = false
@@ -75,7 +79,11 @@ func _ready():
 	story9 = $story9
 	story10 = $story10
 	story11 = $story11
-	story12= $story12
+	story12 = $story12
+	story13 = $story13
+	story14 = $story14
+	story15 = $story15
+	story16 = $story16
 
 func play_button_sfx():
 	button_sfx.play()
@@ -184,3 +192,19 @@ func sto13():
 	story12.play()
 func sto13_stop():
 	story12.stop()
+func sto14():
+	story13.play()
+func sto14_stop():
+	story13.stop()
+func sto15():
+	story14.play()
+func sto15_stop():
+	story14.stop()
+func sto16():
+	story15.play()
+func sto16_stop():
+	story15.stop()
+func sto17():
+	story16.play()
+func sto17_stop():
+	story16.stop()
