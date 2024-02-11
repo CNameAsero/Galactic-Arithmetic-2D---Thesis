@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvhn0ady5xhmn"]
+[gd_scene load_steps=5 format=3 uid="uid://cvpjpxig1y6wl"]
 
 [ext_resource type="Script" path="res://Scripts/thief_bullet.gd" id="1_4gco8"]
 [ext_resource type="Texture2D" uid="uid://chapbaf2peblw" path="res://Sprites/Enemies/world5_enemies/Bullet.png" id="2_ghtnn"]

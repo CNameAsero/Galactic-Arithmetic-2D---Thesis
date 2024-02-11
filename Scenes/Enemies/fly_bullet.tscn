@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c644bw2xl0qwy"]
+[gd_scene load_steps=5 format=3 uid="uid://c05lr1ojbme4r"]
 
 [ext_resource type="Script" path="res://Scripts/fly_bullet.gd" id="1_abp5p"]
 [ext_resource type="Texture2D" uid="uid://xcf3f7ropr5o" path="res://Sprites/Enemies/world5_enemies/Fly-attack.png" id="2_md10m"]

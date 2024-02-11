@@ -1,11 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://cao4j5jl2i7gq"]
+[gd_scene load_steps=28 format=3 uid="uid://duqjg07usvrms"]
 
 [ext_resource type="Script" path="res://Scripts/world_5_enemies.gd" id="1_5nf24"]
-[ext_resource type="PackedScene" uid="uid://c644bw2xl0qwy" path="res://Scenes/Enemies/fly_bullet.tscn" id="2_rbk1j"]
+[ext_resource type="PackedScene" uid="uid://c05lr1ojbme4r" path="res://Scenes/Enemies/fly_bullet.tscn" id="2_rbk1j"]
 [ext_resource type="Texture2D" uid="uid://djlslkfagox0i" path="res://Sprites/Enemies/world5_enemies/Fly.png" id="2_vyehq"]
-[ext_resource type="PackedScene" uid="uid://c7iwbfvapp100" path="res://Scenes/Enemies/flea.tscn" id="3_yd2ea"]
+[ext_resource type="PackedScene" uid="uid://c0qirtw2fxgj7" path="res://Scenes/Enemies/flea.tscn" id="3_yd2ea"]
 [ext_resource type="Texture2D" uid="uid://cvtfvyhhw8xyg" path="res://Sprites/Enemies/world5_enemies/RatMovement_Attack.png" id="4_6r4mx"]
-[ext_resource type="PackedScene" uid="uid://bvhn0ady5xhmn" path="res://Scenes/Enemies/thief_bullet.tscn" id="4_phtog"]
+[ext_resource type="PackedScene" uid="uid://cvpjpxig1y6wl" path="res://Scenes/Enemies/thief_bullet.tscn" id="4_phtog"]
 [ext_resource type="Texture2D" uid="uid://83lp7i4efe3x" path="res://Sprites/Enemies/world5_enemies/Thief.png" id="6_mxfmm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0gnt6"]

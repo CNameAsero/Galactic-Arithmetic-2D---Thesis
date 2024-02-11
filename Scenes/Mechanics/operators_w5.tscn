@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://quk3dlnbr7sj"]
+[gd_scene load_steps=10 format=3 uid="uid://pyjcudqpnqk5"]
 
 [ext_resource type="Script" path="res://Scripts/operators_w5.gd" id="1_fq6wo"]
 [ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="2_mh5rg"]

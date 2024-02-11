@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://b1cwh68wrnd2y"]
+[gd_scene load_steps=76 format=3 uid="uid://b56ju42518v17"]
 
 [ext_resource type="Script" path="res://Scripts/Numbers_w5.gd" id="1_wyqr2"]
 [ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="2_5qcip"]

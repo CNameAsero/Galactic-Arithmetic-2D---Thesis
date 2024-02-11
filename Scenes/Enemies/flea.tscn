@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7iwbfvapp100"]
+[gd_scene load_steps=12 format=3 uid="uid://c0qirtw2fxgj7"]
 
 [ext_resource type="Texture2D" uid="uid://cghnkenifmeve" path="res://Sprites/Enemies/world5_enemies/fleaspawn.png" id="1_8cb6h"]
 [ext_resource type="Script" path="res://Scenes/Enemies/flea.gd" id="1_ec76g"]
