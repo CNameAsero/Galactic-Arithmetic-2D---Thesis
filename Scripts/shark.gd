@@ -71,7 +71,7 @@ func area_radius():
 
 func chase_player(delta):
 	var direction = (target.global_position - global_position).normalized()
-	global_position += direction * move_speed * delta
+	move_and_collide(direction * move_speed * delta)
 	var is_horizontal = abs(direction.x) > abs(direction.y)
 	if is_horizontal:
 		if direction.x > 0:

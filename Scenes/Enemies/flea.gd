@@ -26,7 +26,7 @@ func _process(delta):
 
 func flea_chase(delta):
 	var direction = (target.global_position - global_position).normalized()
-	global_position += direction * flea_speed * delta
+	move_and_collide(direction * flea_speed * delta)
 	var is_horizontal = abs(direction.x) > abs(direction.y)
 
 	if is_horizontal:
