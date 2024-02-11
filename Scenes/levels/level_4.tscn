@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://caa7mqd47i3bg"]
+[gd_scene load_steps=56 format=3 uid="uid://caa7mqd47i3bg"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_iwvka"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_plxkj"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="5_dehq5"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_fli1p"]
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="6_omx7i"]
+[ext_resource type="PackedScene" uid="uid://brr55dgynt6pf" path="res://Scenes/Enemies/wasp_enemy.tscn" id="12_bd18b"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="15_jku4h"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="16_s0puy"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="21_7f7kv"]
@@ -19,10 +20,8 @@
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="28_6n0of"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="29_4xyvc"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="30_ridc3"]
-[ext_resource type="Script" path="res://Scripts/wasp_enemy.gd" id="31_ob2n0"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="31_symrn"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="32_iq2fh"]
-[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="32_nbrto"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="33_b2gg0"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="34_ktmu3"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="35_s6nqf"]
@@ -96,103 +95,6 @@ _data = {
 "RESET": SubResource("Animation_sd1pg"),
 "timer": SubResource("Animation_820pq")
 }
-
-[sub_resource type="Animation" id="Animation_a4h0f"]
-resource_name = "Back_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_ax8ae"]
-resource_name = "Fly_frony"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
-[sub_resource type="Animation" id="Animation_oan2h"]
-resource_name = "Left_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [3, 4, 5]
-}
-
-[sub_resource type="Animation" id="Animation_30qr7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_ovdl6"]
-resource_name = "Right_fly"
-length = 0.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [6, 7, 8]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g6jwu"]
-_data = {
-"Back_fly": SubResource("Animation_a4h0f"),
-"Fly_frony": SubResource("Animation_ax8ae"),
-"Left_fly": SubResource("Animation_oan2h"),
-"RESET": SubResource("Animation_30qr7"),
-"Right_fly": SubResource("Animation_ovdl6")
-}
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_k4fii"]
-radius = 8.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_krfbi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qgw60"]
 radius = 27.0185
@@ -527,157 +429,17 @@ position = Vector2(1775, 497)
 rotation = -3.14159
 scale = Vector2(0.64, 0.64)
 
-[node name="Wasp_enemy" type="Node2D" parent="Enemies"]
-position = Vector2(377, 219)
-
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("31_ob2n0")
-rect_radius = 300.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("32_nbrto")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
-
-[node name="Wasp_enemy2" type="Node2D" parent="Enemies"]
+[node name="Wasp_enemy5" parent="Enemies" instance=ExtResource("12_bd18b")]
 position = Vector2(394, 864)
 
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy2"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("31_ob2n0")
-rect_radius = 300.0
-enemy_speed = 130.0
+[node name="Wasp_enemy6" parent="Enemies" instance=ExtResource("12_bd18b")]
+position = Vector2(1552, 222)
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("32_nbrto")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy2"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy2/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
-
-[node name="Wasp_enemy3" type="Node2D" parent="Enemies"]
-position = Vector2(1551, 222)
-
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy3"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("31_ob2n0")
-rect_radius = 300.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("32_nbrto")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy3"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy3/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
-
-[node name="Wasp_enemy4" type="Node2D" parent="Enemies"]
+[node name="Wasp_enemy7" parent="Enemies" instance=ExtResource("12_bd18b")]
 position = Vector2(1542, 878)
 
-[node name="CharacterBody2D" type="Area2D" parent="Enemies/Wasp_enemy4"]
-position = Vector2(4.66666, 0)
-collision_layer = 8
-collision_mask = 25
-script = ExtResource("31_ob2n0")
-rect_radius = 300.0
-enemy_speed = 130.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/Wasp_enemy4/CharacterBody2D"]
-light_mask = 4
-visibility_layer = 4
-position = Vector2(-5, -2)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("32_nbrto")
-hframes = 3
-vframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/Wasp_enemy4/CharacterBody2D"]
-speed_scale = 0.8
-libraries = {
-"": SubResource("AnimationLibrary_g6jwu")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/Wasp_enemy4/CharacterBody2D"]
-position = Vector2(-4.66666, 2)
-shape = SubResource("CircleShape2D_k4fii")
-one_way_collision_margin = 2.0
-
-[node name="area_det" type="Area2D" parent="Enemies/Wasp_enemy4"]
-
-[node name="collision_det" type="CollisionShape2D" parent="Enemies/Wasp_enemy4/area_det"]
-shape = SubResource("RectangleShape2D_krfbi")
-debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
+[node name="Wasp_enemy8" parent="Enemies" instance=ExtResource("12_bd18b")]
+position = Vector2(377, 219)
 
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
@@ -1129,22 +891,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
-[connection signal="body_entered" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy/CharacterBody2D" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy/area_det" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy/area_det" to="Enemies/Wasp_enemy/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy2/CharacterBody2D" to="Enemies/Wasp_enemy2/CharacterBody2D" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy2/CharacterBody2D" to="Enemies/Wasp_enemy2/CharacterBody2D" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy2/area_det" to="Enemies/Wasp_enemy2/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy2/area_det" to="Enemies/Wasp_enemy2/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy3/CharacterBody2D" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy3/CharacterBody2D" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy3/area_det" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy3/area_det" to="Enemies/Wasp_enemy3/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy4/CharacterBody2D" to="Enemies/Wasp_enemy4/CharacterBody2D" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy4/CharacterBody2D" to="Enemies/Wasp_enemy4/CharacterBody2D" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Enemies/Wasp_enemy4/area_det" to="Enemies/Wasp_enemy4/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
-[connection signal="body_exited" from="Enemies/Wasp_enemy4/area_det" to="Enemies/Wasp_enemy4/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

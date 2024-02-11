@@ -360,6 +360,9 @@ libraries = {
 "": SubResource("AnimationLibrary_at84c")
 }
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="fly" to="." method="hit_fly_entered"]
 [connection signal="body_entered" from="fly/det" to="." method="fly_det_entered"]
 [connection signal="body_exited" from="fly/det" to="." method="fly_det_exited"]
@@ -372,3 +375,4 @@ libraries = {
 [connection signal="body_entered" from="thief/det" to="." method="thief_det_entered"]
 [connection signal="body_exited" from="thief/det" to="." method="thief_det_exited"]
 [connection signal="timeout" from="thief/Timer" to="." method="thief_timeout"]
+[connection signal="timeout" from="Timer" to="." method="hit_timeout"]

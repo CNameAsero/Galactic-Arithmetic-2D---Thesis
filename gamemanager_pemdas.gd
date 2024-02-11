@@ -139,11 +139,13 @@ func restart():
 	reset_hp()
 	var current_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file(current_scene)
+	GameSettings.player_invulnerable = false
 
 func reset_for_next_level():
 	reset_hp()
 	collected_items.clear()
 	collected_parentheses.clear()
+	GameSettings.player_invulnerable = false
 
 func _ready():
 	pass

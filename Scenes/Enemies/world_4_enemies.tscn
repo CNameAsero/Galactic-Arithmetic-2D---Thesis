@@ -20,6 +20,43 @@ func _ready():
 func _process(delta):
 	bear.bear(delta)
 
+
+func bear_chase_player(delta):
+	var direction = (bear.target.global_position - global_position).normalized()
+	move_and_collide(bear.direction * bear.move_speed * delta)
+	var is_horizontal = abs(direction.x) > abs(direction.y)
+	
+	var attack_range = 30 
+	var stop_range = 10
+
+	var distance = bear.target.global_position.distance_to(global_position)
+
+	if distance > stop_range:
+		global_position += bear.direction * bear.move_speed * delta
+
+	if distance < attack_range:
+		if is_horizontal:
+			if direction.x > 0:
+				bear.animation_player.play(\"bear_atk_right\")
+			else:
+				bear.animation_player.play(\"bear_atk_left\")
+		elif !is_horizontal:
+			if direction.y > 0:
+				bear.animation_player.play(\"bear_atk_down\")
+			else:
+				bear.animation_player.play(\"bear_atk_up\")
+	else:
+		if is_horizontal:
+			if direction.x > 0:
+				bear.animation_player.play(\"beat_right\")
+			else:
+				bear.animation_player.play(\"bear_left\")
+		elif !is_horizontal:
+			if direction.y > 0:
+				bear.animation_player.play(\"bear_down\")
+			else:
+				bear.animation_player.play(\"bear_up\")
+
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bv1eo"]
@@ -408,6 +445,8 @@ scale = Vector2(1.8, 1.8)
 [node name="col" type="CollisionShape2D" parent="det_bear"]
 shape = SubResource("CircleShape2D_lkwum")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="ice" to="." method="_on_ice_body_entered"]
 [connection signal="body_entered" from="bear/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="yeti/Timer" to="." method="shockwave_timeout"]
@@ -416,3 +455,4 @@ shape = SubResource("CircleShape2D_lkwum")
 [connection signal="body_entered" from="yeti/Area2D" to="." method="_on_area_yeti_body_entered"]
 [connection signal="body_entered" from="det_bear" to="." method="bear_det_entered"]
 [connection signal="body_exited" from="det_bear" to="." method="bear_det_exited"]
+[connection signal="timeout" from="Timer" to="." method="hit_timeout"]

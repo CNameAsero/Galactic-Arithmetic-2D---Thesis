@@ -295,6 +295,9 @@ libraries = {
 "": SubResource("AnimationLibrary_3ughn")
 }
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
 [connection signal="body_entered" from="bat" to="." method="_on_bat_body_entered"]
 [connection signal="body_entered" from="bat/area_det" to="." method="_on_area_det_body_entered"]
@@ -302,3 +305,4 @@ libraries = {
 [connection signal="timeout" from="skeleton/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="skeleton/area_det" to="." method="skeleton_body_entered"]
 [connection signal="body_exited" from="skeleton/area_det" to="." method="skeleton_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="hit_timeout"]
