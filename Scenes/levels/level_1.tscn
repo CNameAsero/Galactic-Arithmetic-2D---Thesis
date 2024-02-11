@@ -408,7 +408,7 @@ grow_vertical = 2
 script = ExtResource("31_dgdo3")
 buff_selected = "speed"
 hp_buff = 1
-speed_buff = 300.0
+speed_buff = 200.0
 
 [node name="Area2D" type="Area2D" parent="speed_buff"]
 scale = Vector2(0.3, 0.3)

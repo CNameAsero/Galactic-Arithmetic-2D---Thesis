@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://clilhckkmmh4e"]
+[gd_scene load_steps=28 format=3 uid="uid://clilhckkmmh4e"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_o4pbl"]
+[ext_resource type="Texture2D" uid="uid://b16pv0nrv8j1b" path="res://Sprites/Tileset/Level_22_Var_Value.png" id="2_b68sm"]
 [ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="2_i3mqx"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_rc6n2"]
 [ext_resource type="PackedScene" uid="uid://b1cwh68wrnd2y" path="res://Scenes/Mechanics/numbers_w5.tscn" id="3_sm2x6"]
@@ -161,6 +162,11 @@ layer_3/y_sort_origin = 0
 layer_3/z_index = 0
 layer_3/tile_data = PackedInt32Array(851997, 1507329, 35, 851998, 1507329, 35, 786462, 1507329, 35, 786461, 1507329, 35, 852000, 1507329, 36, 917536, 1507329, 37, 852001, 1572865, 36, 917537, 1572865, 37, 851994, 1507329, 38, 917530, 1507329, 39, 851995, 1572865, 38, 917531, 1572865, 39, 1048612, 2555905, 18, 1048613, 2621441, 18, 1114148, 2555905, 19, 1114149, 2621441, 19, 1048598, 2555905, 18, 1114134, 2555905, 19, 1048599, 2621441, 18, 1114135, 2621441, 19, 1179677, 2818049, 31, 1179678, 2883585, 31, 1114142, 2949121, 31, 1114141, 2949121, 31, 1114139, 3080193, 31, 1048603, 2621441, 31, 1048608, 2621441, 31, 1114144, 3080193, 31, 1376290, 2228225, 31, 1376281, 2228225, 31, 1376276, 2228225, 31, 1376295, 2228225, 31, 1179653, 524289, 7, 1114118, 589825, 6, 1179654, 589825, 7, 1179655, 655361, 7, 983045, 524289, 7, 917510, 589825, 6, 983046, 589825, 7, 983047, 655361, 7, 1179658, 524289, 7, 1114123, 589825, 6, 1179659, 589825, 7, 1179660, 655361, 7, 983059, 524289, 7, 917524, 589825, 6, 983060, 589825, 7, 983061, 655361, 7, 983050, 524289, 7, 917515, 589825, 6, 983051, 589825, 7, 983052, 655361, 7, 983054, 524289, 7, 917519, 589825, 6, 983055, 589825, 7, 983056, 655361, 7, 1179662, 524289, 7, 1114127, 589825, 6, 1179663, 589825, 7, 1179664, 655361, 7, 983078, 524289, 7, 917543, 589825, 6, 983079, 589825, 7, 983080, 655361, 7, 983083, 524289, 7, 917548, 589825, 6, 983084, 589825, 7, 983085, 655361, 7, 1179691, 524289, 7, 1114156, 589825, 6, 1179692, 589825, 7, 1179693, 655361, 7, 983087, 524289, 7, 917552, 589825, 6, 983088, 589825, 7, 983089, 655361, 7, 1179695, 524289, 7, 1114160, 589825, 6, 1179696, 589825, 7, 1179697, 655361, 7, 983092, 524289, 7, 917557, 589825, 6, 983093, 589825, 7, 983094, 655361, 7, 1179700, 524289, 7, 1114165, 589825, 6, 1179701, 589825, 7, 1179702, 655361, 7, 983097, 524289, 7, 917562, 589825, 6, 983098, 589825, 7, 983099, 655361, 7, 1179705, 524289, 7, 1114170, 589825, 6, 1179706, 589825, 7, 1179707, 655361, 7, 983048, 786433, 6, 983049, 851969, 6, 1179656, 1179649, 11, 1179657, 1179649, 11, 983057, 786433, 6, 983058, 851969, 6, 1179665, 1179649, 11, 1179666, 1179649, 11, 1179689, 786433, 6, 1179690, 851969, 6, 983081, 1179649, 11, 983082, 1179649, 11, 983090, 1179649, 11, 983091, 1179649, 11, 1179698, 786433, 6, 1179699, 851969, 6, 983095, 786433, 6, 983096, 851969, 6, 1179703, 1179649, 11, 1179704, 1179649, 11, 983086, 851969, 6, 1179694, 1179649, 11, 1179661, 851969, 6, 983053, 1179649, 11, 1114120, 1179649, 10, 1114121, 1179649, 10, 917517, 1179649, 10, 1114129, 1179649, 10, 1114130, 1179649, 10, 917545, 1179649, 10, 917546, 1179649, 10, 1114158, 1179649, 10, 917554, 1179649, 10, 917555, 1179649, 10, 1114167, 1179649, 10, 1114168, 1179649, 10, 1835016, 1179649, 6, 1900552, 1179649, 7, 1835020, 1179649, 6, 1900556, 1179649, 7, 1835024, 1179649, 6, 1900560, 1179649, 7, 1835028, 1179649, 6, 1900564, 1179649, 7, 1835032, 1179649, 6, 1900568, 1179649, 7, 1703963, 786433, 0, 1769499, 786433, 1, 1835035, 786433, 2, 1703964, 851969, 0, 1769500, 851969, 1, 1835036, 851969, 2, 1835044, 1179649, 6, 1900580, 1179649, 7, 1835048, 1179649, 6, 1900584, 1179649, 7, 1835052, 1179649, 6, 1900588, 1179649, 7, 1835056, 1179649, 6, 1900592, 1179649, 7, 1835060, 1179649, 6, 1900596, 1179649, 7, 1835064, 1179649, 6, 1900600, 1179649, 7, 1703967, 786433, 0, 1769503, 786433, 1, 1835039, 786433, 2, 1703968, 851969, 0, 1769504, 851969, 1, 1835040, 851969, 2, 917538, 2490369, 16, 983074, 2490369, 17, 917539, 2555905, 16, 983075, 2555905, 17, 917528, 2424833, 16, 983064, 2424833, 17, 917529, 2490369, 16, 983065, 2490369, 17, 1507349, 1114113, 8, 1572885, 1114113, 9, 1507340, 983041, 8, 1572876, 983041, 9, 1507341, 1048577, 8, 1572877, 1048577, 9, 1507342, 1048577, 8, 1572878, 1048577, 9, 1507343, 1114113, 8, 1572879, 1114113, 9, 1507344, 983041, 8, 1572880, 983041, 9, 1507345, 1048577, 8, 1572881, 1048577, 9, 1507346, 1048577, 8, 1572882, 1048577, 9, 1507347, 1048577, 8, 1572883, 1048577, 9, 1507348, 1048577, 8, 1572884, 1048577, 9, 1572907, 851969, 10, 1572908, 917505, 10, 1507374, 851969, 11, 1507375, 917505, 11, 1572913, 851969, 10, 1572914, 917505, 10, 1572916, 1245185, 14, 1638452, 1245185, 15, 1703976, 786433, 6, 1703989, 786433, 6, 1376309, 786433, 6, 1441803, 786433, 6, 1441814, 786433, 6, 1638422, 786433, 6, 1638411, 786433, 6, 1638416, 786433, 6, 1638417, 786433, 6, 1441808, 786433, 6, 1441809, 786433, 6, 1310771, 1245185, 12, 1376307, 1245185, 13, 1376298, 851969, 12, 1376299, 917505, 12, 196643, 1310721, 12, 262179, 1310721, 13, 196644, 1376257, 12, 262180, 1376257, 13, 1900582, 5, 0, 1900587, 6, 0, 1900558, 13, 0, 1900594, 15, 0, 720920, 14, 0, 655384, 14, 0, 589848, 17, 0, 524312, 16, 0, 196632, 18, 0, 262168, 18, 0, 196629, 11, 0, 262165, 11, 0, 720917, 11, 0, 655381, 10, 0, 524309, 10, 0, 589845, 9, 0, 524297, 14, 0, 720905, 16, 0, 655369, 16, 0, 131081, 18, 0, 262153, 18, 0, 524299, 11, 0, 720907, 11, 0, 262159, 16, 0, 589841, 17, 0, 1900566, 12, 0)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(960, 1033)
+texture = ExtResource("2_b68sm")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(964, 541)
 
@@ -171,35 +177,35 @@ x_value = 3
 y_value = 4
 
 [node name="4" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(1834, 998)
+position = Vector2(1370, 237)
 number = 4
 
 [node name="8" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(55, 1019)
+position = Vector2(1564, 239)
 number = 8
 
 [node name="9" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(1849, 643)
+position = Vector2(613, 239)
 number = 9
 
 [node name="3" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(75, 522)
+position = Vector2(64, 412)
 number = 3
 
 [node name="15" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(1173, 783)
+position = Vector2(1514, 1014)
 number = 15
 
 [node name="1" parent="gamemanager_algebra" instance=ExtResource("3_sm2x6")]
-position = Vector2(786, 780)
+position = Vector2(515, 238)
 number = 1
 
 [node name="+" parent="gamemanager_algebra" instance=ExtResource("4_qebbm")]
-position = Vector2(779, 1024)
+position = Vector2(961, 702)
 oper = "+"
 
 [node name="-" parent="gamemanager_algebra" instance=ExtResource("4_qebbm")]
-position = Vector2(1150, 1026)
+position = Vector2(961, 348)
 oper = "-"
 
 [node name="x1" parent="gamemanager_algebra" instance=ExtResource("5_rqdlo")]
@@ -207,15 +213,15 @@ position = Vector2(1211, 870)
 variable_to_display = "x"
 
 [node name="x2" parent="gamemanager_algebra" instance=ExtResource("5_rqdlo")]
-position = Vector2(595, 897)
+position = Vector2(60, 266)
 variable_to_display = "x"
 
 [node name="y" parent="gamemanager_algebra" instance=ExtResource("5_rqdlo")]
-position = Vector2(719, 888)
+position = Vector2(1695, 1013)
 variable_to_display = "y"
 
 [node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("6_tcrfe")]
-position = Vector2(1120, 405)
+position = Vector2(964, 521)
 x = 3
 yplus = 4
 integer = 12
@@ -226,17 +232,49 @@ display_chest = "lvl2"
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="fly" parent="enemies" instance=ExtResource("8_gur2j")]
-position = Vector2(961, 244)
+position = Vector2(961, 273)
 enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly2" parent="enemies" instance=ExtResource("8_gur2j")]
+position = Vector2(206, 415)
+enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly3" parent="enemies" instance=ExtResource("8_gur2j")]
+position = Vector2(966, 779)
+enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly4" parent="enemies" instance=ExtResource("8_gur2j")]
+position = Vector2(966, 779)
+enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
 
 [node name="rat" parent="enemies" instance=ExtResource("8_gur2j")]
-position = Vector2(961, 244)
+position = Vector2(1187, 236)
 enemy_type = "rat"
+rat_speed = 70.0
+rat_move_direction = Vector2(600, 0)
+
+[node name="rat2" parent="enemies" instance=ExtResource("8_gur2j")]
+position = Vector2(1223, 1020)
+enemy_type = "rat"
+rat_speed = 70.0
+rat_move_direction = Vector2(600, 0)
 
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(965, 1003)
+position = Vector2(613, 1011)
 scale = Vector2(0.57, 0.57)
 collision_mask = 28
 platform_on_leave = 2
@@ -276,6 +314,75 @@ scale = Vector2(1.85, 1.85)
 
 [node name="health_system" parent="." instance=ExtResource("12_vr0cr")]
 
+[node name="time_buff" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 1090.0
+offset_top = 747.0
+offset_right = 1090.0
+offset_bottom = 747.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="time_buff2" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 1470.0
+offset_top = 302.0
+offset_right = 1470.0
+offset_bottom = 302.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="time_buff3" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 403.0
+offset_top = 168.0
+offset_right = 403.0
+offset_bottom = 168.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="health_buff" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 1469.0
+offset_top = 157.0
+offset_right = 1469.0
+offset_bottom = 157.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="health_buff2" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 234.0
+offset_top = 280.0
+offset_right = 234.0
+offset_bottom = 280.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="health_buff3" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 863.0
+offset_top = 216.0
+offset_right = 863.0
+offset_bottom = 216.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="speed_buff" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 495.0
+offset_top = 369.0
+offset_right = 495.0
+offset_bottom = 369.0
+buff_selected = "speed"
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="speed_buff2" parent="." instance=ExtResource("18_rb81l")]
+offset_left = 1494.0
+offset_top = 894.0
+offset_right = 1494.0
+offset_bottom = 894.0
+buff_selected = "speed"
+speed_buff = 200.0
+time_buff = 15.0
+
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -309,14 +416,6 @@ offset_left = -916.0
 offset_top = 494.0
 offset_right = -916.0
 offset_bottom = 494.0
-
-[node name="time" parent="." instance=ExtResource("18_rb81l")]
-offset_left = 960.0
-offset_top = 703.0
-offset_right = 960.0
-offset_bottom = 703.0
-buff_selected = "time"
-time_buff = 15.0
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

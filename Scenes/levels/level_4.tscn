@@ -706,7 +706,7 @@ libraries = {
 }
 
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_uepkl")]
-position = Vector2(242, 881)
+position = Vector2(189, 898)
 scale = Vector2(1.85, 1.85)
 
 [node name="health_system" parent="." instance=ExtResource("56_g0u88")]
