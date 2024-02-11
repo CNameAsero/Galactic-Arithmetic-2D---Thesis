@@ -56,3 +56,6 @@ res://Scenes/levels/level_17.tscn
 res://Scenes/levels/level_18.tscn
 res://Scenes/levels/level_19.tscn
 res://Scenes/levels/level_20.tscn
+res://Scenes/Mechanics/numbers.tscn
+res://Scripts/spike.gd
+res://Scenes/levels/Game Obstacles/spike.tscn
