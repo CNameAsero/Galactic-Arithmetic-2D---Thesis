@@ -408,6 +408,8 @@ scale = Vector2(1.8, 1.8)
 [node name="col" type="CollisionShape2D" parent="det_bear"]
 shape = SubResource("CircleShape2D_lkwum")
 
+[node name="Timer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="ice" to="." method="_on_ice_body_entered"]
 [connection signal="body_entered" from="bear/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="yeti/Timer" to="." method="shockwave_timeout"]
@@ -416,3 +418,4 @@ shape = SubResource("CircleShape2D_lkwum")
 [connection signal="body_entered" from="yeti/Area2D" to="." method="_on_area_yeti_body_entered"]
 [connection signal="body_entered" from="det_bear" to="." method="bear_det_entered"]
 [connection signal="body_exited" from="det_bear" to="." method="bear_det_exited"]
+[connection signal="timeout" from="Timer" to="." method="hit_timeout"]

@@ -139,7 +139,11 @@ one_way_collision_margin = 2.0
 shape = SubResource("RectangleShape2D_krfbi")
 debug_color = Color(0.843137, 0.266667, 0.678431, 0.419608)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="CharacterBody2D" to="CharacterBody2D" method="_on_body_entered"]
 [connection signal="body_exited" from="CharacterBody2D" to="CharacterBody2D" method="_on_body_exited"]
 [connection signal="body_entered" from="area_det" to="CharacterBody2D" method="_on_area_det_body_entered"]
 [connection signal="body_exited" from="area_det" to="CharacterBody2D" method="_on_area_det_body_exited"]
+[connection signal="timeout" from="Timer" to="CharacterBody2D" method="_on_timer_timeout"]

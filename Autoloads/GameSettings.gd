@@ -1,5 +1,7 @@
 extends Node
 
+var player_invulnerable = false
+
 @onready var storyboardPlayed = false
 @onready var tutorialPlayed = false
 

@@ -30,8 +30,39 @@ res://Scenes/levels/level_14.tscn
 res://Scenes/levels/level_15.tscn
 res://Scenes/levels/level_17.tscn
 res://Scenes/levels/level_19.tscn
+<<<<<<< Updated upstream
 res://Scenes/levels/level_16.tscn
 res://Scenes/levels/level_24.tscn
 res://Scenes/levels/level_25.tscn
 res://Scenes/Mechanics/operators_w5.tscn
 res://Scenes/Mechanics/numbers_w5.tscn
+=======
+res://Scenes/levels/level_20.tscn
+res://Scenes/Mechanics/numbers.tscn
+res://Scripts/spike.gd
+res://Scenes/levels/Game Obstacles/spike.tscn
+res://Scripts/fox_enemy.gd
+res://Scenes/Enemies/fox_enemy.tscn
+res://Scenes/Enemies/wasp_enemy.tscn
+res://Scripts/wasp_enemy.gd
+res://Scenes/Enemies/blowfish.tscn
+res://Scripts/blowfish.gd
+res://Scenes/Enemies/shark.tscn
+res://Scripts/shark.gd
+res://Scenes/Enemies/bullets.tscn
+res://Scripts/bullets.gd
+res://Scenes/Enemies/octopus.tscn
+res://Scenes/Enemies/world_3_enemies.tscn
+res://Scenes/Enemies/world_3_enemies.gd
+res://Scenes/Enemies/skeleton_arrow.tscn
+res://Scripts/world_4_enemies.gd
+res://Scenes/Enemies/world_4_enemies.tscn
+res://Scenes/Enemies/shockwave.tscn
+res://Scripts/shockwave.gd
+res://Scenes/Enemies/world_5_enemies.tscn
+res://Scripts/world_5_enemies.gd
+res://Scenes/Enemies/fly_bullet.tscn
+res://Scripts/fly_bullet.gd
+res://Scenes/Enemies/flea.tscn
+res://Scenes/Enemies/flea.gd
+>>>>>>> Stashed changes

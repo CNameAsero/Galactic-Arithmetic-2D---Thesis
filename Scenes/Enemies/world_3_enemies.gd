@@ -23,6 +23,7 @@ var speed = 0.1 * PI / 180
 @onready var player = $"../../slime_player_joystick/slime_player_joystik"
 @onready var ray_cast_2d = $skeleton/RayCast2D
 @onready var timer = $skeleton/Timer
+@onready var timer1 = $Timer
 
 @onready var animation_player = $AnimationPlayer
 var target_detected = false
@@ -203,18 +204,23 @@ func skeleton_patrol(delta):
 			animation_player.play("skeleton_up")
 
 func player_hurt():
+	if GameSettings.player_invulnerable:
+		return
+
+	GameSettings.player_invulnerable = true
+	timer1.start()
 	health_system._health -= 1
 	AudioManager.player_hurt()
-	var blink_duration = 0.1
-	var total_blink_time = 2.0
+	var blink_duration = 0.05
+	var total_blink_time = 1
 	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
-
+	
 	sprite.modulate = Color(1, 1, 1, 0.5)
-
+	
 	for i in range(int(total_blink_time / blink_duration)):
 		sprite.visible = !sprite.visible
-		await get_tree().create_timer(0.1).timeout
-
+		await get_tree().create_timer(blink_duration).timeout
+	
 	sprite.visible = true
 	sprite.modulate = Color(1, 1, 1, 1)
 
@@ -244,9 +250,12 @@ func _on_timer_timeout():
 		skeleton_shoot()
 
 func _on_lava_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
 
 func _on_bat_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player")and not GameSettings.player_invulnerable:
 		player_hurt()
+
+func hit_timeout():
+	GameSettings.player_invulnerable = false

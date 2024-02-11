@@ -8,6 +8,7 @@ extends CharacterBody2D
 @onready var animation_player = $Area2/AnimationPlayer
 @onready var health_system = $"../../../health_system"
 @onready var shark = $".."
+@onready var timer = $"../Timer"
 
 var target = null
 
@@ -91,17 +92,22 @@ func return_pos(delta):
 		return_direction.y = 0
 
 func player_hurt():
+	if GameSettings.player_invulnerable:
+		return
+
+	GameSettings.player_invulnerable = true
+	timer.start()
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.1
-	var total_blink_time = 2.0
+	var total_blink_time = 1.5
 	var sprite = $"../../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)
 	
 	for i in range(int(total_blink_time / blink_duration)):
 		sprite.visible = !sprite.visible
-		await get_tree().create_timer(0.1).timeout
+		await get_tree().create_timer(blink_duration).timeout
 	
 	sprite.visible = true
 	sprite.modulate = Color(1, 1, 1, 1)
@@ -117,5 +123,8 @@ func _on_area_det_body_exited(_body):
 	target = null
 
 func _on_area_2_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
+
+func _on_timer_timeout():
+	GameSettings.player_invulnerable = false
