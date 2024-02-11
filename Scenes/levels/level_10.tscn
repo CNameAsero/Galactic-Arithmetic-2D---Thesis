@@ -801,6 +801,7 @@ offset_top = 583.0
 offset_right = 958.0
 offset_bottom = 583.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("26_kc3nl")]
 offset_left = 293.0
@@ -808,6 +809,7 @@ offset_top = 191.0
 offset_right = 293.0
 offset_bottom = 191.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="timer_buff" parent="." instance=ExtResource("26_kc3nl")]
 offset_left = 284.0

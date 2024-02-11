@@ -731,6 +731,7 @@ offset_top = 545.0
 offset_right = 868.0
 offset_bottom = 545.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("59_gptpt")]
 offset_left = 1060.0
@@ -738,6 +739,7 @@ offset_top = 547.0
 offset_right = 1060.0
 offset_bottom = 547.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="time_buff" parent="." instance=ExtResource("59_gptpt")]
 offset_left = 392.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://clilhckkmmh4e"]
+[gd_scene load_steps=29 format=3 uid="uid://clilhckkmmh4e"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_o4pbl"]
 [ext_resource type="Texture2D" uid="uid://b16pv0nrv8j1b" path="res://Sprites/Tileset/Level_22_Var_Value.png" id="2_b68sm"]

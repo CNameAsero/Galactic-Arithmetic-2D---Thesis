@@ -678,6 +678,7 @@ offset_top = 575.0
 offset_right = 1247.0
 offset_bottom = 575.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0

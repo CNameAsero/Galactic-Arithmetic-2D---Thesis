@@ -853,6 +853,7 @@ offset_top = 551.0
 offset_right = 1127.0
 offset_bottom = 551.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("27_0ikyi")]
 offset_left = 804.0
@@ -860,6 +861,7 @@ offset_top = 555.0
 offset_right = 804.0
 offset_bottom = 555.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="health_system" parent="." instance=ExtResource("34_cvw21")]
 

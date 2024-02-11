@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bh0613j0lpivj"]
+[gd_scene load_steps=30 format=3 uid="uid://bh0613j0lpivj"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_2gtfy"]
@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="9_i8s00"]
 [ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="10_3gc2v"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="11_6epot"]
+[ext_resource type="Texture2D" uid="uid://du24gyqj54k66" path="res://Sprites/Tileset/level_24_VarValue.png" id="14_7niaj"]
+[ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="15_dn627"]
 [ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="18_hgj08"]
 
 [sub_resource type="GDScript" id="GDScript_38jjt"]
@@ -190,6 +192,11 @@ layer_5/y_sort_origin = 0
 layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array(1835025, 1376257, 12, 1900561, 1376257, 13, 2097172, 1376257, 10, 2162708, 1376257, 11, 2097191, 1310721, 10, 2162727, 1310721, 11, 1703965, 1507329, 36, 1769501, 1507329, 37, 1703966, 1572865, 36, 1769502, 1572865, 37, 1835035, 1507329, 35, 1835036, 1572865, 35, 1835039, 1507329, 35, 1835040, 1572865, 35, 1900568, 1572865, 34, 1900579, 1572865, 34, 1245199, 1507329, 38, 1310735, 1507329, 39, 1245200, 1572865, 38, 1310736, 1572865, 39, 1179661, 1507329, 38, 1245197, 1507329, 39, 1179662, 1572865, 38, 1245198, 1572865, 39, 1179665, 1507329, 38, 1245201, 1507329, 39, 1179666, 1572865, 38, 1245202, 1572865, 39, 1310734, 1572865, 35, 1310737, 1572865, 35, 1376278, 1572865, 35, 1376265, 1572865, 35, 1310729, 1507329, 35, 1310742, 1507329, 35, 1310757, 1507329, 35, 1376293, 1572865, 35, 1179689, 1507329, 38, 1245225, 1507329, 39, 1179690, 1572865, 38, 1245226, 1572865, 39, 1310762, 1572865, 35, 1245227, 1507329, 38, 1310763, 1507329, 39, 1245228, 1572865, 38, 1310764, 1572865, 39, 1179693, 1507329, 38, 1245229, 1507329, 39, 1310765, 1572865, 35, 1179694, 1572865, 38, 1245230, 1572865, 39, 1310770, 1507329, 35, 1376306, 1572865, 35, 393226, 1507329, 36, 458762, 1507329, 37, 393227, 1572865, 36, 458763, 1572865, 37, 327700, 1507329, 36, 393236, 1507329, 37, 327701, 1572865, 36, 393237, 1572865, 37, 458772, 1507329, 35, 458773, 1572865, 35, 393231, 1507329, 36, 458767, 1507329, 37, 393232, 1572865, 36, 458768, 1572865, 37, 393254, 1507329, 36, 458790, 1507329, 37, 393255, 1572865, 36, 458791, 1572865, 37, 393259, 1507329, 36, 458795, 1507329, 37, 393260, 1572865, 36, 458796, 1572865, 37, 327728, 1507329, 36, 393264, 1507329, 37, 458800, 1507329, 35, 327729, 1572865, 36, 393265, 1572865, 37, 458801, 1572865, 35)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(979, 1037)
+texture = ExtResource("14_7niaj")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 541)
 
@@ -200,43 +207,43 @@ x_value = 1
 y_value = 3
 
 [node name="4" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(1076, 684)
+position = Vector2(153, 326)
 number = 4
 
 [node name="4_2" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(838, 693)
+position = Vector2(1768, 330)
 number = 4
 
 [node name="1" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(1277, 901)
+position = Vector2(137, 653)
 number = 1
 
 [node name="8" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(613, 911)
+position = Vector2(1746, 667)
 number = 8
 
 [node name="2" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(460, 911)
+position = Vector2(506, 120)
 number = 2
 
 [node name="8_1" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(1622, 916)
+position = Vector2(1431, 121)
 number = 8
 
 [node name="4_3" parent="gamemanager_algebra" instance=ExtResource("3_y865p")]
-position = Vector2(1441, 894)
+position = Vector2(1625, 951)
 number = 4
 
 [node name="×" parent="gamemanager_algebra" instance=ExtResource("4_uwdel")]
-position = Vector2(1202, 782)
+position = Vector2(954, 190)
 oper = "×"
 
 [node name="÷" parent="gamemanager_algebra" instance=ExtResource("4_uwdel")]
-position = Vector2(638, 787)
+position = Vector2(954, 828)
 oper = "÷"
 
 [node name="x1" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
-position = Vector2(1789, 796)
+position = Vector2(82, 727)
 variable_to_display = "x"
 
 [node name="x2" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
@@ -244,11 +251,11 @@ position = Vector2(1829, 705)
 variable_to_display = "x"
 
 [node name="y" parent="gamemanager_algebra" instance=ExtResource("5_omsaj")]
-position = Vector2(1392, 789)
+position = Vector2(337, 955)
 variable_to_display = "y"
 
 [node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("6_4n6tb")]
-position = Vector2(1120, 405)
+position = Vector2(1264, 636)
 y = 3
 integer = 16
 display_chest = "lvl4"
@@ -258,20 +265,48 @@ display_chest = "lvl4"
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="fly" parent="enemies" instance=ExtResource("18_hgj08")]
-position = Vector2(961, 244)
+position = Vector2(869, 789)
 enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
 
-[node name="rat" parent="enemies" instance=ExtResource("18_hgj08")]
-position = Vector2(961, 244)
-enemy_type = "rat"
+[node name="fly2" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(280, 162)
+enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly3" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(1609, 153)
+enemy_type = "fly"
+fly_speed = 60.0
+fly_radius = 200
+rect_radius_fly = 200.0
 
 [node name="thief" parent="enemies" instance=ExtResource("18_hgj08")]
-position = Vector2(961, 244)
+position = Vector2(828, 140)
+rat_speed = 70.0
+thief_speed = 60.0
+rect_size_thief = 350.0
+
+[node name="thief2" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(1404, 846)
+rat_speed = 70.0
+thief_speed = 60.0
+rect_size_thief = 350.0
+
+[node name="thief3" parent="enemies" instance=ExtResource("18_hgj08")]
+position = Vector2(126, 781)
+rat_speed = 70.0
+thief_speed = 60.0
+rect_size_thief = 350.0
 
 [node name="slime_player_joystick" type="Node2D" parent="."]
 
 [node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(961, 662)
+position = Vector2(1402, 405)
 scale = Vector2(0.57, 0.57)
 collision_mask = 28
 platform_on_leave = 2
@@ -309,15 +344,103 @@ shape = SubResource("CircleShape2D_7k73l")
 position = Vector2(189, 898)
 scale = Vector2(1.85, 1.85)
 
-[node name="time" parent="." instance=ExtResource("5_f1pg2")]
-offset_left = 960.0
-offset_top = 703.0
-offset_right = 960.0
-offset_bottom = 703.0
+[node name="health_system" parent="." instance=ExtResource("6_54thq")]
+
+[node name="time_buff" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 1733.0
+offset_top = 188.0
+offset_right = 1733.0
+offset_bottom = 188.0
 buff_selected = "time"
 time_buff = 15.0
 
-[node name="health_system" parent="." instance=ExtResource("6_54thq")]
+[node name="time_buff2" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 196.0
+offset_top = 183.0
+offset_right = 196.0
+offset_bottom = 183.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="time_buff3" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 428.0
+offset_top = 916.0
+offset_right = 428.0
+offset_bottom = 916.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="time_buff4" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 1022.0
+offset_top = 270.0
+offset_right = 1022.0
+offset_bottom = 270.0
+buff_selected = "time"
+time_buff = 15.0
+
+[node name="health_buff" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 293.0
+offset_top = 43.0
+offset_right = 293.0
+offset_bottom = 43.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="health_buff2" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 1065.0
+offset_top = 676.0
+offset_right = 1065.0
+offset_bottom = 676.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="health_buff3" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 1487.0
+offset_top = 403.0
+offset_right = 1487.0
+offset_bottom = 403.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="health_buff4" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 452.0
+offset_top = 408.0
+offset_right = 452.0
+offset_bottom = 408.0
+buff_selected = "health"
+hp_buff = 1
+time_buff = 15.0
+
+[node name="speed_buff" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 1120.0
+offset_top = 119.0
+offset_right = 1120.0
+offset_bottom = 119.0
+buff_selected = "speed"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="speed_buff2" parent="." instance=ExtResource("5_f1pg2")]
+offset_left = 805.0
+offset_top = 668.0
+offset_right = 805.0
+offset_bottom = 668.0
+buff_selected = "speed"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="portal" parent="." instance=ExtResource("15_dn627")]
+modulate = Color(4.14, 1, 1, 1)
+position = Vector2(940, 361)
+
+[node name="portal2" parent="." instance=ExtResource("15_dn627")]
+modulate = Color(4.14, 1, 1, 1)
+position = Vector2(949, 650)
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0

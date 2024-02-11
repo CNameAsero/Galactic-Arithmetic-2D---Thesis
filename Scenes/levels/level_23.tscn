@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b30rdsmcbag4j"]
+[gd_scene load_steps=30 format=3 uid="uid://b30rdsmcbag4j"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_p66vs"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_qgjf3"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="14_fr7jx"]
 [ext_resource type="PackedScene" uid="uid://quk3dlnbr7sj" path="res://Scenes/Mechanics/operators_w5.tscn" id="14_qnvyu"]
 [ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="15_lsj28"]
+[ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="15_x0va5"]
 [ext_resource type="PackedScene" uid="uid://btmq1lrhtcp0e" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="16_5sv83"]
 [ext_resource type="PackedScene" uid="uid://0fvidggqf6tt" path="res://Scenes/timer_w5.tscn" id="17_6xwla"]
 [ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="18_10raa"]
@@ -183,6 +184,11 @@ layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array(1114146, 2752513, 31, 1114147, 3014657, 31, 1114145, 3014657, 31, 720929, 1310721, 8, 786465, 1310721, 9, 720931, 1310721, 8, 786467, 1310721, 9, 852008, 1638401, 16, 851996, 1703937, 16, 1048604, 1638401, 17, 1048616, 1703937, 17, 1900595, 1441793, 16, 1900600, 1441793, 16, 1769524, 1310721, 16, 1769527, 1310721, 16, 1114163, 1245185, 47, 1114164, 1310721, 47, 1114167, 1245185, 47, 1114168, 1310721, 47, 983092, 1376257, 47, 983095, 1376257, 47, 983093, 2097153, 47, 983094, 2097153, 47, 1900597, 2, 1, 1900598, 2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(956, 1039)
+texture = ExtResource("15_x0va5")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 541)

@@ -683,6 +683,7 @@ offset_top = 346.0
 offset_right = 1276.0
 offset_bottom = 346.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("13_45x01")]
 offset_left = 641.0
@@ -690,6 +691,7 @@ offset_top = 717.0
 offset_right = 641.0
 offset_bottom = 717.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="portal" parent="." instance=ExtResource("16_x38oi")]
 modulate = Color(3.7, 0.55, 0.15, 1)

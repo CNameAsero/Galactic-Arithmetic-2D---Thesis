@@ -578,6 +578,7 @@ offset_top = 184.0
 offset_right = 1377.0
 offset_bottom = 184.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff2" parent="." instance=ExtResource("17_mww5y")]
@@ -586,6 +587,7 @@ offset_top = 182.0
 offset_right = 516.0
 offset_bottom = 182.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="Portal" parent="." instance=ExtResource("18_70vat")]

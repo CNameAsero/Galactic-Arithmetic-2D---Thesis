@@ -607,6 +607,7 @@ offset_top = 630.0
 offset_right = 258.0
 offset_bottom = 630.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="time_buff" parent="." instance=ExtResource("57_7jjpe")]
 offset_left = 1670.0

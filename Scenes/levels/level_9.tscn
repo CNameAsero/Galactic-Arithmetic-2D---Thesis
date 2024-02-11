@@ -777,6 +777,7 @@ offset_top = 938.0
 offset_right = 994.0
 offset_bottom = 938.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="health_system" parent="." instance=ExtResource("11_7xiaf")]
 

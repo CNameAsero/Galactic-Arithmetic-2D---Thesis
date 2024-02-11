@@ -670,6 +670,7 @@ offset_top = 943.0
 offset_right = 1755.0
 offset_bottom = 943.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("19_uei7o")]
 offset_left = 702.0
@@ -677,6 +678,7 @@ offset_top = 132.0
 offset_right = 702.0
 offset_bottom = 132.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0

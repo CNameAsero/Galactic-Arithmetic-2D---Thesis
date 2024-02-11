@@ -306,10 +306,10 @@ rect_radius_yeti = 1000.0
 move_direction = Vector2(500, 0)
 
 [node name="yeti2" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(965, 629)
+position = Vector2(927, 630)
 enemy_type = "yeti"
 rect_radius_yeti = 300.0
-move_direction = Vector2(300, 0)
+move_direction = Vector2(200, 0)
 
 [node name="bear2" parent="enemies" instance=ExtResource("11_sipc5")]
 position = Vector2(1321, 866)
@@ -414,6 +414,7 @@ position = Vector2(399, 693)
 oper = "÷"
 
 [node name="fraction_symbol" parent="gamemanager_fraction" instance=ExtResource("7_w7set")]
+position = Vector2(1080, 150)
 oper = "d"
 
 [node name="final_answer_w4" parent="gamemanager_fraction" instance=ExtResource("8_klkwb")]
@@ -479,6 +480,7 @@ offset_top = 870.0
 offset_right = 491.0
 offset_bottom = 870.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff2" parent="." instance=ExtResource("17_5a4w6")]
@@ -487,6 +489,7 @@ offset_top = 126.0
 offset_right = 585.0
 offset_bottom = 126.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff3" parent="." instance=ExtResource("17_5a4w6")]
@@ -495,6 +498,7 @@ offset_top = 834.0
 offset_right = 1109.0
 offset_bottom = 834.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff4" parent="." instance=ExtResource("17_5a4w6")]
@@ -503,6 +507,7 @@ offset_top = 382.0
 offset_right = 1827.0
 offset_bottom = 382.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="time_buff" parent="." instance=ExtResource("17_5a4w6")]
@@ -535,6 +540,7 @@ offset_top = 591.0
 offset_right = 817.0
 offset_bottom = 591.0
 buff_selected = "speed"
+speed_buff = 200.0
 time_buff = 15.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("17_5a4w6")]
@@ -543,6 +549,7 @@ offset_top = 830.0
 offset_right = 766.0
 offset_bottom = 830.0
 buff_selected = "speed"
+speed_buff = 200.0
 time_buff = 15.0
 
 [node name="menus" type="TextureButton" parent="."]

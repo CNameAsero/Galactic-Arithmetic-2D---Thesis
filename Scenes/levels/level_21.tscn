@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b0ewehpefe2oc"]
+[gd_scene load_steps=29 format=3 uid="uid://b0ewehpefe2oc"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_m6f7g"]
 [ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="2_cyekm"]
@@ -199,36 +199,6 @@ texture = ExtResource("14_uui5t")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 539)
 
-[node name="enemies" type="Node2D" parent="."]
-
-[node name="fly" parent="enemies" instance=ExtResource("2_cyekm")]
-position = Vector2(961, 206)
-enemy_type = "fly"
-fly_speed = 70.0
-fly_radius = 200
-rect_radius_fly = 200.0
-
-[node name="fly2" parent="enemies" instance=ExtResource("2_cyekm")]
-position = Vector2(957, 868)
-enemy_type = "fly"
-fly_speed = 70.0
-fly_radius = 200
-rect_radius_fly = 200.0
-
-[node name="fly3" parent="enemies" instance=ExtResource("2_cyekm")]
-position = Vector2(202, 525)
-enemy_type = "fly"
-fly_speed = 70.0
-fly_radius = 200
-rect_radius_fly = 200.0
-
-[node name="fly4" parent="enemies" instance=ExtResource("2_cyekm")]
-position = Vector2(1692, 532)
-enemy_type = "fly"
-fly_speed = 70.0
-fly_radius = 200
-rect_radius_fly = 200.0
-
 [node name="gamemanager_algebra" parent="." instance=ExtResource("5_pnfyq")]
 num_term = 2
 variable_term = 2
@@ -281,6 +251,36 @@ integer = 9
 display_chest = "lvl1"
 
 [node name="timer" parent="gamemanager_algebra" instance=ExtResource("7_vjxnt")]
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="fly" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(961, 206)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly2" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(957, 868)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly3" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(202, 525)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly4" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(1692, 532)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
 
 [node name="slime_player_joystick" type="Node2D" parent="."]
 

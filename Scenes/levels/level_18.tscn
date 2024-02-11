@@ -361,6 +361,7 @@ offset_top = 128.0
 offset_right = 722.0
 offset_bottom = 128.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff2" parent="." instance=ExtResource("17_2u4y1")]
@@ -369,6 +370,7 @@ offset_top = 872.0
 offset_right = 1570.0
 offset_bottom = 872.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="health_buff3" parent="." instance=ExtResource("17_2u4y1")]
@@ -377,6 +379,7 @@ offset_top = 564.0
 offset_right = 1454.0
 offset_bottom = 564.0
 buff_selected = "health"
+hp_buff = 1
 time_buff = 15.0
 
 [node name="time_buff" parent="." instance=ExtResource("17_2u4y1")]
@@ -409,6 +412,7 @@ offset_top = 662.0
 offset_right = 53.0
 offset_bottom = 662.0
 buff_selected = "speed"
+speed_buff = 200.0
 time_buff = 15.0
 
 [node name="Portal" parent="." instance=ExtResource("18_c2u73")]

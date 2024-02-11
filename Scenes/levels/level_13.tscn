@@ -757,6 +757,7 @@ offset_top = 773.0
 offset_right = 1208.0
 offset_bottom = 773.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="speed_buff2" parent="." instance=ExtResource("12_jol7u")]
 offset_left = 731.0
@@ -764,6 +765,7 @@ offset_top = 777.0
 offset_right = 731.0
 offset_bottom = 777.0
 buff_selected = "speed"
+speed_buff = 200.0
 
 [node name="Portal" parent="." instance=ExtResource("17_m6sae")]
 modulate = Color(3.7, 0.55, 0.15, 1)
