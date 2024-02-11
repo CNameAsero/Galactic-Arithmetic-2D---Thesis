@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=40 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -21,22 +21,24 @@
 [ext_resource type="AudioStream" uid="uid://j33rnqwb6256" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/5TH.mp3" id="17_4s04k"]
 [ext_resource type="AudioStream" uid="uid://b7uxx3a1md2kx" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/1basics.mp3" id="18_gpink"]
 [ext_resource type="AudioStream" uid="uid://uq1tc21egbk4" path="res://Galactic Arithmetic Assets/Audio_Assets/tutorial mp3/5th-1.mp3" id="19_x3lbo"]
-[ext_resource type="AudioStream" uid="uid://cn0qrp21tofvp" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/1yellow.mp3" id="20_8lpgi"]
-[ext_resource type="AudioStream" uid="uid://bw8udc4ft13ck" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/2green.mp3" id="21_gmo0d"]
-[ext_resource type="AudioStream" uid="uid://dx7n85aehs0xt" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/3light-blue.mp3" id="22_vd4ny"]
-[ext_resource type="AudioStream" uid="uid://nwhi1rtagmik" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/4pink.mp3" id="23_2p3vc"]
-[ext_resource type="AudioStream" uid="uid://dgwjx2rdsqeho" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/5blue.mp3" id="24_vw1m1"]
-[ext_resource type="AudioStream" uid="uid://c5oa0shbjiyel" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/6red.mp3" id="25_q58mo"]
-[ext_resource type="AudioStream" uid="uid://cnftj4sbxksxq" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/7green (1).mp3" id="26_hrsa1"]
-[ext_resource type="AudioStream" uid="uid://elbfhwlq1tj4" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/8maroon.mp3" id="27_40lxi"]
-[ext_resource type="AudioStream" uid="uid://bmv8j4axrr3jp" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/9maroon-2.mp3" id="28_w8rfv"]
-[ext_resource type="AudioStream" uid="uid://co3v5uwjds866" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/10matcha-green.mp3" id="29_skx5u"]
-[ext_resource type="AudioStream" uid="uid://cw6w5axjfv10y" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/12.mp3" id="31_4pibt"]
-[ext_resource type="AudioStream" uid="uid://d2ina1cma0r1w" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/13.mp3" id="32_4fduk"]
-[ext_resource type="AudioStream" uid="uid://03fufki76ic3" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/14.mp3" id="33_oon6m"]
-[ext_resource type="AudioStream" uid="uid://d1bn0uvgab8o5" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/15.mp3" id="34_72sob"]
-[ext_resource type="AudioStream" uid="uid://htqdux7e8r5e" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/16.mp3" id="35_stc1c"]
-[ext_resource type="AudioStream" uid="uid://dbx6l5t58ughw" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/17.mp3" id="36_apcnj"]
+[ext_resource type="AudioStream" uid="uid://cn0qrp21tofvp" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/1.mp3" id="22_f2l13"]
+[ext_resource type="AudioStream" uid="uid://bw8udc4ft13ck" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/2.mp3" id="23_f0tey"]
+[ext_resource type="AudioStream" uid="uid://dx7n85aehs0xt" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/3.mp3" id="24_8jsf4"]
+[ext_resource type="AudioStream" uid="uid://nwhi1rtagmik" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/4.mp3" id="25_dhd2l"]
+[ext_resource type="AudioStream" uid="uid://dgwjx2rdsqeho" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/5.mp3" id="26_mvt0f"]
+[ext_resource type="AudioStream" uid="uid://x2gqksk5kjwc" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/9.mp3" id="30_21ly5"]
+[ext_resource type="AudioStream" uid="uid://co3v5uwjds866" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/12.mp3" id="31_4pibt"]
+[ext_resource type="AudioStream" uid="uid://elbfhwlq1tj4" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/10.mp3" id="31_56ic5"]
+[ext_resource type="AudioStream" uid="uid://d27hrpyyv4g6n" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/6.mp3" id="31_g5k51"]
+[ext_resource type="AudioStream" uid="uid://lmgegskmxndu" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/7.mp3" id="32_0g1on"]
+[ext_resource type="AudioStream" uid="uid://cw6w5axjfv10y" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/13.mp3" id="32_4fduk"]
+[ext_resource type="AudioStream" uid="uid://qvo2qshtv1jr" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/8.mp3" id="33_avhr7"]
+[ext_resource type="AudioStream" uid="uid://d2ina1cma0r1w" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/14.mp3" id="33_oon6m"]
+[ext_resource type="AudioStream" uid="uid://03fufki76ic3" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/15.mp3" id="34_72sob"]
+[ext_resource type="AudioStream" uid="uid://bmv8j4axrr3jp" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/11.mp3" id="34_owpg0"]
+[ext_resource type="AudioStream" uid="uid://d1bn0uvgab8o5" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/16.mp3" id="35_stc1c"]
+[ext_resource type="AudioStream" uid="uid://htqdux7e8r5e" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/17.mp3" id="36_apcnj"]
+[ext_resource type="AudioStream" uid="uid://dbx6l5t58ughw" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/18.mp3" id="39_2u0a8"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0fra")
@@ -128,49 +130,55 @@ stream = ExtResource("18_gpink")
 stream = ExtResource("19_x3lbo")
 
 [node name="story1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("20_8lpgi")
+stream = ExtResource("22_f2l13")
 
 [node name="story2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("21_gmo0d")
+stream = ExtResource("23_f0tey")
 
 [node name="story3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("22_vd4ny")
+stream = ExtResource("24_8jsf4")
 
 [node name="story4" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("23_2p3vc")
+stream = ExtResource("25_dhd2l")
 
 [node name="story5" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("24_vw1m1")
+stream = ExtResource("26_mvt0f")
 
 [node name="story6" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("25_q58mo")
+stream = ExtResource("31_g5k51")
 
 [node name="story7" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("26_hrsa1")
+stream = ExtResource("32_0g1on")
 
 [node name="story8" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("27_40lxi")
+stream = ExtResource("33_avhr7")
 
 [node name="story9" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("28_w8rfv")
+stream = ExtResource("30_21ly5")
 
 [node name="story10" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("29_skx5u")
+stream = ExtResource("31_56ic5")
 
 [node name="story11" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("31_4pibt")
+stream = ExtResource("34_owpg0")
 
 [node name="story12" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("32_4fduk")
+stream = ExtResource("31_4pibt")
 
 [node name="story13" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("33_oon6m")
+stream = ExtResource("32_4fduk")
 
 [node name="story14" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("34_72sob")
+stream = ExtResource("33_oon6m")
 
 [node name="story15" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("35_stc1c")
+stream = ExtResource("34_72sob")
 
 [node name="story16" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("35_stc1c")
+
+[node name="story17" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_apcnj")
+
+[node name="story18" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_2u0a8")

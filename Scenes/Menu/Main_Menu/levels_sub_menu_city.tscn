@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dalmnihcn14ed"]
 
 [ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_city.gd" id="1_o84i3"]
-[ext_resource type="Texture2D" uid="uid://ceskupbdvisg2" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/bg-city.png" id="1_t6hi4"]
 [ext_resource type="Texture2D" uid="uid://c6bi7b7qup0vr" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/bg.png" id="2_62xeg"]
+[ext_resource type="Texture2D" uid="uid://ch66qh3pm06yn" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/city-bg.png" id="2_at3p1"]
 [ext_resource type="Texture2D" uid="uid://dc4j4fbpw53bn" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/title.png" id="3_nmcg0"]
 [ext_resource type="Texture2D" uid="uid://bfy22oydafdf3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level1 - city.png" id="4_vm780"]
 [ext_resource type="Texture2D" uid="uid://h2y35f2gbbld" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level1 - city tapped.png" id="5_f2550"]
@@ -40,7 +40,7 @@ offset_bottom = 401.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.762235, 1)
-texture = ExtResource("1_t6hi4")
+texture = ExtResource("2_at3p1")
 expand_mode = 1
 
 [node name="panel" type="TextureRect" parent="."]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://diojfj8gidou3"]
+[gd_scene load_steps=18 format=3 uid="uid://diojfj8gidou3"]
 
 [ext_resource type="Texture2D" uid="uid://du4l32g3ub65m" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/lava_level_sub_menu/title.png" id="1_4ci5t"]
 [ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.gd" id="1_snplp"]
+[ext_resource type="Texture2D" uid="uid://cf83737p6aout" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/lava_level_sub_menu/lava-bg.jpeg" id="2_6llxy"]
 [ext_resource type="Texture2D" uid="uid://cr5xf3rkey815" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/lava_level_sub_menu/bg.png" id="2_gq8ms"]
 [ext_resource type="Texture2D" uid="uid://db8hgs1s3j0wg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/lava_level_sub_menu/level1 - lava.png" id="3_v6b4e"]
 [ext_resource type="Texture2D" uid="uid://dv1t3kb5xe0hj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/lava_level_sub_menu/level1 - lava tapped.png" id="4_e2bk7"]
@@ -40,7 +41,7 @@ offset_bottom = 401.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.762235, 1)
-texture = ExtResource("1_4ci5t")
+texture = ExtResource("2_6llxy")
 expand_mode = 1
 
 [node name="panel" type="TextureRect" parent="."]

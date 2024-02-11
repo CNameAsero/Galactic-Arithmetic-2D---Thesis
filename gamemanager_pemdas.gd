@@ -82,7 +82,6 @@ func evaluate_rpn(expression):
 			stack.append(token)
 		else:
 			if stack.size() < 2:
-				print("Not enough numbers for operator")
 				return 0
 			var num2 = stack.pop_back()
 			var num1 = stack.pop_back()
@@ -119,7 +118,9 @@ func check_final_answer():
 
 	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
-		GameSettings.grasscurrentlevel[current_level + 1] = true
+		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
+			GameSettings.max_unlocked_level += 1
+			GameSettings.currentlevel[GameSettings.current_level] = true
 		reset_for_next_level()
 		var time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed

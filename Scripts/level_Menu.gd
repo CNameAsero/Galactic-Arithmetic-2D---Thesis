@@ -63,9 +63,9 @@ func _on_world_5_area_pressed():
 func _process(delta):
 	if GameSettings.currentlevel[5]:
 		$Level_Menu_Bg/Picture_Border_Level/world2_area/locked.hide()
-	elif GameSettings.currentlevel[10]:
+	if GameSettings.currentlevel[10]:
 		$Level_Menu_Bg/Picture_Border_Level/world3_area/locked.hide()
-	elif GameSettings.currentlevel[15]:
+	if GameSettings.currentlevel[15]:
 		$Level_Menu_Bg/Picture_Border_Level/world4_area/locked.hide()
-	elif GameSettings.currentlevel[20]:
+	if GameSettings.currentlevel[20]:
 		$Level_Menu_Bg/Picture_Border_Level/world5_area/locked.hide()

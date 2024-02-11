@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bldw8dfbyu1x6"]
+[gd_scene load_steps=18 format=3 uid="uid://bldw8dfbyu1x6"]
 
 [ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_xc8p8"]
 [ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_drwe6"]
@@ -17,7 +17,22 @@
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_qed12"]
 [ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_yb5ac"]
 
+[sub_resource type="GDScript" id="GDScript_kpbek"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.currentlevel = 12
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="level_12" type="Node2D"]
+script = SubResource("GDScript_kpbek")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_xc8p8")

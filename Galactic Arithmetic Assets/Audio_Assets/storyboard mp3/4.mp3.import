@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://nwhi1rtagmik"
+path="res://.godot/imported/4.mp3-44ada71cf0334ab49a3c7522e2c6e8cc.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/4.mp3"
+dest_files=["res://.godot/imported/4.mp3-44ada71cf0334ab49a3c7522e2c6e8cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

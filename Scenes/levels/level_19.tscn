@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://8wqe3icew0h"]
+[gd_scene load_steps=28 format=3 uid="uid://8wqe3icew0h"]
 
 [ext_resource type="TileSet" uid="uid://d1dx8dh8o5nxq" path="res://World4_Tileset.tres" id="1_xt3g1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_wsw31"]
@@ -18,6 +18,20 @@
 [ext_resource type="PackedScene" uid="uid://b7tkalqgic7ty" path="res://Scenes/Menu/Game_Over/game_over_w4.tscn" id="16_2moev"]
 [ext_resource type="PackedScene" uid="uid://r5g5crpsi4fk" path="res://Scenes/Mechanics/powerups_w4.tscn" id="17_dj8qk"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="18_86lhb"]
+
+[sub_resource type="GDScript" id="GDScript_ro5w1"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.currentlevel = 19
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gv4f4"]
 radius = 27.0185
@@ -133,6 +147,7 @@ _data = {
 }
 
 [node name="level_19" type="Node2D"]
+script = SubResource("GDScript_ro5w1")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_xt3g1")

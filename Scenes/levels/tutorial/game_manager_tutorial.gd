@@ -98,6 +98,7 @@ func check_final_answer():
 		await get_tree().create_timer(10).timeout
 		AudioManager.tuto6_stop()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
+		AudioManager.level1_music.play()
 
 	elif collected_numbers.size() == 3 || current_result != calculate_expression():
 		AudioManager.play_deathsfx()

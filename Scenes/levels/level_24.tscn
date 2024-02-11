@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bh0613j0lpivj"]
+[gd_scene load_steps=28 format=3 uid="uid://bh0613j0lpivj"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_2gtfy"]
@@ -18,6 +18,20 @@
 [ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="10_3gc2v"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="11_6epot"]
 [ext_resource type="PackedScene" uid="uid://cao4j5jl2i7gq" path="res://Scenes/Enemies/world_5_enemies.tscn" id="18_hgj08"]
+
+[sub_resource type="GDScript" id="GDScript_38jjt"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.currentlevel = 24
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7k73l"]
 radius = 27.0185
@@ -133,6 +147,7 @@ _data = {
 }
 
 [node name="level_24" type="Node2D"]
+script = SubResource("GDScript_38jjt")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_ckhy1")

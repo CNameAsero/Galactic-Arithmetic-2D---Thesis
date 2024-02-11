@@ -17,6 +17,7 @@ func _on_level_1_pressed():
 		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
+		AudioManager.background_music.stop()
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
