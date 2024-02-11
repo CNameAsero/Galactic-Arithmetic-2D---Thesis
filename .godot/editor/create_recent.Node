@@ -1,3 +1,4 @@
+Timer
 Sprite2D
 TextureButton
 Button
@@ -6,7 +7,6 @@ CharacterBody2D
 AnimationPlayer
 CollisionShape2D
 Area2D
-Timer
 RayCast2D
 Camera2D
 TileMap
