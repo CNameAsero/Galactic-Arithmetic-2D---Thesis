@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://cdngsmqf0vwbx"]
+[gd_scene load_steps=29 format=3 uid="uid://dj2o10dru8i3u"]
 
 [ext_resource type="Script" path="res://Scripts/world_4_enemies.gd" id="1_po0aj"]
-[ext_resource type="PackedScene" uid="uid://f0pwengecrw" path="res://Scenes/Enemies/shockwave.tscn" id="2_kr7cs"]
+[ext_resource type="PackedScene" uid="uid://ckkwo6n5kq58t" path="res://Scenes/Enemies/shockwave.tscn" id="2_kr7cs"]
 [ext_resource type="Texture2D" uid="uid://co5wxcy6mqwgy" path="res://Sprites/Enemies/world4_enemies/Melted_ice.png" id="2_o2mrn"]
 [ext_resource type="Texture2D" uid="uid://caxs3tb2qg6hu" path="res://Sprites/Enemies/world4_enemies/PolarBear4x4Top-Walk_4x4Bottom-Attack.png" id="3_j8yf2"]
 [ext_resource type="Texture2D" uid="uid://dt3ipykirkyss" path="res://Sprites/Enemies/world4_enemies/Yeti.png" id="4_gyaic"]

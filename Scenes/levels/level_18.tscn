@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="8_eb7i2"]
 [ext_resource type="PackedScene" path="res://Scenes/timer_w4.tscn" id="9_ovl3i"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_f42hq"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_m3gl2"]
+[ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_m3gl2"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="12_sfaux"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="13_4ejsy"]
 [ext_resource type="PackedScene" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_ydo08"]

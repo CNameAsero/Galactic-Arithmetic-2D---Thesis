@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="8_klkwb"]
 [ext_resource type="PackedScene" path="res://Scenes/timer_w4.tscn" id="9_bx162"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_3h48g"]
-[ext_resource type="PackedScene" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_sipc5"]
+[ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_sipc5"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="12_xlhyb"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="13_qwla4"]
 [ext_resource type="PackedScene" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_veuaw"]
@@ -306,7 +306,7 @@ rect_radius_yeti = 1000.0
 move_direction = Vector2(500, 0)
 
 [node name="yeti2" parent="enemies" instance=ExtResource("11_sipc5")]
-position = Vector2(927, 630)
+position = Vector2(954, 598)
 enemy_type = "yeti"
 rect_radius_yeti = 300.0
 move_direction = Vector2(200, 0)
