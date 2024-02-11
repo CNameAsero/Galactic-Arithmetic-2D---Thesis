@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkag7otesqpaa"]
+
+[ext_resource type="Script" path="res://Scenes/Others/XandYValue.gd" id="1_fei3y"]
+[ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="1_r2sku"]
+
+[node name="XandYValue" type="Node2D"]
+script = ExtResource("1_fei3y")
+display = "xequaltwo"
+
+[node name="xequaltwo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(575, 367)
+texture = ExtResource("1_r2sku")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false

@@ -26,8 +26,9 @@ func checknum():
 radius = 6.08276
 
 [node name="thief_bullet" type="Area2D"]
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_4gco8")
-speed = 600.0
+speed = 500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 3.14159

@@ -104,10 +104,11 @@ size = Vector2(24, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_342mc"]
 
 [node name="flea" type="CharacterBody2D"]
+scale = Vector2(0.75, 0.75)
 collision_layer = 8
 collision_mask = 29
 script = ExtResource("1_ec76g")
-flea_speed = 125
+flea_speed = 180
 rect_size_flea_x = 5000
 rect_size_flea_y = 2500
 

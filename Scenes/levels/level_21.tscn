@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="13_x7544"]
 [ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="14_bn6e4"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="14_p3yr7"]
+[ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="14_uui5t"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="15_4o8un"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="15_rgqxl"]
 [ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="18_4pgqc"]
@@ -190,14 +191,43 @@ layer_5/y_sort_origin = 0
 layer_5/z_index = 0
 layer_5/tile_data = PackedInt32Array(458809, 1179649, 10, 524345, 1179649, 11, 57, 1179649, 10, 65593, 1179649, 11, 50, 1179649, 10, 65586, 1179649, 11, 43, 1179649, 10, 65579, 1179649, 11, 1769497, 1245185, 10, 1835033, 1245185, 11, 1507330, 1245185, 10, 1572866, 1245185, 11, 1572889, 917505, 7, 1835010, 917505, 7, 1835043, 786433, 7, 1835047, 786433, 7, 1638442, 786433, 7, 1376298, 786433, 7, 852012, 1179649, 6, 917548, 1179649, 7, 852015, 1179649, 6, 917551, 1179649, 7, 1966131, 983041, 8, 2031667, 983041, 9, 1966132, 1048577, 8, 2031668, 1048577, 9, 1966133, 1048577, 8, 2031669, 1048577, 9, 1966134, 1114113, 8, 2031670, 1114113, 9, 524291, 524289, 9, 458756, 589825, 8, 524292, 589825, 9, 524293, 655361, 9)
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(961, 1037)
+texture = ExtResource("14_uui5t")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 539)
 
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="fly" parent="enemies" instance=ExtResource("2_cyekm")]
-position = Vector2(961, 244)
+position = Vector2(961, 206)
 enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly2" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(957, 868)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly3" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(202, 525)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
+
+[node name="fly4" parent="enemies" instance=ExtResource("2_cyekm")]
+position = Vector2(1692, 532)
+enemy_type = "fly"
+fly_speed = 70.0
+fly_radius = 200
+rect_radius_fly = 200.0
 
 [node name="gamemanager_algebra" parent="." instance=ExtResource("5_pnfyq")]
 num_term = 2
@@ -205,27 +235,27 @@ variable_term = 2
 x_value = 2
 
 [node name="5" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(905, 1031)
+position = Vector2(260, 523)
 number = 5
 
 [node name="4" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(1015, 1034)
+position = Vector2(1625, 528)
 number = 4
 
 [node name="7" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(1870, 524)
+position = Vector2(1761, 532)
 number = 7
 
 [node name="2" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(75, 522)
+position = Vector2(143, 524)
 number = 2
 
 [node name="11" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(903, 133)
+position = Vector2(915, 163)
 number = 11
 
 [node name="2_2" parent="gamemanager_algebra" instance=ExtResource("6_4daac")]
-position = Vector2(1012, 138)
+position = Vector2(1004, 166)
 number = 2
 
 [node name="+" parent="gamemanager_algebra" instance=ExtResource("7_kalap")]
@@ -237,15 +267,15 @@ position = Vector2(1694, 776)
 oper = "-"
 
 [node name="x1" parent="gamemanager_algebra" instance=ExtResource("8_hylm7")]
-position = Vector2(1473, 353)
+position = Vector2(1657, 425)
 variable_to_display = "x"
 
 [node name="x2" parent="gamemanager_algebra" instance=ExtResource("8_hylm7")]
-position = Vector2(334, 656)
+position = Vector2(348, 656)
 variable_to_display = "x"
 
 [node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("9_pa7j3")]
-position = Vector2(1120, 405)
+position = Vector2(736, 336)
 x = 2
 integer = 9
 display_chest = "lvl1"
@@ -295,6 +325,56 @@ scale = Vector2(1.85, 1.85)
 
 [node name="health_system" parent="." instance=ExtResource("10_d1b0s")]
 
+[node name="time_buff" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 144.0
+offset_top = 665.0
+offset_right = 144.0
+offset_bottom = 665.0
+buff_selected = "time"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="time_buff2" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 1742.0
+offset_top = 665.0
+offset_right = 1742.0
+offset_bottom = 665.0
+buff_selected = "time"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="speed_buff" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 904.0
+offset_top = 895.0
+offset_right = 904.0
+offset_bottom = 895.0
+buff_selected = "speed"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="health_buff" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 1014.0
+offset_top = 895.0
+offset_right = 1014.0
+offset_bottom = 895.0
+buff_selected = "health"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
+[node name="health_buff2" parent="." instance=ExtResource("18_4pgqc")]
+offset_left = 964.0
+offset_top = 273.0
+offset_right = 964.0
+offset_bottom = 273.0
+buff_selected = "health"
+hp_buff = 1
+speed_buff = 200.0
+time_buff = 15.0
+
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -328,14 +408,6 @@ offset_left = -916.0
 offset_top = 494.0
 offset_right = -916.0
 offset_bottom = 494.0
-
-[node name="time" parent="." instance=ExtResource("18_4pgqc")]
-offset_left = 960.0
-offset_top = 703.0
-offset_right = 960.0
-offset_bottom = 703.0
-buff_selected = "time"
-time_buff = 15.0
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
