@@ -317,7 +317,7 @@ radius = 8.06226
 [node name="world_4_enemies" type="Node2D"]
 position = Vector2(603, 462)
 script = ExtResource("1_po0aj")
-move_speed = 75.0
+move_speed = 50.0
 radius = 200
 rect_radius_bear = 125.0
 yeti_speed = 30.0
