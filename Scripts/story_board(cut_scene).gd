@@ -26,6 +26,7 @@ func _on_tap_to_continue_pressed():
 			get_node("/root/GameSettings").storyboardPlayed = true
 
 func _on_skip_pressed():
+	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
 	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 	get_node("/root/GameSettings").storyboardPlayed = true

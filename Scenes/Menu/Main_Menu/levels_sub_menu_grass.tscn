@@ -1,0 +1,252 @@
+[gd_scene load_steps=19 format=3 uid="uid://dikyi515jidoo"]
+
+[ext_resource type="Script" path="res://Scripts/levels_sub_menu.gd" id="1_10ffj"]
+[ext_resource type="Texture2D" uid="uid://s8t12uni42x7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/75%-lvl1-thu.png" id="2_7rwc1"]
+[ext_resource type="Texture2D" uid="uid://gjmxwqq17iyp" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/ewan.png" id="3_2jnhn"]
+[ext_resource type="Texture2D" uid="uid://b6whjkdysyeg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/grass_holder.png" id="4_asegl"]
+[ext_resource type="Texture2D" uid="uid://dpk8aj1das11a" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/grass.png" id="5_q0o2n"]
+[ext_resource type="Texture2D" uid="uid://jbbvb6brx65q" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level1_normal.png" id="6_kk35n"]
+[ext_resource type="Texture2D" uid="uid://c86c026nsu1cn" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl1 pressed.png" id="6_lkqyf"]
+[ext_resource type="Texture2D" uid="uid://dafum73crbprv" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl2 pressed.png" id="8_dfvgk"]
+[ext_resource type="Texture2D" uid="uid://rtii8qtk3ck8" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level_2_normal.png" id="8_nrqe2"]
+[ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="10_s8t04"]
+[ext_resource type="Texture2D" uid="uid://ospqk5r04vho" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level3_normal.png" id="11_id05r"]
+[ext_resource type="Texture2D" uid="uid://cqkvmc43noqu5" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl3 pressed.png" id="11_sq1o5"]
+[ext_resource type="Texture2D" uid="uid://cfj3ofkceuhyg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/LEVEL 4.png" id="12_i6cpp"]
+[ext_resource type="Texture2D" uid="uid://cbwnar20vbvi6" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/close.png" id="13_6d8kw"]
+[ext_resource type="Texture2D" uid="uid://b65df3cry4f1j" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl4 pressed.png" id="13_86ghs"]
+[ext_resource type="Texture2D" uid="uid://etdmri5jcn0e" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/LEVEL 5.png" id="14_0i7a4"]
+[ext_resource type="Texture2D" uid="uid://dh2us3h2p4v80" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/exit_button_tap.png" id="14_7l7eh"]
+[ext_resource type="Texture2D" uid="uid://blk0tru0g7lcx" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl5 pressed.png" id="15_qacmr"]
+
+[node name="levels_sub_menu_grass" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_10ffj")
+
+[node name="baka-bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -399.0
+offset_right = 801.0
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.762235, 1)
+texture = ExtResource("2_7rwc1")
+expand_mode = 1
+
+[node name="panel" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_2jnhn")
+expand_mode = 1
+
+[node name="grass" type="TextureRect" parent="panel"]
+self_modulate = Color(1, 1, 1, 0.313726)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -350.0
+offset_right = 375.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_asegl")
+expand_mode = 1
+
+[node name="grass-text" type="TextureRect" parent="panel/grass"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.5
+offset_top = -53.0
+offset_right = 341.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_q0o2n")
+
+[node name="level1" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_kk35n")
+texture_pressed = ExtResource("6_lkqyf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level2" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 435.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("8_nrqe2")
+texture_pressed = ExtResource("8_dfvgk")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl2" type="TextureRect" parent="panel/level2"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 412.0
+offset_bottom = 115.0
+texture = ExtResource("10_s8t04")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("11_id05r")
+texture_pressed = ExtResource("11_sq1o5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl3" type="TextureRect" parent="panel/level3"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("10_s8t04")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_i6cpp")
+texture_pressed = ExtResource("13_86ghs")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl4" type="TextureRect" parent="panel/level4"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("10_s8t04")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 200.0
+offset_right = 213.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("14_0i7a4")
+texture_pressed = ExtResource("15_qacmr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl5" type="TextureRect" parent="panel/level5"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("10_s8t04")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="exit_button" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("13_6d8kw")
+texture_pressed = ExtResource("14_7l7eh")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="panel/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="panel/level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="panel/level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="panel/level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="panel/level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="panel/exit_button" to="." method="_on_exit_button_pressed"]

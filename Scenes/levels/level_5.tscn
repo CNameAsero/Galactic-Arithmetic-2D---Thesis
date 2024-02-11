@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://byi7jgcls2yrb"]
+[gd_scene load_steps=66 format=3 uid="uid://byi7jgcls2yrb"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_fhicb"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_4pr1q"]
@@ -45,6 +45,20 @@
 [ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="36_gjtqh"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="46_rbhug"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="64_gljot"]
+
+[sub_resource type="GDScript" id="GDScript_d4a0e"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.current_level = 5
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="Animation" id="Animation_sd1pg"]
 length = 0.001
@@ -296,6 +310,7 @@ _data = {
 }
 
 [node name="level_5" type="Node2D"]
+script = SubResource("GDScript_d4a0e")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_fhicb")

@@ -102,8 +102,10 @@ func check_final_answer():
 	var current_result = calculate_expression()
 	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
-		GameSettings.grasscurrentlevel[currentlevel + 1] = true
 		reset_for_next_level()
+		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
+			GameSettings.max_unlocked_level += 1
+			GameSettings.currentlevel[GameSettings.current_level] = true
 		time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()

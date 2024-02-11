@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://dj3ehb2q87umn"]
+[gd_scene load_steps=81 format=3 uid="uid://dj3ehb2q87umn"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_40c2s"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_kggt5"]
@@ -53,6 +53,20 @@
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="45_gqa1s"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="46_j88nq"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="47_m0kbt"]
+
+[sub_resource type="GDScript" id="GDScript_7b6oj"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.current_level = 10
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="Animation" id="Animation_qe8cb"]
 length = 0.001
@@ -382,6 +396,7 @@ _data = {
 }
 
 [node name="level_10" type="Node2D"]
+script = SubResource("GDScript_7b6oj")
 metadata/_edit_horizontal_guides_ = []
 
 [node name="TileMap" type="TileMap" parent="."]

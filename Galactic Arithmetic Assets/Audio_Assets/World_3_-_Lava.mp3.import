@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daojw2icffwmd"
+path="res://.godot/imported/World_3_-_Lava.mp3-e79416203a251759afb7eafb1e32043d.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/World_3_-_Lava.mp3"
+dest_files=["res://.godot/imported/World_3_-_Lava.mp3-e79416203a251759afb7eafb1e32043d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -6,9 +6,7 @@ extends Control
 
 func _on_next_level_button_pressed():
 	AudioManager.play_button_sfx()
-	GameSettings.current_level += 1
-	
-	var next_scene_path = "res://Scenes/levels/level_" + str(GameSettings.current_level) + ".tscn"
+	var next_scene_path = "res://Scenes/levels/level_" + str(GameSettings.current_level+1) + ".tscn"
 	if ResourceLoader.exists(next_scene_path):
 		get_tree().change_scene_to_file(next_scene_path)
 	else:

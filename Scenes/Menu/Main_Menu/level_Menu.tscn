@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://rrfg6wxb2eae"]
+[gd_scene load_steps=31 format=3 uid="uid://rrfg6wxb2eae"]
 
 [ext_resource type="Script" path="res://Scripts/level_Menu.gd" id="1_v21kn"]
 [ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="2_0ga8v"]
@@ -9,23 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://dkfldh6yw52xd" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Back.png" id="7_uao7h"]
 [ext_resource type="Texture2D" uid="uid://u0umsqtlk1dh" path="res://Galactic Arithmetic Assets/Settings_Assets/Back_Violet.png" id="8_4oy0f"]
 [ext_resource type="Texture2D" uid="uid://bwjjno1pnni37" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Level_1_BG 1.png" id="8_v354u"]
-[ext_resource type="PackedScene" uid="uid://dikyi515jidoo" path="res://Scenes/Menu/Main_Menu/levels_sub_menu.tscn" id="9_47w8l"]
+[ext_resource type="PackedScene" uid="uid://dikyi515jidoo" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_grass.tscn" id="9_47w8l"]
 [ext_resource type="Texture2D" uid="uid://r7ot8i210g06" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1.png" id="9_qkb7f"]
 [ext_resource type="Texture2D" uid="uid://r3lrw36oiu3f" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1-area-50.png" id="10_xcwnw"]
-[ext_resource type="Texture2D" uid="uid://bf1hn0ioa5ooj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/level_panel/Chest_with_Bolt.png" id="11_deh37"]
 [ext_resource type="Texture2D" uid="uid://cyiy7osj3i4uc" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2.png" id="11_ownny"]
+[ext_resource type="Texture2D" uid="uid://bf1hn0ioa5ooj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/Chest_with_Bolt.png" id="11_wwbvl"]
 [ext_resource type="Texture2D" uid="uid://d2dp2utfjtfwg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3.png" id="12_05r3n"]
 [ext_resource type="Texture2D" uid="uid://st5agbgp1ssj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area.png" id="13_l1pe1"]
 [ext_resource type="Texture2D" uid="uid://b6h83itdguvs7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4.png" id="13_w0gct"]
 [ext_resource type="Texture2D" uid="uid://ccopvqjgxmycv" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area-50.png" id="14_2lijg"]
 [ext_resource type="Texture2D" uid="uid://78v73yhqtlqs" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5.png" id="14_svs62"]
+[ext_resource type="PackedScene" uid="uid://cpjbkprfm5i4j" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ocean.tscn" id="16_2mr4q"]
 [ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="16_5mng4"]
 [ext_resource type="Texture2D" uid="uid://dakd01ngska0k" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area.png" id="16_m7t2t"]
 [ext_resource type="Texture2D" uid="uid://bofoy8b5gd8b7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area-50.png" id="17_hwl2e"]
 [ext_resource type="Texture2D" uid="uid://p8ngd6i21qbo" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area.png" id="19_lmgwv"]
 [ext_resource type="Texture2D" uid="uid://c3ee6n0a7rpje" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area-50.png" id="20_ab0r7"]
+[ext_resource type="PackedScene" uid="uid://diojfj8gidou3" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.tscn" id="20_c0xf5"]
 [ext_resource type="Texture2D" uid="uid://spua6m6y6n12" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area50.png" id="22_c67cx"]
 [ext_resource type="Texture2D" uid="uid://dd0fb8wu06ygb" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area.png" id="23_njvr4"]
+[ext_resource type="PackedScene" uid="uid://b7imt8slluse8" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.tscn" id="24_7imo4"]
+[ext_resource type="PackedScene" uid="uid://dalmnihcn14ed" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_city.tscn" id="28_p4ogf"]
 
 [node name="level_Menu" type="Control"]
 layout_mode = 3
@@ -126,13 +130,10 @@ texture = ExtResource("9_qkb7f")
 [node name="levels_sub_menu" parent="Level_Menu_Bg/Picture_Border_Level/world1_area" instance=ExtResource("9_47w8l")]
 visible = false
 layout_mode = 1
-offset_top = 54.5
-offset_bottom = 54.5
-scale = Vector2(1.25, 1.158)
 
 [node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
 position = Vector2(1129, -99.5)
-texture = ExtResource("11_deh37")
+texture = ExtResource("11_wwbvl")
 hframes = 6
 
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/chest"]
@@ -178,6 +179,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_ownny")
 
+[node name="levels_sub_menu_ocean" parent="Level_Menu_Bg/Picture_Border_Level/world2_area" instance=ExtResource("16_2mr4q")]
+visible = false
+layout_mode = 1
+
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
 self_modulate = Color(1, 1, 1, 0.686275)
 layout_mode = 1
@@ -197,7 +202,7 @@ stretch_mode = 3
 
 [node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
 position = Vector2(1129, -99.5)
-texture = ExtResource("11_deh37")
+texture = ExtResource("11_wwbvl")
 hframes = 6
 
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world2_area/chest"]
@@ -243,6 +248,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_05r3n")
 
+[node name="levels_sub_menu_lava" parent="Level_Menu_Bg/Picture_Border_Level/world3_area" instance=ExtResource("20_c0xf5")]
+visible = false
+layout_mode = 1
+
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
 self_modulate = Color(1, 1, 1, 0.686275)
 layout_mode = 1
@@ -262,7 +271,7 @@ stretch_mode = 3
 
 [node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
 position = Vector2(1129, -99.5)
-texture = ExtResource("11_deh37")
+texture = ExtResource("11_wwbvl")
 hframes = 6
 
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world3_area/chest"]
@@ -308,6 +317,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("13_w0gct")
 
+[node name="levels_sub_menu_ice" parent="Level_Menu_Bg/Picture_Border_Level/world4_area" instance=ExtResource("24_7imo4")]
+visible = false
+layout_mode = 1
+
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
 self_modulate = Color(1, 1, 1, 0.686275)
 layout_mode = 1
@@ -327,7 +340,7 @@ stretch_mode = 3
 
 [node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
 position = Vector2(1129, -99.5)
-texture = ExtResource("11_deh37")
+texture = ExtResource("11_wwbvl")
 hframes = 6
 
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world4_area/chest"]
@@ -373,6 +386,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_svs62")
 
+[node name="levels_sub_menu_city" parent="Level_Menu_Bg/Picture_Border_Level/world5_area" instance=ExtResource("28_p4ogf")]
+visible = false
+layout_mode = 1
+
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
 self_modulate = Color(1, 1, 1, 0.686275)
 layout_mode = 1
@@ -392,7 +409,7 @@ stretch_mode = 3
 
 [node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
 position = Vector2(1129, -99.5)
-texture = ExtResource("11_deh37")
+texture = ExtResource("11_wwbvl")
 hframes = 6
 
 [node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world5_area/chest"]

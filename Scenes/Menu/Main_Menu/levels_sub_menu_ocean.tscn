@@ -1,0 +1,236 @@
+[gd_scene load_steps=18 format=3 uid="uid://cpjbkprfm5i4j"]
+
+[ext_resource type="Texture2D" uid="uid://bkoq6pk71ttgb" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/ocean bg.jpg" id="1_3ia6h"]
+[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ocean.gd" id="1_ny5ix"]
+[ext_resource type="Texture2D" uid="uid://ky4ige24p3fj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/template.png" id="2_v2fbe"]
+[ext_resource type="Texture2D" uid="uid://73clsqh7r2t7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/ocean - text.png" id="3_exort"]
+[ext_resource type="Texture2D" uid="uid://dbdipqr72tx1x" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level1 - ocean.png" id="5_vm5vu"]
+[ext_resource type="Texture2D" uid="uid://b4ct3ra7lktn4" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level1 - ocean tapped.png" id="6_vo8s8"]
+[ext_resource type="Texture2D" uid="uid://b8mpuf7anfulp" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level2 - ocean.png" id="7_x7n06"]
+[ext_resource type="Texture2D" uid="uid://cwqhajo8nvb1r" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level2 - ocean tapped.png" id="8_4sr8a"]
+[ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="8_fesrr"]
+[ext_resource type="Texture2D" uid="uid://5g8k7o8cb1uc" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level3 - ocean.png" id="10_gcqr0"]
+[ext_resource type="Texture2D" uid="uid://p7fx1wovwapr" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level3 - ocean tapped.png" id="11_qmces"]
+[ext_resource type="Texture2D" uid="uid://ch4sv257l6u5y" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level4 - ocean.png" id="12_l8xtr"]
+[ext_resource type="Texture2D" uid="uid://0ywv2lq7i34s" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level4 - ocean tapped.png" id="13_udk3d"]
+[ext_resource type="Texture2D" uid="uid://clqxl6lyohfun" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level5 - ocean.png" id="14_l41b3"]
+[ext_resource type="Texture2D" uid="uid://vocistk6tibp" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/level5 - ocean tapped.png" id="15_vicu5"]
+[ext_resource type="Texture2D" uid="uid://3issxom4tbci" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/x button ocean.png" id="16_54wwf"]
+[ext_resource type="Texture2D" uid="uid://vhcjf2rixgre" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/ocean_level_sub_menu/x button ocean tapped.png" id="17_uh6gx"]
+
+[node name="levels_sub_menu_ocean" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ny5ix")
+
+[node name="ocean-bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -399.0
+offset_right = 801.0
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.762235, 1)
+texture = ExtResource("1_3ia6h")
+expand_mode = 1
+
+[node name="panel" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v2fbe")
+expand_mode = 1
+
+[node name="Title" type="TextureRect" parent="panel"]
+self_modulate = Color(1, 1, 1, 0.843137)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -350.0
+offset_right = 375.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_exort")
+expand_mode = 1
+
+[node name="level1" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_vm5vu")
+texture_pressed = ExtResource("6_vo8s8")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level2" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 435.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_x7n06")
+texture_pressed = ExtResource("8_4sr8a")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl2" type="TextureRect" parent="panel/level2"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 412.0
+offset_bottom = 115.0
+texture = ExtResource("8_fesrr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_gcqr0")
+texture_pressed = ExtResource("11_qmces")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl3" type="TextureRect" parent="panel/level3"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_fesrr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_l8xtr")
+texture_pressed = ExtResource("13_udk3d")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl4" type="TextureRect" parent="panel/level4"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_fesrr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 200.0
+offset_right = 213.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("14_l41b3")
+texture_pressed = ExtResource("15_vicu5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl5" type="TextureRect" parent="panel/level5"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_fesrr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="exit_button" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("16_54wwf")
+texture_pressed = ExtResource("17_uh6gx")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="panel/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="panel/level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="panel/level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="panel/level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="panel/level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="panel/exit_button" to="." method="_on_exit_button_pressed"]

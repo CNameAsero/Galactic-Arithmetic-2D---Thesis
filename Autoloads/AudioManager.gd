@@ -5,6 +5,11 @@ var Music_bus = AudioServer.get_bus_index("music")
 var Sfx_bus = AudioServer.get_bus_index("sfx")
 
 var level1_music: AudioStreamPlayer
+var level2_music: AudioStreamPlayer
+var level3_music: AudioStreamPlayer
+var level4_music: AudioStreamPlayer
+var level5_music: AudioStreamPlayer
+
 var background_music: AudioStreamPlayer
 var button_sfx: AudioStreamPlayer
 var death_sfx: AudioStreamPlayer
@@ -46,7 +51,14 @@ var is_sfx_muted = false
 var music_position: float
 
 func _ready():
+	#WORLD 1 - 5 MUSIC
 	level1_music = $Level1_Music
+	level2_music = $Level2_Music
+	level3_music = $Level3_Music
+	level4_music = $Level4_Music
+	level5_music = $Level5_Music
+	
+	#SOUND EFFECTS
 	background_music = $BG_Music
 	button_sfx = $Button_SFX
 	death_sfx = $death_sfx
@@ -57,6 +69,7 @@ func _ready():
 	slime_hurt = $slime_hurt
 	octopus = $octopus_shot
 	teleport = $teleport
+
 
 	#TUTORIAL
 	tutorial1 = $"6th_tutorial"

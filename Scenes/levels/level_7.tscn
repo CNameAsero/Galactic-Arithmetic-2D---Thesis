@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://dqxrs4asm625s"]
+[gd_scene load_steps=86 format=3 uid="uid://dqxrs4asm625s"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_r1wch"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_7oxo1"]
@@ -54,6 +54,20 @@
 [ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="58_gcxqq"]
 [ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="59_rk543"]
 [ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="60_nl68f"]
+
+[sub_resource type="GDScript" id="GDScript_aesus"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.current_level = 7
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [sub_resource type="Animation" id="Animation_qe8cb"]
 length = 0.001
@@ -424,6 +438,7 @@ _data = {
 }
 
 [node name="world2_lvl2" type="Node2D"]
+script = SubResource("GDScript_aesus")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_r1wch")

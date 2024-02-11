@@ -1,0 +1,234 @@
+[gd_scene load_steps=18 format=3 uid="uid://b7imt8slluse8"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.gd" id="1_ug41x"]
+[ext_resource type="Texture2D" uid="uid://crxp5caru46kq" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/ice-bg.png" id="2_e6klj"]
+[ext_resource type="Texture2D" uid="uid://cvjqmkce4fuax" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/bg.png" id="2_o7wiy"]
+[ext_resource type="Texture2D" uid="uid://difn1ggnfg2s" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/title.png" id="3_dqt82"]
+[ext_resource type="Texture2D" uid="uid://cotfguhf2bpad" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 1 - ice.png" id="4_s6lev"]
+[ext_resource type="Texture2D" uid="uid://dwv4taf2jelu6" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 1 - ice tapped.png" id="5_jglfp"]
+[ext_resource type="Texture2D" uid="uid://sgynniygoc66" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 2 - ice.png" id="6_cykj3"]
+[ext_resource type="Texture2D" uid="uid://8dfi4pthrmux" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 2 - ice tapped.png" id="7_hsrpv"]
+[ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="7_kdpl4"]
+[ext_resource type="Texture2D" uid="uid://l4qrbdv0ea1w" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 3 - ice.png" id="9_beuqe"]
+[ext_resource type="Texture2D" uid="uid://j6j4qvr8pwiw" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 3 - ice tapped.png" id="10_idnt7"]
+[ext_resource type="Texture2D" uid="uid://b4hfw2j4utp7x" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 4 - ice.png" id="11_s5ng3"]
+[ext_resource type="Texture2D" uid="uid://c3gjsquq717n3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 4 - ice tapped.png" id="12_h0qnb"]
+[ext_resource type="Texture2D" uid="uid://da7jlnwvbrcl3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 5 - ice.png" id="13_rx1hp"]
+[ext_resource type="Texture2D" uid="uid://d2f8nwsj2xxf3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/level 5 - ice tapped.png" id="14_5fadw"]
+[ext_resource type="Texture2D" uid="uid://b5nwhwfodqsl2" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/x - button.png" id="15_32boa"]
+[ext_resource type="Texture2D" uid="uid://dj3g8m3igtwl4" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/snow_level_sub_menu/x - button tapped.png" id="16_8oqnt"]
+
+[node name="levels_sub_menu_ice" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ug41x")
+
+[node name="ice-bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -399.0
+offset_right = 801.0
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.762235, 1)
+texture = ExtResource("2_e6klj")
+expand_mode = 1
+
+[node name="panel" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o7wiy")
+expand_mode = 1
+
+[node name="title" type="TextureRect" parent="panel"]
+self_modulate = Color(1, 1, 1, 0.843137)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -350.0
+offset_right = 375.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dqt82")
+expand_mode = 1
+
+[node name="level1" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_s6lev")
+texture_pressed = ExtResource("5_jglfp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level2" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 435.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_cykj3")
+texture_pressed = ExtResource("7_hsrpv")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl2" type="TextureRect" parent="panel/level2"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 412.0
+offset_bottom = 115.0
+texture = ExtResource("7_kdpl4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_beuqe")
+texture_pressed = ExtResource("10_idnt7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl3" type="TextureRect" parent="panel/level3"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("7_kdpl4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("11_s5ng3")
+texture_pressed = ExtResource("12_h0qnb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl4" type="TextureRect" parent="panel/level4"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("7_kdpl4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 200.0
+offset_right = 213.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("13_rx1hp")
+texture_pressed = ExtResource("14_5fadw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl5" type="TextureRect" parent="panel/level5"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("7_kdpl4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="exit_button" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("15_32boa")
+texture_pressed = ExtResource("16_8oqnt")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="panel/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="panel/level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="panel/level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="panel/level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="panel/level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="panel/exit_button" to="." method="_on_exit_button_pressed"]

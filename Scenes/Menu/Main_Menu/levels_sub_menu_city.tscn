@@ -1,0 +1,233 @@
+[gd_scene load_steps=17 format=3 uid="uid://dalmnihcn14ed"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_city.gd" id="1_o84i3"]
+[ext_resource type="Texture2D" uid="uid://ceskupbdvisg2" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/bg-city.png" id="1_t6hi4"]
+[ext_resource type="Texture2D" uid="uid://c6bi7b7qup0vr" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/bg.png" id="2_62xeg"]
+[ext_resource type="Texture2D" uid="uid://dc4j4fbpw53bn" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/title.png" id="3_nmcg0"]
+[ext_resource type="Texture2D" uid="uid://bfy22oydafdf3" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level1 - city.png" id="4_vm780"]
+[ext_resource type="Texture2D" uid="uid://h2y35f2gbbld" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level1 - city tapped.png" id="5_f2550"]
+[ext_resource type="Texture2D" uid="uid://2dcx6o6v62qb" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level2 - city.png" id="6_xkgdu"]
+[ext_resource type="Texture2D" uid="uid://dufjas6i14cgh" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level3 - city tapped.png" id="7_5phjf"]
+[ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="8_k8mf1"]
+[ext_resource type="Texture2D" uid="uid://crw6ehf3eto50" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level3 - city.png" id="9_148pd"]
+[ext_resource type="Texture2D" uid="uid://bhme5f3pmvtm5" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level4 - city.png" id="10_dbqgx"]
+[ext_resource type="Texture2D" uid="uid://c7bj38bp7gd4y" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level4 - city tapped.png" id="11_da6j1"]
+[ext_resource type="Texture2D" uid="uid://b10uv7lxgr0dh" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level5 - city.png" id="12_bp4a8"]
+[ext_resource type="Texture2D" uid="uid://c3ev0uojsi0tx" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/level5 - city tapped.png" id="13_8gvru"]
+[ext_resource type="Texture2D" uid="uid://bf3plrc5h7iwd" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/x - button.png" id="14_iw0se"]
+[ext_resource type="Texture2D" uid="uid://dxtxt06sm3uqj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/city_level_sub_menu/x - button tapped.png" id="15_6nu50"]
+
+[node name="levels_sub_menu_city" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o84i3")
+
+[node name="city-bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -399.0
+offset_right = 801.0
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.762235, 1)
+texture = ExtResource("1_t6hi4")
+expand_mode = 1
+
+[node name="panel" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_62xeg")
+expand_mode = 1
+
+[node name="title" type="TextureRect" parent="panel"]
+self_modulate = Color(1, 1, 1, 0.843137)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -350.0
+offset_right = 375.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nmcg0")
+expand_mode = 1
+
+[node name="level1" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_vm780")
+texture_pressed = ExtResource("5_f2550")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level2" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 435.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_xkgdu")
+texture_pressed = ExtResource("7_5phjf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl2" type="TextureRect" parent="panel/level2"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 412.0
+offset_bottom = 115.0
+texture = ExtResource("8_k8mf1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9_148pd")
+texture_pressed = ExtResource("7_5phjf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl3" type="TextureRect" parent="panel/level3"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_k8mf1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_dbqgx")
+texture_pressed = ExtResource("11_da6j1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl4" type="TextureRect" parent="panel/level4"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_k8mf1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 200.0
+offset_right = 213.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_bp4a8")
+texture_pressed = ExtResource("13_8gvru")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl5" type="TextureRect" parent="panel/level5"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("8_k8mf1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="exit_button" type="TextureButton" parent="panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("14_iw0se")
+texture_pressed = ExtResource("15_6nu50")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="panel/level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="panel/level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="panel/level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="panel/level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="panel/level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="panel/exit_button" to="." method="_on_exit_button_pressed"]

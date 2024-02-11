@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b1bkvbpublp12"]
+[gd_scene load_steps=55 format=3 uid="uid://b1bkvbpublp12"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_a0nmm"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="3_ijcpw"]
@@ -43,6 +43,15 @@
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="56_blqqh"]
 [ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="56_l3fsr"]
 [ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="57_tgibj"]
+
+[sub_resource type="GDScript" id="GDScript_h75cv"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameSettings.current_level = 1
+"
 
 [sub_resource type="Animation" id="Animation_sd1pg"]
 length = 0.001
@@ -201,6 +210,7 @@ _data = {
 }
 
 [node name="level_1" type="Node2D"]
+script = SubResource("GDScript_h75cv")
 
 [node name="Level_design" type="TileMap" parent="."]
 tile_set = ExtResource("1_a0nmm")
