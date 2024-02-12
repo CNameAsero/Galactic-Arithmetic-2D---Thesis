@@ -55,3 +55,13 @@ res://Scenes/Menu/Main_Menu/levels_sub_menu_ocean.tscn
 res://Scenes/Menu/Main_Menu/levels_sub_menu_ocean.gd
 res://Scenes/Menu/Main_Menu/cut_scene_1.tscn
 res://Scenes/Menu/Main_Menu/cut_scene_1.gd
+res://Scripts/level_complete_menu.gd
+res://Scenes/Menu/Main_Menu/cut_scene_2.tscn
+res://Scenes/Menu/Main_Menu/cut_scene_2.gd
+res://cut_scene3.gd
+res://Scenes/Menu/Main_Menu/cut_scene_4.gd
+res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.tscn
+res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.gd
+res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.tscn
+res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.gd
+res://Scenes/Menu/Main_Menu/levels_sub_menu_city.gd

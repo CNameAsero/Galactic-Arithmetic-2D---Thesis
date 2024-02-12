@@ -11,11 +11,13 @@ func _on_exit_button_pressed():
 
 func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
-	if GameSettings.cutscene2:
-		GameSettings.isHard = true
+	if GameSettings.cutscene2 || GameSettings.currentlevel[10]:
 		AudioManager.background_music.stop()
 		AudioManager.level3_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_11.tscn")
+	else: 
+		AudioManager.background_music.stop()
+		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/cut_scene_2.tscn")
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()

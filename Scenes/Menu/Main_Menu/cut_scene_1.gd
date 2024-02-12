@@ -21,7 +21,7 @@ func _on_tap_to_continue_pressed():
 		if nextPage > 7:  # Change this to 18
 			audio_stop(currentPage)
 			GameSettings.cutscene1 = true
-			if GameSettings.currentlevel[5]:
+			if GameSettings.currentlevel[5] && GameSettings.cutscene1:
 				get_tree().change_scene_to_file("res://Scenes/levels/level_6.tscn")
 				AudioManager.background_music.stop()
 			else:
@@ -31,9 +31,8 @@ func _on_tap_to_continue_pressed():
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
-	AudioManager.background_music.play()
 	GameSettings.cutscene1 = true
-	if GameSettings.currentlevel[5]:
+	if GameSettings.currentlevel[5] && GameSettings.cutscene1:
 		get_tree().change_scene_to_file("res://Scenes/levels/level_6.tscn")
 		AudioManager.background_music.stop()
 	else:
