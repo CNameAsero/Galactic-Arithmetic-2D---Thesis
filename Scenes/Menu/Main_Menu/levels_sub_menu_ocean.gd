@@ -11,18 +11,16 @@ func _on_exit_button_pressed():
 
 func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
-	if GameSettings.tutorialPlayed:
+	if GameSettings.cutscene1:
 		AudioManager.background_music.stop()
-		AudioManager.level1_music.play()
+		AudioManager.level2_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_6.tscn")
-	else:
-		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[6] == true:
 		AudioManager.background_music.stop()
-		AudioManager.level1_music.play()
+		AudioManager.level2_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_7.tscn")
 	else:
 		print("Clear level 6 to open this level!")
@@ -31,7 +29,7 @@ func _on_level_3_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[7] == true:
 		AudioManager.background_music.stop()
-		AudioManager.level1_music.play()
+		AudioManager.level2_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_8.tscn")
 	else:
 		print("Clear level 7 to open this level!")
@@ -40,7 +38,7 @@ func _on_level_4_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[8] == true:
 		AudioManager.background_music.stop()
-		AudioManager.level1_music.play()
+		AudioManager.level2_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_9.tscn")
 	else:
 		print("Clear level 8 to open this level!")
@@ -49,7 +47,7 @@ func _on_level_5_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[9] == true:
 		AudioManager.background_music.stop()
-		AudioManager.level1_music.play()
+		AudioManager.level2_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_10.tscn")
 	else:
 		print("Clear level 9 to open this level!")

@@ -1,0 +1,212 @@
+[gd_scene load_steps=28 format=3 uid="uid://bfwcc01q5f7s6"]
+
+[ext_resource type="Script" path="res://finalscene.gd" id="1_u3ef8"]
+[ext_resource type="Texture2D" uid="uid://b72eolepv2m74" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/1.png" id="2_ysi3y"]
+[ext_resource type="Texture2D" uid="uid://btyasaindiukn" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/2.png" id="3_i7iny"]
+[ext_resource type="Texture2D" uid="uid://db8opln35lce6" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/3.png" id="4_427ol"]
+[ext_resource type="Texture2D" uid="uid://dosilwvd2s4rr" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/4.png" id="5_j5rab"]
+[ext_resource type="Texture2D" uid="uid://bqvvley3o1a0r" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/5.png" id="6_w8ki6"]
+[ext_resource type="Texture2D" uid="uid://cxletsqk0r1xm" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/6.png" id="7_g4kck"]
+[ext_resource type="Texture2D" uid="uid://bw6ib5tmxxqxw" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/7.png" id="8_trwk1"]
+[ext_resource type="Texture2D" uid="uid://ytcnjn6y265g" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/8.png" id="9_6rgip"]
+[ext_resource type="Texture2D" uid="uid://drgsj7rhs1sfs" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/9.png" id="10_dhvc0"]
+[ext_resource type="Texture2D" uid="uid://beoj6ko45v6s5" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/10.png" id="11_jdp3l"]
+[ext_resource type="Texture2D" uid="uid://iip3poptfk7l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/11.png" id="12_x3gh3"]
+[ext_resource type="Texture2D" uid="uid://dqeloy28qviia" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/12.png" id="13_s60u2"]
+[ext_resource type="Texture2D" uid="uid://cmpxbkrj3gykb" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/13.png" id="14_2ddru"]
+[ext_resource type="Texture2D" uid="uid://dbmupw1njpvba" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/14.png" id="15_al3if"]
+[ext_resource type="Texture2D" uid="uid://bhp2nu3vb0ftj" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/15.png" id="16_1eo8s"]
+[ext_resource type="Texture2D" uid="uid://cgrwxei2f8tu5" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/16.png" id="17_8g0pg"]
+[ext_resource type="Texture2D" uid="uid://tnuukn6t0wud" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/17.png" id="18_pyhg2"]
+[ext_resource type="Texture2D" uid="uid://cyx2fi0tcl8s0" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/18.png" id="19_xufo3"]
+[ext_resource type="Texture2D" uid="uid://bmmf1o6x5vc6l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/19.png" id="20_ehrgw"]
+[ext_resource type="Texture2D" uid="uid://b7bjqsnb3a7co" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/20.png" id="21_xvwst"]
+[ext_resource type="Texture2D" uid="uid://b1wlomiboymir" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/21.png" id="22_rt3fa"]
+[ext_resource type="Texture2D" uid="uid://t8je86kh8q5p" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button.png" id="23_3uuth"]
+[ext_resource type="Texture2D" uid="uid://dqipxxqaot3h1" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button_40Trans.png" id="24_w1t7x"]
+[ext_resource type="Script" path="res://Scripts/Tap_To_Continue.gd" id="25_r86dt"]
+[ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="26_vwajl"]
+[ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="27_l3tbi"]
+
+[node name="finalscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u3ef8")
+
+[node name="Page1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ysi3y")
+
+[node name="Page2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_i7iny")
+
+[node name="Page3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_427ol")
+
+[node name="Page4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_j5rab")
+
+[node name="Page5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_w8ki6")
+
+[node name="Page6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_g4kck")
+
+[node name="Page7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_trwk1")
+
+[node name="Page8" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("9_6rgip")
+
+[node name="Page9" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("10_dhvc0")
+
+[node name="Page10" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("11_jdp3l")
+
+[node name="Page11" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("12_x3gh3")
+
+[node name="Page12" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("13_s60u2")
+
+[node name="Page13" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("14_2ddru")
+
+[node name="Page14" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("15_al3if")
+
+[node name="Page15" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("16_1eo8s")
+
+[node name="Page16" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("17_8g0pg")
+
+[node name="Page17" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("18_pyhg2")
+
+[node name="Page18" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("19_xufo3")
+
+[node name="Page19" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("20_ehrgw")
+
+[node name="Page20" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("21_xvwst")
+
+[node name="Page21" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("22_rt3fa")
+
+[node name="Tap_To_Continue" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 875.0
+offset_right = 2035.0
+offset_bottom = 1199.0
+scale = Vector2(0.653686, 0.463638)
+action_mode = 0
+texture_normal = ExtResource("23_3uuth")
+texture_pressed = ExtResource("24_w1t7x")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("25_r86dt")
+
+[node name="skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 75.0
+offset_right = 1850.0
+offset_bottom = 225.0
+texture_normal = ExtResource("26_vwajl")
+texture_pressed = ExtResource("27_l3tbi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

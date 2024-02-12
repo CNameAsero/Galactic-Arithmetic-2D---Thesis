@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=42 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -8,7 +8,9 @@
 [ext_resource type="AudioStream" uid="uid://daojw2icffwmd" path="res://Galactic Arithmetic Assets/Audio_Assets/World_3_-_Lava.mp3" id="5_8eqsm"]
 [ext_resource type="AudioStream" uid="uid://b3ivhtebesg6l" path="res://Galactic Arithmetic Assets/Audio_Assets/Death sound.mp3" id="5_crlbh"]
 [ext_resource type="AudioStream" uid="uid://bmcmyea614roy" path="res://Galactic Arithmetic Assets/Audio_Assets/SlimeWalk.mp3" id="6_5l0s8"]
+[ext_resource type="AudioStream" uid="uid://b3yo55gau3qfu" path="res://Galactic Arithmetic Assets/Audio_Assets/World_4_-_Snow.mp3" id="6_c7iyg"]
 [ext_resource type="AudioStream" uid="uid://7w6wu2qducod" path="res://Galactic Arithmetic Assets/Audio_Assets/Item Collect.mp3" id="7_cj0vk"]
+[ext_resource type="AudioStream" uid="uid://c7caqkmh6cf7c" path="res://Galactic Arithmetic Assets/Audio_Assets/World_5_-_City.mp3" id="7_vhnww"]
 [ext_resource type="AudioStream" uid="uid://d0ql4gyx76r87" path="res://Galactic Arithmetic Assets/Audio_Assets/button_collect.mp3" id="8_y41oi"]
 [ext_resource type="AudioStream" uid="uid://t1yki7j3xxv8" path="res://Galactic Arithmetic Assets/Audio_Assets/level_complete_sfx.wav" id="9_27e31"]
 [ext_resource type="AudioStream" uid="uid://du1bqh1bfa85j" path="res://Galactic Arithmetic Assets/Audio_Assets/slime_hurt.mp3" id="10_fe16u"]
@@ -60,11 +62,11 @@ stream = ExtResource("5_8eqsm")
 bus = &"music"
 
 [node name="Level4_Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_1id1u")
+stream = ExtResource("6_c7iyg")
 bus = &"music"
 
 [node name="Level5_Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_1id1u")
+stream = ExtResource("7_vhnww")
 bus = &"music"
 
 [node name="Button_SFX" type="AudioStreamPlayer" parent="."]

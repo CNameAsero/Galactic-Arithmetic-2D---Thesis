@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://b24ic7ilbhxyr"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/cut_scene_4.gd" id="1_5f4yr"]
+[ext_resource type="Texture2D" uid="uid://453ymmuhbceu" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/1.png" id="1_owlyo"]
+[ext_resource type="Texture2D" uid="uid://ctqkyl5vqj6r" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/2.png" id="2_qkagw"]
+[ext_resource type="Texture2D" uid="uid://c1ewq6cdxsxfo" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/3.png" id="3_spj3g"]
+[ext_resource type="Texture2D" uid="uid://bpdu64h52qiwf" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/4.png" id="4_kc8um"]
+[ext_resource type="Texture2D" uid="uid://cne3t50xydtf8" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/5.png" id="5_616rb"]
+[ext_resource type="Texture2D" uid="uid://dgcshodqpxic" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/6.png" id="6_cqbee"]
+[ext_resource type="Texture2D" uid="uid://cd3si5qkj0onr" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/7.png" id="7_5i5u6"]
+[ext_resource type="Texture2D" uid="uid://t8je86kh8q5p" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button.png" id="8_wm3ss"]
+[ext_resource type="Texture2D" uid="uid://dqipxxqaot3h1" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button_40Trans.png" id="9_3n8h7"]
+[ext_resource type="Script" path="res://Scripts/Tap_To_Continue.gd" id="10_pd2nb"]
+[ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="11_3iul2"]
+[ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="12_35bgb"]
+
+[node name="cut_scene4" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5f4yr")
+
+[node name="Page1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_owlyo")
+
+[node name="Page2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_qkagw")
+
+[node name="Page3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_spj3g")
+
+[node name="Page4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_kc8um")
+
+[node name="Page5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_616rb")
+
+[node name="Page6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_cqbee")
+
+[node name="Page7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_5i5u6")
+
+[node name="Tap_To_Continue" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 875.0
+offset_right = 2035.0
+offset_bottom = 1199.0
+scale = Vector2(0.653686, 0.463638)
+action_mode = 0
+texture_normal = ExtResource("8_wm3ss")
+texture_pressed = ExtResource("9_3n8h7")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_pd2nb")
+
+[node name="skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 75.0
+offset_right = 1850.0
+offset_bottom = 225.0
+texture_normal = ExtResource("11_3iul2")
+texture_pressed = ExtResource("12_35bgb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]

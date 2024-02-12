@@ -1,0 +1,100 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwc8cn8jg3tq2"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/cut_scene_2.gd" id="1_dkgpi"]
+[ext_resource type="Texture2D" uid="uid://bihtrc4d0hx8d" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/1.png" id="2_vrqb7"]
+[ext_resource type="Texture2D" uid="uid://b56b5h6hc0rfs" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/2.png" id="3_xfcd6"]
+[ext_resource type="Texture2D" uid="uid://bk06uliw3nbat" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/3.png" id="4_js8xx"]
+[ext_resource type="Texture2D" uid="uid://cvgsiohorprsu" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/4.png" id="5_53bn7"]
+[ext_resource type="Texture2D" uid="uid://gamkdwi5q8wb" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/5.png" id="6_ltsln"]
+[ext_resource type="Texture2D" uid="uid://evmow6ih0bhi" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/6.png" id="7_u88no"]
+[ext_resource type="Texture2D" uid="uid://f5h8qnbk7fkq" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/7.png" id="8_q1yuy"]
+[ext_resource type="Texture2D" uid="uid://t8je86kh8q5p" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button.png" id="8_y7bgb"]
+[ext_resource type="Texture2D" uid="uid://dqipxxqaot3h1" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Tap_Button_40Trans.png" id="9_16qdx"]
+[ext_resource type="Script" path="res://Scripts/Tap_To_Continue.gd" id="10_rr180"]
+[ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="11_xvrim"]
+[ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="12_xjeb4"]
+
+[node name="cut_scene2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dkgpi")
+
+[node name="Page1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_vrqb7")
+
+[node name="Page2" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("3_xfcd6")
+
+[node name="Page3" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_js8xx")
+
+[node name="Page4" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("5_53bn7")
+
+[node name="Page5" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("6_ltsln")
+
+[node name="Page6" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("7_u88no")
+
+[node name="Page7" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("8_q1yuy")
+
+[node name="Tap_To_Continue" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 875.0
+offset_right = 2035.0
+offset_bottom = 1199.0
+scale = Vector2(0.653686, 0.463638)
+action_mode = 0
+texture_normal = ExtResource("8_y7bgb")
+texture_pressed = ExtResource("9_16qdx")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_rr180")
+
+[node name="skip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1500.0
+offset_top = 75.0
+offset_right = 1850.0
+offset_bottom = 225.0
+texture_normal = ExtResource("11_xvrim")
+texture_pressed = ExtResource("12_xjeb4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]
+[connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]
