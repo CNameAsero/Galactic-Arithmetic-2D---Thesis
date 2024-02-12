@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://81h4f2tmbwfp"]
+[gd_scene load_steps=90 format=3 uid="uid://81h4f2tmbwfp"]
 
 [ext_resource type="Script" path="res://Autoloads/AudioManager.gd" id="1_n0fra"]
 [ext_resource type="AudioStream" uid="uid://bayjgoyippie8" path="res://Galactic Arithmetic Assets/Audio_Assets/BG_Music_Main_Menu.wav" id="2_l0pdd"]
@@ -41,6 +41,54 @@
 [ext_resource type="AudioStream" uid="uid://d1bn0uvgab8o5" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/16.mp3" id="35_stc1c"]
 [ext_resource type="AudioStream" uid="uid://htqdux7e8r5e" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/17.mp3" id="36_apcnj"]
 [ext_resource type="AudioStream" uid="uid://dbx6l5t58ughw" path="res://Galactic Arithmetic Assets/Audio_Assets/storyboard mp3/18.mp3" id="39_2u0a8"]
+[ext_resource type="AudioStream" uid="uid://b2kby251lu6gl" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/1.mp3" id="42_0sdbc"]
+[ext_resource type="AudioStream" uid="uid://rodewx2mistq" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/2.mp3" id="43_ecrdv"]
+[ext_resource type="AudioStream" uid="uid://bou8meqbiaeif" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/3.mp3" id="44_y6xyp"]
+[ext_resource type="AudioStream" uid="uid://ui2mw0unkyso" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/4.mp3" id="45_ptfmo"]
+[ext_resource type="AudioStream" uid="uid://bq70ok3nxyqhh" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/5.mp3" id="46_6g5px"]
+[ext_resource type="AudioStream" uid="uid://cjh4xnuqdtk5j" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/6.mp3" id="47_b5ewa"]
+[ext_resource type="AudioStream" uid="uid://big3s6jk2joxc" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/7.mp3" id="48_c55y1"]
+[ext_resource type="AudioStream" uid="uid://etxv4k8c5dwa" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/1.mp3" id="49_8qemk"]
+[ext_resource type="AudioStream" uid="uid://ck4s4jgf4xw0" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/2.mp3" id="50_0x6gq"]
+[ext_resource type="AudioStream" uid="uid://by4jtvduggx8i" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/3.mp3" id="51_pa1bf"]
+[ext_resource type="AudioStream" uid="uid://by516eum05wd3" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/4.mp3" id="52_ilp4q"]
+[ext_resource type="AudioStream" uid="uid://1u1crvo2nd4b" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/5.mp3" id="53_11nay"]
+[ext_resource type="AudioStream" uid="uid://u5kcgr8wfwr" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/6.mp3" id="54_6fj66"]
+[ext_resource type="AudioStream" uid="uid://doy7udy31pncu" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene2/7.mp3" id="55_da030"]
+[ext_resource type="AudioStream" uid="uid://ccjoj0lji1kjo" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/1.mp3" id="56_t1dpj"]
+[ext_resource type="AudioStream" uid="uid://wkmyfv3cjcea" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/2.mp3" id="57_ap54v"]
+[ext_resource type="AudioStream" uid="uid://b82p57dg8kopr" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/3.mp3" id="58_8b4px"]
+[ext_resource type="AudioStream" uid="uid://cjea5nfvldmgo" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/4.mp3" id="59_mojs6"]
+[ext_resource type="AudioStream" uid="uid://cfvracuso0217" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/5.mp3" id="60_kfr43"]
+[ext_resource type="AudioStream" uid="uid://bsi4iif6fabjj" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/6.mp3" id="61_o8mgt"]
+[ext_resource type="AudioStream" uid="uid://bpd77ioxmx6tc" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene3/7.mp3" id="62_ud4ik"]
+[ext_resource type="AudioStream" uid="uid://dp5theh5rm1oe" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/1.mp3" id="63_4xkkm"]
+[ext_resource type="AudioStream" uid="uid://b8axy7q8f2i68" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/2.mp3" id="64_wtyt6"]
+[ext_resource type="AudioStream" uid="uid://dxl1sackjevtm" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/3.mp3" id="65_fk8ya"]
+[ext_resource type="AudioStream" uid="uid://ce076yec2pjrx" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/4.mp3" id="66_1meuu"]
+[ext_resource type="AudioStream" uid="uid://n1gxblcr0b0g" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/5.mp3" id="67_06jcr"]
+[ext_resource type="AudioStream" uid="uid://btv7x64unb1kk" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/6.mp3" id="68_5gluh"]
+[ext_resource type="AudioStream" uid="uid://c7j4dua400ust" path="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/7.mp3" id="69_hwmsm"]
+[ext_resource type="AudioStream" uid="uid://d1dl1e52y35ny" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/1.mp3" id="70_fof37"]
+[ext_resource type="AudioStream" uid="uid://ced36ftlkvq52" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/2.mp3" id="71_xfkbg"]
+[ext_resource type="AudioStream" uid="uid://ddrth4ea51vwc" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/3.mp3" id="72_4cpp5"]
+[ext_resource type="AudioStream" uid="uid://cam5brqxavkbf" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/4.mp3" id="73_2l35w"]
+[ext_resource type="AudioStream" uid="uid://bse0t1rcghl61" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/5.mp3" id="74_vt1ex"]
+[ext_resource type="AudioStream" uid="uid://ewoyu05jltgx" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/6.mp3" id="75_rea2k"]
+[ext_resource type="AudioStream" uid="uid://ckvsdeduiy73r" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/7.mp3" id="76_awihd"]
+[ext_resource type="AudioStream" uid="uid://cbt1db8aj6h74" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/8.mp3" id="77_ad024"]
+[ext_resource type="AudioStream" uid="uid://be5eddkxycxx8" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/9.mp3" id="78_i4gup"]
+[ext_resource type="AudioStream" uid="uid://b5v5squbdydb7" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/10.mp3" id="79_env77"]
+[ext_resource type="AudioStream" uid="uid://dv0pl6po10v88" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/11.mp3" id="80_bcujd"]
+[ext_resource type="AudioStream" uid="uid://fi0l0qd2bds1" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/12.mp3" id="81_m0nst"]
+[ext_resource type="AudioStream" uid="uid://de3vogev07i8u" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/13.mp3" id="82_mo3yv"]
+[ext_resource type="AudioStream" uid="uid://bdgbqpgwhqva2" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/14.mp3" id="83_fcq2b"]
+[ext_resource type="AudioStream" uid="uid://bocux27tvqrho" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/15.mp3" id="84_hlpuw"]
+[ext_resource type="AudioStream" uid="uid://m4i5ju661h8h" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/16.mp3" id="85_ckrqo"]
+[ext_resource type="AudioStream" uid="uid://s6yg1lbrock5" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/17.mp3" id="86_md4bp"]
+[ext_resource type="AudioStream" uid="uid://b7d8g3vgdglf3" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/18.mp3" id="87_vhddu"]
+[ext_resource type="AudioStream" uid="uid://dkx1dsjkx23pn" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/19.mp3" id="88_4bi04"]
+[ext_resource type="AudioStream" uid="uid://clnpuwg4wphc5" path="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/20.mp3" id="89_dnfn3"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_n0fra")
@@ -103,84 +151,304 @@ bus = &"sfx"
 
 [node name="slime_hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_fe16u")
+bus = &"sfx"
 
 [node name="octopus_shot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("11_tkjrb")
+bus = &"sfx"
 
 [node name="teleport" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_hq4iy")
+bus = &"sfx"
 
 [node name="1st_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_6eser")
+bus = &"music"
 
 [node name="2nd_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_vppl7")
+bus = &"music"
 
 [node name="3rd_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("15_nflfr")
+bus = &"music"
 
 [node name="4th_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("16_bhitp")
+bus = &"music"
 
 [node name="5th_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_4s04k")
+bus = &"music"
 
 [node name="6th_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_gpink")
+bus = &"music"
 
 [node name="7th_tutorial" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_x3lbo")
+bus = &"music"
 
 [node name="story1" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("22_f2l13")
+bus = &"music"
 
 [node name="story2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("23_f0tey")
+bus = &"music"
 
 [node name="story3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("24_8jsf4")
+bus = &"music"
 
 [node name="story4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("25_dhd2l")
+bus = &"music"
 
 [node name="story5" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_mvt0f")
+bus = &"music"
 
 [node name="story6" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_g5k51")
+bus = &"music"
 
 [node name="story7" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_0g1on")
+bus = &"music"
 
 [node name="story8" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_avhr7")
+bus = &"music"
 
 [node name="story9" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("30_21ly5")
+bus = &"music"
 
 [node name="story10" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_56ic5")
+bus = &"music"
 
 [node name="story11" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_owpg0")
+bus = &"music"
 
 [node name="story12" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("31_4pibt")
+bus = &"music"
 
 [node name="story13" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("32_4fduk")
+bus = &"music"
 
 [node name="story14" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("33_oon6m")
+bus = &"music"
 
 [node name="story15" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("34_72sob")
+bus = &"music"
 
 [node name="story16" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("35_stc1c")
+bus = &"music"
 
 [node name="story17" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("36_apcnj")
+bus = &"music"
 
 [node name="story18" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("39_2u0a8")
+bus = &"music"
+
+[node name="cut1_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_0sdbc")
+bus = &"music"
+
+[node name="cut1_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_ecrdv")
+bus = &"music"
+
+[node name="cut1_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_y6xyp")
+bus = &"music"
+
+[node name="cut1_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_ptfmo")
+bus = &"music"
+
+[node name="cut1_5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("46_6g5px")
+bus = &"music"
+
+[node name="cut1_6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("47_b5ewa")
+bus = &"music"
+
+[node name="cut1_7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48_c55y1")
+bus = &"music"
+
+[node name="cut2_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("49_8qemk")
+bus = &"music"
+
+[node name="cut2_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("50_0x6gq")
+bus = &"music"
+
+[node name="cut2_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("51_pa1bf")
+bus = &"music"
+
+[node name="cut2_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("52_ilp4q")
+bus = &"music"
+
+[node name="cut2_5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("53_11nay")
+bus = &"music"
+
+[node name="cut2_6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("54_6fj66")
+bus = &"music"
+
+[node name="cut2_7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("55_da030")
+bus = &"music"
+
+[node name="cut3_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_t1dpj")
+bus = &"music"
+
+[node name="cut3_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_ap54v")
+bus = &"music"
+
+[node name="cut3_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("58_8b4px")
+bus = &"music"
+
+[node name="cut3_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("59_mojs6")
+bus = &"music"
+
+[node name="cut3_5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("60_kfr43")
+bus = &"music"
+
+[node name="cut3_6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("61_o8mgt")
+bus = &"music"
+
+[node name="cut3_7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("62_ud4ik")
+bus = &"music"
+
+[node name="cut4_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("63_4xkkm")
+bus = &"music"
+
+[node name="cut4_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("64_wtyt6")
+bus = &"music"
+
+[node name="cut4_3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("65_fk8ya")
+bus = &"music"
+
+[node name="cut4_4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("66_1meuu")
+bus = &"music"
+
+[node name="cut4_5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("67_06jcr")
+bus = &"music"
+
+[node name="cut4_6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("68_5gluh")
+bus = &"music"
+
+[node name="cut4_7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("69_hwmsm")
+bus = &"music"
+
+[node name="finalcut1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("70_fof37")
+bus = &"music"
+
+[node name="finalcut2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("71_xfkbg")
+bus = &"music"
+
+[node name="finalcut3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("72_4cpp5")
+bus = &"music"
+
+[node name="finalcut4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("73_2l35w")
+bus = &"music"
+
+[node name="finalcut5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("74_vt1ex")
+bus = &"music"
+
+[node name="finalcut6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("75_rea2k")
+bus = &"music"
+
+[node name="finalcut7" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("76_awihd")
+bus = &"music"
+
+[node name="finalcut8" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("77_ad024")
+bus = &"music"
+
+[node name="finalcut9" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("78_i4gup")
+bus = &"music"
+
+[node name="finalcut10" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("79_env77")
+bus = &"music"
+
+[node name="finalcut11" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("80_bcujd")
+bus = &"music"
+
+[node name="finalcut12" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("81_m0nst")
+bus = &"music"
+
+[node name="finalcut13" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("82_mo3yv")
+bus = &"music"
+
+[node name="finalcut14" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("83_fcq2b")
+bus = &"music"
+
+[node name="finalcut15" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("84_hlpuw")
+bus = &"music"
+
+[node name="finalcut16" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("85_ckrqo")
+bus = &"music"
+
+[node name="finalcut17" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("86_md4bp")
+bus = &"music"
+
+[node name="finalcut18" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("87_vhddu")
+bus = &"music"
+
+[node name="finalcut19" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("88_4bi04")
+bus = &"music"
+
+[node name="finalcut20" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("89_dnfn3")
+bus = &"music"

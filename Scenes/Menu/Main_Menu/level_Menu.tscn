@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://rrfg6wxb2eae"]
+[gd_scene load_steps=30 format=3 uid="uid://rrfg6wxb2eae"]
 
 [ext_resource type="Script" path="res://Scripts/level_Menu.gd" id="1_v21kn"]
 [ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="2_0ga8v"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://r7ot8i210g06" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1.png" id="9_qkb7f"]
 [ext_resource type="Texture2D" uid="uid://r3lrw36oiu3f" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1-area-50.png" id="10_xcwnw"]
 [ext_resource type="Texture2D" uid="uid://cyiy7osj3i4uc" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2.png" id="11_ownny"]
-[ext_resource type="Texture2D" uid="uid://bf1hn0ioa5ooj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/Chest_with_Bolt.png" id="11_wwbvl"]
 [ext_resource type="Texture2D" uid="uid://d2dp2utfjtfwg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3.png" id="12_05r3n"]
 [ext_resource type="Texture2D" uid="uid://st5agbgp1ssj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area.png" id="13_l1pe1"]
 [ext_resource type="Texture2D" uid="uid://b6h83itdguvs7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4.png" id="13_w0gct"]
@@ -131,21 +130,6 @@ texture = ExtResource("9_qkb7f")
 visible = false
 layout_mode = 1
 
-[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
-position = Vector2(1129, -99.5)
-texture = ExtResource("11_wwbvl")
-hframes = 6
-
-[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/chest"]
-self_modulate = Color(1, 1, 1, 0.607843)
-offset_left = -93.0
-offset_top = -81.0
-offset_right = 105.0
-offset_bottom = 70.0
-texture_normal = ExtResource("16_5mng4")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="world2_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 visible = false
 layout_mode = 1
@@ -199,21 +183,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
 stretch_mode = 3
-
-[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
-position = Vector2(1129, -99.5)
-texture = ExtResource("11_wwbvl")
-hframes = 6
-
-[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world2_area/chest"]
-self_modulate = Color(1, 1, 1, 0.607843)
-offset_left = -93.0
-offset_top = -81.0
-offset_right = 105.0
-offset_bottom = 70.0
-texture_normal = ExtResource("16_5mng4")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="world3_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 visible = false
@@ -269,21 +238,6 @@ grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
 stretch_mode = 3
 
-[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
-position = Vector2(1129, -99.5)
-texture = ExtResource("11_wwbvl")
-hframes = 6
-
-[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world3_area/chest"]
-self_modulate = Color(1, 1, 1, 0.607843)
-offset_left = -93.0
-offset_top = -81.0
-offset_right = 105.0
-offset_bottom = 70.0
-texture_normal = ExtResource("16_5mng4")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="world4_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 visible = false
 layout_mode = 1
@@ -338,21 +292,6 @@ grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
 stretch_mode = 3
 
-[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
-position = Vector2(1129, -99.5)
-texture = ExtResource("11_wwbvl")
-hframes = 6
-
-[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world4_area/chest"]
-self_modulate = Color(1, 1, 1, 0.607843)
-offset_left = -93.0
-offset_top = -81.0
-offset_right = 105.0
-offset_bottom = 70.0
-texture_normal = ExtResource("16_5mng4")
-ignore_texture_size = true
-stretch_mode = 5
-
 [node name="world5_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 visible = false
 layout_mode = 1
@@ -406,21 +345,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
 stretch_mode = 3
-
-[node name="chest" type="Sprite2D" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
-position = Vector2(1129, -99.5)
-texture = ExtResource("11_wwbvl")
-hframes = 6
-
-[node name="locked" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world5_area/chest"]
-self_modulate = Color(1, 1, 1, 0.607843)
-offset_left = -93.0
-offset_top = -81.0
-offset_right = 105.0
-offset_bottom = 70.0
-texture_normal = ExtResource("16_5mng4")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="Back_Button_LevelMenu" type="TextureButton" parent="Level_Menu_Bg"]
 layout_mode = 0

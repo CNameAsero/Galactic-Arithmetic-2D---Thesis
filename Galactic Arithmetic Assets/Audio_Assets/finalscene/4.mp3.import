@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cam5brqxavkbf"
+path="res://.godot/imported/4.mp3-da73009817599372ed1a9aa83d84fe09.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/finalscene/4.mp3"
+dest_files=["res://.godot/imported/4.mp3-da73009817599372ed1a9aa83d84fe09.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

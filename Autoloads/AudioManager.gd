@@ -47,6 +47,62 @@ var story16 : AudioStreamPlayer
 var story17 : AudioStreamPlayer
 var story18 : AudioStreamPlayer
 
+##CUTSCENE 1
+@onready var cut1_1 = $cut1_1
+@onready var cut1_2 = $cut1_2
+@onready var cut1_3 = $cut1_3
+@onready var cut1_4 = $cut1_4
+@onready var cut1_5 = $cut1_5
+@onready var cut1_6 = $cut1_6
+@onready var cut1_7 = $cut1_7
+
+@onready var cut2_1 = $cut2_1
+@onready var cut2_2 = $cut2_2
+@onready var cut2_3 = $cut2_3
+@onready var cut2_4 = $cut2_4
+@onready var cut2_5 = $cut2_5
+@onready var cut2_6 = $cut2_6
+@onready var cut2_7 = $cut2_7
+
+@onready var cut3_1 = $cut3_1
+@onready var cut3_2 = $cut3_2
+@onready var cut3_3 = $cut3_3
+@onready var cut3_4 = $cut3_4
+@onready var cut3_5 = $cut3_5
+@onready var cut3_6 = $cut3_6
+@onready var cut3_7 = $cut3_7
+
+@onready var cut4_1 = $cut4_1
+@onready var cut4_2 = $cut4_2
+@onready var cut4_3 = $cut4_3
+@onready var cut4_4 = $cut4_4
+@onready var cut4_5 = $cut4_5
+@onready var cut4_6 = $cut4_6
+@onready var cut4_7 = $cut4_7
+
+
+@onready var finalcut1 = $finalcut1
+@onready var finalcut2 = $finalcut2
+@onready var finalcut3 = $finalcut3
+@onready var finalcut4 = $finalcut4
+@onready var finalcut5 = $finalcut5
+@onready var finalcut6 = $finalcut6
+@onready var finalcut7 = $finalcut7
+@onready var finalcut8 = $finalcut8
+@onready var finalcut9 = $finalcut9
+@onready var finalcut10 = $finalcut10
+@onready var finalcut11 = $finalcut11
+@onready var finalcut12 = $finalcut12
+@onready var finalcut13 = $finalcut13
+@onready var finalcut14 = $finalcut14
+@onready var finalcut15 = $finalcut15
+@onready var finalcut16 = $finalcut16
+@onready var finalcut17 = $finalcut17
+@onready var finalcut18 = $finalcut18
+@onready var finalcut19 = $finalcut19
+@onready var finalcut20 = $finalcut20
+
+
 var is_music_muted = false #bg music menu
 var is_level1music_muted = false #bg music level1
 var is_sfx_muted = false
@@ -233,3 +289,202 @@ func sto18():
 	story18.play()
 func sto18_stop():
 	story18.stop()
+
+#CUTSCENE 1
+func cut1():
+	cut1_1.play()
+func cut1_stop():
+	cut1_1.stop()
+func cut2():
+	cut1_2.play()
+func cut2_stop():
+	cut1_2.stop()
+func cut3():
+	cut1_3.play()
+func cut3_stop():
+	cut1_3.stop()
+func cut4():
+	cut1_4.play()
+func cut4_stop():
+	cut1_4.stop()
+func cut5():
+	cut1_5.play()
+func cut5_stop():
+	cut1_5.stop()
+func cut6():
+	cut1_6.play()
+func cut6_stop():
+	cut1_6.stop()
+func cut7():
+	cut1_7.play()
+func cut7_stop():
+	cut1_7.stop()
+
+func cutt1():
+	cut2_1.play()
+func cutt1_stop():
+	cut2_1.stop()
+func cutt2():
+	cut2_2.play()
+func cutt2_stop():
+	cut2_2.stop()
+func cutt3():
+	cut2_3.play()
+func cutt3_stop():
+	cut2_3.stop()
+func cutt4():
+	cut2_4.play()
+func cutt4_stop():
+	cut2_4.stop()
+func cutt5():
+	cut2_5.play()
+func cutt5_stop():
+	cut2_5.stop()
+func cutt6():
+	cut2_6.play()
+func cutt6_stop():
+	cut2_6.stop()
+func cutt7():
+	cut2_7.play()
+func cutt7_stop():
+	cut2_7.stop()
+
+
+func cuttt1():
+	cut3_1.play()
+func cuttt1_stop():
+	cut3_1.stop()
+func cuttt2():
+	cut3_2.play()
+func cuttt2_stop():
+	cut3_2.stop()
+func cuttt3():
+	cut3_3.play()
+func cuttt3_stop():
+	cut3_3.stop()
+func cuttt4():
+	cut3_4.play()
+func cuttt4_stop():
+	cut3_4.stop()
+func cuttt5():
+	cut3_5.play()
+func cuttt5_stop():
+	cut3_5.stop()
+func cuttt6():
+	cut3_6.play()
+func cuttt6_stop():
+	cut3_6.stop()
+func cuttt7():
+	cut3_7.play()
+func cuttt7_stop():
+	cut3_7.stop()
+
+func cutttt1():
+	cut4_1.play()
+func cutttt1_stop():
+	cut4_1.stop()
+func cutttt2():
+	cut4_2.play()
+func cutttt2_stop():
+	cut4_2.stop()
+func cutttt3():
+	cut4_3.play()
+func cutttt3_stop():
+	cut4_3.stop()
+func cutttt4():
+	cut4_4.play()
+func cutttt4_stop():
+	cut4_4.stop()
+func cutttt5():
+	cut4_5.play()
+func cutttt5_stop():
+	cut4_5.stop()
+func cutttt6():
+	cut4_6.play()
+func cutttt6_stop():
+	cut4_6.stop()
+func cutttt7():
+	cut4_7.play()
+func cutttt7_stop():
+	cut4_7.stop()
+
+func final_cut1():
+	finalcut1.play()
+func final_cut1_stop():
+	finalcut1.stop()
+func final_cut2():
+	finalcut2.play()
+func final_cut2_stop():
+	finalcut2.stop()
+func final_cut3():
+	finalcut3.play()
+func final_cut3_stop():
+	finalcut3.stop()
+func final_cut4():
+	finalcut4.play()
+func final_cut4_stop():
+	finalcut4.stop()
+func final_cut5():
+	finalcut5.play()
+func final_cut5_stop():
+	finalcut5.stop()
+func final_cut6():
+	finalcut6.play()
+func final_cut6_stop():
+	finalcut6.stop()
+func final_cut7():
+	finalcut7.play()
+func final_cut7_stop():
+	finalcut7.stop()
+func final_cut8():
+	finalcut8.play()
+func final_cut8_stop():
+	finalcut8.stop()
+func final_cut9():
+	finalcut9.play()
+func final_cut9_stop():
+	finalcut9.stop()
+func final_cut10():
+	finalcut10.play()
+func final_cut10_stop():
+	finalcut10.stop()
+func final_cut11():
+	finalcut11.play()
+func final_cut11_stop():
+	finalcut11.stop()
+func final_cut12():
+	finalcut12.play()
+func final_cut12_stop():
+	finalcut12.stop()
+func final_cut13():
+	finalcut13.play()
+func final_cut13_stop():
+	finalcut13.stop()
+func final_cut14():
+	finalcut14.play()
+func final_cut14_stop():
+	finalcut14.stop()
+func final_cut15():
+	finalcut15.play()
+func final_cut15_stop():
+	finalcut15.stop()
+func final_cut16():
+	finalcut16.play()
+func final_cut16_stop():
+	finalcut16.stop()
+func final_cut17():
+	finalcut17.play()
+func final_cut17_stop():
+	finalcut17.stop()
+func final_cut18():
+	finalcut18.play()
+func final_cut18_stop():
+	finalcut18.stop()
+func final_cut19():
+	finalcut19.play()
+func final_cut19_stop():
+	finalcut19.stop()
+func final_cut20():
+	finalcut20.play()
+func final_cut20_stop():
+	finalcut20.stop()

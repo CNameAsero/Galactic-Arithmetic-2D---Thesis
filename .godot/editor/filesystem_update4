@@ -20,3 +20,17 @@ res://Scenes/levels/level_4.tscn
 res://Scenes/levels/level_1.tscn
 res://Scenes/Menu/Main_Menu/levels_sub_menu_city.tscn
 res://finalscene.gd
+res://Scenes/Menu/Main_Menu/level_Menu.tscn
+res://Autoloads/AudioManager.gd
+res://Scenes/Menu/Main_Menu/cut_scene_1.gd
+res://Scripts/story_board(cut_scene).gd
+res://Scenes/Menu/Main_Menu/cut_scene_2.gd
+res://Scenes/Mechanics/health_system.tscn
+res://cut_scene3.gd
+res://Scenes/Menu/Main_Menu/cut_scene_4.gd
+res://Scenes/Menu/Main_Menu/main_menu.tscn
+res://Scripts/main_menu.gd
+res://Autoloads/GameSettings.gd
+res://Scripts/health_system.gd
+res://Scenes/levels/level_11.tscn
+res://Scenes/levels/World_3_Tileset.tres

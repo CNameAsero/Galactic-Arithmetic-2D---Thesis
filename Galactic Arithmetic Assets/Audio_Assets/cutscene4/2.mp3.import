@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8axy7q8f2i68"
+path="res://.godot/imported/2.mp3-6766f0c3896595eca7845b1fa6522fab.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/cutscene4/2.mp3"
+dest_files=["res://.godot/imported/2.mp3-6766f0c3896595eca7845b1fa6522fab.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

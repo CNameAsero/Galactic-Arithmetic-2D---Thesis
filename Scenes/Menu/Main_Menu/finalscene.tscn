@@ -1,18 +1,17 @@
-[gd_scene load_steps=28 format=3 uid="uid://bfwcc01q5f7s6"]
+[gd_scene load_steps=27 format=3 uid="uid://bfwcc01q5f7s6"]
 
 [ext_resource type="Script" path="res://finalscene.gd" id="1_u3ef8"]
 [ext_resource type="Texture2D" uid="uid://b72eolepv2m74" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/1.png" id="2_ysi3y"]
 [ext_resource type="Texture2D" uid="uid://btyasaindiukn" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/2.png" id="3_i7iny"]
 [ext_resource type="Texture2D" uid="uid://db8opln35lce6" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/3.png" id="4_427ol"]
-[ext_resource type="Texture2D" uid="uid://dosilwvd2s4rr" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/4.png" id="5_j5rab"]
-[ext_resource type="Texture2D" uid="uid://bqvvley3o1a0r" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/5.png" id="6_w8ki6"]
-[ext_resource type="Texture2D" uid="uid://cxletsqk0r1xm" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/6.png" id="7_g4kck"]
-[ext_resource type="Texture2D" uid="uid://bw6ib5tmxxqxw" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/7.png" id="8_trwk1"]
+[ext_resource type="Texture2D" uid="uid://dlf188njqcqi4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/4.png" id="5_j5rab"]
+[ext_resource type="Texture2D" uid="uid://bpxf5kij6o72c" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/5.png" id="6_w8ki6"]
+[ext_resource type="Texture2D" uid="uid://bfebubyipnc8j" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/6.png" id="7_g4kck"]
+[ext_resource type="Texture2D" uid="uid://dn7kff1go6y4u" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/7.png" id="8_trwk1"]
 [ext_resource type="Texture2D" uid="uid://ytcnjn6y265g" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/8.png" id="9_6rgip"]
 [ext_resource type="Texture2D" uid="uid://drgsj7rhs1sfs" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/9.png" id="10_dhvc0"]
 [ext_resource type="Texture2D" uid="uid://beoj6ko45v6s5" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/10.png" id="11_jdp3l"]
 [ext_resource type="Texture2D" uid="uid://iip3poptfk7l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/11.png" id="12_x3gh3"]
-[ext_resource type="Texture2D" uid="uid://dqeloy28qviia" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/12.png" id="13_s60u2"]
 [ext_resource type="Texture2D" uid="uid://cmpxbkrj3gykb" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/13.png" id="14_2ddru"]
 [ext_resource type="Texture2D" uid="uid://dbmupw1njpvba" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/14.png" id="15_al3if"]
 [ext_resource type="Texture2D" uid="uid://bhp2nu3vb0ftj" path="res://Galactic Arithmetic Assets/Story_Board_Assets/final_cutscene/15.png" id="16_1eo8s"]
@@ -118,65 +117,58 @@ visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("13_s60u2")
+texture = ExtResource("14_2ddru")
 
 [node name="Page13" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("14_2ddru")
+texture = ExtResource("15_al3if")
 
 [node name="Page14" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("15_al3if")
+texture = ExtResource("16_1eo8s")
 
 [node name="Page15" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("16_1eo8s")
+texture = ExtResource("17_8g0pg")
 
 [node name="Page16" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("17_8g0pg")
+texture = ExtResource("18_pyhg2")
 
 [node name="Page17" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("18_pyhg2")
+texture = ExtResource("19_xufo3")
 
 [node name="Page18" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("19_xufo3")
+texture = ExtResource("20_ehrgw")
 
 [node name="Page19" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("20_ehrgw")
-
-[node name="Page20" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
 texture = ExtResource("21_xvwst")
 
-[node name="Page21" type="TextureRect" parent="."]
+[node name="Page20" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0

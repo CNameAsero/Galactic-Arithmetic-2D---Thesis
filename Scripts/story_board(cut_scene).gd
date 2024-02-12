@@ -5,7 +5,6 @@ var storyboardPlayed = false
 
 func _ready():
 	audio(currentPage)
-
 #storyboard next if tap the screen
 func _on_tap_to_continue_pressed():
 	AudioManager.play_button_sfx()

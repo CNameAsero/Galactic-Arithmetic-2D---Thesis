@@ -8,8 +8,9 @@ var player_invulnerable = false
 @onready var cutscene3 = false
 @onready var cutscene4 = false
 @onready var finalcutscene = false
-
 @onready var tutorialPlayed = false
+
+@onready var isHard = false
 
 #for level to proceed to next
 var current_world = 0

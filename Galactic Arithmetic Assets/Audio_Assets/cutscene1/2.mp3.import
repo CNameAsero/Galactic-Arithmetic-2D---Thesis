@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://rodewx2mistq"
+path="res://.godot/imported/2.mp3-edd723a1f219162bfcce199ad4866e6d.mp3str"
+
+[deps]
+
+source_file="res://Galactic Arithmetic Assets/Audio_Assets/cutscene1/2.mp3"
+dest_files=["res://.godot/imported/2.mp3-edd723a1f219162bfcce199ad4866e6d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

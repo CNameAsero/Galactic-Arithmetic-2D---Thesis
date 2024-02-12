@@ -1,14 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://dyvtdhajlwyx8"]
+[gd_scene load_steps=16 format=3 uid="uid://dyvtdhajlwyx8"]
 
 [ext_resource type="Script" path="res://Scripts/health_system.gd" id="1_33p3b"]
 [ext_resource type="Texture2D" uid="uid://66snsfexycjo" path="res://Galactic Arithmetic Assets/hp/hp.png" id="2_afuim"]
+[ext_resource type="Texture2D" uid="uid://dhoyl0vvoic8t" path="res://Galactic Arithmetic Assets/hp/HealthSystem_HardLevel.png" id="3_qeg6j"]
 
 [sub_resource type="Animation" id="Animation_2takf"]
 resource_name = "hp 0"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -23,7 +24,7 @@ resource_name = "hp 1"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -38,7 +39,7 @@ resource_name = "hp 2"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -53,7 +54,7 @@ resource_name = "hp 3"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -71,6 +72,106 @@ _data = {
 "hp 3": SubResource("Animation_bq1mo")
 }
 
+[sub_resource type="Animation" id="Animation_o8q02"]
+resource_name = "hp0"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_2b6j2"]
+resource_name = "hp1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_1h1vy"]
+resource_name = "hp2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_30fle"]
+resource_name = "hp3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_8rbh5"]
+resource_name = "hp4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_xgtan"]
+resource_name = "hp5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("5hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_00lrs"]
+_data = {
+"hp0": SubResource("Animation_o8q02"),
+"hp1": SubResource("Animation_2b6j2"),
+"hp2": SubResource("Animation_1h1vy"),
+"hp3": SubResource("Animation_30fle"),
+"hp4": SubResource("Animation_8rbh5"),
+"hp5": SubResource("Animation_xgtan")
+}
+
 [node name="health_system" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -80,13 +181,25 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_33p3b")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="3hp" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1856, 1055)
 texture = ExtResource("2_afuim")
 hframes = 4
-frame = 3
+frame = 1
+
+[node name="5hp" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1815, 1057)
+texture = ExtResource("3_qeg6j")
+hframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0tfsy")
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_00lrs")
 }
