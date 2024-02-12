@@ -255,13 +255,13 @@ stretch_mode = 0
 [node name="about" type="Node2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button"]
 visible = false
 
-[node name="about_us_names" type="Sprite2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-position = Vector2(-91, -212)
-texture = ExtResource("21_k0ns0")
-
 [node name="about_us_description" type="Sprite2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
 position = Vector2(-91, -212)
 texture = ExtResource("22_xbp7n")
+
+[node name="about_us_names" type="Sprite2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
+position = Vector2(-91, -212)
+texture = ExtResource("21_k0ns0")
 
 [node name="next_button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
 offset_left = 370.0

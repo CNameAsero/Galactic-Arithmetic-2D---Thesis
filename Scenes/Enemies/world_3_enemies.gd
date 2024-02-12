@@ -212,7 +212,7 @@ func player_hurt():
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.05
-	var total_blink_time = 1
+	var total_blink_time = 0.5
 	var sprite = $"../../slime_player_joystick/slime_player_joystik/Sprite2D"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)

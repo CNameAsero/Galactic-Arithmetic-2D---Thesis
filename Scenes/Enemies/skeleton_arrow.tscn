@@ -19,15 +19,11 @@ func _physics_process(delta):
 	position += direction * speed * delta
 
 func player_hurt():
-	if GameSettings.player_invulnerable:
-		return
-
 	GameSettings.player_invulnerable = true
-	timer.start()
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.05
-	var total_blink_time = 1
+	var total_blink_time = 0.5
 	var sprite = $\"../slime_player_joystick/slime_player_joystik/Sprite2D\"
 	
 	sprite.modulate = Color(1, 1, 1, 0.5)
@@ -38,15 +34,10 @@ func player_hurt():
 	
 	sprite.visible = true
 	sprite.modulate = Color(1, 1, 1, 1)
-
 func _on_body_entered(body):
-	if body.is_in_group(\"player\") and not GameSettings.player_invulnerable:
+	if body.is_in_group(\"player\"):
 		$Sprite2D.num + 1
 		player_hurt()
-
-
-func _on_timer_timeout():
-	GameSettings.player_invulnerable = false
 "
 
 [sub_resource type="GDScript" id="GDScript_010ny"]
@@ -83,8 +74,4 @@ script = SubResource("GDScript_010ny")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_skejf")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 1.5
-
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

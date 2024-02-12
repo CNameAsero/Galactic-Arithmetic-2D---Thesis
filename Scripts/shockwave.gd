@@ -16,11 +16,7 @@ func _physics_process(delta):
 	position += direction * speed * delta
 
 func player_hurt():
-	if GameSettings.player_invulnerable:
-		return
-
 	GameSettings.player_invulnerable = true
-	timer.start()
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.05
@@ -36,9 +32,6 @@ func player_hurt():
 	sprite.visible = true
 	sprite.modulate = Color(1, 1, 1, 1)
 func _on_body_entered(body):
-	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$Sprite2D.num + 1
 		player_hurt()
-
-func _on_timer_timeout():
-	GameSettings.player_invulnerable = false
