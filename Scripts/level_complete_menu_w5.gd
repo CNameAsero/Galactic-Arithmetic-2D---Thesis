@@ -21,6 +21,8 @@ func _on_next_level_button_pressed():
 	get_tree().paused = false
 
 func _on_restart_button_pressed():
+	if GameSettings.current_level % 5 == 0:
+		GameSettings.current_world -= 1
 	AudioManager.play_button_sfx()
 	get_tree().paused = false
 	game_manager.restart()

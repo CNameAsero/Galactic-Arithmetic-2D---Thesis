@@ -65,3 +65,4 @@ res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.gd
 res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.tscn
 res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.gd
 res://Scenes/Menu/Main_Menu/levels_sub_menu_city.gd
+res://Scripts/game_manager_world_1-2.gd

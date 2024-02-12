@@ -4,7 +4,6 @@ var direction : Vector2 = Vector2.RIGHT
 @export var speed : float = 300
 
 @onready var health_system = $"../health_system"
-@onready var timer = $Timer
 
 func _ready():
 	await get_tree().create_timer(3).timeout

@@ -23,6 +23,7 @@ func _on_tap_to_continue_pressed():
 			GameSettings.cutscene1 = true
 			if GameSettings.currentlevel[10] && GameSettings.cutscene2:
 				get_tree().change_scene_to_file("res://Scenes/levels/level_11.tscn")
+				AudioManager.level3_music.play()
 				AudioManager.background_music.stop()
 			else:
 				get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
@@ -35,6 +36,7 @@ func _on_skip_pressed():
 	if GameSettings.currentlevel[10] && GameSettings.cutscene2:
 		get_tree().change_scene_to_file("res://Scenes/levels/level_11.tscn")
 		AudioManager.background_music.stop()
+		AudioManager.level3_music.play()
 	else:
 		AudioManager.background_music.play()
 		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
