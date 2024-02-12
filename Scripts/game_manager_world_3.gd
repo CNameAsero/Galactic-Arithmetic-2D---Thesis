@@ -145,11 +145,13 @@ func reset_player_position():
 	$"../Slime_player".position = player_pos
 
 func restart():
+	GameSettings.player_invulnerable = false
 	reset_hp()
 	var current_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file(current_scene)
 
 func reset_for_next_level():
+	GameSettings.player_invulnerable = false
 	reset_hp()
 	collected_numbers.clear()
 	collected_operators.clear()

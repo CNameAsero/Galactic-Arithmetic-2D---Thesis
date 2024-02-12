@@ -125,6 +125,8 @@ func check_final_answer():
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
 			GameSettings.max_unlocked_level += 1
 			GameSettings.currentlevel[GameSettings.current_level] = true
+		if GameSettings.current_level % 5 == 0:
+			GameSettings.current_world += 1
 		reset_for_next_level()
 		var time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
@@ -140,11 +142,13 @@ func reset_hp():
 	health_system._health = 3
 
 func restart():
+	GameSettings.player_invulnerable = false
 	reset_hp()
 	var current_scene = get_tree().current_scene.scene_file_path
 	get_tree().change_scene_to_file(current_scene)
 
 func reset_for_next_level():
+	GameSettings.player_invulnerable = false
 	reset_hp()
 	collected_items.clear()
 	collected_numbers.clear()
