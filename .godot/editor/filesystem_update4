@@ -31,3 +31,11 @@ res://Scripts/fly_bullet.gd
 res://Scenes/Mechanics/gamemanager_fraction.tscn
 res://Scenes/levels/level_21.tscn
 res://Scenes/Menu/Main_Menu/levels_sub_menu_city.tscn
+res://Scripts/paused_menu.gd
+res://Autoloads/AudioManager.tscn
+res://Scenes/levels/level_8.tscn
+res://Scripts/paused_menu_w3.gd
+res://Scripts/paused_menu_w4.gd
+res://Scripts/game_over_w5.gd
+res://Scripts/paused_menu_w5.gd
+res://Scripts/game_over.gd
