@@ -110,6 +110,85 @@ texture_pressed = ExtResource("6_si3jo")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="w1_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 295.0
+offset_right = 379.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_qkb7f")
+
+[node name="w2_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 295.0
+offset_right = 379.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_ownny")
+
+[node name="w3_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 295.0
+offset_right = 379.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_05r3n")
+
+[node name="w4_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 295.0
+offset_right = 379.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_w0gct")
+
+[node name="w5_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = 295.0
+offset_right = 379.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_svs62")
+
 [node name="world1_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 layout_mode = 1
 anchors_preset = 8
@@ -126,21 +205,6 @@ grow_vertical = 2
 texture_normal = ExtResource("8_v354u")
 texture_pressed = ExtResource("10_xcwnw")
 stretch_mode = 0
-
-[node name="w1_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = 289.5
-offset_right = 379.0
-offset_bottom = 437.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("9_qkb7f")
 
 [node name="levels_sub_menu" type="Control" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
 visible = false
@@ -386,21 +450,6 @@ texture_normal = ExtResource("13_l1pe1")
 texture_pressed = ExtResource("14_2lijg")
 stretch_mode = 0
 
-[node name="w2_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world2_area"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = 289.5
-offset_right = 379.0
-offset_bottom = 437.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_ownny")
-
 [node name="levels_sub_menu_ocean" parent="Level_Menu_Bg/Picture_Border_Level/world2_area" instance=ExtResource("16_2mr4q")]
 visible = false
 layout_mode = 1
@@ -413,10 +462,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = -258.5
-offset_right = 307.0
-offset_bottom = 259.5
+offset_left = -325.0
+offset_top = -275.0
+offset_right = 325.0
+offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
@@ -440,21 +489,6 @@ texture_normal = ExtResource("16_m7t2t")
 texture_pressed = ExtResource("17_hwl2e")
 stretch_mode = 0
 
-[node name="w3_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world3_area"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = 289.5
-offset_right = 379.0
-offset_bottom = 437.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("12_05r3n")
-
 [node name="levels_sub_menu_lava" parent="Level_Menu_Bg/Picture_Border_Level/world3_area" instance=ExtResource("20_c0xf5")]
 visible = false
 layout_mode = 1
@@ -467,10 +501,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = -258.5
-offset_right = 307.0
-offset_bottom = 259.5
+offset_left = -325.0
+offset_top = -275.0
+offset_right = 325.0
+offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
@@ -494,21 +528,6 @@ texture_normal = ExtResource("19_lmgwv")
 texture_pressed = ExtResource("20_ab0r7")
 stretch_mode = 0
 
-[node name="w4_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world4_area"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = 289.5
-offset_right = 379.0
-offset_bottom = 437.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("13_w0gct")
-
 [node name="levels_sub_menu_ice" parent="Level_Menu_Bg/Picture_Border_Level/world4_area" instance=ExtResource("24_7imo4")]
 visible = false
 layout_mode = 1
@@ -521,10 +540,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = -258.5
-offset_right = 307.0
-offset_bottom = 259.5
+offset_left = -325.0
+offset_top = -275.0
+offset_right = 325.0
+offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")
@@ -548,21 +567,6 @@ texture_normal = ExtResource("23_njvr4")
 texture_pressed = ExtResource("22_c67cx")
 stretch_mode = 0
 
-[node name="w5_text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world5_area"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -379.0
-offset_top = 289.5
-offset_right = 379.0
-offset_bottom = 437.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("14_svs62")
-
 [node name="levels_sub_menu_city" parent="Level_Menu_Bg/Picture_Border_Level/world5_area" instance=ExtResource("28_p4ogf")]
 visible = false
 layout_mode = 1
@@ -575,10 +579,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -309.0
-offset_top = -258.5
-offset_right = 307.0
-offset_bottom = 259.5
+offset_left = -325.0
+offset_top = -275.0
+offset_right = 325.0
+offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("16_5mng4")

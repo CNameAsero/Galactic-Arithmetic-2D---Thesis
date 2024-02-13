@@ -2,6 +2,8 @@ extends Node
 
 var player_invulnerable = false
 
+var world_completed = {}
+
 @onready var storyboardPlayed = false
 @onready var cutscene1 = false
 @onready var cutscene2 = false
@@ -29,6 +31,9 @@ false, false, false, false, false,
 false, false, false, false, false, 
 false, false, false, false, false, 
 false, false, false, false, false, false]
+
+var music_volume = -10
+var sfx_volume = -10
 
 func _autosave():
 	var save_data = {

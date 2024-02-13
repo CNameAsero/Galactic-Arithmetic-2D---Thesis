@@ -15,6 +15,7 @@ func _on_restart_button_pressed():
 	get_tree().paused = false
 
 func _on_home_button_pressed():
+	GameSettings.player_invulnerable = false
 	AudioManager.play_button_sfx()
 	if GameSettings.current_level <= 5:
 		AudioManager.level1_music.stop()

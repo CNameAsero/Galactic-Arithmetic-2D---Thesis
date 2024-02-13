@@ -8,6 +8,7 @@ func _on_restart_button_pressed():
 	get_tree().paused = false
 
 func _on_home_button_pressed():
+	GameSettings.player_invulnerable = false
 	game_manager.reset_hp()
 	AudioManager.play_button_sfx()
 	AudioManager.level1_music.stop()

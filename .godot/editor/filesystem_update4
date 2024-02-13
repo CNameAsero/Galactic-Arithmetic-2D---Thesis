@@ -1,4 +1,5 @@
 res://Scenes/levels/level_1.tscn
+<<<<<<< Updated upstream
 res://Scenes/levels/level1_TileSet2dPixel.tres
 res://World4_Tileset.tres
 res://Autoloads/GameSettings.tscn
@@ -11,3 +12,41 @@ res://Scenes/timer_w4.tscn
 res://Scenes/levels/level_18.tscn
 res://Scenes/levels/level_17.tscn
 res://Scenes/levels/level_16.tscn
+=======
+res://Scripts/level_Menu.gd
+res://Scenes/Menu/Main_Menu/main_menu.tscn
+res://Scripts/main_menu.gd
+res://Autoloads/AudioManager.tscn
+res://Autoloads/AudioManager.gd
+res://Autoloads/GameSettings.tscn
+res://Autoloads/GameSettings.gd
+res://Scripts/level_complete_menu.gd
+res://Scenes/Menu/Main_Menu/cut_scene_1.tscn
+res://Scripts/game_manager_world_1-2.gd
+res://Scenes/levels/level_5.tscn
+res://Scenes/Menu/Main_Menu/cut_scene_1.gd
+res://Scenes/levels/16x16Tileset.tres
+res://Scenes/levels/level_10.tscn
+res://Scenes/levels/level_15.tscn
+res://Scenes/levels/World_3_Tileset.tres
+res://gamemanager_pemdas.gd
+res://Scripts/level_complete_menu_w3.gd
+res://Scenes/levels/level_20.tscn
+res://World4_Tileset.tres
+res://Scripts/level_complete_menu_w4.gd
+res://Scenes/levels/level_25.tscn
+res://Scenes/levels/world5_tileset.tres
+res://Scripts/level_complete_menu_w5.gd
+res://Scripts/gamemanager_algebra.gd
+res://Scripts/gamemanager_fraction.gd
+res://Scenes/Menu/Main_Menu/cut_scene_2.tscn
+res://Scenes/Menu/Main_Menu/cut_scene_3.tscn
+res://Scripts/game_over_w5.gd
+res://Scripts/paused_menu_w5.gd
+res://Scripts/paused_menu_w4.gd
+res://Scripts/game_over_w4.gd
+res://Scripts/paused_menu.gd
+res://Scripts/game_over.gd
+res://Scripts/paused_menu_w3.gd
+res://Scripts/game_over_w3.gd
+>>>>>>> Stashed changes

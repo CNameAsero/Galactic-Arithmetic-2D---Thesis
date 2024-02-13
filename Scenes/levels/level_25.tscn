@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="2_3crqy"]
 [ext_resource type="PackedScene" uid="uid://duqjg07usvrms" path="res://Scenes/Enemies/world_5_enemies.tscn" id="2_g44ke"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_gcrqx"]
-[ext_resource type="Texture2D" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="2_n7v32"]
+[ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="2_n7v32"]
 [ext_resource type="PackedScene" uid="uid://b56ju42518v17" path="res://Scenes/Mechanics/numbers_w5.tscn" id="3_0c3vi"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_6dvnb"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_fs61n"]

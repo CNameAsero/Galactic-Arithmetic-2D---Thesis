@@ -10,6 +10,7 @@ func _on_restart_button_pressed():
 func _on_home_button_pressed():
 	game_manager.reset_hp()
 	AudioManager.play_button_sfx()
+	GameSettings.player_invulnerable = false
 	AudioManager.level1_music.stop()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")

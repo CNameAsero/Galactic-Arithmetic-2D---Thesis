@@ -69,3 +69,24 @@ func _process(delta):
 		$Level_Menu_Bg/Picture_Border_Level/world4_area/locked.hide()
 	if GameSettings.currentlevel[20]:
 		$Level_Menu_Bg/Picture_Border_Level/world5_area/locked.hide()
+
+	if $Level_Menu_Bg/Picture_Border_Level/world1_area.visible:
+		$Level_Menu_Bg/Picture_Border_Level/w1_text.show()
+	else:
+		$Level_Menu_Bg/Picture_Border_Level/w1_text.hide()
+	if $Level_Menu_Bg/Picture_Border_Level/world2_area.visible:
+		$Level_Menu_Bg/Picture_Border_Level/w2_text.show()
+	else:
+		$Level_Menu_Bg/Picture_Border_Level/w2_text.hide()
+	if $Level_Menu_Bg/Picture_Border_Level/world3_area.visible:
+		$Level_Menu_Bg/Picture_Border_Level/w3_text.show()
+	else:
+		$Level_Menu_Bg/Picture_Border_Level/w3_text.hide()
+	if $Level_Menu_Bg/Picture_Border_Level/world4_area.visible:
+		$Level_Menu_Bg/Picture_Border_Level/w4_text.show()
+	else:
+		$Level_Menu_Bg/Picture_Border_Level/w4_text.hide()
+	if $Level_Menu_Bg/Picture_Border_Level/world5_area.visible:
+		$Level_Menu_Bg/Picture_Border_Level/w5_text.show()
+	else:
+		$Level_Menu_Bg/Picture_Border_Level/w5_text.hide()

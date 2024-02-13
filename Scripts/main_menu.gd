@@ -2,6 +2,8 @@ extends Control
 
 func _ready():
 	AudioManager.background_music.play()
+	$Option_Menu_Bg/Inside_BG/music_slider.value = GameSettings.music_volume
+	$Option_Menu_Bg/Inside_BG/sfx_slider.value = GameSettings.sfx_volume
 
 #change scene to story or level menu
 func _on_play_button_pressed():
@@ -33,14 +35,16 @@ func _on_back_button_option_menu_pressed():
 	$Option_Menu_Bg.hide()
 #music toggle button in settings
 
-func _on_music_slider_value_changed(value):
+func _on_music_slider_value_changed(value) -> void:
+	GameSettings.music_volume = value
 	AudioServer.set_bus_volume_db(AudioManager.Music_bus, value)
 	if value == -30:
 		AudioServer.set_bus_mute(AudioManager.Music_bus, true)
 	else:
 		AudioServer.set_bus_mute(AudioManager.Music_bus, false)
 
-func _on_sfx_slider_value_changed(value):
+func _on_sfx_slider_value_changed(value) -> void:
+	GameSettings.sfx_volume = value
 	AudioServer.set_bus_volume_db(AudioManager.Sfx_bus, value)
 	if value == -30:
 		AudioServer.set_bus_mute(AudioManager.Sfx_bus, true)

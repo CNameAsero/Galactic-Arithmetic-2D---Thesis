@@ -10,6 +10,7 @@ func _on_restart_button_pressed():
 func _on_home_button_pressed():
 	game_manager.reset_hp()
 	AudioManager.play_button_sfx()
+	GameSettings.player_invulnerable = false
 	if GameSettings.current_level >= 20:
 		AudioManager.level5_music.stop()
 	get_tree().paused = false

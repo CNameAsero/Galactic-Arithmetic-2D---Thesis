@@ -103,9 +103,12 @@ func check_final_answer():
 	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
 		reset_for_next_level()
-		if GameSettings.current_level % 5 == 0:
-			GameSettings.current_world += 1
-			print("add 1 sa world ocean")
+		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene1 && !GameSettings.world_completed.get(GameSettings.current_level, false):
+				GameSettings.current_world += 1
+				GameSettings.world_completed[GameSettings.current_level] = true
+		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false):
+				GameSettings.current_world += 1
+				GameSettings.world_completed[GameSettings.current_level] = true
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
 			GameSettings.max_unlocked_level += 1
 			GameSettings.currentlevel[GameSettings.current_level] = true
