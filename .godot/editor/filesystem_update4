@@ -25,3 +25,10 @@ res://Scenes/Menu/Main_Menu/cut_scene_4.tscn
 res://Scenes/Menu/Main_Menu/cut_scene_4.gd
 res://Scenes/Enemies/shockwave.tscn
 res://Scripts/shockwave.gd
+res://Scenes/Enemies/fly_bullet.tscn
+res://Scripts/fly_bullet.gd
+res://Scenes/Enemies/thief_bullet.tscn
+res://Scripts/thief_bullet.gd
+res://Scenes/Enemies/bullets.tscn
+res://Scripts/bullets.gd
+res://Scenes/Enemies/skeleton_arrow.tscn
