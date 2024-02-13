@@ -6,10 +6,13 @@ var direction : Vector2 = Vector2.RIGHT
 @onready var health_system = $"../health_system"
 @onready var animation_player = $AnimationPlayer
 @onready var timer = $Timer
+@onready var sprite = $"../slime_player_joystick/slime_player_joystik/Sprite2D"
 
 func _ready():
 	animation_player.play("shockwave")
 	await get_tree().create_timer(1.5).timeout
+	sprite.visible = true
+	sprite.modulate = Color(1, 1, 1, 1)
 	queue_free()
 
 func _physics_process(delta):

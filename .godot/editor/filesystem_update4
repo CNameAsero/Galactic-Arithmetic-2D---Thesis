@@ -23,3 +23,5 @@ res://Scenes/Menu/Main_Menu/cut_scene_3.tscn
 res://cut_scene3.gd
 res://Scenes/Menu/Main_Menu/cut_scene_4.tscn
 res://Scenes/Menu/Main_Menu/cut_scene_4.gd
+res://Scenes/Enemies/shockwave.tscn
+res://Scripts/shockwave.gd
