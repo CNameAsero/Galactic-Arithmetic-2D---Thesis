@@ -32,3 +32,7 @@ res://Scripts/thief_bullet.gd
 res://Scenes/Enemies/bullets.tscn
 res://Scripts/bullets.gd
 res://Scenes/Enemies/skeleton_arrow.tscn
+res://Scenes/levels/level_5.tscn
+res://Scenes/levels/level_15.tscn
+res://Scenes/levels/level_20.tscn
+res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.tscn

@@ -198,29 +198,29 @@ num_term = 3
 variable_term = 3
 x_value = 2
 
-[node name="4_2nd" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
+[node name="12" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(961, 963)
-number = 4
+number = 12
 
-[node name="2" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
+[node name="8" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(1787, 529)
-number = 2
+number = 8
 
-[node name="7" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
+[node name="3" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(176, 530)
-number = 7
+number = 3
 
-[node name="5" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
+[node name="6" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(962, 149)
-number = 5
+number = 6
 
 [node name="4" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(1353, 155)
 number = 4
 
-[node name="2_2nd" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
+[node name="8_8" parent="gamemanager_algebra" instance=ExtResource("3_0c3vi")]
 position = Vector2(1286, 252)
-number = 2
+number = 8
 
 [node name="×" parent="gamemanager_algebra" instance=ExtResource("4_qfyvu")]
 position = Vector2(674, 216)
@@ -229,10 +229,6 @@ oper = "×"
 [node name="+" parent="gamemanager_algebra" instance=ExtResource("4_qfyvu")]
 position = Vector2(1247, 813)
 oper = "+"
-
-[node name="^" parent="gamemanager_algebra" instance=ExtResource("4_qfyvu")]
-position = Vector2(622, 812)
-oper = "^"
 
 [node name="x1" parent="gamemanager_algebra" instance=ExtResource("5_jaodm")]
 position = Vector2(1790, 967)
@@ -250,7 +246,7 @@ variable_to_display = "x"
 position = Vector2(959, 596)
 x = 4
 integer = 24
-display_chest = "lvl4"
+display_chest = "lvl5"
 
 [node name="timer" parent="gamemanager_algebra" instance=ExtResource("7_gjwmv")]
 
