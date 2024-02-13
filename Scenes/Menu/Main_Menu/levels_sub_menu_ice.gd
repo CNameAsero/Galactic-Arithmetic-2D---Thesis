@@ -11,7 +11,7 @@ func _on_exit_button_pressed():
 
 func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
-	if GameSettings.cutscene3 || GameSettings.currentlevel[15]:
+	if GameSettings.cutscene3 && GameSettings.currentlevel[15]:
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_16.tscn")

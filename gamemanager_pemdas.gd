@@ -118,7 +118,7 @@ func check_final_answer():
 
 	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
-		if GameSettings.current_level % 5 == 0 and !GameSettings.currentlevel[10]:
+		if GameSettings.current_level % 5 == 0:
 			GameSettings.current_world += 1
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
 			GameSettings.max_unlocked_level += 1

@@ -122,11 +122,11 @@ func check_final_answer():
 	var current_result = evaluate_rpn(shunting_yard(), variables)
 	if str(current_result) == str(final_answer):
 		AudioManager.level_complete_sfx.play()
+		if GameSettings.current_level % 5 == 0:
+			GameSettings.current_world += 1
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
 			GameSettings.max_unlocked_level += 1
 			GameSettings.currentlevel[GameSettings.current_level] = true
-		if GameSettings.current_level % 5 == 0:
-			GameSettings.current_world += 1
 		reset_for_next_level()
 		var time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed

@@ -22,24 +22,18 @@ func _on_tap_to_continue_pressed():
 			audio_stop(currentPage)
 			GameSettings.cutscene4 = true
 			if GameSettings.currentlevel[20] && GameSettings.cutscene4:
-				get_tree().change_scene_to_file("res://Scenes/levels/level_21.tscn")
-				AudioManager.level5_music.play()
-				AudioManager.background_music.stop()
-			else:
-				AudioManager.background_music.play()
 				get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+				AudioManager.background_music.play()
+				AudioManager.level4_music.stop()
 
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
 	GameSettings.cutscene4 = true
 	if GameSettings.currentlevel[20] && GameSettings.cutscene4:
-		get_tree().change_scene_to_file("res://Scenes/levels/level_21.tscn")
-		AudioManager.level5_music.play()
-		AudioManager.background_music.stop()
-	else:
-		AudioManager.background_music.play()
 		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+		AudioManager.background_music.play()
+		AudioManager.level4_music.stop()
 
 func audio(num):
 	if num >= 1 and num <= 7:
