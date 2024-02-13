@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://13e1kxxruiya"]
+[gd_scene load_steps=37 format=3 uid="uid://13e1kxxruiya"]
 
 [ext_resource type="TileSet" uid="uid://bru2ps4sjjt66" path="res://World4_Tileset.tres" id="1_q3i6q"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_rq44p"]
@@ -15,9 +15,17 @@
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_8ajfy"]
 [ext_resource type="PackedScene" uid="uid://bkrwfkw8lyn73" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="13_msfvo"]
 [ext_resource type="PackedScene" uid="uid://bv8w2y4n6rixp" path="res://Scenes/Menu/level_complete_menu_w4.tscn" id="14_ddr35"]
+[ext_resource type="Texture2D" uid="uid://du8bokt8nexnj" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_1.png" id="14_wxfrr"]
 [ext_resource type="PackedScene" uid="uid://b7tkalqgic7ty" path="res://Scenes/Menu/Game_Over/game_over_w4.tscn" id="15_6k4ir"]
+[ext_resource type="Texture2D" uid="uid://gy36a8nfrnkc" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_2.png" id="15_okjyg"]
+[ext_resource type="Texture2D" uid="uid://l18rpa4ryo8y" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_3.png" id="16_sfjm7"]
+[ext_resource type="Texture2D" uid="uid://7hmpe7xurkcs" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_4.png" id="17_jxeju"]
 [ext_resource type="PackedScene" uid="uid://r5g5crpsi4fk" path="res://Scenes/Mechanics/powerups_w4.tscn" id="17_mww5y"]
+[ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="18_5rpjx"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="18_70vat"]
+[ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="19_n17xn"]
+[ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="20_srwwr"]
+[ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="21_00rto"]
 
 [sub_resource type="GDScript" id="GDScript_t6ans"]
 script/source = "extends Node2D
@@ -26,7 +34,9 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 16
-
+	if !GameSettings.isTuto4:
+		$tutorial.show()
+		get_tree().paused = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -145,6 +155,42 @@ _data = {
 "right": SubResource("Animation_6hker"),
 "up": SubResource("Animation_g04ig")
 }
+
+[sub_resource type="GDScript" id="GDScript_03gmu"]
+script/source = "extends Node2D
+
+@onready var notes = [$notes1, $notes2, $notes3, $notes4]
+var currentNoteIndex := 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	show_current_note()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()  # Hide all notes before showing the current one
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto4 = true
+	get_tree().paused = false
+	$\".\".queue_free()
+"
 
 [node name="level_16" type="Node2D"]
 script = SubResource("GDScript_t6ans")
@@ -598,6 +644,43 @@ id = 1
 position = Vector2(714, 514)
 id = 1
 
+[node name="tutorial" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(960, 540)
+script = SubResource("GDScript_03gmu")
+
+[node name="notes1" type="Sprite2D" parent="tutorial"]
+texture = ExtResource("14_wxfrr")
+
+[node name="notes2" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("15_okjyg")
+
+[node name="notes3" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("16_sfjm7")
+
+[node name="notes4" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("17_jxeju")
+
+[node name="next" type="TextureButton" parent="tutorial"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("18_5rpjx")
+texture_pressed = ExtResource("19_n17xn")
+
+[node name="exit" type="TextureButton" parent="tutorial"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("20_srwwr")
+texture_pressed = ExtResource("21_00rto")
+
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -633,4 +716,6 @@ offset_right = -913.5
 offset_bottom = 494.5
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
+[connection signal="pressed" from="tutorial/next" to="tutorial" method="_on_next_pressed"]
+[connection signal="pressed" from="tutorial/exit" to="tutorial" method="_on_exit_pressed"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]

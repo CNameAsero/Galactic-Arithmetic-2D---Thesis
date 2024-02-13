@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bs22kufrkxsj1"]
+[gd_scene load_steps=36 format=3 uid="uid://bs22kufrkxsj1"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_m6f7g"]
 [ext_resource type="PackedScene" uid="uid://duqjg07usvrms" path="res://Scenes/Enemies/world_5_enemies.tscn" id="2_cyekm"]
@@ -18,7 +18,13 @@
 [ext_resource type="Texture2D" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="14_uui5t"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="15_4o8un"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="15_rgqxl"]
+[ext_resource type="Texture2D" uid="uid://ccpcwvop5pgkn" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_1.png" id="15_v4epa"]
+[ext_resource type="Texture2D" uid="uid://c3no2jvmsgvoh" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_2.png" id="16_kioni"]
 [ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="18_4pgqc"]
+[ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="19_osrf4"]
+[ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="20_0c4aa"]
+[ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="21_jm727"]
+[ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="22_bmv5t"]
 
 [sub_resource type="GDScript" id="GDScript_5ertt"]
 script/source = "extends Node2D
@@ -27,7 +33,9 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 21
-
+	if !GameSettings.isTuto5:
+		$tutorial.show()
+		get_tree().paused = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -146,6 +154,42 @@ _data = {
 "right": SubResource("Animation_6hker"),
 "up": SubResource("Animation_g04ig")
 }
+
+[sub_resource type="GDScript" id="GDScript_fkite"]
+script/source = "extends Node2D
+
+@onready var notes = [$notes1, $notes2]
+var currentNoteIndex := 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	show_current_note()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()  # Hide all notes before showing the current one
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto5 = true
+	get_tree().paused = false
+	$\".\".queue_free()
+"
 
 [node name="level_21" type="Node2D"]
 script = SubResource("GDScript_5ertt")
@@ -375,6 +419,35 @@ hp_buff = 1
 speed_buff = 200.0
 time_buff = 15.0
 
+[node name="tutorial" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(960, 540)
+script = SubResource("GDScript_fkite")
+
+[node name="notes1" type="Sprite2D" parent="tutorial"]
+texture = ExtResource("15_v4epa")
+
+[node name="notes2" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("16_kioni")
+
+[node name="next" type="TextureButton" parent="tutorial"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("19_osrf4")
+texture_pressed = ExtResource("20_0c4aa")
+
+[node name="exit" type="TextureButton" parent="tutorial"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("21_jm727")
+texture_pressed = ExtResource("22_bmv5t")
+
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
 offset_top = 8.0
@@ -410,4 +483,6 @@ offset_right = -916.0
 offset_bottom = 494.0
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
+[connection signal="pressed" from="tutorial/next" to="tutorial" method="_on_next_pressed"]
+[connection signal="pressed" from="tutorial/exit" to="tutorial" method="_on_exit_pressed"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
