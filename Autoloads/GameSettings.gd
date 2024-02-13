@@ -28,7 +28,25 @@ var max_unlocked_level = 0
 false, false, false, false, false, 
 false, false, false, false, false, 
 false, false, false, false, false, 
-false, false, false, false, false]
+false, false, false, false, false, false]
 
-
+func _autosave():
+	var save_data = {
+		"storyboard_played?": storyboardPlayed,
+		"1sttutorial_played?": tutorialPlayed,
+		"cutscene1?": cutscene1,
+		"cutscene2?": cutscene2,
+		"cutscene3?": cutscene3,
+		"cutscene4?": cutscene4,
+		"finalscene?": finalcutscene,
+		"isHard?": isHard,
+		"tuto1?": isTuto1,
+		"tuto2?": isTuto2,
+		"tuto3?": isTuto3,
+		"tuto4?": isTuto4,
+		"tuto5?": isTuto5,
+		"currentworld?": current_world,
+		"maxunlocked_level": max_unlocked_level,
+		"currentlevels:": currentlevel
+	}
 

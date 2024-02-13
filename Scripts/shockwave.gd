@@ -10,7 +10,7 @@ var direction : Vector2 = Vector2.RIGHT
 
 func _ready():
 	animation_player.play("shockwave")
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(3).timeout
 	sprite1.visible = true
 	sprite1.modulate = Color(1, 1, 1, 1)
 	queue_free()

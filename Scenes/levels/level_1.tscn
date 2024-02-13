@@ -27,12 +27,12 @@
 [ext_resource type="Script" path="res://Scripts/powerups.gd" id="31_dgdo3"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="31_mabie"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="31_y0qct"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="32_0lw40"]
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="32_0lw40"]
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="32_ecply"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="32_skq6l"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="33_wcq8o"]
+[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="33_wcq8o"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="34_5d8p4"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/AddedTime.png" id="34_qy447"]
+[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="34_qy447"]
 [ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="35_brgsv"]
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="36_8f003"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="37_clg2m"]
@@ -53,7 +53,6 @@
 
 [sub_resource type="GDScript" id="GDScript_h75cv"]
 script/source = "extends Node2D
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

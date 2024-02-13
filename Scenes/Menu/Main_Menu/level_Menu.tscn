@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://rrfg6wxb2eae"]
+[gd_scene load_steps=46 format=3 uid="uid://rrfg6wxb2eae"]
 
 [ext_resource type="Script" path="res://Scripts/level_Menu.gd" id="1_v21kn"]
 [ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="2_0ga8v"]
@@ -9,25 +9,41 @@
 [ext_resource type="Texture2D" uid="uid://dkfldh6yw52xd" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Back.png" id="7_uao7h"]
 [ext_resource type="Texture2D" uid="uid://u0umsqtlk1dh" path="res://Galactic Arithmetic Assets/Settings_Assets/Back_Violet.png" id="8_4oy0f"]
 [ext_resource type="Texture2D" uid="uid://bwjjno1pnni37" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Level_1_BG 1.png" id="8_v354u"]
-[ext_resource type="PackedScene" uid="uid://dikyi515jidoo" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_grass.tscn" id="9_47w8l"]
 [ext_resource type="Texture2D" uid="uid://r7ot8i210g06" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1.png" id="9_qkb7f"]
+[ext_resource type="Script" path="res://Scripts/levels_sub_menu.gd" id="10_5mwug"]
 [ext_resource type="Texture2D" uid="uid://r3lrw36oiu3f" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w1-area-50.png" id="10_xcwnw"]
+[ext_resource type="Texture2D" uid="uid://s8t12uni42x7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/75%-lvl1-thu.png" id="11_b6w6g"]
 [ext_resource type="Texture2D" uid="uid://cyiy7osj3i4uc" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2.png" id="11_ownny"]
 [ext_resource type="Texture2D" uid="uid://d2dp2utfjtfwg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3.png" id="12_05r3n"]
+[ext_resource type="Texture2D" uid="uid://gjmxwqq17iyp" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/ewan.png" id="12_f0fs7"]
+[ext_resource type="Texture2D" uid="uid://b6whjkdysyeg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/grass_holder.png" id="13_khjp6"]
 [ext_resource type="Texture2D" uid="uid://st5agbgp1ssj" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area.png" id="13_l1pe1"]
 [ext_resource type="Texture2D" uid="uid://b6h83itdguvs7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4.png" id="13_w0gct"]
 [ext_resource type="Texture2D" uid="uid://ccopvqjgxmycv" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w2-area-50.png" id="14_2lijg"]
+[ext_resource type="Texture2D" uid="uid://dpk8aj1das11a" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/grass.png" id="14_kxget"]
 [ext_resource type="Texture2D" uid="uid://78v73yhqtlqs" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5.png" id="14_svs62"]
+[ext_resource type="Texture2D" uid="uid://jbbvb6brx65q" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level1_normal.png" id="15_ykbxu"]
 [ext_resource type="PackedScene" uid="uid://cpjbkprfm5i4j" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ocean.tscn" id="16_2mr4q"]
 [ext_resource type="Texture2D" uid="uid://da0ujwnsf1l0n" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/Padlock.png" id="16_5mng4"]
+[ext_resource type="Texture2D" uid="uid://c86c026nsu1cn" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl1 pressed.png" id="16_6e0w0"]
 [ext_resource type="Texture2D" uid="uid://dakd01ngska0k" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area.png" id="16_m7t2t"]
 [ext_resource type="Texture2D" uid="uid://bofoy8b5gd8b7" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w3-area-50.png" id="17_hwl2e"]
+[ext_resource type="Texture2D" uid="uid://rtii8qtk3ck8" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level_2_normal.png" id="17_y1i7c"]
+[ext_resource type="Texture2D" uid="uid://dafum73crbprv" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl2 pressed.png" id="18_juvnu"]
 [ext_resource type="Texture2D" uid="uid://p8ngd6i21qbo" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area.png" id="19_lmgwv"]
 [ext_resource type="Texture2D" uid="uid://c3ee6n0a7rpje" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w4-area-50.png" id="20_ab0r7"]
 [ext_resource type="PackedScene" uid="uid://diojfj8gidou3" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_lava.tscn" id="20_c0xf5"]
+[ext_resource type="Texture2D" uid="uid://ospqk5r04vho" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/level3_normal.png" id="20_hqphs"]
+[ext_resource type="Texture2D" uid="uid://cqkvmc43noqu5" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl3 pressed.png" id="21_44lus"]
 [ext_resource type="Texture2D" uid="uid://spua6m6y6n12" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area50.png" id="22_c67cx"]
+[ext_resource type="Texture2D" uid="uid://cfj3ofkceuhyg" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/LEVEL 4.png" id="22_snrtl"]
+[ext_resource type="Texture2D" uid="uid://b65df3cry4f1j" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl4 pressed.png" id="23_2lx4r"]
 [ext_resource type="Texture2D" uid="uid://dd0fb8wu06ygb" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/w5-area.png" id="23_njvr4"]
+[ext_resource type="Texture2D" uid="uid://etdmri5jcn0e" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/LEVEL 5.png" id="24_4pu0k"]
 [ext_resource type="PackedScene" uid="uid://b7imt8slluse8" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_ice.tscn" id="24_7imo4"]
+[ext_resource type="Texture2D" uid="uid://blk0tru0g7lcx" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/lvl5 pressed.png" id="25_5xe0a"]
+[ext_resource type="Texture2D" uid="uid://cbwnar20vbvi6" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/close.png" id="26_qw0wp"]
+[ext_resource type="Texture2D" uid="uid://dh2us3h2p4v80" path="res://Galactic Arithmetic Assets/Level_Menu_Assets/grass_level_sub_menu/exit_button_tap.png" id="27_3tsbm"]
 [ext_resource type="PackedScene" uid="uid://dalmnihcn14ed" path="res://Scenes/Menu/Main_Menu/levels_sub_menu_city.tscn" id="28_p4ogf"]
 
 [node name="level_Menu" type="Control"]
@@ -126,9 +142,231 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("9_qkb7f")
 
-[node name="levels_sub_menu" parent="Level_Menu_Bg/Picture_Border_Level/world1_area" instance=ExtResource("9_47w8l")]
+[node name="levels_sub_menu" type="Control" parent="Level_Menu_Bg/Picture_Border_Level/world1_area"]
 visible = false
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_5mwug")
+
+[node name="baka-bg" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -499.0
+offset_top = -399.0
+offset_right = 801.0
+offset_bottom = 401.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.762235, 1)
+texture = ExtResource("11_b6w6g")
+expand_mode = 1
+
+[node name="panel" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu"]
+self_modulate = Color(1, 1, 1, 0.580392)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -400.0
+offset_right = 500.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_f0fs7")
+expand_mode = 1
+
+[node name="grass" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+self_modulate = Color(1, 1, 1, 0.313726)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -350.0
+offset_right = 375.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_khjp6")
+expand_mode = 1
+
+[node name="grass-text" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/grass"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -335.5
+offset_top = -53.0
+offset_right = 341.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_kxget")
+
+[node name="level1" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -100.0
+offset_right = -25.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_ykbxu")
+texture_pressed = ExtResource("16_6e0w0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="level2" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -100.0
+offset_right = 435.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("17_y1i7c")
+texture_pressed = ExtResource("18_juvnu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl2" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level2"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 412.0
+offset_bottom = 115.0
+texture = ExtResource("16_5mng4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level3" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = 50.0
+offset_right = -25.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("20_hqphs")
+texture_pressed = ExtResource("21_44lus")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl3" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level3"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("16_5mng4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level4" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 435.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("22_snrtl")
+texture_pressed = ExtResource("23_2lx4r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl4" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level4"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("16_5mng4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="level5" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 200.0
+offset_right = 213.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("24_4pu0k")
+texture_pressed = ExtResource("25_5xe0a")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="locked-lvl5" type="TextureRect" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level5"]
+self_modulate = Color(1, 1, 1, 0.686275)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 410.0
+offset_bottom = 115.0
+texture = ExtResource("16_5mng4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="exit_button" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -54.0
+offset_top = -20.0
+offset_right = 21.0
+offset_bottom = 55.0
+grow_horizontal = 0
+texture_normal = ExtResource("26_qw0wp")
+texture_pressed = ExtResource("27_3tsbm")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="world2_area" type="TextureButton" parent="Level_Menu_Bg/Picture_Border_Level"]
 visible = false
@@ -362,6 +600,12 @@ position = Vector2(958, 538)
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/Left_Button" to="." method="_on_left_button_pressed"]
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/Right_Button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area" to="." method="_on_world_1_area_pressed"]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level1" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_level_1_pressed" flags=18]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level2" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_level_2_pressed" flags=18]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level3" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_level_3_pressed" flags=18]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level4" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_level_4_pressed" flags=18]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/level5" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_level_5_pressed" flags=18]
+[connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu/panel/exit_button" to="Level_Menu_Bg/Picture_Border_Level/world1_area/levels_sub_menu" method="_on_exit_button_pressed" flags=18]
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world2_area" to="." method="_on_world_2_area_pressed"]
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world3_area" to="." method="_on_world_3_area_pressed"]
 [connection signal="pressed" from="Level_Menu_Bg/Picture_Border_Level/world4_area" to="." method="_on_world_4_area_pressed"]

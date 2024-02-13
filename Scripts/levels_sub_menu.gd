@@ -11,13 +11,13 @@ func _on_exit_button_pressed():
 
 func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
-	if GameSettings.tutorialPlayed:
+	if !GameSettings.tutorialPlayed:
+		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
+		AudioManager.background_music.stop()
+	else:
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
-	else:
-		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
-		AudioManager.background_music.stop()
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
