@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_7i85y"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_t31ck"]
-[ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_hrbwc"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_hu1ba"]
 [ext_resource type="PackedScene" uid="uid://br0575d74v2ro" path="res://Scenes/Enemies/blowfish.tscn" id="5_nnolj"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_8i6i7"]
@@ -13,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="10_x24fu"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="11_1sbeh"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="12_q7gqe"]
+[ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="13_shkq1"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="13_txqck"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="14_d5nho"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="15_k5nao"]
@@ -471,7 +471,7 @@ script = ExtResource("2_t31ck")
 
 [node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_hrbwc")
+texture = ExtResource("13_shkq1")
 hframes = 4
 vframes = 6
 frame = 9

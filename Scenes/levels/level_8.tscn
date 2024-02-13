@@ -2,7 +2,6 @@
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_ityal"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_6foly"]
-[ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_nqt34"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_xwxw6"]
 [ext_resource type="PackedScene" uid="uid://cctb0dww2joqb" path="res://Scenes/Enemies/octopus.tscn" id="5_74ad0"]
 [ext_resource type="Script" path="res://Scripts/bool_handler.gd" id="6_3uiii"]
@@ -14,10 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="14_qrwvl"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="15_7ufph"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="16_me4so"]
-[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="17_5b680"]
+[ext_resource type="Texture2D" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="17_5b680"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="18_708yx"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="19_qf4p2"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="20_ax7qx"]
+[ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="25_lnt8r"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="27_0ikyi"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="28_s8lo8"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="29_blv35"]
@@ -800,7 +800,7 @@ script = ExtResource("2_6foly")
 
 [node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_nqt34")
+texture = ExtResource("25_lnt8r")
 hframes = 4
 vframes = 6
 frame = 9

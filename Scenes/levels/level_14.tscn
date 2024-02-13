@@ -1,6 +1,6 @@
 [gd_scene load_steps=27 format=3 uid="uid://b71a3jxxxc6i4"]
 
-[ext_resource type="TileSet" uid="uid://duiogmk67uwrf" path="res://Scenes/levels/World_3_Tileset.tres" id="1_06cmj"]
+[ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_06cmj"]
 [ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_va0hy"]
 [ext_resource type="PackedScene" uid="uid://pc3v0o5lloge" path="res://Scenes/Mechanics/numbers_w3.tscn" id="3_ch8cu"]
 [ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="4_g2shf"]

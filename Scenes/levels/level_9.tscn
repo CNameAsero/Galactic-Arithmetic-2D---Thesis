@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_hcgwd"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_l4yoi"]
 [ext_resource type="PackedScene" uid="uid://br0575d74v2ro" path="res://Scenes/Enemies/blowfish.tscn" id="2_s53uy"]
-[ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_o8j0e"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_or8p3"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="5_68pfb"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="6_bku2e"]
@@ -27,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="20_qn7is"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="21_0165u"]
 [ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="22_ip7v4"]
+[ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="23_souei"]
 [ext_resource type="Texture2D" uid="uid://dag8hg0rvi0s4" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON_75.png" id="23_tum4a"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="24_kfobj"]
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="24_m3eu0"]
@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="39_x3bw8"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="40_cmn02"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="41_gfs1m"]
-[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="42_8as7e"]
+[ext_resource type="Texture2D" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="42_8as7e"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="43_xc8tx"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="44_gpm5q"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="45_064qh"]
@@ -724,7 +724,7 @@ script = ExtResource("2_hcgwd")
 
 [node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_o8j0e")
+texture = ExtResource("23_souei")
 hframes = 4
 vframes = 6
 frame = 9

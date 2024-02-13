@@ -12,6 +12,12 @@ var player_invulnerable = false
 
 @onready var isHard = false
 
+@onready var isTuto1 = false
+@onready var isTuto2 = false
+@onready var isTuto3 = false
+@onready var isTuto4 = false
+@onready var isTuto5 = false
+
 #for level to proceed to next
 var current_world = 0
 var current_level = 0

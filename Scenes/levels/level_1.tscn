@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://b1bkvbpublp12"]
+[gd_scene load_steps=63 format=3 uid="uid://b1bkvbpublp12"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_a0nmm"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="3_ijcpw"]
@@ -11,7 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="15_vcb78"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="16_6b3n7"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="17_w6ui0"]
+[ext_resource type="Texture2D" uid="uid://cpr4scy2gtdm7" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_1.png" id="18_jwfqc"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="18_ydvd7"]
+[ext_resource type="Texture2D" uid="uid://be124105b26ii" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_2.png" id="19_nntc1"]
+[ext_resource type="Texture2D" uid="uid://cmeqvvlm0ivs3" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_3.png" id="20_s2g6c"]
+[ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="21_ipret"]
+[ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="22_ph1rn"]
+[ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="23_kwlc2"]
+[ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="24_dj5mh"]
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="27_ksyb5"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="28_huo8u"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="29_lw3j1"]
@@ -20,12 +27,12 @@
 [ext_resource type="Script" path="res://Scripts/powerups.gd" id="31_dgdo3"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="31_mabie"]
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="31_y0qct"]
-[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="32_0lw40"]
+[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="32_0lw40"]
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="32_ecply"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="32_skq6l"]
-[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="33_wcq8o"]
+[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="33_wcq8o"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="34_5d8p4"]
-[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="34_qy447"]
+[ext_resource type="Texture2D" path="res://Sprites/Collectibles/power up/AddedTime.png" id="34_qy447"]
 [ext_resource type="Texture2D" uid="uid://bcaoat487emgw" path="res://Galactic Arithmetic Assets/Game_Over_Assets/restart_button.png" id="35_brgsv"]
 [ext_resource type="Texture2D" uid="uid://cd8ryefiqekn0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/home-button.png" id="36_8f003"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="37_clg2m"]
@@ -51,6 +58,9 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 1
+	if !GameSettings.isTuto1:
+		get_tree().paused = true
+		$tutorial.show()
 "
 
 [sub_resource type="Animation" id="Animation_sd1pg"]
@@ -208,6 +218,42 @@ _data = {
 "spd": SubResource("Animation_8hmy1"),
 "time": SubResource("Animation_tg4dr")
 }
+
+[sub_resource type="GDScript" id="GDScript_sdpky"]
+script/source = "extends Node2D
+
+@onready var notes = [$notes1, $notes2, $notes3]
+var currentNoteIndex := 0
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	show_current_note()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()  # Hide all notes before showing the current one
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	get_tree().paused = false
+	$\".\".queue_free()
+"
 
 [node name="level_1" type="Node2D"]
 script = SubResource("GDScript_h75cv")
@@ -447,6 +493,39 @@ libraries = {
 }
 
 [node name="health_system" parent="." instance=ExtResource("56_blqqh")]
+
+[node name="tutorial" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(960, 540)
+script = SubResource("GDScript_sdpky")
+
+[node name="notes1" type="Sprite2D" parent="tutorial"]
+texture = ExtResource("18_jwfqc")
+
+[node name="notes2" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("19_nntc1")
+
+[node name="notes3" type="Sprite2D" parent="tutorial"]
+visible = false
+texture = ExtResource("20_s2g6c")
+
+[node name="next" type="TextureButton" parent="tutorial"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("21_ipret")
+texture_pressed = ExtResource("22_ph1rn")
+
+[node name="exit" type="TextureButton" parent="tutorial"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("23_kwlc2")
+texture_pressed = ExtResource("24_dj5mh")
 
 [node name="menus" type="TextureButton" parent="."]
 offset_left = 1838.0
@@ -824,6 +903,8 @@ vertical_alignment = 1
 [connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="speed_buff/Area2D" to="speed_buff" method="_on_area_2d_body_entered" flags=18]
 [connection signal="timeout" from="speed_buff/Area2D/speed/speed_buff_timer" to="speed_buff" method="_on_speed_buff_timer_timeout" flags=18]
+[connection signal="pressed" from="tutorial/next" to="tutorial" method="_on_next_pressed"]
+[connection signal="pressed" from="tutorial/exit" to="tutorial" method="_on_exit_pressed"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

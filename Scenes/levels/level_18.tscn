@@ -1,22 +1,22 @@
 [gd_scene load_steps=28 format=3 uid="uid://cp3iyidufs5y"]
 
-[ext_resource type="TileSet" path="res://World4_Tileset.tres" id="1_grluw"]
+[ext_resource type="TileSet" uid="uid://bru2ps4sjjt66" path="res://World4_Tileset.tres" id="1_grluw"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_lbrvi"]
-[ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_kmgqp"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_82rws"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/gamemanager_fraction.tscn" id="5_3fppu"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/numbers_w4.tscn" id="6_jdnx1"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/operators_w4.tscn" id="7_neswt"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="8_eb7i2"]
-[ext_resource type="PackedScene" path="res://Scenes/timer_w4.tscn" id="9_ovl3i"]
+[ext_resource type="PackedScene" uid="uid://c6l46jv1tsbb6" path="res://Scenes/Mechanics/gamemanager_fraction.tscn" id="5_3fppu"]
+[ext_resource type="PackedScene" uid="uid://da2cv6qqt82a2" path="res://Scenes/Mechanics/numbers_w4.tscn" id="6_jdnx1"]
+[ext_resource type="PackedScene" uid="uid://c6qenf481l3o3" path="res://Scenes/Mechanics/operators_w4.tscn" id="7_neswt"]
+[ext_resource type="PackedScene" uid="uid://c0ug32c0f4tmi" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="8_eb7i2"]
+[ext_resource type="Texture2D" uid="uid://js3grxd2conc" path="res://Sprites/Character/Slime_Scarf.png" id="9_3cfjf"]
+[ext_resource type="PackedScene" uid="uid://20qsvs6f2wea" path="res://Scenes/timer_w4.tscn" id="9_ovl3i"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_f42hq"]
 [ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_m3gl2"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="12_sfaux"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="13_4ejsy"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_ydo08"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/level_complete_menu_w4.tscn" id="15_sxq8f"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/Game_Over/game_over_w4.tscn" id="16_qc624"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/powerups_w4.tscn" id="17_2u4y1"]
+[ext_resource type="PackedScene" uid="uid://bkrwfkw8lyn73" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_ydo08"]
+[ext_resource type="PackedScene" uid="uid://bv8w2y4n6rixp" path="res://Scenes/Menu/level_complete_menu_w4.tscn" id="15_sxq8f"]
+[ext_resource type="PackedScene" uid="uid://b7tkalqgic7ty" path="res://Scenes/Menu/Game_Over/game_over_w4.tscn" id="16_qc624"]
+[ext_resource type="PackedScene" uid="uid://r5g5crpsi4fk" path="res://Scenes/Mechanics/powerups_w4.tscn" id="17_2u4y1"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="18_c2u73"]
 
 [sub_resource type="GDScript" id="GDScript_77yqt"]
@@ -323,7 +323,7 @@ script = ExtResource("2_lbrvi")
 
 [node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
 scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_kmgqp")
+texture = ExtResource("9_3cfjf")
 hframes = 4
 vframes = 6
 frame = 9
