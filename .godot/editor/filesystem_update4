@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 res://Scenes/Menu/Main_Menu/main_menu.tscn
 res://Scenes/levels/16x16Tileset.tres
 res://Scenes/levels/level_6.tscn
@@ -14,3 +15,29 @@ res://Scenes/levels/level_2.tscn
 res://Scenes/levels/level_4.tscn
 res://Scenes/levels/level_5.tscn
 res://Scenes/levels/tutorial/tutorial.tscn
+=======
+res://Autoloads/AudioManager.tscn
+res://Scenes/levels/level_10.tscn
+res://Scenes/levels/World_3_Tileset.tres
+res://World4_Tileset.tres
+res://Scenes/levels/world5_tileset.tres
+res://Scenes/levels/16x16Tileset.tres
+res://Scenes/Enemies/shark.tscn
+res://Autoloads/GameSettings.tscn
+res://Scenes/Menu/Main_Menu/cut_scene_2.tscn
+res://Scripts/shark.gd
+res://Scenes/Enemies/world_3_enemies.gd
+res://Scenes/Enemies/world_3_enemies.tscn
+res://Scenes/levels/level_12.tscn
+res://Scenes/Enemies/world_4_enemies.tscn
+res://Scripts/world_4_enemies.gd
+res://Scenes/levels/level_17.tscn
+res://Scenes/Enemies/world_5_enemies.tscn
+res://Scripts/world_5_enemies.gd
+res://Scenes/levels/level_22.tscn
+res://Scenes/Enemies/flea.gd
+res://Scenes/Enemies/flea.tscn
+res://Scenes/levels/level_25.tscn
+res://Scenes/levels/level_3.tscn
+res://Scenes/levels/level1_TileSet2dPixel.tres
+>>>>>>> Stashed changes

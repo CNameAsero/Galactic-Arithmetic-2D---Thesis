@@ -19,7 +19,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
 "
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g7cyq"]
@@ -130,6 +129,7 @@ script = SubResource("GDScript_c8bq8")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 collision_layer = 8
 collision_mask = 29
+platform_floor_layers = 4294967294
 script = ExtResource("1_lg7u7")
 
 [node name="Area2" type="Area2D" parent="CharacterBody2D"]
@@ -154,6 +154,9 @@ libraries = {
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_l50ik")
 
+[node name="hit_delay" type="Timer" parent="CharacterBody2D"]
+wait_time = 1.5
+
 [node name="area_det" type="Area2D" parent="."]
 
 [node name="col_det" type="CollisionShape2D" parent="area_det"]
@@ -164,6 +167,8 @@ debug_color = Color(0.713726, 0.258824, 1, 0.419608)
 wait_time = 1.5
 
 [connection signal="body_entered" from="CharacterBody2D/Area2" to="CharacterBody2D" method="_on_area_2_body_entered"]
+[connection signal="body_exited" from="CharacterBody2D/Area2" to="CharacterBody2D" method="_on_area_2_body_exited"]
+[connection signal="timeout" from="CharacterBody2D/hit_delay" to="CharacterBody2D" method="_on_hit_delay_timeout"]
 [connection signal="body_entered" from="area_det" to="CharacterBody2D" method="_on_area_det_body_entered"]
 [connection signal="body_exited" from="area_det" to="CharacterBody2D" method="_on_area_det_body_exited"]
 [connection signal="timeout" from="Timer" to="CharacterBody2D" method="_on_timer_timeout"]

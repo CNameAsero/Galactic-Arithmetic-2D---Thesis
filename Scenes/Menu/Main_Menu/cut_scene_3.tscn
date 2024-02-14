@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dis86h20u008"]
 
-[ext_resource type="Script" path="res://cut_scene3.gd" id="1_sq2pd"]
+[ext_resource type="Script" path="res://Scripts/cut_scene3.gd" id="1_sq2pd"]
 [ext_resource type="Texture2D" uid="uid://brfvb0572hi0d" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/1.png" id="2_hgabc"]
 [ext_resource type="Texture2D" uid="uid://cr2vire3acg83" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/2.png" id="3_e2gm0"]
 [ext_resource type="Texture2D" uid="uid://d3xrk4nphrd2l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/3.png" id="4_l37h7"]

@@ -224,6 +224,14 @@ func bear_det_exited(body):
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
+		$bear/bear_hit_delay.start()
+
+func bear_exited(body):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+		$bear/bear_hit_delay.stop()
+
+func _on_bear_hit_delay_timeout():
+	player_hurt()
 
 func yeti_det_entered(body):
 	target = body
@@ -280,3 +288,6 @@ func _on_area_yeti_body_entered(body):
 
 func hit_timeout():
 	GameSettings.player_invulnerable = false
+
+
+

@@ -398,6 +398,9 @@ position = Vector2(3, 1)
 shape = SubResource("CapsuleShape2D_46pto")
 debug_color = Color(0.498039, 0.482353, 0.858824, 0.419608)
 
+[node name="bear_hit_delay" type="Timer" parent="bear"]
+wait_time = 1.5
+
 [node name="yeti" type="CharacterBody2D" parent="."]
 visible = false
 scale = Vector2(0.9, 0.9)
@@ -448,6 +451,8 @@ shape = SubResource("CircleShape2D_lkwum")
 
 [connection signal="body_entered" from="ice" to="." method="_on_ice_body_entered"]
 [connection signal="body_entered" from="bear/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="bear/Area2D" to="." method="bear_exited"]
+[connection signal="timeout" from="bear/bear_hit_delay" to="." method="_on_bear_hit_delay_timeout"]
 [connection signal="timeout" from="yeti/Timer" to="." method="shockwave_timeout"]
 [connection signal="body_entered" from="yeti/det" to="." method="yeti_det_entered"]
 [connection signal="body_exited" from="yeti/det" to="." method="yeti_det_exited"]

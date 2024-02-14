@@ -12,6 +12,7 @@ func _on_exit_button_pressed():
 func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.cutscene3 && GameSettings.currentlevel[15]:
+		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_16.tscn")
@@ -23,6 +24,7 @@ func _on_level_1_pressed():
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[16] == true:
+		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_17.tscn")
@@ -32,6 +34,7 @@ func _on_level_2_pressed():
 func _on_level_3_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[17] == true:
+		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_18.tscn")
@@ -41,6 +44,7 @@ func _on_level_3_pressed():
 func _on_level_4_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[18] == true:
+		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_19.tscn")
@@ -50,6 +54,7 @@ func _on_level_4_pressed():
 func _on_level_5_pressed():
 	AudioManager.play_button_sfx()
 	if GameSettings.currentlevel[19] == true:
+		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level4_music.play()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_20.tscn")
