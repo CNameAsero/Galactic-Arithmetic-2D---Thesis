@@ -1571,6 +1571,7 @@ theme_override_font_sizes/font_size = 35
 text = "Welcome To galactic arithmetic 2d! 
 now, let us start with the basics."
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/sample_text"]
 root_node = NodePath("../..")
@@ -1612,6 +1613,7 @@ first thing you need to do is collect
 a number. use the joystick below to make 
 slimey move."
 horizontal_alignment = 3
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/Step 1"]
 autoplay = "typewriter"
@@ -1652,6 +1654,7 @@ so you can see the equation
 you are creating."
 horizontal_alignment = 3
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/Number_Collect"]
 autoplay = "typewriter"
@@ -1684,6 +1687,7 @@ the correct equation. Remember
 to avoid enemies or 
 obstacles like the spikes here"
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="Button3" type="Button" parent="typewriter_text_effect/Step 2"]
 self_modulate = Color(1, 1, 1, 0)
@@ -1722,6 +1726,7 @@ to complete the equation. you need
 to think fast because there's a timer
 ticking away."
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/Press_Operator"]
 autoplay = "typewriter"
@@ -1754,6 +1759,7 @@ operators that you think will
 create the correct equation."
 horizontal_alignment = 3
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/EndTutorial1"]
 autoplay = "typewriter"
@@ -1785,6 +1791,7 @@ five worlds to earn the five missing spaceship
 pieces so slimey can go back home. 
 Good luck and have fun!"
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="typewriter_text_effect/EndTutorial2"]
 autoplay = "typewriter"
