@@ -256,6 +256,16 @@ func _on_lava_body_entered(body):
 func _on_bat_body_entered(body):
 	if body.is_in_group("player")and not GameSettings.player_invulnerable:
 		player_hurt()
+		$bat/hit_delay_bat.start()
+
+func _on_bat_body_exited(body):
+	if body.is_in_group("player")and not GameSettings.player_invulnerable:
+		$bat/hit_delay_bat.stop()
 
 func hit_timeout():
 	GameSettings.player_invulnerable = false
+
+func _on_hit_delay_bat_timeout():
+	player_hurt()
+
+

@@ -177,6 +177,14 @@ func fly_timeout():
 func hit_fly_entered(body):
 	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
+		$fly/fly_hit_delay.start()
+
+func _on_fly_body_exited(body):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+		$fly/fly_hit_delay.stop()
+
+func _on_fly_hit_delay_timeout():
+	player_hurt()
 
 #rat
 func area_radius_rat():
@@ -275,6 +283,14 @@ func _on_timer_timeout():
 func hit_rat_entered(body):
 	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
+		$rat/hit_rat_delay.start()
+
+func hit_rat_exited(body):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+		$rat/hit_rat_delay.stop()
+
+func _on_hit_rat_delay_timeout():
+	player_hurt()
 #thief
 func area_radius_thief():
 	var collision_det = $thief/det/col
@@ -384,3 +400,5 @@ func player_hurt():
 
 func hit_timeout():
 	GameSettings.player_invulnerable = false
+
+

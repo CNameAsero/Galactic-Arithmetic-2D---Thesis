@@ -294,6 +294,9 @@ debug_color = Color(0.784314, 0.282353, 0.827451, 0.419608)
 [node name="Timer" type="Timer" parent="fly"]
 wait_time = 1.75
 
+[node name="fly_hit_delay" type="Timer" parent="fly"]
+wait_time = 1.5
+
 [node name="rat" type="CharacterBody2D" parent="."]
 visible = false
 collision_layer = 8
@@ -324,6 +327,8 @@ debug_color = Color(0.921569, 0, 0.694118, 0.419608)
 
 [node name="Timer" type="Timer" parent="rat"]
 wait_time = 1.5
+
+[node name="hit_rat_delay" type="Timer" parent="rat"]
 
 [node name="thief" type="CharacterBody2D" parent="."]
 scale = Vector2(1.1, 1.1)
@@ -364,13 +369,17 @@ libraries = {
 wait_time = 1.5
 
 [connection signal="body_entered" from="fly" to="." method="hit_fly_entered"]
+[connection signal="body_exited" from="fly" to="." method="_on_fly_body_exited"]
 [connection signal="body_entered" from="fly/det" to="." method="fly_det_entered"]
 [connection signal="body_exited" from="fly/det" to="." method="fly_det_exited"]
 [connection signal="timeout" from="fly/Timer" to="." method="fly_timeout"]
+[connection signal="timeout" from="fly/fly_hit_delay" to="." method="_on_fly_hit_delay_timeout"]
 [connection signal="body_entered" from="rat/areabox" to="." method="hit_rat_entered"]
+[connection signal="body_exited" from="rat/areabox" to="." method="hit_rat_exited"]
 [connection signal="body_entered" from="rat/det" to="." method="rat_det_entered"]
 [connection signal="body_exited" from="rat/det" to="." method="rat_det_exited"]
 [connection signal="timeout" from="rat/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="rat/hit_rat_delay" to="." method="_on_hit_rat_delay_timeout"]
 [connection signal="body_entered" from="thief/hitbox" to="." method="thief_hitbox_entered"]
 [connection signal="body_entered" from="thief/det" to="." method="thief_det_entered"]
 [connection signal="body_exited" from="thief/det" to="." method="thief_det_exited"]

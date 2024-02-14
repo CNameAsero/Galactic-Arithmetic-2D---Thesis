@@ -69,8 +69,6 @@ func player_hurt():
 	if GameSettings.player_invulnerable:
 		return
 
-	GameSettings.player_invulnerable = true
-	timer.start()
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.05
@@ -100,9 +98,14 @@ func _on_det_body_exited(body):
 func hitbox_entered(body):
 	if body.is_in_group("player") and not GameSettings.player_invulnerable:
 		player_hurt()
+		$flea_hit_delay.start()
 
 func _on_timer_timeout():
 	queue_free()
 
-func _on_time123r_2_timeout():
-	GameSettings.player_invulnerable = false
+func _on_flea_hit_delay_timeout():
+	player_hurt()
+
+func _on_hitbox_body_exited(body):
+	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+		$flea_hit_delay.stop()

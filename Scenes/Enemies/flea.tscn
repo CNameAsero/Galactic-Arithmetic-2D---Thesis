@@ -142,7 +142,12 @@ shape = SubResource("RectangleShape2D_342mc")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 
+[node name="flea_hit_delay" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="body_entered" from="hitbox" to="." method="hitbox_entered"]
+[connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="body_entered" from="det" to="." method="det_entered"]
 [connection signal="body_exited" from="det" to="." method="_on_det_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="flea_hit_delay" to="." method="_on_flea_hit_delay_timeout"]

@@ -4,36 +4,36 @@ var player_invulnerable = false
 
 var world_completed = {}
 
-@onready var storyboardPlayed = false
-@onready var cutscene1 = false
-@onready var cutscene2 = false
-@onready var cutscene3 = false
-@onready var cutscene4 = false
-@onready var finalcutscene = false
-@onready var tutorialPlayed = false
+@onready var storyboardPlayed = false #ok
+@onready var cutscene1 = false #ok
+@onready var cutscene2 = false #ok
+@onready var cutscene3 = false #ok
+@onready var cutscene4 = false #ok
+@onready var finalcutscene = false #ok
+@onready var tutorialPlayed = false #ok
 
-@onready var isHard = false
+@onready var isHard = false #ok
 
-@onready var isTuto1 = false
-@onready var isTuto2 = false
-@onready var isTuto3 = false
-@onready var isTuto4 = false
-@onready var isTuto5 = false
+@onready var isTuto1 = false #ok
+@onready var isTuto2 = false #ok
+@onready var isTuto3 = false #ok
+@onready var isTuto4 = false #ok
+@onready var isTuto5 = false #ok
 
 #for level to proceed to next
-var current_world = 0
+var current_world = 0 #ok
 var current_level = 0
-var max_unlocked_level = 0
+var max_unlocked_level = 0 #ok
 
 #this is to check what level the player in the grass area
 @onready var currentlevel = [true, false, false, false, false, 
 false, false, false, false, false, 
 false, false, false, false, false, 
 false, false, false, false, false, 
-false, false, false, false, false, false]
+false, false, false, false, false, false] #ok
 
-var music_volume = -10
-var sfx_volume = -10
+var music_volume = -10#ok
+var sfx_volume = -10 #ok
 
 func _autosave():
 	var save_data = {
@@ -52,6 +52,9 @@ func _autosave():
 		"tuto5?": isTuto5,
 		"currentworld?": current_world,
 		"maxunlocked_level": max_unlocked_level,
-		"currentlevels:": currentlevel
+		"currentlevels:": currentlevel,
+		"music_volume": music_volume,
+		"sfx_volume": sfx_volume,
+		"world_completed?": world_completed
 	}
 

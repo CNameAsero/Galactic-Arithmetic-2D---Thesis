@@ -266,6 +266,9 @@ shape = SubResource("CapsuleShape2D_13ido")
 shape = SubResource("CircleShape2D_2iou4")
 debug_color = Color(0.870588, 0, 0.847059, 0.419608)
 
+[node name="hit_delay_bat" type="Timer" parent="bat"]
+wait_time = 1.5
+
 [node name="skeleton" type="Area2D" parent="."]
 visible = false
 scale = Vector2(0.9, 0.9)
@@ -300,8 +303,10 @@ wait_time = 1.5
 
 [connection signal="body_entered" from="lava" to="." method="_on_lava_body_entered"]
 [connection signal="body_entered" from="bat" to="." method="_on_bat_body_entered"]
+[connection signal="body_exited" from="bat" to="." method="_on_bat_body_exited"]
 [connection signal="body_entered" from="bat/area_det" to="." method="_on_area_det_body_entered"]
 [connection signal="body_exited" from="bat/area_det" to="." method="_on_area_det_body_exited"]
+[connection signal="timeout" from="bat/hit_delay_bat" to="." method="_on_hit_delay_bat_timeout"]
 [connection signal="timeout" from="skeleton/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="skeleton/area_det" to="." method="skeleton_body_entered"]
 [connection signal="body_exited" from="skeleton/area_det" to="." method="skeleton_body_exited"]
