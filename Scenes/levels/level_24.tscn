@@ -1,23 +1,23 @@
 [gd_scene load_steps=30 format=3 uid="uid://t3yu0sy08dow"]
 
-[ext_resource type="TileSet" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
+[ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_ckhy1"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_2gtfy"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="2_8egcv"]
+[ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="2_8egcv"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="3_l0lhm"]
 [ext_resource type="PackedScene" uid="uid://b56ju42518v17" path="res://Scenes/Mechanics/numbers_w5.tscn" id="3_y865p"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_lqdom"]
 [ext_resource type="PackedScene" uid="uid://pyjcudqpnqk5" path="res://Scenes/Mechanics/operators_w5.tscn" id="4_uwdel"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/powerups_w5.tscn" id="5_f1pg2"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/variables_w5.tscn" id="5_omsaj"]
-[ext_resource type="PackedScene" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="6_4n6tb"]
+[ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="5_f1pg2"]
+[ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="5_omsaj"]
+[ext_resource type="PackedScene" uid="uid://btmq1lrhtcp0e" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="6_4n6tb"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="6_54thq"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="7_gppnv"]
-[ext_resource type="PackedScene" path="res://Scenes/timer_w5.tscn" id="7_gstfm"]
+[ext_resource type="PackedScene" uid="uid://0fvidggqf6tt" path="res://Scenes/timer_w5.tscn" id="7_gstfm"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="8_2n45q"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="9_i8s00"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="10_3gc2v"]
-[ext_resource type="PackedScene" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="11_6epot"]
-[ext_resource type="Texture2D" path="res://Sprites/Tileset/level_24_VarValue.png" id="14_7niaj"]
+[ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="9_i8s00"]
+[ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="10_3gc2v"]
+[ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="11_6epot"]
+[ext_resource type="Texture2D" uid="uid://du24gyqj54k66" path="res://Sprites/Tileset/level_24_VarValue.png" id="14_7niaj"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="15_dn627"]
 [ext_resource type="PackedScene" uid="uid://duqjg07usvrms" path="res://Scenes/Enemies/world_5_enemies.tscn" id="18_hgj08"]
 
@@ -341,8 +341,8 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_7k73l")
 
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_lqdom")]
-position = Vector2(189, 898)
-scale = Vector2(1.85, 1.85)
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="health_system" parent="." instance=ExtResource("6_54thq")]
 

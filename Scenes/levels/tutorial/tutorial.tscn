@@ -1535,7 +1535,7 @@ libraries = {
 
 [node name="joystick" type="Node2D" parent="slime_player_joystick"]
 position = Vector2(245, 882)
-scale = Vector2(1.85, 1.85)
+scale = Vector2(2.2, 2.2)
 script = ExtResource("32_rn7pe")
 
 [node name="ring" type="Sprite2D" parent="slime_player_joystick/joystick"]

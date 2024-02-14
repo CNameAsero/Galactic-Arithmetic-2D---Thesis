@@ -771,8 +771,8 @@ libraries = {
 }
 
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_nvtfn")]
-position = Vector2(224, 888)
-scale = Vector2(1.85, 1.85)
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="health_buff" parent="." instance=ExtResource("26_kc3nl")]
 offset_left = 479.0

@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="13_x7544"]
 [ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="14_bn6e4"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="14_p3yr7"]
-[ext_resource type="Texture2D" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="14_uui5t"]
+[ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="14_uui5t"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="15_4o8un"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="15_rgqxl"]
 [ext_resource type="Texture2D" uid="uid://ccpcwvop5pgkn" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_1.png" id="15_v4epa"]
@@ -364,8 +364,8 @@ position = Vector2(0, 3)
 shape = SubResource("CircleShape2D_gv4f4")
 
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("15_rgqxl")]
-position = Vector2(189, 898)
-scale = Vector2(1.85, 1.85)
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="health_system" parent="." instance=ExtResource("10_d1b0s")]
 
