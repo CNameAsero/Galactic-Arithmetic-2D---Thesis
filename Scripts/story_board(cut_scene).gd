@@ -22,6 +22,7 @@ func _on_tap_to_continue_pressed():
 			audio_stop(currentPage)
 			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 			get_node("/root/GameSettings").storyboardPlayed = true
+			GameSettings._autosave()
 
 func _on_skip_pressed():
 	audio_stop(currentPage)
@@ -29,6 +30,7 @@ func _on_skip_pressed():
 	AudioManager.background_music.play()
 	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 	get_node("/root/GameSettings").storyboardPlayed = true
+	GameSettings._autosave()
 
 func audio(num):
 	if num >= 1 and num <= 18:  # Change this to 18

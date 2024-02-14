@@ -40,3 +40,8 @@ res://Scripts/gamemanager_fraction.gd
 res://Scenes/Mechanics/gamemanager_algebra.tscn
 res://Scripts/gamemanager_algebra.gd
 res://Scenes/levels/tutorial/game_manager_tutorial.gd
+res://savegame.tres
+res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn
+res://Scripts/story_board(cut_scene).gd
+res://Scenes/Menu/Main_Menu/main_menu.tscn
+res://Scripts/main_menu.gd

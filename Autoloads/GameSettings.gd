@@ -1,5 +1,7 @@
 extends Node
 
+const save_path = "res://savefile.save"
+
 var player_invulnerable = false
 
 var world_completed = {}
@@ -36,55 +38,59 @@ var music_volume = -10#ok
 var sfx_volume = -10 #ok
 
 func _autosave():
-	var save_data = {
-		"storyboard_played?": storyboardPlayed,
-		"1sttutorial_played?": tutorialPlayed,
-		"cutscene1?": cutscene1,
-		"cutscene2?": cutscene2,
-		"cutscene3?": cutscene3,
-		"cutscene4?": cutscene4,
-		"finalscene?": finalcutscene,
-		"isHard?": isHard,
-		"tuto1?": isTuto1,
-		"tuto2?": isTuto2,
-		"tuto3?": isTuto3,
-		"tuto4?": isTuto4,
-		"tuto5?": isTuto5,
-		"currentworld?": current_world,
-		"maxunlocked_level?": max_unlocked_level,
-		"currentlevels?": currentlevel,
-		"music_volume?": music_volume,
-		"sfx_volume?": sfx_volume,
-		"world_completed?": world_completed
-	}
+	var config = ConfigFile.new()
 	
-	var save_game = GameSave.new()
-	save_game.set_data(save_data)
+	config.set_value("game_data", "storyboard_played?", storyboardPlayed)
+	config.set_value("game_data", "1sttutorial_played?", tutorialPlayed)
+	config.set_value("game_data", "cutscene1?", cutscene1)
+	config.set_value("game_data", "cutscene2?", cutscene2)
+	config.set_value("game_data", "cutscene3?", cutscene3)
+	config.set_value("game_data", "cutscene4?", cutscene4)
+	config.set_value("game_data", "finalscene?", finalcutscene)
+	config.set_value("game_data", "isHard?", isHard)
+	config.set_value("game_data", "tuto1?", isTuto1)
+	config.set_value("game_data", "tuto2?", isTuto2)
+	config.set_value("game_data", "tuto3?", isTuto3)
+	config.set_value("game_data", "tuto4?", isTuto4)
+	config.set_value("game_data", "tuto5?", isTuto5)
+	config.set_value("game_data", "currentworld?", current_world)
+	config.set_value("game_data", "maxunlocked_level?", max_unlocked_level)
+	config.set_value("game_data", "currentlevels?", currentlevel)
+	config.set_value("game_data", "music_volume?", music_volume)
+	config.set_value("game_data", "sfx_volume?", sfx_volume)
+	config.set_value("game_data", "world_completed?", world_completed)
 	
-	ResourceSaver.save(save_game,"res://savegame.tres")
+	var error = config.save("res://GameSettings.cfg")
+
+	if error != OK:
+		print("Failed to save game settings.")
+
 
 func _autoload():
-	var loaded_game_save = ResourceLoader.load("res://savegame.tres") 
-	
-	if loaded_game_save != null:
-		var loaded_data = loaded_game_save.get_data()  # Get the data from the GameSave instance
+	var config = ConfigFile.new()
+	var error = config.load("res://GameSettings.cfg")
 
-		storyboardPlayed = loaded_data["storyboard_played?"]
-		tutorialPlayed = loaded_data["1sttutorial_played?"]
-		cutscene1 = loaded_data["cutscene1?"]
-		cutscene2 = loaded_data["cutscene2?"]
-		cutscene3 = loaded_data["cutscene3?"]
-		cutscene4 = loaded_data["cutscene4?"]
-		finalcutscene = loaded_data["finalscene?"]
-		isHard = loaded_data["isHard?"]
-		isTuto1 = loaded_data["tuto1?"]
-		isTuto2 = loaded_data["tuto2?"]
-		isTuto3 = loaded_data["tuto3?"]
-		isTuto4 = loaded_data["tuto4?"]
-		isTuto5 = loaded_data["tuto5?"]
-		current_world = loaded_data["currentworld?"]
-		max_unlocked_level = loaded_data["maxunlocked_level?"]
-		currentlevel = loaded_data["currentlevels?"]
-		music_volume = loaded_data ["music_volume?"]
-		sfx_volume = loaded_data ["sfx_volume?"]
-		world_completed = loaded_data["world_completed?"]
+	if error != OK:
+		print("Failed to load game settings.")
+		return
+
+	storyboardPlayed = config.get_value("game_data", "storyboard_played?", false)
+	tutorialPlayed = config.get_value("game_data", "1sttutorial_played?", false)
+	cutscene1 = config.get_value("game_data", "cutscene1?", false)
+	cutscene2 = config.get_value("game_data", "cutscene2?", false)
+	cutscene3 = config.get_value("game_data", "cutscene3?", false)
+	cutscene4 = config.get_value("game_data", "cutscene4?", false)
+	finalcutscene = config.get_value("game_data", "finalscene?", false)
+	isHard = config.get_value("game_data", "isHard?", false)
+	isTuto1 = config.get_value("game_data", "tuto1?", false)
+	isTuto2 = config.get_value("game_data", "tuto2?", false)
+	isTuto3 = config.get_value("game_data", "tuto3?", false)
+	isTuto4 = config.get_value("game_data", "tuto4?", false)
+	isTuto5 = config.get_value("game_data", "tuto5?", false)
+	current_world = config.get_value("game_data", "currentworld?", 0)
+	max_unlocked_level = config.get_value("game_data", "maxunlocked_level?", 0)
+	currentlevel = config.get_value("game_data", "currentlevels?", [])
+	music_volume = config.get_value("game_data", "music_volume?", -10)
+	sfx_volume = config.get_value("game_data", "sfx_volume?", -10)
+	world_completed = config.get_value("game_data", "world_completed?", {})
+

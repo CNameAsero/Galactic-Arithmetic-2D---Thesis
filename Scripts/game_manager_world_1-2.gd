@@ -27,8 +27,7 @@ extends Node2D
 @onready var oper_term = num_term - 1
 
 func _ready():
-	if GameSettings.current_world >= 1:
-		GameSettings._autoload()
+	pass
 
 func collect_number(num):
 	if isDestroy.isDestroy && last_item_was_number:
@@ -116,7 +115,6 @@ func check_final_answer():
 		time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
-		GameSettings._autosave()
 		get_tree().paused = true
 	elif collected_numbers.size() == num_term || current_result != calculate_expression():
 		AudioManager.play_deathsfx()
