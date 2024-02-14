@@ -22,7 +22,8 @@ func _on_next_level_button_pressed():
 		if ResourceLoader.exists(next_scene_path):
 			if GameSettings.current_level % 5 == 0:
 				AudioManager.level1_music.stop()
-				AudioManager.level2_music.play()
+			if GameSettings.current_level % 10 == 0:
+				AudioManager.level2_music.stop()
 			get_tree().change_scene_to_file(next_scene_path)
 		else:
 			print("Level " + str(GameSettings.current_level) + " does not exist.")

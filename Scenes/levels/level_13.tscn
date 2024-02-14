@@ -193,12 +193,6 @@ skeleton_speed = 50.0
 rect_radius_skeleton = 400.0
 move_direction = Vector2(150, 0)
 
-[node name="world3_enemies3" parent="enemies" instance=ExtResource("9_h3pp5")]
-position = Vector2(1206, 511)
-skeleton_speed = 50.0
-rect_radius_skeleton = 400.0
-move_direction = Vector2(150, 0)
-
 [node name="world3_enemies4" parent="enemies" instance=ExtResource("9_h3pp5")]
 position = Vector2(839, 361)
 enemy_type = "lava"

@@ -51,10 +51,40 @@ func _autosave():
 		"tuto4?": isTuto4,
 		"tuto5?": isTuto5,
 		"currentworld?": current_world,
-		"maxunlocked_level": max_unlocked_level,
-		"currentlevels:": currentlevel,
-		"music_volume": music_volume,
-		"sfx_volume": sfx_volume,
+		"maxunlocked_level?": max_unlocked_level,
+		"currentlevels?": currentlevel,
+		"music_volume?": music_volume,
+		"sfx_volume?": sfx_volume,
 		"world_completed?": world_completed
 	}
+	
+	var save_game = GameSave.new()
+	save_game.set_data(save_data)
+	
+	ResourceSaver.save(save_game,"res://savegame.tres")
 
+func _autoload():
+	var loaded_game_save = ResourceLoader.load("res://savegame.tres") 
+	
+	if loaded_game_save != null:
+		var loaded_data = loaded_game_save.get_data()  # Get the data from the GameSave instance
+
+		storyboardPlayed = loaded_data["storyboard_played?"]
+		tutorialPlayed = loaded_data["1sttutorial_played?"]
+		cutscene1 = loaded_data["cutscene1?"]
+		cutscene2 = loaded_data["cutscene2?"]
+		cutscene3 = loaded_data["cutscene3?"]
+		cutscene4 = loaded_data["cutscene4?"]
+		finalcutscene = loaded_data["finalscene?"]
+		isHard = loaded_data["isHard?"]
+		isTuto1 = loaded_data["tuto1?"]
+		isTuto2 = loaded_data["tuto2?"]
+		isTuto3 = loaded_data["tuto3?"]
+		isTuto4 = loaded_data["tuto4?"]
+		isTuto5 = loaded_data["tuto5?"]
+		current_world = loaded_data["currentworld?"]
+		max_unlocked_level = loaded_data["maxunlocked_level?"]
+		currentlevel = loaded_data["currentlevels?"]
+		music_volume = loaded_data ["music_volume?"]
+		sfx_volume = loaded_data ["sfx_volume?"]
+		world_completed = loaded_data["world_completed?"]

@@ -259,7 +259,7 @@ func _on_bat_body_entered(body):
 		$bat/hit_delay_bat.start()
 
 func _on_bat_body_exited(body):
-	if body.is_in_group("player")and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$bat/hit_delay_bat.stop()
 
 func hit_timeout():

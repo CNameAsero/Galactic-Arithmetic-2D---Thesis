@@ -180,7 +180,7 @@ func hit_fly_entered(body):
 		$fly/fly_hit_delay.start()
 
 func _on_fly_body_exited(body):
-	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$fly/fly_hit_delay.stop()
 
 func _on_fly_hit_delay_timeout():

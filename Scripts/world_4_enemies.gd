@@ -227,7 +227,7 @@ func _on_area_2d_body_entered(body):
 		$bear/bear_hit_delay.start()
 
 func bear_exited(body):
-	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$bear/bear_hit_delay.stop()
 
 func _on_bear_hit_delay_timeout():

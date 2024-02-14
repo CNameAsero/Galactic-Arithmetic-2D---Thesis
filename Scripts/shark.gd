@@ -128,8 +128,9 @@ func _on_area_2_body_entered(body):
 		$hit_delay.start()
 
 func _on_area_2_body_exited(body):
-	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$hit_delay.stop()
+
 func _on_timer_timeout():
 	GameSettings.player_invulnerable = false
 

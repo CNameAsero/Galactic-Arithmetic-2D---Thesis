@@ -1,21 +1,3 @@
-<<<<<<< Updated upstream
-res://Scenes/Menu/Main_Menu/main_menu.tscn
-res://Scenes/levels/16x16Tileset.tres
-res://Scenes/levels/level_6.tscn
-res://Scenes/levels/level_7.tscn
-res://Scenes/levels/level_8.tscn
-res://Scenes/levels/level_9.tscn
-res://Scenes/levels/level_10.tscn
-res://Scenes/Enemies/bullets.tscn
-res://Scenes/Enemies/blowfish.tscn
-res://Scenes/levels/level_3.tscn
-res://Scenes/levels/level1_TileSet2dPixel.tres
-res://Scenes/levels/level_1.tscn
-res://Scenes/levels/level_2.tscn
-res://Scenes/levels/level_4.tscn
-res://Scenes/levels/level_5.tscn
-res://Scenes/levels/tutorial/tutorial.tscn
-=======
 res://Autoloads/AudioManager.tscn
 res://Scenes/levels/level_10.tscn
 res://Scenes/levels/World_3_Tileset.tres
@@ -40,4 +22,21 @@ res://Scenes/Enemies/flea.tscn
 res://Scenes/levels/level_25.tscn
 res://Scenes/levels/level_3.tscn
 res://Scenes/levels/level1_TileSet2dPixel.tres
->>>>>>> Stashed changes
+res://Scripts/Save_Game.gd
+res://Autoloads/GameSettings.gd
+res://Scenes/levels/tutorial/tutorial.tscn
+res://Scenes/levels/level_1.tscn
+res://Scripts/game_manager_world_1-2.gd
+res://Scenes/levels/tutorial/tutorial.gd
+res://Scenes/levels/level_13.tscn
+res://Scenes/levels/level_6.tscn
+res://Scenes/levels/level_7.tscn
+res://Scenes/Enemies/skeleton_arrow.tscn
+res://Scripts/level_complete_menu.gd
+res://Scenes/levels/level_15.tscn
+res://Scripts/gamemanager_pemdas.gd
+res://Scenes/Mechanics/gamemanager_fraction.tscn
+res://Scripts/gamemanager_fraction.gd
+res://Scenes/Mechanics/gamemanager_algebra.tscn
+res://Scripts/gamemanager_algebra.gd
+res://Scenes/levels/tutorial/game_manager_tutorial.gd

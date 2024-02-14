@@ -84,7 +84,6 @@ func calculate_expression():
 
 @onready var end_tutorial_1 = $"../typewriter_text_effect/EndTutorial1"
 @onready var end_tutorial_2 = $"../typewriter_text_effect/EndTutorial2"
-@onready var animation_player = $"../typewriter_text_effect/EndTutorial2/AnimationPlayer"
 
 func check_final_answer():
 	var current_result = calculate_expression()
@@ -93,9 +92,8 @@ func check_final_answer():
 		AudioManager.tuto7_stop()
 		AudioManager.tuto6()
 		end_tutorial_2.show()
-		animation_player.play("typewriter")
 		GameSettings.tutorialPlayed = true
-		await get_tree().create_timer(10).timeout
+		await get_tree().create_timer(17).timeout
 		AudioManager.tuto6_stop()
 		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
 		AudioManager.level1_music.play()

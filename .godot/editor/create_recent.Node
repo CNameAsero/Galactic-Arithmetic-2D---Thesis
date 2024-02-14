@@ -1,7 +1,8 @@
+Sprite2D
+RichTextLabel
 Timer
 TextureButton
 Node2D
-Sprite2D
 Node
 AnimationPlayer
 AudioStreamPlayer
@@ -12,7 +13,6 @@ Area2D
 RayCast2D
 Camera2D
 TileMap
-RichTextLabel
 StaticBody2D
 Label
 VisibleOnScreenNotifier2D
