@@ -27,7 +27,8 @@ extends Node2D
 @onready var oper_term = num_term - 1
 
 func _ready():
-	GameSettings._autoload()
+	if GameSettings.current_world >= 1:
+		GameSettings._autoload()
 
 func collect_number(num):
 	if isDestroy.isDestroy && last_item_was_number:
