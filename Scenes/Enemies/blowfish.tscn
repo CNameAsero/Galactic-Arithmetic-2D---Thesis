@@ -46,6 +46,7 @@ _data = {
 
 [node name="blowfish" type="Area2D"]
 position = Vector2(590, 370)
+scale = Vector2(1.3, 1.3)
 script = ExtResource("1_6n8pm")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

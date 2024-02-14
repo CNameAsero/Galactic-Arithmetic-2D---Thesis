@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="10_biymq"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="11_i8761"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="12_rkgsi"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="13_vqi6u"]
+[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="13_vqi6u"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="14_0pftb"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="15_4e610"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="16_256bi"]

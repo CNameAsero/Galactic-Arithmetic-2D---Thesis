@@ -677,7 +677,7 @@ position = Vector2(1305, 560)
 
 [node name="octopus" parent="enemies" instance=ExtResource("3_473ma")]
 position = Vector2(290, 349)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="shark4" parent="enemies" instance=ExtResource("4_us4ct")]
 position = Vector2(481, 650)
@@ -702,11 +702,11 @@ rect_radius_y = 380.0
 
 [node name="octopus2" parent="enemies" instance=ExtResource("3_473ma")]
 position = Vector2(1632, 372)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus3" parent="enemies" instance=ExtResource("3_473ma")]
 position = Vector2(961, 716)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="blowfish8" parent="enemies" instance=ExtResource("2_khkgu")]
 position = Vector2(75, 931)

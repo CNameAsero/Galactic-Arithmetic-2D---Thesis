@@ -48,7 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="39_x3bw8"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="40_cmn02"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="41_gfs1m"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="42_8as7e"]
+[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="42_8as7e"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="43_xc8tx"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="44_gpm5q"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="45_064qh"]
@@ -657,10 +657,10 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(136, 154)
 
 [node name="blowfish2" parent="Enemies" instance=ExtResource("2_s53uy")]
-position = Vector2(188, 154)
+position = Vector2(180, 156)
 
 [node name="blowfish3" parent="Enemies" instance=ExtResource("2_s53uy")]
-position = Vector2(217, 78)
+position = Vector2(220, 76)
 
 [node name="blowfish4" parent="Enemies" instance=ExtResource("2_s53uy")]
 position = Vector2(216, 121)
@@ -691,27 +691,27 @@ position = Vector2(1052, 735)
 
 [node name="octopus" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(1241, 849)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus5" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(1425, 188)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus6" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(1428, 497)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus2" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(717, 852)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus3" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(534, 497)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="octopus4" parent="Enemies" instance=ExtResource("14_7i06c")]
 position = Vector2(531, 189)
-rect_radius = 450.0
+rect_radius = 400.0
 
 [node name="slime_player_joystick" type="Node2D" parent="."]
 

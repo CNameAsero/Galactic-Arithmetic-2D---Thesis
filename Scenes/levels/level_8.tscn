@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="14_qrwvl"]
 [ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="15_7ufph"]
 [ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="16_me4so"]
-[ext_resource type="Texture2D" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="17_5b680"]
+[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="17_5b680"]
 [ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="18_708yx"]
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="19_qf4p2"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="20_ax7qx"]
@@ -747,18 +747,21 @@ oper = "÷"
 
 [node name="octopus" parent="enemies" instance=ExtResource("5_74ad0")]
 position = Vector2(409, 211)
+rect_radius = 500.0
 
 [node name="octopus2" parent="enemies" instance=ExtResource("5_74ad0")]
 position = Vector2(709, 877)
+rect_radius = 500.0
 
 [node name="octopus3" parent="enemies" instance=ExtResource("5_74ad0")]
 position = Vector2(1553, 877)
+rect_radius = 500.0
 
 [node name="octopus4" type="Node2D" parent="enemies"]
 position = Vector2(1275, 310)
 script = ExtResource("50_eugng")
 ammo = ExtResource("51_jr8av")
-rect_radius = 600.0
+rect_radius = 500.0
 
 [node name="Area2D" type="Area2D" parent="enemies/octopus4"]
 
