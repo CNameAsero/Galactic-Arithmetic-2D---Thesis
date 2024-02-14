@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	GameSettings._autoload()
+	GameSettings._autoload_json()
 	AudioManager.background_music.play()
 	$Option_Menu_Bg/Inside_BG/music_slider.value = GameSettings.music_volume
 	$Option_Menu_Bg/Inside_BG/sfx_slider.value = GameSettings.sfx_volume

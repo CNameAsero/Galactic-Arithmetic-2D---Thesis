@@ -1,5 +1,5 @@
 res://Autoloads/AudioManager.tscn::ff3502e2b784bbdcefc984e6b23230ba::1707909111::res://.godot/exported/133200997/export-184bdd8a8e1d0d777e2a4d6e2fc1f540-AudioManager.scn
-res://Autoloads/GameSettings.tscn::2af991a08f35b83215f846ddd5307b7c::1707908954::res://.godot/exported/133200997/export-3024ded1ed35bb498d08b8743a884dbf-GameSettings.scn
+res://Autoloads/GameSettings.tscn::2af991a08f35b83215f846ddd5307b7c::1707926017::res://.godot/exported/133200997/export-3024ded1ed35bb498d08b8743a884dbf-GameSettings.scn
 res://Galactic Arithmetic Assets/Audio_Assets/buses.tres::8040da09a643312daf21f608719c34ae::1706016831::res://.godot/exported/133200997/export-862073403ed0bf6af1536ef8b9faf9d7-buses.res
 res://Scenes/Enemies/area_detection.tscn::cd9bdbbc59b1925103ce0f87a557f38b::1706016831::res://.godot/exported/133200997/export-cbd58a4b7a90a66a3688450b36a643be-area_detection.scn
 res://Scenes/Enemies/bee_enemy.tscn::93bd38612b2c072c33509efcbfb5f148::1706016831::res://.godot/exported/133200997/export-0063844547515f8ac5dec40f54d41cd4-bee_enemy.scn
@@ -9,8 +9,8 @@ res://Scenes/Enemies/wasp_enemy.tscn::345585a1106bef34cbd4df5f1dd552c1::17077881
 res://Scenes/levels/Game Obstacles/big_crate.tscn::85793a17fd6c153735f2cac4b29b5b91::1706016831::res://.godot/exported/133200997/export-1b68ae87f7aedaf30838cdf42960564b-big_crate.scn
 res://Scenes/levels/Game Obstacles/hay_bale.tscn::2bfffb9d81a936547cc8f107c16b0918::1706016831::res://.godot/exported/133200997/export-44cc1e53fabd691a48297bdd8b457244-hay_bale.scn
 res://Scenes/levels/Game Obstacles/spike.tscn::0649335ba9a3562050c52547ff82c018::1707788115::res://.godot/exported/133200997/export-9554e6d7f33c9dcb884bfdee9fc15724-spike.scn
-res://Scenes/levels/level1_TileSet2dPixel.tres::6a4d10703335a93ede59a086ac8b1303::1707915587::res://.godot/exported/133200997/export-2a91ac5ce9efc21c40363f00a86b643b-level1_TileSet2dPixel.res
-res://Scenes/levels/level_1.tscn::f5e728f3c196724c3b58f7460189bc73::1707919258::res://.godot/exported/133200997/export-1e4970020d014aabb691dad3951baa23-level_1.scn
+res://Scenes/levels/level1_TileSet2dPixel.tres::6a4d10703335a93ede59a086ac8b1303::1707926017::res://.godot/exported/133200997/export-2a91ac5ce9efc21c40363f00a86b643b-level1_TileSet2dPixel.res
+res://Scenes/levels/level_1.tscn::f5e728f3c196724c3b58f7460189bc73::1707925861::res://.godot/exported/133200997/export-1e4970020d014aabb691dad3951baa23-level_1.scn
 res://Scenes/Mechanics/chest.tscn::7891ffa901e92f0601e19f0a72a9c5a0::1707788114::res://.godot/exported/133200997/export-690603578b5266cae4cfdc470e903fea-chest.scn
 res://Scenes/Mechanics/final_answer.tscn::7312f649e7e34874e74b876e3b9955be::1707788114::res://.godot/exported/133200997/export-e818efc90ec6e458f9866a7349a0f181-final_answer.scn
 res://Scenes/Mechanics/game_manager.tscn::57d19e25ffef74d5ff141660fde0878d::1707788114::res://.godot/exported/133200997/export-c4fa72d2c8f978761475be111be73997-game_manager.scn

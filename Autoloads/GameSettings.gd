@@ -1,7 +1,31 @@
 extends Node
 
-const save_path = "res://savefile.save"
-
+const save_path = "user://savefile.json"
+var game_data = {
+	"storyboardPlayed": false,
+	"cutscene1": false,
+	"cutscene2": false,
+	"cutscene3": false,
+	"cutscene4": false,
+	"finalcutscene": false,
+	"tutorialplayed": false,
+	"istuto1": false,
+	"istuto2": false,
+	"istuto3": false,
+	"istuto4": false,
+	"istuto5": false,
+	"isHard": false,
+	"worldcompleted": {},
+	"current_world": 0,
+	"current_level": 0,
+	"max_unlocked_level": 0,
+	"currentlevel": [true, false, false, false, false, 
+false, false, false, false, false, 
+false, false, false, false, false, 
+false, false, false, false, false, 
+false, false, false, false, false, false],
+	
+}
 var player_invulnerable = false
 
 var world_completed = {}
@@ -65,7 +89,6 @@ func _autosave():
 	if error != OK:
 		print("Failed to save game settings.")
 
-
 func _autoload():
 	var config = ConfigFile.new()
 	var error = config.load("res://GameSettings.cfg")
@@ -93,4 +116,52 @@ func _autoload():
 	music_volume = config.get_value("game_data", "music_volume?", -10)
 	sfx_volume = config.get_value("game_data", "sfx_volume?", -10)
 	world_completed = config.get_value("game_data", "world_completed?", {})
+
+func _autosave_json():
+	var file = FileAccess.open(save_path, FileAccess.WRITE)
+	
+	var json_data = JSON.stringify(game_data)
+	
+	file.store_line(json_data)
+
+func _autoload_json():
+	print("Loading from: ", save_path)  # Debug print
+	if not FileAccess.file_exists(save_path):
+		print("Save file does not exist.")
+		return
+	
+	var save_game = FileAccess.open(save_path, FileAccess.READ)
+	
+	while save_game.get_position() < save_game.get_length():
+		var json_string = save_game.get_line()
+		var json = JSON.new()
+		var parse_result = json.parse(json_string)
+		var node_data = json.get_data()
+
+		if parse_result == OK:
+			node_data = json.get_data()
+			game_data = node_data
+			# Update the @onready variables
+			storyboardPlayed = node_data["storyboardPlayed"]
+			cutscene1 = node_data["cutscene1"]
+			cutscene2 = node_data["cutscene2"]
+			cutscene3 = node_data["cutscene3"]
+			cutscene4 = node_data["cutscene4"]
+			finalcutscene = node_data["finalcutscene"]
+			tutorialPlayed = node_data["tutorialplayed"]
+			isHard = node_data["isHard"]
+			isTuto1 = node_data["istuto1"]
+			isTuto2 = node_data["istuto2"]
+			isTuto3 = node_data["istuto3"]
+			isTuto4 = node_data["istuto4"]
+			isTuto5 = node_data["istuto5"]
+			current_world = node_data["current_world"]
+			current_level = node_data["current_level"]
+			max_unlocked_level = node_data["max_unlocked_level"]
+			currentlevel = node_data["currentlevel"]
+		else:
+			print("Error parsing JSON: ", parse_result)
+
+
+
 
