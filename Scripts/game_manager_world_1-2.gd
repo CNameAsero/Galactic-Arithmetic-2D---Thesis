@@ -106,7 +106,7 @@ func check_final_answer():
 	if current_result == final_answer:
 		AudioManager.level_complete_sfx.play()
 		reset_for_next_level()
-		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene1 && !GameSettings.world_completed.get(GameSettings.current_level, false):
+		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene1 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 5:
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
 		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 10:
@@ -118,6 +118,7 @@ func check_final_answer():
 		time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
+		GameSettings.player_invulnerable = false
 		GameSettings._autosave()
 		get_tree().paused = true
 	elif collected_numbers.size() == num_term || current_result != calculate_expression():

@@ -4,22 +4,15 @@ extends Node2D
 
 @onready var sample_text = $typewriter_text_effect/sample_text
 
-
 @onready var step_1 = $"typewriter_text_effect/Step 1"
-
 
 @onready var number_collect = $typewriter_text_effect/Number_Collect
 
-
 @onready var step_2 = $"typewriter_text_effect/Step 2"
-
 
 @onready var press_operator = $typewriter_text_effect/Press_Operator
 
-
-
 @onready var end_tutorial_1 = $typewriter_text_effect/EndTutorial1
-
 
 @onready var end_tutorial_2 = $typewriter_text_effect/EndTutorial2
 

@@ -359,36 +359,6 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(503, 740)
 oper = "-"
 
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(960, 612)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("2_plxkj")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_3fqii")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_qgw60")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_uepkl")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Spike" parent="Enemies" instance=ExtResource("6_omx7i")]
@@ -470,6 +440,36 @@ position = Vector2(1542, 878)
 
 [node name="Wasp_enemy8" parent="Enemies" instance=ExtResource("12_bd18b")]
 position = Vector2(377, 219)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(960, 612)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("2_plxkj")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("3_3fqii")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_qgw60")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_uepkl")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="health_system" parent="." instance=ExtResource("56_g0u88")]
 

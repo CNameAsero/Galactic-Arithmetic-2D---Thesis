@@ -125,7 +125,7 @@ func _autosave_json():
 	file.store_line(json_data)
 
 func _autoload_json():
-	print("Loading from: ", save_path)  # Debug print
+	print("Loading from: ", save_path)
 	if not FileAccess.file_exists(save_path):
 		print("Save file does not exist.")
 		return
@@ -141,7 +141,7 @@ func _autoload_json():
 		if parse_result == OK:
 			node_data = json.get_data()
 			game_data = node_data
-			# Update the @onready variables
+
 			storyboardPlayed = node_data["storyboardPlayed"]
 			cutscene1 = node_data["cutscene1"]
 			cutscene2 = node_data["cutscene2"]

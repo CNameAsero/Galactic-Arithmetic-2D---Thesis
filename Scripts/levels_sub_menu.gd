@@ -13,15 +13,13 @@ func _on_level_1_pressed():
 	AudioManager.play_button_sfx()
 	if !GameSettings.tutorialPlayed:
 		AudioManager.background_music.stop()
-		Loading.load_scene(self, "res://Scenes/levels/tutorial/tutorial.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/tutorial/tutorial.tscn")
 	else:
 		GameSettings.isHard = false
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		GameSettings._autosave()
-		Loading.load_scene(self, "res://Scenes/levels/level_1.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/level_1.tscn")
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
@@ -30,8 +28,7 @@ func _on_level_2_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		GameSettings._autosave()
-		Loading.load_scene(self, "res://Scenes/levels/level_2.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/level_2.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/level_2.tscn")
 	else:
 		print("this is locked")
 
@@ -42,8 +39,7 @@ func _on_level_3_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		GameSettings._autosave()
-		Loading.load_scene(self, "res://Scenes/levels/level_3.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/level_3.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/level_3.tscn")
 	else:
 		print("Clear level 2 to open this level!")
 
@@ -54,8 +50,7 @@ func _on_level_4_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		GameSettings._autosave()
-		Loading.load_scene(self, "res://Scenes/levels/level_4.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/level_4.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/level_4.tscn")
 	else:
 		print("Clear level 3 to open this level!")
 
@@ -66,8 +61,7 @@ func _on_level_5_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level1_music.play()
 		GameSettings._autosave()
-		Loading.load_scene(self, "res://Scenes/levels/level_5.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/levels/level_5.tscn")
+		get_tree().change_scene_to_file("res://Scenes/levels/level_5.tscn")
 	else:
 		print("Clear level 4 to open this level!")
 

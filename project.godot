@@ -23,7 +23,6 @@ buses/default_bus_layout="res://Galactic Arithmetic Assets/Audio_Assets/buses.tr
 
 GameSettings="*res://Autoloads/GameSettings.gd"
 AudioManager="*res://Autoloads/AudioManager.tscn"
-Loading="*res://Autoloads/loading.tscn"
 
 [display]
 

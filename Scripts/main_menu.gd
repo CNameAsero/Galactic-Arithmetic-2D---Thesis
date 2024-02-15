@@ -12,12 +12,10 @@ func _on_play_button_pressed():
 	#here if the storyboard still not played then do this
 	if not get_node("/root/GameSettings").storyboardPlayed:
 		AudioManager.background_music.stop()
-		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
-#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
+		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
 	#if the storyboard already play then just go to level menu
 	else:
-		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
-#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 		AudioManager.background_music.play()
 
 #here if click the option button then just hide the main menu and show option menu

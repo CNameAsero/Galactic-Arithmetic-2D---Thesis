@@ -60,7 +60,7 @@ func _on_world_5_area_pressed():
 	AudioManager.play_button_sfx()
 	city_sub_menu.show()
 
-func _process(delta):
+func _process(_delta):
 	if GameSettings.currentlevel[5]:
 		$Level_Menu_Bg/Picture_Border_Level/world2_area/locked.hide()
 	if GameSettings.currentlevel[10]:

@@ -122,7 +122,7 @@ func check_final_answer():
 	var current_result = evaluate_rpn(shunting_yard(), variables)
 	if str(current_result) == str(final_answer):
 		AudioManager.level_complete_sfx.play()
-		if GameSettings.current_level % 5 == 0 && !GameSettings.finalcutscene && !GameSettings.world_completed.get(GameSettings.current_level, false):
+		if GameSettings.current_level % 5 == 0 && !GameSettings.finalcutscene && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 25:
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
@@ -132,6 +132,7 @@ func check_final_answer():
 		var time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
+		GameSettings.player_invulnerable = false
 		GameSettings._autosave()
 		get_tree().paused = true
 	elif collected_items.size() == terms || current_result != evaluate_rpn(shunting_yard(), variables):
