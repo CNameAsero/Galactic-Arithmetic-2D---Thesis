@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	GameSettings._autoload_json()
+	GameSettings._autoload()
 	AudioManager.background_music.play()
 	$Option_Menu_Bg/Inside_BG/music_slider.value = GameSettings.music_volume
 	$Option_Menu_Bg/Inside_BG/sfx_slider.value = GameSettings.sfx_volume
@@ -11,11 +11,13 @@ func _on_play_button_pressed():
 	AudioManager.play_button_sfx()
 	#here if the storyboard still not played then do this
 	if not get_node("/root/GameSettings").storyboardPlayed:
-		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
 		AudioManager.background_music.stop()
+		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
+#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn")
 	#if the storyboard already play then just go to level menu
 	else:
-		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 		AudioManager.background_music.play()
 
 #here if click the option button then just hide the main menu and show option menu
@@ -43,6 +45,7 @@ func _on_music_slider_value_changed(value) -> void:
 		AudioServer.set_bus_mute(AudioManager.Music_bus, true)
 	else:
 		AudioServer.set_bus_mute(AudioManager.Music_bus, false)
+	GameSettings._autosave()
 
 func _on_sfx_slider_value_changed(value) -> void:
 	GameSettings.sfx_volume = value
@@ -51,6 +54,7 @@ func _on_sfx_slider_value_changed(value) -> void:
 		AudioServer.set_bus_mute(AudioManager.Sfx_bus, true)
 	else:
 		AudioServer.set_bus_mute(AudioManager.Sfx_bus, false)
+	GameSettings._autosave()
 
 func _on_about_us_button_pressed():
 	AudioManager.play_button_sfx()

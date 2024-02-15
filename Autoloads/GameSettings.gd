@@ -84,14 +84,14 @@ func _autosave():
 	config.set_value("game_data", "sfx_volume?", sfx_volume)
 	config.set_value("game_data", "world_completed?", world_completed)
 	
-	var error = config.save("res://GameSettings.cfg")
+	var error = config.save("user://GameSettings.cfg")
 
 	if error != OK:
 		print("Failed to save game settings.")
 
 func _autoload():
 	var config = ConfigFile.new()
-	var error = config.load("res://GameSettings.cfg")
+	var error = config.load("user://GameSettings.cfg")
 
 	if error != OK:
 		print("Failed to load game settings.")

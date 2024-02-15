@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dwc8cn8jg3tq2"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/cut_scene_2.gd" id="1_dkgpi"]
+[ext_resource type="Script" path="res://Scripts/cut_scene_2.gd" id="1_dkgpi"]
 [ext_resource type="Texture2D" uid="uid://bihtrc4d0hx8d" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/1.png" id="2_vrqb7"]
 [ext_resource type="Texture2D" uid="uid://b56b5h6hc0rfs" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/2.png" id="3_xfcd6"]
 [ext_resource type="Texture2D" uid="uid://bk06uliw3nbat" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ocean_cutscene/3.png" id="4_js8xx"]

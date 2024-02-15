@@ -17,7 +17,6 @@ func _physics_process(delta):
 @onready var timer = $Timer
 
 func player_hurt():
-	GameSettings.player_invulnerable = true
 	health_system._health -= 1
 	AudioManager.player_hurt()
 	var blink_duration = 0.05

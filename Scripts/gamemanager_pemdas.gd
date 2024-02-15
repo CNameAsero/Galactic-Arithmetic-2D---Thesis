@@ -128,6 +128,7 @@ func check_final_answer():
 		var time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
+		GameSettings._autosave()
 		get_tree().paused = true
 	elif collected_items.size() == terms || current_result != evaluate_rpn(shunting_yard()):
 		AudioManager.play_deathsfx()

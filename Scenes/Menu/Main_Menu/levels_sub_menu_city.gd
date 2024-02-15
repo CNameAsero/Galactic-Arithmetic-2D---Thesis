@@ -15,10 +15,13 @@ func _on_level_1_pressed():
 		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_21.tscn")
+		GameSettings._autosave()
+		Loading.load_scene(self, "res://Scenes/levels/level_21.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/levels/level_21.tscn")
 	else: 
 		AudioManager.background_music.stop()
-		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/cut_scene_4.tscn")
+		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/cut_scene_4.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/cut_scene_4.tscn")
 
 func _on_level_2_pressed():
 	AudioManager.play_button_sfx()
@@ -26,7 +29,9 @@ func _on_level_2_pressed():
 		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_22.tscn")
+		GameSettings._autosave()
+		Loading.load_scene(self, "res://Scenes/levels/level_22.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/levels/level_22.tscn")
 	else:
 		print("Clear level 21 to open this level!")
 
@@ -36,7 +41,9 @@ func _on_level_3_pressed():
 		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_23.tscn")
+		GameSettings._autosave()
+		Loading.load_scene(self, "res://Scenes/levels/level_23.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/levels/level_23.tscn")
 	else:
 		print("Clear level 22 to open this level!")
 
@@ -46,7 +53,9 @@ func _on_level_4_pressed():
 		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_24.tscn")
+		GameSettings._autosave()
+		Loading.load_scene(self, "res://Scenes/levels/level_24.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/levels/level_24.tscn")
 	else:
 		print("Clear level 23 to open this level!")
 
@@ -56,7 +65,9 @@ func _on_level_5_pressed():
 		GameSettings.isHard = true
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_25.tscn")
+		GameSettings._autosave()
+		Loading.load_scene(self, "res://Scenes/levels/level_25.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/levels/level_25.tscn")
 	else:
 		print("Clear level 24 to open this level!")
 

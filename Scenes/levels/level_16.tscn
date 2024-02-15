@@ -188,6 +188,7 @@ func hide_all_notes():
 func _on_exit_pressed():
 	AudioManager.play_button_sfx()
 	GameSettings.isTuto4 = true
+	GameSettings._autosave()
 	get_tree().paused = false
 	$\".\".queue_free()
 "

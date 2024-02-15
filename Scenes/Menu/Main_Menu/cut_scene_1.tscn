@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://d0hh7olgwermw"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/cut_scene_1.gd" id="1_qpcfh"]
+[ext_resource type="Script" path="res://Scripts/cut_scene_1.gd" id="1_qpcfh"]
 [ext_resource type="Texture2D" uid="uid://cwbiyg4noyq4k" path="res://Galactic Arithmetic Assets/Story_Board_Assets/grass_cutscene/1.png" id="2_cblvs"]
 [ext_resource type="Texture2D" uid="uid://hc4minwrx6po" path="res://Galactic Arithmetic Assets/Story_Board_Assets/grass_cutscene/2.png" id="3_upxjc"]
 [ext_resource type="Texture2D" uid="uid://cs3t8pqnhue80" path="res://Galactic Arithmetic Assets/Story_Board_Assets/grass_cutscene/3.png" id="4_ni2gg"]

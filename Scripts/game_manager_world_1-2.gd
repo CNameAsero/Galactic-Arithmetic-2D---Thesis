@@ -69,6 +69,9 @@ func update_expression():
 
 	$CurrentExpressionLabel.text = current_expression + " = " + str(calculate_expression())
 
+func round_to_two_decimals(number):
+	return round(number * 100.0) / 100.0
+
 func calculate_expression():
 	if collected_numbers.size() == 0:
 		return 0
@@ -92,7 +95,7 @@ func calculate_expression():
 				result *= number
 			"÷":
 				if number != 0:
-					result /= number
+					result = round_to_two_decimals(float(result) / number)
 				else:
 					print("Division by zero error")
 					return 0
@@ -106,7 +109,7 @@ func check_final_answer():
 		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene1 && !GameSettings.world_completed.get(GameSettings.current_level, false):
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
-		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false):
+		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 10:
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
@@ -115,6 +118,7 @@ func check_final_answer():
 		time_elapsed = $timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
+		GameSettings._autosave()
 		get_tree().paused = true
 	elif collected_numbers.size() == num_term || current_result != calculate_expression():
 		AudioManager.play_deathsfx()

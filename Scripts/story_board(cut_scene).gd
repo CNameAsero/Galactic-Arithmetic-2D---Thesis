@@ -19,20 +19,21 @@ func _on_tap_to_continue_pressed():
 			get_node("Page" + str(nextPage)).show()
 			currentPage = nextPage
 		if nextPage > 18:  # Change this to 18
+			AudioManager.background_music.play()
 			audio_stop(currentPage)
-			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+			Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+#			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 			get_node("/root/GameSettings").storyboardPlayed = true
-			GameSettings.game_data["storyboardPlayed"] = GameSettings.storyboardPlayed
-			GameSettings._autosave_json()
+			GameSettings._autosave()
 
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
 	AudioManager.background_music.play()
-	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+	Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+#	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 	get_node("/root/GameSettings").storyboardPlayed = true
-	GameSettings.game_data["storyboardPlayed"] = GameSettings.storyboardPlayed
-	GameSettings._autosave_json()
+	GameSettings._autosave()
 
 func audio(num):
 	if num >= 1 and num <= 18:  # Change this to 18

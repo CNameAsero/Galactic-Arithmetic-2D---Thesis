@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbvctm3shjnpk"
-path="res://.godot/imported/slimey_icon.png-a4c7e0bb932c885ee5c0b2b923d3d06e.ctex"
+uid="uid://78riwwpt0ccf"
+path="res://.godot/imported/Loading_background.png-b787b99a8713eb66254c850f81c5510b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://slimey_icon.png"
-dest_files=["res://.godot/imported/slimey_icon.png-a4c7e0bb932c885ee5c0b2b923d3d06e.ctex"]
+source_file="res://Sprites/Objects/Loading_background.png"
+dest_files=["res://.godot/imported/Loading_background.png-b787b99a8713eb66254c850f81c5510b.ctex"]
 
 [params]
 

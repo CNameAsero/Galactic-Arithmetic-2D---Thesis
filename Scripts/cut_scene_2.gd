@@ -22,8 +22,10 @@ func _on_tap_to_continue_pressed():
 			audio_stop(currentPage)
 			GameSettings.cutscene2 = true
 			GameSettings.isHard = true
+			GameSettings._autosave()
 			if GameSettings.currentlevel[10] && GameSettings.cutscene2:
-				get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+				Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+#				get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 				AudioManager.background_music.play()
 				AudioManager.level2_music.stop()
 
@@ -31,8 +33,11 @@ func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
 	GameSettings.cutscene2 = true
+	GameSettings.isHard = true
+	GameSettings._autosave()
 	if GameSettings.currentlevel[10] && GameSettings.cutscene2:
-		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+		Loading.load_scene(self, "res://Scenes/Menu/Main_Menu/level_Menu.tscn")
+#		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/level_Menu.tscn")
 		AudioManager.background_music.play()
 		AudioManager.level2_music.stop()
 

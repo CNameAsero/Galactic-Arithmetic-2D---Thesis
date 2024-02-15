@@ -20,14 +20,18 @@ func _on_tap_to_continue_pressed():
 			currentPage = nextPage
 		if nextPage > 20:  # Change this to 18
 			audio_stop(currentPage)
-			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn") #change this depends on the next you want
 			GameSettings.finalcutscene = true
+			GameSettings._autosave()
+			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn") #change this depends on the next you want
+
 
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
-	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")  #change this depends on the next you want
 	GameSettings.finalcutscene = true
+	GameSettings._autosave()
+	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")  #change this depends on the next you want
+
 
 func audio(num):
 	if num >= 1 and num <= 20:  # Change this to 18

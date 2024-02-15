@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b24ic7ilbhxyr"]
 
-[ext_resource type="Script" path="res://Scenes/Menu/Main_Menu/cut_scene_4.gd" id="1_5f4yr"]
+[ext_resource type="Script" path="res://Scripts/cut_scene_4.gd" id="1_5f4yr"]
 [ext_resource type="Texture2D" uid="uid://453ymmuhbceu" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/1.png" id="1_owlyo"]
 [ext_resource type="Texture2D" uid="uid://ctqkyl5vqj6r" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/2.png" id="2_qkagw"]
 [ext_resource type="Texture2D" uid="uid://c1ewq6cdxsxfo" path="res://Galactic Arithmetic Assets/Story_Board_Assets/ice_cutscene/3.png" id="3_spj3g"]
