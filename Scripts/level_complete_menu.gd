@@ -24,6 +24,7 @@ func _on_next_level_button_pressed():
 				AudioManager.level1_music.stop()
 				AudioManager.level2_music.play()
 			if GameSettings.current_level % 10 == 0:
+				GameSettings.isHard = true
 				AudioManager.level2_music.stop()
 				AudioManager.level3_music.play()
 			get_tree().change_scene_to_file(next_scene_path)

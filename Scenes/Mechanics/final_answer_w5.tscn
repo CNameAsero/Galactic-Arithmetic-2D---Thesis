@@ -1,11 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://btmq1lrhtcp0e"]
+[gd_scene load_steps=34 format=3 uid="uid://btmq1lrhtcp0e"]
 
 [ext_resource type="Script" path="res://Scenes/Mechanics/final_answer_w5.gd" id="1_ofle6"]
 [ext_resource type="Texture2D" uid="uid://c0bxfhgqnpnc5" path="res://Sprites/Collectibles/final answers/w5/9x.png" id="2_rdhvr"]
+[ext_resource type="Texture2D" uid="uid://31kbqdosjx6r" path="res://Sprites/Collectibles/final answers/w5/8x_chest.png" id="3_3bmpw"]
 [ext_resource type="Texture2D" uid="uid://d4lxc8d717und" path="res://Sprites/Collectibles/final answers/w5/12xplusy.png" id="3_mivv2"]
+[ext_resource type="Texture2D" uid="uid://dhxwfi2du4mus" path="res://Sprites/Collectibles/final answers/w5/10x_chest.png" id="4_0esbq"]
 [ext_resource type="Texture2D" uid="uid://tltp83xnhocx" path="res://Sprites/Collectibles/final answers/w5/16xsquarey.png" id="5_w8aj8"]
+[ext_resource type="Texture2D" uid="uid://chb21fyviqod1" path="res://Sprites/Collectibles/final answers/w5/11x2y_chest.png" id="6_4dfkm"]
 [ext_resource type="Texture2D" uid="uid://b3oag7jusoho4" path="res://Sprites/Collectibles/final answers/w5/12xsquare.png" id="6_itus0"]
 [ext_resource type="Texture2D" uid="uid://ggio7jo6o2q0" path="res://Sprites/Collectibles/final answers/w5/24xsquare.png" id="6_wdc3o"]
+[ext_resource type="Texture2D" uid="uid://b2gh18jun34xg" path="res://Sprites/Collectibles/final answers/w5/13x3y_chest.png" id="7_hkf3h"]
+[ext_resource type="Texture2D" uid="uid://bi075cfyj5xmi" path="res://Sprites/Collectibles/final answers/w5/16xsquare_chest.png" id="9_weamb"]
+[ext_resource type="Texture2D" uid="uid://cmxbpwa5dao82" path="res://Sprites/Collectibles/final answers/w5/12xsquare2y.png" id="11_yepcc"]
+[ext_resource type="Texture2D" uid="uid://bi4f8h3prjyny" path="res://Sprites/Collectibles/final answers/w5/18xsquare2y_chst.png" id="12_bv6t1"]
+[ext_resource type="Texture2D" uid="uid://bywt5frqwsoqn" path="res://Sprites/Collectibles/final answers/w5/18xsquare_chest.png" id="14_o4fk1"]
+[ext_resource type="Texture2D" uid="uid://d31xyts3hbarv" path="res://Sprites/Collectibles/final answers/w5/32xsquare.png" id="15_dpcps"]
 
 [sub_resource type="Animation" id="Animation_p0rax"]
 length = 0.001
@@ -76,6 +85,126 @@ tracks/5/path = NodePath("lvl5:frame")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("lvl1_1:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("lvl1_2:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("lvl2_1:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("lvl2_2:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("lvl3_1:frame")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("lvl3_2:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("lvl4_1:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("lvl4_2:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("lvl5_1:frame")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("lvl5_2:frame")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -167,14 +296,194 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
+[sub_resource type="Animation" id="Animation_mf4ag"]
+resource_name = "lvl1_1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl1_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_p85ku"]
+resource_name = "lvl1_2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl1_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_jkcpv"]
+resource_name = "lvl2_1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl2_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_olvnq"]
+resource_name = "lvl2_2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl2_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_7rwhv"]
+resource_name = "lvl3_1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl3_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_263iu"]
+resource_name = "lvl3_2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl3_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_7bvt5"]
+resource_name = "lvl4_1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl4_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_2ihfq"]
+resource_name = "lvl4_2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl4_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_y6eni"]
+resource_name = "lvl5_1"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl5_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_57oij"]
+resource_name = "lvl5_2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl5_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d4abo"]
 _data = {
 "RESET": SubResource("Animation_p0rax"),
 "lvl1": SubResource("Animation_52535"),
+"lvl1_1": SubResource("Animation_mf4ag"),
+"lvl1_2": SubResource("Animation_p85ku"),
 "lvl2": SubResource("Animation_rsvet"),
+"lvl2_1": SubResource("Animation_jkcpv"),
+"lvl2_2": SubResource("Animation_olvnq"),
 "lvl3": SubResource("Animation_heput"),
+"lvl3_1": SubResource("Animation_7rwhv"),
+"lvl3_2": SubResource("Animation_263iu"),
 "lvl4": SubResource("Animation_xxu30"),
-"lvl5": SubResource("Animation_77m5v")
+"lvl4_1": SubResource("Animation_7bvt5"),
+"lvl4_2": SubResource("Animation_2ihfq"),
+"lvl5": SubResource("Animation_77m5v"),
+"lvl5_1": SubResource("Animation_y6eni"),
+"lvl5_2": SubResource("Animation_57oij")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bsnka"]
@@ -192,13 +501,49 @@ texture = ExtResource("2_rdhvr")
 hframes = 5
 frame = 1
 
+[node name="lvl1_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_3bmpw")
+hframes = 5
+frame = 1
+
+[node name="lvl1_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_0esbq")
+hframes = 5
+frame = 1
+
 [node name="lvl2" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("3_mivv2")
 hframes = 5
 frame = 1
 
+[node name="lvl2_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_4dfkm")
+hframes = 5
+frame = 1
+
+[node name="lvl2_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_hkf3h")
+hframes = 5
+frame = 1
+
 [node name="lvl3" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_itus0")
+hframes = 5
+frame = 1
+
+[node name="lvl3_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_weamb")
+hframes = 5
+frame = 1
+
+[node name="lvl3_2" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("6_itus0")
 hframes = 5
@@ -210,9 +555,33 @@ texture = ExtResource("5_w8aj8")
 hframes = 5
 frame = 1
 
+[node name="lvl4_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("11_yepcc")
+hframes = 5
+frame = 1
+
+[node name="lvl4_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("12_bv6t1")
+hframes = 5
+frame = 1
+
 [node name="lvl5" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("6_wdc3o")
+hframes = 5
+frame = 1
+
+[node name="lvl5_1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("14_o4fk1")
+hframes = 5
+frame = 1
+
+[node name="lvl5_2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("15_dpcps")
 hframes = 5
 frame = 1
 

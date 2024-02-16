@@ -27,6 +27,7 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 15
+	GameSettings.isHard = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -520,6 +521,11 @@ modulate = Color(47.93, 1, 1, 1)
 position = Vector2(1546, 652)
 number = 7
 
+[node name="6" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
+modulate = Color(47.93, 1, 1, 1)
+position = Vector2(871, 807)
+number = 6
+
 [node name="2" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
 modulate = Color(47.93, 1, 1, 1)
 position = Vector2(869, 253)
@@ -529,11 +535,6 @@ number = 2
 modulate = Color(47.93, 1, 1, 1)
 position = Vector2(907, 638)
 number = 2
-
-[node name="6" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
-modulate = Color(47.93, 1, 1, 1)
-position = Vector2(871, 807)
-number = 6
 
 [node name="7_7" parent="gamemanager_pemdas" instance=ExtResource("3_4j1i3")]
 modulate = Color(47.93, 1, 1, 1)

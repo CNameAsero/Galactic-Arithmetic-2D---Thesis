@@ -16,7 +16,12 @@ func _on_level_1_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level2_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_6.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_6.tscn", "res://Scenes/levels/level_6_1.tscn", "res://Scenes/levels/level_6_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else: 
 		AudioManager.background_music.stop()
 		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/cut_scene_1.tscn")
@@ -28,7 +33,12 @@ func _on_level_2_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level2_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_7.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_7.tscn", "res://Scenes/levels/level_7_1.tscn", "res://Scenes/levels/level_7_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 6 to open this level!")
 
@@ -39,7 +49,12 @@ func _on_level_3_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level2_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_8.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_8.tscn", "res://Scenes/levels/level_8_1.tscn", "res://Scenes/levels/level_8_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 7 to open this level!")
 
@@ -50,7 +65,12 @@ func _on_level_4_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level2_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_9.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_9.tscn", "res://Scenes/levels/level_9_1.tscn", "res://Scenes/levels/level_9_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 8 to open this level!")
 
@@ -61,7 +81,12 @@ func _on_level_5_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level2_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_10.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_10.tscn", "res://Scenes/levels/level_10_1.tscn", "res://Scenes/levels/level_10_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 9 to open this level!")
 

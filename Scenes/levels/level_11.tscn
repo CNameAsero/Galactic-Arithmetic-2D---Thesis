@@ -35,6 +35,7 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 11
+	GameSettings.isHard = true
 	if !GameSettings.isTuto3:
 		$tutorial.show()
 		get_tree().paused = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://mhcc6jvxkvlt"]
+[gd_scene load_steps=82 format=3 uid="uid://mhcc6jvxkvlt"]
 
 [ext_resource type="Script" path="res://Scripts/Numbers.gd" id="1_rk7vo"]
 [ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="2_t6f27"]
@@ -12,17 +12,25 @@
 [ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/numbers/8.png" id="10_0qysk"]
 [ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="11_np18y"]
 [ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/numbers/Ten.png" id="12_3h2ow"]
+[ext_resource type="Texture2D" uid="uid://buco4q7ucin8p" path="res://Sprites/Collectibles/numbers/eleven.png" id="13_6q7vh"]
 [ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/numbers/Twelve.png" id="13_n6j8l"]
 [ext_resource type="Texture2D" uid="uid://bsle4qkpsyof4" path="res://Sprites/Collectibles/numbers/Thirteen.png" id="14_1pxys"]
 [ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/numbers/Sixteen.png" id="14_pvuwo"]
 [ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/numbers/Seventeen.png" id="15_kgcat"]
 [ext_resource type="Texture2D" uid="uid://dn80bl04kib27" path="res://Sprites/Collectibles/numbers/Fourteen.png" id="15_kw2td"]
 [ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/numbers/Nineteen.png" id="16_0gs3s"]
+[ext_resource type="Texture2D" uid="uid://devvcbf4r80kg" path="res://Sprites/Collectibles/numbers/Fifteen.png" id="16_scuhk"]
+[ext_resource type="Texture2D" uid="uid://ckj43wlvcf3va" path="res://Sprites/Collectibles/numbers/Eighteen.png" id="19_gbxp6"]
 [ext_resource type="Texture2D" uid="uid://bd6vxipjlid17" path="res://Sprites/Collectibles/numbers/Twenty.png" id="19_mejsf"]
 [ext_resource type="Texture2D" uid="uid://75s7yrvvev8k" path="res://Sprites/Collectibles/numbers/twenty-four.png" id="20_x2nlw"]
 [ext_resource type="Texture2D" uid="uid://dxgvg3rba1bc8" path="res://Sprites/Collectibles/numbers/Thirty.png" id="21_qmod5"]
 [ext_resource type="Texture2D" uid="uid://cvad01ij51hf4" path="res://Sprites/Collectibles/numbers/Fifty-four.png" id="22_0m1r2"]
 [ext_resource type="Texture2D" uid="uid://c1grv2c33og60" path="res://Sprites/Collectibles/numbers/Fifty-six.png" id="23_plaek"]
+[ext_resource type="Texture2D" uid="uid://bfriq47iul184" path="res://Sprites/Collectibles/numbers/36_dia.png" id="25_ojon6"]
+[ext_resource type="Texture2D" uid="uid://bgp46525t60y1" path="res://Sprites/Collectibles/numbers/42_dia.png" id="25_plt32"]
+[ext_resource type="Texture2D" uid="uid://0ka87swdpsh4" path="res://Sprites/Collectibles/numbers/48_dia.png" id="26_68meg"]
+[ext_resource type="Texture2D" uid="uid://c8y04ro4lu1e3" path="res://Sprites/Collectibles/numbers/80_dia.png" id="28_1lxvl"]
+[ext_resource type="Texture2D" uid="uid://b0xylcs70tgov" path="res://Sprites/Collectibles/numbers/60_dia.png" id="28_32elk"]
 
 [sub_resource type="GDScript" id="GDScript_s62f4"]
 script/source = "extends Node2D
@@ -788,6 +796,17 @@ libraries = {
 "": SubResource("AnimationLibrary_43xt3")
 }
 
+[node name="11" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("13_6q7vh")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/11"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_43xt3")
+}
+
 [node name="12" type="Sprite2D" parent="set_number"]
 visible = false
 texture = ExtResource("13_n6j8l")
@@ -823,6 +842,18 @@ libraries = {
 "": SubResource("AnimationLibrary_4wvhd")
 }
 
+[node name="15" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("16_scuhk")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/15"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
 [node name="16" type="Sprite2D" parent="set_number"]
 visible = false
 texture = ExtResource("14_pvuwo")
@@ -840,6 +871,17 @@ texture = ExtResource("15_kgcat")
 hframes = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/17"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_vjcp7")
+}
+
+[node name="18" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("19_gbxp6")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/18"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_vjcp7")
@@ -892,6 +934,42 @@ libraries = {
 "": SubResource("AnimationLibrary_4wvhd")
 }
 
+[node name="36" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("25_ojon6")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/36"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="42" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("25_plt32")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/42"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="48" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("26_68meg")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/48"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
 [node name="54" type="Sprite2D" parent="set_number"]
 visible = false
 texture = ExtResource("22_0m1r2")
@@ -911,6 +989,30 @@ hframes = 2
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/56"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="60" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("28_32elk")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/60"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="80" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("28_1lxvl")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/80"]
 speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_4wvhd")

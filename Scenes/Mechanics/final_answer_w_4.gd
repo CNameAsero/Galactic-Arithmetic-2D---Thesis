@@ -15,6 +15,12 @@ func _ready():
 			match display:
 				'3over4':
 					animation_player.play("075")
+				'3over2':
+					animation_player.play("3over2")
+				'5over8':
+					animation_player.play("5over8")
+				'8over5':
+					animation_player.play("8over5")
 				'5over16':
 					animation_player.play("03125")
 				'7over8':
@@ -23,3 +29,15 @@ func _ready():
 					animation_player.play("06875")
 				'14over15':
 					animation_player.play("09333")
+				'16over25':
+					animation_player.play("16over25")
+				'25over16':
+					animation_player.play("25over16")
+				'1over20':
+					animation_player.play("1over20")
+				'32over25':
+					animation_player.play("32over25")
+				'19over16':
+					animation_player.play("19over16")
+				'13over20':
+					animation_player.play("13over20")

@@ -16,7 +16,12 @@ func _on_level_1_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_21.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_21.tscn", "res://Scenes/levels/level_21_1.tscn", "res://Scenes/levels/level_21_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else: 
 		AudioManager.background_music.stop()
 		get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/cut_scene_4.tscn")
@@ -28,7 +33,12 @@ func _on_level_2_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_22.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_22.tscn", "res://Scenes/levels/level_22_1.tscn", "res://Scenes/levels/level_22_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 21 to open this level!")
 
@@ -39,7 +49,12 @@ func _on_level_3_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_23.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_23.tscn", "res://Scenes/levels/level_23_1.tscn", "res://Scenes/levels/level_23_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 22 to open this level!")
 
@@ -50,7 +65,12 @@ func _on_level_4_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_24.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_24.tscn", "res://Scenes/levels/level_24_1.tscn", "res://Scenes/levels/level_24_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 23 to open this level!")
 
@@ -61,7 +81,12 @@ func _on_level_5_pressed():
 		AudioManager.background_music.stop()
 		AudioManager.level5_music.play()
 		GameSettings._autosave()
-		get_tree().change_scene_to_file("res://Scenes/levels/level_25.tscn")
+		var rng = RandomNumberGenerator.new()
+		var scenes = []
+		scenes = ["res://Scenes/levels/level_25.tscn", "res://Scenes/levels/level_25_1.tscn", "res://Scenes/levels/level_25_2.tscn"]
+		var random_index = rng.randi_range(0, scenes.size() - 1)
+		var random_scene = scenes[random_index]
+		get_tree().change_scene_to_file(random_scene)
 	else:
 		print("Clear level 24 to open this level!")
 

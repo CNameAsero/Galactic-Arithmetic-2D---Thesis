@@ -21,6 +21,7 @@ func _on_tap_to_continue_pressed():
 		if nextPage > 20:
 			audio_stop(currentPage)
 			GameSettings.finalcutscene = true
+			AudioManager.level5_music.stop()
 			GameSettings._autosave()
 			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")
 
@@ -28,6 +29,7 @@ func _on_tap_to_continue_pressed():
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
+	AudioManager.level5_music.stop()
 	GameSettings.finalcutscene = true
 	GameSettings._autosave()
 	get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")

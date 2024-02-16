@@ -286,7 +286,7 @@ func hit_rat_entered(body):
 		$rat/hit_rat_delay.start()
 
 func hit_rat_exited(body):
-	if body.is_in_group("player") and not GameSettings.player_invulnerable:
+	if body.is_in_group("player"):
 		$rat/hit_rat_delay.stop()
 
 func _on_hit_rat_delay_timeout():

@@ -133,8 +133,35 @@ func reset_player_position():
 func restart():
 	GameSettings.player_invulnerable = false
 	reset_hp()
-	var current_scene = get_tree().current_scene.scene_file_path
-	get_tree().change_scene_to_file(current_scene)
+	
+	var rng = RandomNumberGenerator.new()
+	var scenes = []
+	
+	if GameSettings.current_level == 1:
+		scenes = ["res://Scenes/levels/level_1.tscn", "res://Scenes/levels/level_1_1.tscn", "res://Scenes/levels/level_1_2.tscn"]
+	elif GameSettings.current_level == 2:
+		scenes = ["res://Scenes/levels/level_2.tscn", "res://Scenes/levels/level_2_1.tscn", "res://Scenes/levels/level_2_2.tscn"]
+	elif GameSettings.current_level == 3:
+		scenes = ["res://Scenes/levels/level_3.tscn", "res://Scenes/levels/level_3_1.tscn", "res://Scenes/levels/level_3_2.tscn"]
+	elif GameSettings.current_level == 4:
+		scenes = ["res://Scenes/levels/level_4.tscn", "res://Scenes/levels/level_4_1.tscn", "res://Scenes/levels/level_4_2.tscn"]
+	elif GameSettings.current_level == 5:
+		scenes = ["res://Scenes/levels/level_5.tscn", "res://Scenes/levels/level_5_1.tscn", "res://Scenes/levels/level_5_2.tscn"]
+	elif GameSettings.current_level == 6:
+		scenes = ["res://Scenes/levels/level_6.tscn", "res://Scenes/levels/level_6_1.tscn", "res://Scenes/levels/level_6_2.tscn"]
+	elif GameSettings.current_level == 7:
+		scenes = ["res://Scenes/levels/level_7.tscn", "res://Scenes/levels/level_7_1.tscn", "res://Scenes/levels/level_7_2.tscn"]
+	elif GameSettings.current_level == 8:
+		scenes = ["res://Scenes/levels/level_8.tscn", "res://Scenes/levels/level_8_1.tscn", "res://Scenes/levels/level_8_2.tscn"]
+	elif GameSettings.current_level == 9:
+		scenes = ["res://Scenes/levels/level_9.tscn", "res://Scenes/levels/level_9_1.tscn", "res://Scenes/levels/level_9_2.tscn"]
+	elif GameSettings.current_level == 10:
+		scenes = ["res://Scenes/levels/level_10.tscn", "res://Scenes/levels/level_10_1.tscn", "res://Scenes/levels/level_10_2.tscn"]
+	var random_index = rng.randi_range(0, scenes.size() - 1)
+	var random_scene = scenes[random_index]
+	get_tree().change_scene_to_file(random_scene)
+
+
 
 func reset_for_next_level():
 	reset_hp()

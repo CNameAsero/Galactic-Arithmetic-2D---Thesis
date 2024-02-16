@@ -142,13 +142,29 @@ func check_final_answer():
 		get_tree().paused = true
 
 func reset_hp():
-	health_system._health = 3
+	health_system._health = 5
 
 func restart():
 	GameSettings.player_invulnerable = false
 	reset_hp()
-	var current_scene = get_tree().current_scene.scene_file_path
-	get_tree().change_scene_to_file(current_scene)
+	
+	var rng = RandomNumberGenerator.new()
+	var scenes = []
+	
+	if GameSettings.current_level == 21:
+		scenes = ["res://Scenes/levels/level_21.tscn", "res://Scenes/levels/level_21_1.tscn", "res://Scenes/levels/level_21_2.tscn"]
+	elif GameSettings.current_level == 22:
+		scenes = ["res://Scenes/levels/level_22.tscn", "res://Scenes/levels/level_22_1.tscn", "res://Scenes/levels/level_22_2.tscn"]
+	elif GameSettings.current_level == 23:
+		scenes = ["res://Scenes/levels/level_23.tscn", "res://Scenes/levels/level_23_1.tscn", "res://Scenes/levels/level_23_2.tscn"]
+	elif GameSettings.current_level == 24:
+		scenes = ["res://Scenes/levels/level_24.tscn", "res://Scenes/levels/level_24_1.tscn", "res://Scenes/levels/level_24_2.tscn"]
+	elif GameSettings.current_level == 25:
+		scenes = ["res://Scenes/levels/level_25.tscn", "res://Scenes/levels/level_25_1.tscn", "res://Scenes/levels/level_25_2.tscn"]
+
+	var random_index = rng.randi_range(0, scenes.size() - 1)
+	var random_scene = scenes[random_index]
+	get_tree().change_scene_to_file(random_scene)
 
 func reset_for_next_level():
 	GameSettings.player_invulnerable = false
@@ -157,7 +173,7 @@ func reset_for_next_level():
 	collected_numbers.clear()
 
 func _ready():
-	pass
+	GameSettings.isHard = true
 
 func _process(_delta):
 	update_expression()

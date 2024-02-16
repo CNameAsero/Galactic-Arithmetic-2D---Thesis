@@ -42,6 +42,9 @@ func _ready():
 				10:
 					var animationplayer10 = $"10/AnimationPlayer"
 					animationplayer10.play("Shining")
+				11:
+					var animationplayer11 = $"11/AnimationPlayer"
+					animationplayer11.play("Shining")
 				12:
 					var animationplayer12 = $"12/AnimationPlayer"
 					animationplayer12.play("Shining")
@@ -51,12 +54,18 @@ func _ready():
 				14:
 					var animationplayer14 = $"14/AnimationPlayer"
 					animationplayer14.play("Shining")
+				15:
+					var animationplayer15 = $"15/AnimationPlayer"
+					animationplayer15.play("Shining")
 				16:
 					var animationplayer16 = $"16/AnimationPlayer"
 					animationplayer16.play("Shining")
 				17:
 					var animationplayer17 = $"17/AnimationPlayer"
 					animationplayer17.play("Shining")
+				18:
+					var animationplayer18 = $"18/AnimationPlayer"
+					animationplayer18.play("Shining")
 				19:
 					var animationplayer19 = $"19/AnimationPlayer"
 					animationplayer19.play("Shining")
@@ -69,12 +78,27 @@ func _ready():
 				30:
 					var animationplayer30 = $"30/AnimationPlayer"
 					animationplayer30.play("Shining")
+				36:
+					var animationplayer36 = $"36/AnimationPlayer"
+					animationplayer36.play("Shining")
+				42:
+					var animationplayer42 = $"42/AnimationPlayer"
+					animationplayer42.play("Shining")
+				48:
+					var animationplayer48 = $"48/AnimationPlayer"
+					animationplayer48.play("Shining")
 				54:
 					var animationplayer54 = $"54/AnimationPlayer"
 					animationplayer54.play("Shining")
 				56:
 					var animationplayer56 = $"56/AnimationPlayer"
 					animationplayer56.play("Shining")
+				60:
+					var animationplayer60 = $"60/AnimationPlayer"
+					animationplayer60.play("Shining")
+				80:
+					var animationplayer80 = $"80/AnimationPlayer"
+					animationplayer80.play("Shining")
 		else:
 			i.visible = false
 

@@ -28,7 +28,7 @@ tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
@@ -43,7 +43,7 @@ tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.2),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [2]
@@ -58,7 +58,7 @@ tracks/0/path = NodePath("3hp:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.3),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [3]
@@ -186,13 +186,13 @@ visible = false
 position = Vector2(1856, 1055)
 texture = ExtResource("2_afuim")
 hframes = 4
-frame = 1
 
 [node name="5hp" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1815, 1057)
 texture = ExtResource("3_qeg6j")
 hframes = 6
+frame = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

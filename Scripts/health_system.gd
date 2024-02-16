@@ -36,6 +36,8 @@ func display_healthui():
 			game_over.show()
 			get_tree().paused = true
 	else:
+		$"3hp".hide()
+		$"5hp".show()
 		if _health == 5:
 			animation_player_2.play("hp5")
 		elif _health == 4:

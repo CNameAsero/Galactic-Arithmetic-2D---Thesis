@@ -1,10 +1,11 @@
-[gd_scene load_steps=81 format=3 uid="uid://dj3ehb2q87umn"]
+[gd_scene load_steps=57 format=3 uid="uid://dj3ehb2q87umn"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_40c2s"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_kggt5"]
 [ext_resource type="PackedScene" uid="uid://br0575d74v2ro" path="res://Scenes/Enemies/blowfish.tscn" id="2_khkgu"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_rbhcl"]
 [ext_resource type="PackedScene" uid="uid://cctb0dww2joqb" path="res://Scenes/Enemies/octopus.tscn" id="3_473ma"]
+[ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="4_f5bew"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="4_nvtfn"]
 [ext_resource type="PackedScene" uid="uid://dk0trij6hevr6" path="res://Scenes/Enemies/shark.tscn" id="4_us4ct"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="5_nm5k0"]
@@ -40,19 +41,9 @@
 [ext_resource type="Texture2D" uid="uid://c8by2x8ogpqkx" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON.png" id="35_mxbxd"]
 [ext_resource type="Texture2D" uid="uid://cjrkhkab5cffa" path="res://Galactic Arithmetic Assets/level_complete_asset/RIGHT_ARROW_BUTTON_75.png" id="36_bnjc5"]
 [ext_resource type="Texture2D" uid="uid://y7l37jl0o23c" path="res://Galactic Arithmetic Assets/level_complete_asset/RESTART_BUTTON.png" id="37_d50pj"]
-[ext_resource type="Script" path="res://Scripts/final_answer.gd" id="38_mlont"]
 [ext_resource type="Texture2D" uid="uid://by47a4pppasyh" path="res://Galactic Arithmetic Assets/level_complete_asset/LEVEL_COMPLETE_TEXT.png" id="38_ooe2a"]
-[ext_resource type="Texture2D" uid="uid://02dg06mgelq5" path="res://Sprites/Collectibles/final answers/3_chest.png" id="39_p32wa"]
 [ext_resource type="Texture2D" uid="uid://dq1dvsfffcq01" path="res://Galactic Arithmetic Assets/level_complete_asset/TIMER.png" id="39_w6x2t"]
 [ext_resource type="Texture2D" uid="uid://cwyywj81m7ajx" path="res://Galactic Arithmetic Assets/level_complete_asset/time_holder.png" id="40_l5yoh"]
-[ext_resource type="Texture2D" uid="uid://0sufo7g35isy" path="res://Sprites/Collectibles/final answers/1.png" id="40_nf3dq"]
-[ext_resource type="Texture2D" uid="uid://c2f0htdo5dfgm" path="res://Sprites/Collectibles/final answers/48.png" id="41_x13gr"]
-[ext_resource type="Texture2D" uid="uid://7313yl1xq6ku" path="res://Sprites/Collectibles/final answers/72.png" id="42_3qv85"]
-[ext_resource type="Texture2D" uid="uid://n6itlm5vl61v" path="res://Sprites/Collectibles/final answers/24.png" id="43_q3i57"]
-[ext_resource type="Texture2D" uid="uid://c141r1gtcqt2w" path="res://Sprites/Collectibles/others/Chest_AnimationWithFinalAns10.png" id="44_ak18u"]
-[ext_resource type="Texture2D" uid="uid://bvl6dlpvy7i2s" path="res://Sprites/Collectibles/final answers/11_chest.png" id="45_gqa1s"]
-[ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="46_j88nq"]
-[ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="47_m0kbt"]
 
 [sub_resource type="GDScript" id="GDScript_7b6oj"]
 script/source = "extends Node2D
@@ -61,188 +52,13 @@ script/source = "extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameSettings.current_level = 10
+	GameSettings.isHard = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_qe8cb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_dvv1d"]
-resource_name = "chest"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_de2hf"]
-_data = {
-"RESET": SubResource("Animation_qe8cb"),
-"chest": SubResource("Animation_dvv1d")
-}
-
-[sub_resource type="Animation" id="Animation_01dj4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_7jca7"]
-resource_name = "chest"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhy63"]
-_data = {
-"RESET": SubResource("Animation_01dj4"),
-"chest": SubResource("Animation_7jca7")
-}
-
-[sub_resource type="Animation" id="Animation_itt5g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_rjwla"]
-resource_name = "chest"
-length = 1.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.7, 1, 1.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_65hcj"]
-_data = {
-"RESET": SubResource("Animation_itt5g"),
-"chest": SubResource("Animation_rjwla")
-}
-
-[sub_resource type="Animation" id="Animation_h5ka7"]
-resource_name = "chest"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 1, 2, 3, 4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlcnm"]
-_data = {
-"chest": SubResource("Animation_h5ka7")
-}
-
-[sub_resource type="Animation" id="Animation_xbek2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_jkwa3"]
-resource_name = "chest"
-length = 1.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.1, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfyue"]
-_data = {
-"RESET": SubResource("Animation_xbek2"),
-"chest": SubResource("Animation_jkwa3")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8y4e"]
-size = Vector2(26, 20)
 
 [sub_resource type="Animation" id="Animation_sd1pg"]
 length = 0.001
@@ -428,121 +244,9 @@ num_term = 4
 [node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
 script = ExtResource("9_en6pq")
 
-[node name="final_answer" type="CharacterBody2D" parent="game_manager_world_1-2"]
-position = Vector2(958, 508)
-scale = Vector2(1.8, 1.8)
-collision_layer = 4
-collision_mask = 25
-script = ExtResource("38_mlont")
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("4_f5bew")]
+position = Vector2(962, 498)
 final_answer = 48
-
-[node name="3" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("39_p32wa")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/3"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="1" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("40_nf3dq")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/1"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="48" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-position = Vector2(1.11111, -5.55554)
-texture = ExtResource("41_x13gr")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/48"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="72" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("42_3qv85")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/72"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="24" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("43_q3i57")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/24"]
-speed_scale = 0.3
-libraries = {
-"": SubResource("AnimationLibrary_de2hf")
-}
-
-[node name="10" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("44_ak18u")
-hframes = 5
-vframes = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/10"]
-libraries = {
-"": SubResource("AnimationLibrary_bhy63")
-}
-
-[node name="11" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("45_gqa1s")
-hframes = 5
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/11"]
-libraries = {
-"": SubResource("AnimationLibrary_65hcj")
-}
-
-[node name="19" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("46_j88nq")
-hframes = 5
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/19"]
-speed_scale = 0.5
-libraries = {
-"": SubResource("AnimationLibrary_jlcnm")
-}
-
-[node name="32" type="Sprite2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-texture = ExtResource("47_m0kbt")
-hframes = 5
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/final_answer/32"]
-libraries = {
-"": SubResource("AnimationLibrary_kfyue")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager_world_1-2/final_answer"]
-visible = false
-position = Vector2(0, 5)
-shape = SubResource("RectangleShape2D_p8y4e")
 
 [node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
 offset_left = 576.0

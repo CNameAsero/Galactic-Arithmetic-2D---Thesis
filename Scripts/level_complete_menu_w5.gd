@@ -16,6 +16,7 @@ func _on_next_level_button_pressed():
 		if ResourceLoader.exists(next_scene_path):
 			get_tree().change_scene_to_file(next_scene_path)
 		else:
+			AudioManager.level5_music.stop()
 			get_tree().change_scene_to_file("res://Scenes/Menu/Main_Menu/main_menu.tscn")
 
 	get_tree().paused = false
