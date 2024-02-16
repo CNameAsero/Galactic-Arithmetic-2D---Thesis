@@ -20,6 +20,7 @@ func _on_tap_to_continue_pressed():
 			currentPage = nextPage
 		if nextPage > 7:
 			audio_stop(currentPage)
+			GameSettings.isHard = true
 			GameSettings.cutscene3 = true
 			GameSettings._autosave()
 			if GameSettings.currentlevel[15] && GameSettings.cutscene3:
@@ -30,6 +31,7 @@ func _on_tap_to_continue_pressed():
 func _on_skip_pressed():
 	audio_stop(currentPage)
 	AudioManager.play_button_sfx()
+	GameSettings.isHard = true
 	GameSettings.cutscene3 = true
 	GameSettings._autosave()
 	if GameSettings.currentlevel[15] && GameSettings.cutscene3:

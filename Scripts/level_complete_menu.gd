@@ -13,7 +13,7 @@ func _on_next_level_button_pressed():
 			AudioManager.level1_music.stop()
 			AudioManager.level2_music.stop()
 			get_tree().change_scene_to_file(cut_scene_path)
-	elif GameSettings.current_world == 2 && GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2:
+	elif GameSettings.current_world == 2 && GameSettings.current_level % 10 == 0 && !GameSettings.cutscene2:
 		if ResourceLoader.exists(cut_scene_path):
 			AudioManager.level1_music.stop()
 			AudioManager.level2_music.stop()
@@ -22,6 +22,7 @@ func _on_next_level_button_pressed():
 		if ResourceLoader.exists(next_scene_path):
 			if GameSettings.current_level % 5 == 0:
 				AudioManager.level1_music.stop()
+				AudioManager.level2_music.play()
 			if GameSettings.current_level % 10 == 0:
 				AudioManager.level2_music.stop()
 				AudioManager.level3_music.play()

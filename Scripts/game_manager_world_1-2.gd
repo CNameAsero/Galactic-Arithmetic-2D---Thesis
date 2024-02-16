@@ -109,7 +109,7 @@ func check_final_answer():
 		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene1 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 5:
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
-		if GameSettings.current_level % 5 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 10:
+		if GameSettings.current_level % 10 == 0 && !GameSettings.cutscene2 && !GameSettings.world_completed.get(GameSettings.current_level, false) && GameSettings.current_level == 10:
 				GameSettings.current_world += 1
 				GameSettings.world_completed[GameSettings.current_level] = true
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:

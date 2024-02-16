@@ -9,8 +9,8 @@ res://Scenes/Enemies/wasp_enemy.tscn::345585a1106bef34cbd4df5f1dd552c1::17077881
 res://Scenes/levels/Game Obstacles/big_crate.tscn::85793a17fd6c153735f2cac4b29b5b91::1706016831::res://.godot/exported/133200997/export-1b68ae87f7aedaf30838cdf42960564b-big_crate.scn
 res://Scenes/levels/Game Obstacles/hay_bale.tscn::2bfffb9d81a936547cc8f107c16b0918::1706016831::res://.godot/exported/133200997/export-44cc1e53fabd691a48297bdd8b457244-hay_bale.scn
 res://Scenes/levels/Game Obstacles/spike.tscn::0649335ba9a3562050c52547ff82c018::1707788115::res://.godot/exported/133200997/export-9554e6d7f33c9dcb884bfdee9fc15724-spike.scn
-res://Scenes/levels/level1_TileSet2dPixel.tres::6a4d10703335a93ede59a086ac8b1303::1708013239::res://.godot/exported/133200997/export-2a91ac5ce9efc21c40363f00a86b643b-level1_TileSet2dPixel.res
-res://Scenes/levels/level_1.tscn::acaf3d1e190183a192bf6bc3e0d166f0::1708006431::res://.godot/exported/133200997/export-1e4970020d014aabb691dad3951baa23-level_1.scn
+res://Scenes/levels/level1_TileSet2dPixel.tres::6a4d10703335a93ede59a086ac8b1303::1708043557::res://.godot/exported/133200997/export-2a91ac5ce9efc21c40363f00a86b643b-level1_TileSet2dPixel.res
+res://Scenes/levels/level_1.tscn::acaf3d1e190183a192bf6bc3e0d166f0::1708045076::res://.godot/exported/133200997/export-1e4970020d014aabb691dad3951baa23-level_1.scn
 res://Scenes/Mechanics/chest.tscn::7891ffa901e92f0601e19f0a72a9c5a0::1707788114::res://.godot/exported/133200997/export-690603578b5266cae4cfdc470e903fea-chest.scn
 res://Scenes/Mechanics/final_answer.tscn::7312f649e7e34874e74b876e3b9955be::1707788114::res://.godot/exported/133200997/export-e818efc90ec6e458f9866a7349a0f181-final_answer.scn
 res://Scenes/Mechanics/game_manager.tscn::57d19e25ffef74d5ff141660fde0878d::1707788114::res://.godot/exported/133200997/export-c4fa72d2c8f978761475be111be73997-game_manager.scn
@@ -18,7 +18,7 @@ res://Scenes/Mechanics/numbers.tscn::9e190fdcce5e006183a2360ccea91169::170778811
 res://Scenes/Mechanics/operators.tscn::2f5eb8d68b23c8a5b115c7cac5c92ef3::1707788114::res://.godot/exported/133200997/export-5c6f7ea7f775b267c211e263b9b1955a-operators.scn
 res://Scenes/Menu/Game_Over/game_over.tscn::faf16ed70e80e4e8c216ef11d5d654b9::1707788114::res://.godot/exported/133200997/export-d92cd859bf1a82a21e8af29e86e10c75-game_over.scn
 res://Scenes/Menu/Main_Menu/level_Menu.tscn::ac499cfc6a994b5b25e5872a599bfe67::1707957049::res://.godot/exported/133200997/export-69273f9707f9d325d5de32ecdef4d031-level_Menu.scn
-res://Scenes/Menu/Main_Menu/main_menu.tscn::7ed7a389f0e9e1744099a094454fdd35::1708011693::res://.godot/exported/133200997/export-710593323600a7de23189e5100429cf2-main_menu.scn
+res://Scenes/Menu/Main_Menu/main_menu.tscn::7ed7a389f0e9e1744099a094454fdd35::1708044754::res://.godot/exported/133200997/export-710593323600a7de23189e5100429cf2-main_menu.scn
 res://Scenes/Menu/Main_Menu/story_board(cut_scene).tscn::634e26c78be5546fafe6bf65ff01c342::1708011692::res://.godot/exported/133200997/export-883b69b507a9dffc486aca2880f17242-story_board(cut_scene).scn
 res://Scenes/Menu/Paused_Menu/paused_menu.tscn::714ca51d9509fc662f20f71819ce027f::1706016831::res://.godot/exported/133200997/export-90e915564aec094a0b4785639257bf24-paused_menu.scn
 res://Scenes/Menu/level_complete_menu.tscn::a128ebf8653303fb1c487811ba536d5b::1707571378::res://.godot/exported/133200997/export-5a9f7fbdeb0376a8052b5f07a501acaa-level_complete_menu.scn
@@ -51,23 +51,23 @@ res://Scenes/levels/level_7.tscn::363a54ee09072cd31b3ee70b5975a8bc::1707909112::
 res://Scenes/levels/level_8.tscn::ef25085eaf8992f71d61d15b9acdf326::1708011693::res://.godot/exported/133200997/export-be9543196f2662ef9618279b23bc1a4d-level_8.scn
 res://Scenes/levels/level_9.tscn::f7d778af08a8c01c8403a28fd268df1c::1707974436::res://.godot/exported/133200997/export-909e7b5f8ed6751ab5f22d4aa04603b3-level_9.scn
 res://Scenes/levels/level_10.tscn::b546b3a6bee191a70acac9af1b2453fe::1707909112::res://.godot/exported/133200997/export-aad7730d3f91150789db5cc8cd37f3f3-level_10.scn
-res://Scenes/levels/level_11.tscn::5effcbe7b4e77248d8c6f2fe1d0c5d26::1708011693::res://.godot/exported/133200997/export-8d9133ca3f9ef964a423c36901296b2d-level_11.scn
+res://Scenes/levels/level_11.tscn::5effcbe7b4e77248d8c6f2fe1d0c5d26::1708044883::res://.godot/exported/133200997/export-8d9133ca3f9ef964a423c36901296b2d-level_11.scn
 res://Scenes/levels/level_12.tscn::8250fcc2bf0212b6580015b4e23083f8::1707909112::res://.godot/exported/133200997/export-d686a111073a68c6b0c3331f05df5dc0-level_12.scn
 res://Scenes/levels/level_13.tscn::1044ab194d4a1a48081b784526683595::1707909112::res://.godot/exported/133200997/export-ea8b11e337541fb015d698ea443d062f-level_13.scn
 res://Scenes/levels/level_14.tscn::98a0a80025a3a7412acdba100b423017::1707909112::res://.godot/exported/133200997/export-01748825e18efad7b28734e0e768a31a-level_14.scn
 res://Scenes/levels/level_15.tscn::b76d63d242c8ac284e5aa6883de9d0f5::1707909112::res://.godot/exported/133200997/export-a74c4ab04f56c69f182bc03a2af70150-level_15.scn
-res://Scenes/levels/level_16.tscn::408b00db48488fd02632ec4f196b3fcd::1708011693::res://.godot/exported/133200997/export-b33d1d81c6f0f82ad9ddd701f96773d3-level_16.scn
+res://Scenes/levels/level_16.tscn::408b00db48488fd02632ec4f196b3fcd::1708044892::res://.godot/exported/133200997/export-b33d1d81c6f0f82ad9ddd701f96773d3-level_16.scn
 res://Scenes/levels/level_17.tscn::2c09e62c974e05951da37b75bc711a1b::1707909112::res://.godot/exported/133200997/export-5c658b87a6e3a3ba6148116ceb0b7257-level_17.scn
 res://Scenes/levels/level_18.tscn::e4a9b842f26d9c138df82816ec1e29e5::1707909112::res://.godot/exported/133200997/export-7abb257078e93dce67a9b6ee980223a7-level_18.scn
 res://Scenes/levels/level_19.tscn::4d6330fc01d38d8120c74dd1976fee3a::1707909112::res://.godot/exported/133200997/export-4df21a373419ad362356ba3074a32521-level_19.scn
 res://Scenes/levels/level_20.tscn::ce2700a9d51a450352cd20328b3f8a78::1707909112::res://.godot/exported/133200997/export-7055635217a88e12e62b914254518ce9-level_20.scn
-res://Scenes/levels/level_21.tscn::47bef8f9968e1784ae0d01f1ab3267e4::1708011693::res://.godot/exported/133200997/export-9da9957c47d5782f88409027c1955393-level_21.scn
+res://Scenes/levels/level_21.tscn::47bef8f9968e1784ae0d01f1ab3267e4::1708044902::res://.godot/exported/133200997/export-9da9957c47d5782f88409027c1955393-level_21.scn
 res://Scenes/levels/level_22.tscn::c6d1297b40d6971c67f736c376548bc4::1707909112::res://.godot/exported/133200997/export-9ebf89142f0e36abd5790ccc12da2720-level_22.scn
 res://Scenes/levels/level_23.tscn::78cfdd0b60114db249ee1c48c14997c5::1707909112::res://.godot/exported/133200997/export-5920a0b9e47873b84b1cd3fb088b10e7-level_23.scn
 res://Scenes/levels/level_24.tscn::b88067dd557cc0876a56425be67b9c08::1707909112::res://.godot/exported/133200997/export-b283a023fe12f239589d907fe8998ead-level_24.scn
 res://Scenes/levels/level_25.tscn::bc8d4535aecd6dc0ea05cf5f411fa9de::1707909112::res://.godot/exported/133200997/export-7e531d5db8936682d61079ff69496353-level_25.scn
-res://Scenes/levels/world5_tileset.tres::3796322b816dac24583661656f5da1f4::1708008671::res://.godot/exported/133200997/export-4a15ca84f360635b16e70f05510668c8-world5_tileset.res
-res://Scenes/levels/World_3_Tileset.tres::793884bebbb6ba80814214a9561c5e3e::1708008669::res://.godot/exported/133200997/export-35c03a3b0af94a0160b5ae08410eea63-World_3_Tileset.res
+res://Scenes/levels/world5_tileset.tres::3796322b816dac24583661656f5da1f4::1708044885::res://.godot/exported/133200997/export-4a15ca84f360635b16e70f05510668c8-world5_tileset.res
+res://Scenes/levels/World_3_Tileset.tres::793884bebbb6ba80814214a9561c5e3e::1708044755::res://.godot/exported/133200997/export-35c03a3b0af94a0160b5ae08410eea63-World_3_Tileset.res
 res://Scenes/Mechanics/Add_time.tscn::674f6cabb6b59c098ccb05c032c25b5e::1707788114::res://.godot/exported/133200997/export-6060f8a209ef63693873a4c792cdc47d-Add_time.scn
 res://Scenes/Mechanics/final_answer_w5.tscn::5a7d70dc1e8649d076c2fd497a0f5d65::1707788114::res://.godot/exported/133200997/export-4bb6c99b5bc786afdfbd21602a2ef00e-final_answer_w5.scn
 res://Scenes/Mechanics/final_answer_w_4.tscn::132d37fb5434976dbecb653525eab0ab::1707788114::res://.godot/exported/133200997/export-371ac40217aa9d1339db5824119c5ef2-final_answer_w_4.scn
@@ -107,7 +107,7 @@ res://Scenes/timer_w4.tscn::a6f09752d73edf51facc4fee88ce6152::1707788116::res://
 res://Scenes/timer_w5.tscn::f29113f3749df555908aa2ed28856a93::1707788116::res://.godot/exported/133200997/export-1f174af71a5359694512eab0471ede95-timer_w5.scn
 res://Scripts/gamemanager_new.tscn::1d3279993100165bac218715f1aa5c9f::1707909112::res://.godot/exported/133200997/export-73921d3cb6657a7a6ea2fb7322d8fc61-gamemanager_new.scn
 res://Scripts/gamemanager_pemdas.tscn::8430e0dd96cd72e621cdd3fd53a65150::1707909112::res://.godot/exported/133200997/export-c2e7086446e66312547c8e370a351654-gamemanager_pemdas.scn
-res://World4_Tileset.tres::761f5d57a2565aaced7c7b474f9dde32::1708008670::res://.godot/exported/133200997/export-6c2d4c506ecc922d7d90137d30fad110-World4_Tileset.res
+res://World4_Tileset.tres::761f5d57a2565aaced7c7b474f9dde32::1708044884::res://.godot/exported/133200997/export-6c2d4c506ecc922d7d90137d30fad110-World4_Tileset.res
 res://Scenes/levels/tutorial/tutorial.tscn::b11e17902523686b82180d50b9b2e6e4::1708011693::res://.godot/exported/133200997/export-9813f3743679f3ad241a1d312de68acb-tutorial.scn
 res://Scenes/Menu/Main_Menu/cut_scene_1.tscn::b07d9e08fb473bada04fd7971e09d668::1707975259::res://.godot/exported/133200997/export-51f45c87618308672e42329d304c965e-cut_scene_1.scn
 res://Scenes/Menu/Main_Menu/cut_scene_2.tscn::2694b14f3ef17821480bce6422af9c28::1707975259::res://.godot/exported/133200997/export-4d9b127ef5d2399b70614cafd4733028-cut_scene_2.scn
