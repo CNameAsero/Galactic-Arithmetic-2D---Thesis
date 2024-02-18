@@ -250,7 +250,7 @@ variable_to_display = "x"
 [node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("7_ipaqt")]
 position = Vector2(1104, 485)
 x = 4
-integer = 14
+integer = 16
 display_chest = "lvl3_1"
 
 [node name="timer" parent="gamemanager_algebra" instance=ExtResource("8_2okhe")]

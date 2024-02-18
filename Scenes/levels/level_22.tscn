@@ -268,13 +268,6 @@ fly_speed = 60.0
 fly_radius = 200
 rect_radius_fly = 200.0
 
-[node name="fly4" parent="enemies" instance=ExtResource("8_gur2j")]
-position = Vector2(966, 779)
-enemy_type = "fly"
-fly_speed = 60.0
-fly_radius = 200
-rect_radius_fly = 200.0
-
 [node name="rat" parent="enemies" instance=ExtResource("8_gur2j")]
 position = Vector2(1187, 236)
 enemy_type = "rat"

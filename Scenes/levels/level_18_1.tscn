@@ -223,75 +223,55 @@ move_direction = Vector2(170, 0)
 [node name="gamemanager_fraction" parent="." instance=ExtResource("3_tuk05")]
 num_term = 6
 
-[node name="7" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(1368, 261)
-number = 7
-
-[node name="2" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(296, 223)
-number = 2
-
 [node name="5" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(642, 969)
 number = 5
-
-[node name="7_2nd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(361, 750)
-number = 7
-
-[node name="2_2nd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(831, 506)
-number = 2
-
-[node name="14" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(441, 500)
-number = 14
-
-[node name="1" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(596, 227)
-number = 1
-
-[node name="3" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(888, 764)
-number = 3
 
 [node name="5_2nd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(1358, 768)
 number = 5
 
+[node name="1" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(596, 227)
+number = 1
+
+[node name="1_1" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(1368, 261)
+number = 1
+
+[node name="1_2" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(296, 223)
+number = 1
+
+[node name="4" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(361, 750)
+number = 4
+
+[node name="4_1" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(831, 506)
+number = 4
+
+[node name="8" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+modulate = Color(1.18, 0.98, 35.5, 1)
+position = Vector2(441, 500)
+number = 8
+
 [node name="2_3rd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
 modulate = Color(1.18, 0.98, 35.5, 1)
 position = Vector2(1775, 765)
 number = 2
 
-[node name="5_3rd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
+[node name="2" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
 modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(1754, 260)
-number = 5
-
-[node name="3_2nd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(1572, 376)
-number = 3
-
-[node name="3_3rd" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1, 0.98, 35.5, 1)
-position = Vector2(1690, 472)
-number = 3
-
-[node name="5_4th" parent="gamemanager_fraction" instance=ExtResource("4_chfag")]
-modulate = Color(1.18, 0.98, 35.5, 1)
-position = Vector2(1456, 472)
-number = 5
+position = Vector2(888, 764)
+number = 2
 
 [node name="Multiplication" parent="gamemanager_fraction" instance=ExtResource("5_pexhb")]
 position = Vector2(277, 500)
@@ -307,9 +287,9 @@ oper = "d"
 
 [node name="final_answer_w4" parent="gamemanager_fraction" instance=ExtResource("6_amu8h")]
 position = Vector2(1571, 540)
-num1 = 14.0
-num2 = 15.0
-display = "14over15"
+num1 = 5.0
+num2 = 16.0
+display = "5over16"
 
 [node name="timer" parent="gamemanager_fraction" instance=ExtResource("7_2nfs5")]
 

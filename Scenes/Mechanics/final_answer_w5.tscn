@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://b2gh18jun34xg" path="res://Sprites/Collectibles/final answers/w5/13x3y_chest.png" id="7_hkf3h"]
 [ext_resource type="Texture2D" uid="uid://bi075cfyj5xmi" path="res://Sprites/Collectibles/final answers/w5/16xsquare_chest.png" id="9_weamb"]
 [ext_resource type="Texture2D" uid="uid://cmxbpwa5dao82" path="res://Sprites/Collectibles/final answers/w5/12xsquare2y.png" id="11_yepcc"]
-[ext_resource type="Texture2D" uid="uid://bi4f8h3prjyny" path="res://Sprites/Collectibles/final answers/w5/18xsquare2y_chst.png" id="12_bv6t1"]
+[ext_resource type="Texture2D" uid="uid://b2reyc2fhifs8" path="res://Sprites/Collectibles/final answers/w5/18xsquarey_chest.png" id="12_vmulo"]
 [ext_resource type="Texture2D" uid="uid://bywt5frqwsoqn" path="res://Sprites/Collectibles/final answers/w5/18xsquare_chest.png" id="14_o4fk1"]
 [ext_resource type="Texture2D" uid="uid://d31xyts3hbarv" path="res://Sprites/Collectibles/final answers/w5/32xsquare.png" id="15_dpcps"]
 
@@ -228,74 +228,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_rsvet"]
-resource_name = "lvl2"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lvl2:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_heput"]
-resource_name = "lvl3"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lvl3:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_xxu30"]
-resource_name = "lvl4"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lvl4:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_77m5v"]
-resource_name = "lvl5"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("lvl5:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
 [sub_resource type="Animation" id="Animation_mf4ag"]
 resource_name = "lvl1_1"
 length = 0.5
@@ -328,6 +260,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_rsvet"]
+resource_name = "lvl2"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="Animation" id="Animation_jkcpv"]
@@ -364,6 +313,23 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_heput"]
+resource_name = "lvl3"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
 [sub_resource type="Animation" id="Animation_7rwhv"]
 resource_name = "lvl3_1"
 length = 0.5
@@ -398,6 +364,23 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_xxu30"]
+resource_name = "lvl4"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
 [sub_resource type="Animation" id="Animation_7bvt5"]
 resource_name = "lvl4_1"
 length = 0.5
@@ -430,6 +413,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_77m5v"]
+resource_name = "lvl5"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lvl5:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
 }
 
 [sub_resource type="Animation" id="Animation_y6eni"]
@@ -563,7 +563,7 @@ frame = 1
 
 [node name="lvl4_2" type="Sprite2D" parent="."]
 visible = false
-texture = ExtResource("12_bv6t1")
+texture = ExtResource("12_vmulo")
 hframes = 5
 frame = 1
 
