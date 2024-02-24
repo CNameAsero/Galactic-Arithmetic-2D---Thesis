@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://o6qfx2agd3hj"]
+[gd_scene load_steps=29 format=3 uid="uid://o6qfx2agd3hj"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_s20ko"]
 [ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_14wx8"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="9_h3pp5"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="9_loj7k"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_8om52"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_dxww0"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_wycx1"]
 [ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="12_jol7u"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_jwy0w"]
@@ -614,6 +615,47 @@ skeleton_speed = 50.0
 rect_radius_skeleton = 400.0
 move_direction = Vector2(150, 0)
 
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(980, 793)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("7_elb2k")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("8_pf51w")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+visibility_layer = 5
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_gv4f4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="Area2D" type="Area2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, -1)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik/Area2D"]
+visibility_layer = 5
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_gv4f4")
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("9_loj7k")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
+
 [node name="gamemanager_pemdas" parent="." instance=ExtResource("2_14wx8")]
 num_term = 4
 
@@ -661,46 +703,7 @@ final_answer = 19
 [node name="timer" parent="gamemanager_pemdas" instance=ExtResource("7_05mhr")]
 position = Vector2(62, 65)
 
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(980, 793)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("7_elb2k")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("8_pf51w")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-visibility_layer = 5
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_gv4f4")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="Area2D" type="Area2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, -1)
-collision_layer = 0
-collision_mask = 32
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik/Area2D"]
-visibility_layer = 5
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_gv4f4")
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("9_loj7k")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="gamemanager_pemdas" instance=ExtResource("11_dxww0")]
 
 [node name="health_system" parent="." instance=ExtResource("10_8om52")]
 

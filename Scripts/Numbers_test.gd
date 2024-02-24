@@ -82,4 +82,5 @@ func _on_body_entered(body):
 		AudioManager.play_item_collect()
 		access_manager.isDestroy = true
 		access_manager.collect_number(number_to_display)
-		queue_free()
+		access_manager.save_collectible_number($"..")
+		$"..".queue_free()

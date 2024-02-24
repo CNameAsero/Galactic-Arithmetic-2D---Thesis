@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dmfc7em2kunvo"]
+[gd_scene load_steps=52 format=3 uid="uid://dmfc7em2kunvo"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_10ucj"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_a2xxi"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="12_3nkjg"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="13_balp8"]
 [ext_resource type="Texture2D" uid="uid://cx3s73kplpcec" path="res://Galactic Arithmetic Assets/Game_Over_Assets/game-over-text.png" id="14_8suuy"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="14_qgbp1"]
 [ext_resource type="Texture2D" uid="uid://dimklv4puhep0" path="res://Galactic Arithmetic Assets/Game_Over_Assets/gameover_holder.png" id="15_xyhsa"]
 [ext_resource type="Texture2D" uid="uid://bs0uc8jkdriku" path="res://Sprites/Character/sad_slimey.png" id="16_dwq5r"]
 [ext_resource type="Texture2D" uid="uid://3gndw501yox3" path="res://Galactic Arithmetic Assets/Game_Over_Assets/button_holder.png" id="17_ste0m"]
@@ -217,60 +218,6 @@ layer_5/tile_data = PackedInt32Array(1310773, 720898, 6, 1376309, 720898, 7, 144
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 539)
 
-[node name="game_manager_world_1-2" parent="." instance=ExtResource("4_p8uan")]
-num_term = 3
-
-[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
-script = ExtResource("8_hvatq")
-
-[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("27_fyurx")]
-position = Vector2(833, 214)
-scale = Vector2(1.85, 1.85)
-final_answer = 19
-
-[node name="timer" parent="game_manager_world_1-2" instance=ExtResource("28_rhj7q")]
-position = Vector2(62, 65)
-
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
-offset_left = 576.0
-offset_top = -17.0
-offset_right = 1342.0
-offset_bottom = 122.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("32_pinbe")
-theme_override_font_sizes/font_size = 100
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="9" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(815, 874)
-number = 9
-
-[node name="7" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(1274, 870)
-number = 7
-
-[node name="8" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(1265, 267)
-number = 8
-
-[node name="3" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(1486, 721)
-number = 3
-
-[node name="5" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(658, 697)
-number = 5
-
-[node name="5_2nd" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
-position = Vector2(1104, 391)
-number = 5
-
-[node name="+" parent="game_manager_world_1-2" instance=ExtResource("11_hk7rs")]
-position = Vector2(623, 383)
-oper = "+"
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Fox_enemy" parent="Enemies" instance=ExtResource("5_uxr7y")]
@@ -351,6 +298,62 @@ libraries = {
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_8bdfm")]
 position = Vector2(245, 882)
 scale = Vector2(2.2, 2.2)
+
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("4_p8uan")]
+num_term = 3
+
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
+script = ExtResource("8_hvatq")
+
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("27_fyurx")]
+position = Vector2(833, 214)
+scale = Vector2(1.85, 1.85)
+final_answer = 19
+
+[node name="timer" parent="game_manager_world_1-2" instance=ExtResource("28_rhj7q")]
+position = Vector2(62, 65)
+
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
+offset_left = 576.0
+offset_top = -17.0
+offset_right = 1342.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("32_pinbe")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(815, 874)
+number = 9
+
+[node name="7" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(1274, 870)
+number = 7
+
+[node name="8" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(1265, 267)
+number = 8
+
+[node name="3" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(1486, 721)
+number = 3
+
+[node name="5" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(658, 697)
+number = 5
+
+[node name="5_2nd" parent="game_manager_world_1-2" instance=ExtResource("10_uowya")]
+position = Vector2(1104, 391)
+number = 5
+
+[node name="+" parent="game_manager_world_1-2" instance=ExtResource("11_hk7rs")]
+position = Vector2(623, 383)
+oper = "+"
+
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("14_qgbp1")]
 
 [node name="health_system" parent="." instance=ExtResource("55_hbv2j")]
 

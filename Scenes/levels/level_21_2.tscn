@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b5b1d0kpxm58u"]
+[gd_scene load_steps=37 format=3 uid="uid://b5b1d0kpxm58u"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_75cpd"]
 [ext_resource type="Texture2D" uid="uid://dlqw5lqvbqkhi" path="res://Sprites/Tileset/Level21and23_VarValue.png" id="2_lej7d"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="10_6yqmw"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="11_217wg"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="12_gnasg"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="13_0yant"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="13_wrryl"]
 [ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="14_fepdf"]
 [ext_resource type="Texture2D" uid="uid://ccpcwvop5pgkn" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_1.png" id="15_ll12s"]
@@ -245,59 +246,6 @@ texture = ExtResource("2_lej7d")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(959, 539)
 
-[node name="gamemanager_algebra" parent="." instance=ExtResource("3_tyct7")]
-num_term = 2
-variable_term = 2
-x_value = 2
-
-[node name="6" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(260, 523)
-number = 6
-
-[node name="4" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(1625, 528)
-number = 4
-
-[node name="12" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(1761, 532)
-number = 12
-
-[node name="2" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(143, 524)
-number = 2
-
-[node name="7" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(915, 163)
-number = 7
-
-[node name="3" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
-position = Vector2(1004, 166)
-number = 3
-
-[node name="+" parent="gamemanager_algebra" instance=ExtResource("5_m0dk5")]
-position = Vector2(228, 295)
-oper = "+"
-
-[node name="-" parent="gamemanager_algebra" instance=ExtResource("5_m0dk5")]
-position = Vector2(1694, 776)
-oper = "-"
-
-[node name="x1" parent="gamemanager_algebra" instance=ExtResource("6_l0mk7")]
-position = Vector2(1657, 425)
-variable_to_display = "x"
-
-[node name="x2" parent="gamemanager_algebra" instance=ExtResource("6_l0mk7")]
-position = Vector2(348, 656)
-variable_to_display = "x"
-
-[node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("7_e65v4")]
-position = Vector2(736, 336)
-x = 2
-integer = 10
-display_chest = "lvl1_2"
-
-[node name="timer" parent="gamemanager_algebra" instance=ExtResource("8_lqvsr")]
-
 [node name="enemies" type="Node2D" parent="."]
 
 [node name="fly" parent="enemies" instance=ExtResource("9_vl5ng")]
@@ -368,6 +316,61 @@ shape = SubResource("CircleShape2D_gv4f4")
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("12_gnasg")]
 position = Vector2(245, 882)
 scale = Vector2(2.2, 2.2)
+
+[node name="gamemanager_algebra" parent="." instance=ExtResource("3_tyct7")]
+num_term = 2
+variable_term = 2
+x_value = 2
+
+[node name="6" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(260, 523)
+number = 6
+
+[node name="4" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(1625, 528)
+number = 4
+
+[node name="12" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(1761, 532)
+number = 12
+
+[node name="2" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(143, 524)
+number = 2
+
+[node name="7" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(915, 163)
+number = 7
+
+[node name="3" parent="gamemanager_algebra" instance=ExtResource("4_b54tf")]
+position = Vector2(1004, 166)
+number = 3
+
+[node name="+" parent="gamemanager_algebra" instance=ExtResource("5_m0dk5")]
+position = Vector2(228, 295)
+oper = "+"
+
+[node name="-" parent="gamemanager_algebra" instance=ExtResource("5_m0dk5")]
+position = Vector2(1694, 776)
+oper = "-"
+
+[node name="x1" parent="gamemanager_algebra" instance=ExtResource("6_l0mk7")]
+position = Vector2(1657, 425)
+variable_to_display = "x"
+
+[node name="x2" parent="gamemanager_algebra" instance=ExtResource("6_l0mk7")]
+position = Vector2(348, 656)
+variable_to_display = "x"
+
+[node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("7_e65v4")]
+position = Vector2(736, 336)
+x = 2
+integer = 10
+display_chest = "lvl1_2"
+
+[node name="timer" parent="gamemanager_algebra" instance=ExtResource("8_lqvsr")]
+
+[node name="clear_btn" parent="gamemanager_algebra" instance=ExtResource("13_0yant")]
 
 [node name="health_system" parent="." instance=ExtResource("13_wrryl")]
 

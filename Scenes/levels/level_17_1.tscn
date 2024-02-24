@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cmgu2cjjd358l"]
+[gd_scene load_steps=29 format=3 uid="uid://cmgu2cjjd358l"]
 
 [ext_resource type="TileSet" uid="uid://bru2ps4sjjt66" path="res://World4_Tileset.tres" id="1_lqxj5"]
 [ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="2_qr2xf"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6qenf481l3o3" path="res://Scenes/Mechanics/operators_w4.tscn" id="8_ht4h6"]
 [ext_resource type="PackedScene" uid="uid://c0ug32c0f4tmi" path="res://Scenes/Mechanics/final_answer_w_4.tscn" id="9_beg3v"]
 [ext_resource type="PackedScene" uid="uid://20qsvs6f2wea" path="res://Scenes/timer_w4.tscn" id="10_f31jh"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_4u1ny"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="11_cd88k"]
 [ext_resource type="PackedScene" uid="uid://r5g5crpsi4fk" path="res://Scenes/Mechanics/powerups_w4.tscn" id="12_ld7dn"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="13_fdn1t"]
@@ -493,6 +494,8 @@ num2 = 5.0
 display = "8over5"
 
 [node name="timer" parent="gamemanager_fraction" instance=ExtResource("10_f31jh")]
+
+[node name="clear_btn" parent="gamemanager_fraction" instance=ExtResource("11_4u1ny")]
 
 [node name="health_system" parent="." instance=ExtResource("11_cd88k")]
 

@@ -30,11 +30,13 @@ func _on_set_parentheses_body_entered(body):
 			AudioManager.play_item_collect()
 			access_manager.isDestroy = true
 			access_manager.collect_open_parenthesis(parentheses_to_display)
+			access_manager.save_collectible_parentheses($\".\")
 			queue_free()
 		elif parentheses_to_display == \")\" and access_manager.last_item_was_number and access_manager.open and access_manager.collected_items.size() > 1:
 			AudioManager.play_item_collect()
 			access_manager.isDestroy = true
 			access_manager.collect_close_parenthesis(parentheses_to_display)
+			access_manager.save_collectible_parentheses($\".\")
 			queue_free()
 "
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://c2qkq2dc455at"]
+[gd_scene load_steps=39 format=3 uid="uid://c2qkq2dc455at"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_cimep"]
 [ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="2_jluev"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="11_sich2"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="12_76yr0"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="12_quab3"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="13_f2c63"]
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="13_qnom3"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="14_7jm3q"]
 [ext_resource type="Texture2D" uid="uid://cwvm7xekef7o" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_1.png" id="15_kc348"]
@@ -668,6 +669,8 @@ id = 2
 modulate = Color(3.7, 0.55, 0.15, 1)
 position = Vector2(1455, 898)
 id = 2
+
+[node name="clear_btn" parent="gamemanager_pemdas" instance=ExtResource("13_f2c63")]
 
 [node name="health_system" parent="." instance=ExtResource("8_m6n3p")]
 

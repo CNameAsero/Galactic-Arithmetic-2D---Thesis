@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://qgy4p218tw4q"]
+[gd_scene load_steps=58 format=3 uid="uid://qgy4p218tw4q"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_ig7j4"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_g5f12"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="15_63u7a"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="16_5yoi3"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="17_7ienf"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="17_72ebm"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="18_3vaub"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="19_168ok"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="20_m82vg"]
@@ -59,44 +60,6 @@ func _ready():
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_12y64"]
 radius = 27.0185
@@ -211,6 +174,44 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="level_10" type="Node2D"]
 script = SubResource("GDScript_7b6oj")
 metadata/_edit_horizontal_guides_ = []
@@ -237,6 +238,126 @@ layer_2/tile_data = PackedInt32Array(262148, 917510, 6, 327684, 917510, 7, 39322
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(957, 543)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="blowfish2" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(581, 559)
+
+[node name="blowfish3" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(641, 560)
+
+[node name="blowfish4" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(700, 560)
+
+[node name="blowfish5" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1190, 559)
+
+[node name="blowfish6" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1247, 559)
+
+[node name="blowfish7" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1305, 560)
+
+[node name="octopus" parent="enemies" instance=ExtResource("12_q3lax")]
+position = Vector2(290, 349)
+rect_radius = 400.0
+
+[node name="shark4" parent="enemies" instance=ExtResource("13_000rj")]
+position = Vector2(481, 650)
+move_speed = 90.0
+move_direction = Vector2(-290, 0)
+rect_radius_x = 150.0
+rect_radius_y = 50.0
+
+[node name="shark5" parent="enemies" instance=ExtResource("13_000rj")]
+position = Vector2(1059, 437)
+move_speed = 90.0
+move_direction = Vector2(-290, 0)
+rect_radius_x = 150.0
+rect_radius_y = 50.0
+
+[node name="shark6" parent="enemies" instance=ExtResource("13_000rj")]
+position = Vector2(1772, 644)
+move_speed = 90.0
+move_direction = Vector2(-250, 0)
+rect_radius_x = 450.0
+rect_radius_y = 380.0
+
+[node name="octopus2" parent="enemies" instance=ExtResource("12_q3lax")]
+position = Vector2(1632, 372)
+rect_radius = 400.0
+
+[node name="octopus3" parent="enemies" instance=ExtResource("12_q3lax")]
+position = Vector2(961, 716)
+rect_radius = 400.0
+
+[node name="blowfish8" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(75, 931)
+
+[node name="blowfish9" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(123, 932)
+
+[node name="blowfish10" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(164, 967)
+
+[node name="blowfish11" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(163, 1015)
+
+[node name="blowfish12" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(761, 217)
+
+[node name="blowfish13" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(839, 160)
+
+[node name="blowfish14" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(839, 116)
+
+[node name="blowfish15" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(811, 196)
+
+[node name="blowfish16" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1759, 1012)
+
+[node name="blowfish17" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1758, 969)
+
+[node name="blowfish18" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1845, 937)
+
+[node name="blowfish19" parent="enemies" instance=ExtResource("11_r6djo")]
+position = Vector2(1796, 939)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(960, 227)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+platform_wall_layers = 1
+script = ExtResource("14_81rry")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("15_63u7a")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_12y64")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("16_5yoi3")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="game_manager_world_1-2" parent="." instance=ExtResource("2_g5f12")]
 num_term = 4
@@ -359,125 +480,7 @@ oper = "×"
 position = Vector2(104, 542)
 oper = "÷"
 
-[node name="enemies" type="Node2D" parent="."]
-
-[node name="blowfish2" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(581, 559)
-
-[node name="blowfish3" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(641, 560)
-
-[node name="blowfish4" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(700, 560)
-
-[node name="blowfish5" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1190, 559)
-
-[node name="blowfish6" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1247, 559)
-
-[node name="blowfish7" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1305, 560)
-
-[node name="octopus" parent="enemies" instance=ExtResource("12_q3lax")]
-position = Vector2(290, 349)
-rect_radius = 400.0
-
-[node name="shark4" parent="enemies" instance=ExtResource("13_000rj")]
-position = Vector2(481, 650)
-move_speed = 90.0
-move_direction = Vector2(-290, 0)
-rect_radius_x = 150.0
-rect_radius_y = 50.0
-
-[node name="shark5" parent="enemies" instance=ExtResource("13_000rj")]
-position = Vector2(1059, 437)
-move_speed = 90.0
-move_direction = Vector2(-290, 0)
-rect_radius_x = 150.0
-rect_radius_y = 50.0
-
-[node name="shark6" parent="enemies" instance=ExtResource("13_000rj")]
-position = Vector2(1772, 644)
-move_speed = 90.0
-move_direction = Vector2(-250, 0)
-rect_radius_x = 450.0
-rect_radius_y = 380.0
-
-[node name="octopus2" parent="enemies" instance=ExtResource("12_q3lax")]
-position = Vector2(1632, 372)
-rect_radius = 400.0
-
-[node name="octopus3" parent="enemies" instance=ExtResource("12_q3lax")]
-position = Vector2(961, 716)
-rect_radius = 400.0
-
-[node name="blowfish8" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(75, 931)
-
-[node name="blowfish9" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(123, 932)
-
-[node name="blowfish10" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(164, 967)
-
-[node name="blowfish11" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(163, 1015)
-
-[node name="blowfish12" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(761, 217)
-
-[node name="blowfish13" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(839, 160)
-
-[node name="blowfish14" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(839, 116)
-
-[node name="blowfish15" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(811, 196)
-
-[node name="blowfish16" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1759, 1012)
-
-[node name="blowfish17" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1758, 969)
-
-[node name="blowfish18" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1845, 937)
-
-[node name="blowfish19" parent="enemies" instance=ExtResource("11_r6djo")]
-position = Vector2(1796, 939)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(960, 227)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-platform_wall_layers = 1
-script = ExtResource("14_81rry")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("15_63u7a")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_12y64")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("16_5yoi3")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("17_72ebm")]
 
 [node name="health_buff" parent="." instance=ExtResource("17_7ienf")]
 offset_left = 479.0

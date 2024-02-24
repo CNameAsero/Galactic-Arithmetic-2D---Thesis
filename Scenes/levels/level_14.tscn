@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://b71a3jxxxc6i4"]
+[gd_scene load_steps=28 format=3 uid="uid://b71a3jxxxc6i4"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_06cmj"]
 [ext_resource type="PackedScene" uid="uid://co0144nx0e41q" path="res://Scripts/gamemanager_pemdas.tscn" id="2_va0hy"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="9_wchfq"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="10_rf6ts"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="10_yge74"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_pfdca"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="11_wnprw"]
 [ext_resource type="PackedScene" uid="uid://cgt5qgbjcmmwt" path="res://Scenes/Menu/Paused_Menu/paused_menu_w3.tscn" id="12_pvs6k"]
 [ext_resource type="PackedScene" uid="uid://c1hehmk0e0uq8" path="res://Scenes/Menu/Game_Over/game_over_w3.tscn" id="13_xkftf"]
@@ -826,6 +827,8 @@ final_answer = 38
 
 [node name="timer" parent="gamemanager_pemdas" instance=ExtResource("6_m3qqj")]
 position = Vector2(62, 65)
+
+[node name="clear_btn" parent="gamemanager_pemdas" instance=ExtResource("11_pfdca")]
 
 [node name="health_system" parent="." instance=ExtResource("9_wchfq")]
 

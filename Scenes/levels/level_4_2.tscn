@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://du8oth3jennoc"]
+[gd_scene load_steps=57 format=3 uid="uid://du8oth3jennoc"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_cwdw3"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_nwfmw"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://fn7vueoj36ug" path="res://Sprites/Objects/Timer.png" id="8_ifsp7"]
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="9_re6tb"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="10_mwvi3"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_kayjb"]
 [ext_resource type="PackedScene" uid="uid://csvk6opbfqou1" path="res://Scenes/levels/Game Obstacles/spike.tscn" id="11_m0ae3"]
 [ext_resource type="PackedScene" uid="uid://brr55dgynt6pf" path="res://Scenes/Enemies/wasp_enemy.tscn" id="12_0i4wi"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="13_64xau"]
@@ -58,44 +59,6 @@ func _ready():
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qgw60"]
 radius = 27.0185
@@ -210,6 +173,44 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="level_4" type="Node2D"]
 script = SubResource("GDScript_i8m5y")
 
@@ -263,102 +264,6 @@ layer_6/tile_data = PackedInt32Array(1572896, 2, 9, 1638432, 2, 10, 1572897, 655
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 541)
-
-[node name="game_manager_world_1-2" parent="." instance=ExtResource("2_nwfmw")]
-num_term = 4
-
-[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
-script = ExtResource("3_87xl0")
-
-[node name="16" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(1551, 298)
-number = 16
-
-[node name="4" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(156, 541)
-number = 4
-
-[node name="1" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(1774, 523)
-number = 1
-
-[node name="3" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(1544, 769)
-number = 3
-
-[node name="14" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(392, 336)
-number = 14
-
-[node name="2" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
-position = Vector2(399, 758)
-number = 2
-
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
-offset_left = 576.0
-offset_top = -17.0
-offset_right = 1342.0
-offset_bottom = 122.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("5_fufb4")
-theme_override_font_sizes/font_size = 100
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("6_bxyda")]
-position = Vector2(961, 545)
-final_answer = 9
-
-[node name="timer" type="Node2D" parent="game_manager_world_1-2"]
-position = Vector2(62, 65)
-scale = Vector2(0.5, 0.5)
-script = ExtResource("7_ojl72")
-
-[node name="Sprite2D" type="Sprite2D" parent="game_manager_world_1-2/timer"]
-texture = ExtResource("8_ifsp7")
-hframes = 4
-frame = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/timer"]
-speed_scale = 0.1
-libraries = {
-"": SubResource("AnimationLibrary_kxgoo")
-}
-
-[node name="Timer" type="Timer" parent="game_manager_world_1-2/timer"]
-wait_time = 180.0
-autostart = true
-
-[node name="timer_placeholder" type="Sprite2D" parent="game_manager_world_1-2/timer"]
-position = Vector2(4, 158)
-scale = Vector2(1.4, 1.4)
-texture = ExtResource("9_re6tb")
-
-[node name="timer_label" type="Label" parent="game_manager_world_1-2/timer/timer_placeholder"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -114.0
-offset_top = -94.5
-offset_right = -14.0
-offset_bottom = -33.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0.521569, 1, 1, 1)
-theme_override_constants/outline_size = 2
-theme_override_fonts/font = ExtResource("5_fufb4")
-theme_override_font_sizes/font_size = 45
-horizontal_alignment = 1
-vertical_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="-" parent="game_manager_world_1-2" instance=ExtResource("10_mwvi3")]
-position = Vector2(503, 740)
-oper = "-"
 
 [node name="Enemies" type="Node2D" parent="."]
 
@@ -471,6 +376,104 @@ libraries = {
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("15_hrtmm")]
 position = Vector2(245, 882)
 scale = Vector2(2.2, 2.2)
+
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("2_nwfmw")]
+num_term = 4
+
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
+script = ExtResource("3_87xl0")
+
+[node name="16" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(1551, 298)
+number = 16
+
+[node name="4" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(156, 541)
+number = 4
+
+[node name="1" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(1774, 523)
+number = 1
+
+[node name="3" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(1544, 769)
+number = 3
+
+[node name="14" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(392, 336)
+number = 14
+
+[node name="2" parent="game_manager_world_1-2" instance=ExtResource("4_u0s2x")]
+position = Vector2(399, 758)
+number = 2
+
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
+offset_left = 576.0
+offset_top = -17.0
+offset_right = 1342.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_fufb4")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("6_bxyda")]
+position = Vector2(961, 545)
+final_answer = 9
+
+[node name="timer" type="Node2D" parent="game_manager_world_1-2"]
+position = Vector2(62, 65)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("7_ojl72")
+
+[node name="Sprite2D" type="Sprite2D" parent="game_manager_world_1-2/timer"]
+texture = ExtResource("8_ifsp7")
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="game_manager_world_1-2/timer"]
+speed_scale = 0.1
+libraries = {
+"": SubResource("AnimationLibrary_kxgoo")
+}
+
+[node name="Timer" type="Timer" parent="game_manager_world_1-2/timer"]
+wait_time = 180.0
+autostart = true
+
+[node name="timer_placeholder" type="Sprite2D" parent="game_manager_world_1-2/timer"]
+position = Vector2(4, 158)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("9_re6tb")
+
+[node name="timer_label" type="Label" parent="game_manager_world_1-2/timer/timer_placeholder"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -94.5
+offset_right = -14.0
+offset_bottom = -33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.521569, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("5_fufb4")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="-" parent="game_manager_world_1-2" instance=ExtResource("10_mwvi3")]
+position = Vector2(503, 740)
+oper = "-"
+
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("11_kayjb")]
 
 [node name="health_system" parent="." instance=ExtResource("16_1x8hs")]
 

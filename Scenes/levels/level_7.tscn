@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://dqxrs4asm625s"]
+[gd_scene load_steps=93 format=3 uid="uid://dqxrs4asm625s"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_r1wch"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_7oxo1"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://c3uf0qvygard8" path="res://Sprites/Collectibles/final answers/19chest.png" id="15_4e610"]
 [ext_resource type="Texture2D" uid="uid://dsknbtmm7seeo" path="res://Sprites/Collectibles/final answers/32_chest.png" id="16_256bi"]
 [ext_resource type="Script" path="res://Scripts/shark.gd" id="20_1v5vr"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="20_hyaqs"]
 [ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/world2_enemies/ViciousShark.png" id="21_kx0yp"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="25_f3cty"]
 [ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="25_x5dxw"]
@@ -69,220 +70,6 @@ func _ready():
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_qe8cb"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [Vector2i(1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_dvv1d"]
-resource_name = "chest"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame_coords")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_de2hf"]
-_data = {
-"RESET": SubResource("Animation_qe8cb"),
-"chest": SubResource("Animation_dvv1d")
-}
-
-[sub_resource type="Animation" id="Animation_01dj4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_7jca7"]
-resource_name = "chest"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhy63"]
-_data = {
-"RESET": SubResource("Animation_01dj4"),
-"chest": SubResource("Animation_7jca7")
-}
-
-[sub_resource type="Animation" id="Animation_itt5g"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_rjwla"]
-resource_name = "chest"
-length = 1.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.7, 1, 1.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_65hcj"]
-_data = {
-"RESET": SubResource("Animation_itt5g"),
-"chest": SubResource("Animation_rjwla")
-}
-
-[sub_resource type="Animation" id="Animation_h5ka7"]
-resource_name = "chest"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 1, 2, 3, 4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlcnm"]
-_data = {
-"chest": SubResource("Animation_h5ka7")
-}
-
-[sub_resource type="Animation" id="Animation_xbek2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_jkwa3"]
-resource_name = "chest"
-length = 1.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.4, 0.8, 1.1, 1.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfyue"]
-_data = {
-"RESET": SubResource("Animation_xbek2"),
-"chest": SubResource("Animation_jkwa3")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8y4e"]
-size = Vector2(26, 20)
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="GDScript" id="GDScript_c8bq8"]
 script/source = "extends Node2D
@@ -517,6 +304,220 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_qe8cb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dvv1d"]
+resource_name = "chest"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0), Vector2i(4, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_de2hf"]
+_data = {
+"RESET": SubResource("Animation_qe8cb"),
+"chest": SubResource("Animation_dvv1d")
+}
+
+[sub_resource type="Animation" id="Animation_01dj4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7jca7"]
+resource_name = "chest"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bhy63"]
+_data = {
+"RESET": SubResource("Animation_01dj4"),
+"chest": SubResource("Animation_7jca7")
+}
+
+[sub_resource type="Animation" id="Animation_itt5g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_rjwla"]
+resource_name = "chest"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7, 1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_65hcj"]
+_data = {
+"RESET": SubResource("Animation_itt5g"),
+"chest": SubResource("Animation_rjwla")
+}
+
+[sub_resource type="Animation" id="Animation_h5ka7"]
+resource_name = "chest"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jlcnm"]
+_data = {
+"chest": SubResource("Animation_h5ka7")
+}
+
+[sub_resource type="Animation" id="Animation_xbek2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_jkwa3"]
+resource_name = "chest"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.1, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kfyue"]
+_data = {
+"RESET": SubResource("Animation_xbek2"),
+"chest": SubResource("Animation_jkwa3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8y4e"]
+size = Vector2(26, 20)
+
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="world2_lvl2" type="Node2D"]
 script = SubResource("GDScript_aesus")
 
@@ -549,6 +550,129 @@ layer_3/tile_data = PackedInt32Array(524290, 327684, 12, 589826, 327684, 13, 524
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 542)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="shark" type="Node2D" parent="Enemies"]
+position = Vector2(1251, 831)
+script = SubResource("GDScript_c8bq8")
+move_speed = 90.0
+move_direction = Vector2(400, 0)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Enemies/shark"]
+collision_layer = 8
+collision_mask = 29
+script = ExtResource("20_1v5vr")
+
+[node name="Area2" type="Area2D" parent="Enemies/shark/CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies/shark/CharacterBody2D/Area2"]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("21_kx0yp")
+hframes = 4
+vframes = 2
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/shark/CharacterBody2D/Area2"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_g7cyq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/shark/CharacterBody2D/Area2"]
+libraries = {
+"": SubResource("AnimationLibrary_6gjaj")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/shark/CharacterBody2D"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_l50ik")
+
+[node name="area_det" type="Area2D" parent="Enemies/shark"]
+
+[node name="col_det" type="CollisionShape2D" parent="Enemies/shark/area_det"]
+shape = SubResource("RectangleShape2D_4mgll")
+debug_color = Color(0.713726, 0.258824, 1, 0.419608)
+
+[node name="Timer" type="Timer" parent="Enemies/shark"]
+wait_time = 1.5
+
+[node name="shark2" parent="Enemies" instance=ExtResource("5_3jgl7")]
+position = Vector2(1239, 181)
+move_speed = 90.0
+move_direction = Vector2(-380, 0)
+rect_radius_x = 750.0
+rect_radius_y = 125.0
+
+[node name="blowfish2" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(600, 683)
+
+[node name="blowfish15" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(554, 680)
+
+[node name="blowfish3" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(553, 409)
+
+[node name="blowfish4" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(601, 408)
+
+[node name="blowfish5" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1128, 614)
+
+[node name="blowfish6" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1054, 537)
+
+[node name="blowfish7" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1135, 481)
+
+[node name="blowfish8" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1077, 591)
+
+[node name="blowfish9" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1083, 497)
+
+[node name="blowfish10" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1368, 481)
+
+[node name="blowfish11" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1369, 618)
+
+[node name="blowfish12" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1433, 541)
+
+[node name="blowfish13" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1418, 592)
+
+[node name="blowfish14" parent="Enemies" instance=ExtResource("3_ks7dh")]
+position = Vector2(1411, 501)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(371, 543)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("2_7oxo1")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("25_x5dxw")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_4uvgf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_o08xo")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="game_manager_world_1-2" parent="." instance=ExtResource("2_uo40f")]
 num_term = 5
@@ -773,128 +897,7 @@ number = 8
 position = Vector2(225, 546)
 oper = "×"
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="shark" type="Node2D" parent="Enemies"]
-position = Vector2(1251, 831)
-script = SubResource("GDScript_c8bq8")
-move_speed = 90.0
-move_direction = Vector2(400, 0)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Enemies/shark"]
-collision_layer = 8
-collision_mask = 29
-script = ExtResource("20_1v5vr")
-
-[node name="Area2" type="Area2D" parent="Enemies/shark/CharacterBody2D"]
-
-[node name="Sprite2D" type="Sprite2D" parent="Enemies/shark/CharacterBody2D/Area2"]
-scale = Vector2(1.8, 1.8)
-texture = ExtResource("21_kx0yp")
-hframes = 4
-vframes = 2
-frame = 1
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/shark/CharacterBody2D/Area2"]
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_g7cyq")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Enemies/shark/CharacterBody2D/Area2"]
-libraries = {
-"": SubResource("AnimationLibrary_6gjaj")
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemies/shark/CharacterBody2D"]
-position = Vector2(0.5, -0.5)
-shape = SubResource("RectangleShape2D_l50ik")
-
-[node name="area_det" type="Area2D" parent="Enemies/shark"]
-
-[node name="col_det" type="CollisionShape2D" parent="Enemies/shark/area_det"]
-shape = SubResource("RectangleShape2D_4mgll")
-debug_color = Color(0.713726, 0.258824, 1, 0.419608)
-
-[node name="Timer" type="Timer" parent="Enemies/shark"]
-wait_time = 1.5
-
-[node name="shark2" parent="Enemies" instance=ExtResource("5_3jgl7")]
-position = Vector2(1239, 181)
-move_speed = 90.0
-move_direction = Vector2(-380, 0)
-rect_radius_x = 750.0
-rect_radius_y = 125.0
-
-[node name="blowfish2" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(600, 683)
-
-[node name="blowfish15" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(554, 680)
-
-[node name="blowfish3" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(553, 409)
-
-[node name="blowfish4" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(601, 408)
-
-[node name="blowfish5" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1128, 614)
-
-[node name="blowfish6" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1054, 537)
-
-[node name="blowfish7" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1135, 481)
-
-[node name="blowfish8" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1077, 591)
-
-[node name="blowfish9" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1083, 497)
-
-[node name="blowfish10" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1368, 481)
-
-[node name="blowfish11" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1369, 618)
-
-[node name="blowfish12" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1433, 541)
-
-[node name="blowfish13" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1418, 592)
-
-[node name="blowfish14" parent="Enemies" instance=ExtResource("3_ks7dh")]
-position = Vector2(1411, 501)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(371, 543)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("2_7oxo1")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("25_x5dxw")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_4uvgf")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_o08xo")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("20_hyaqs")]
 
 [node name="health_system" parent="." instance=ExtResource("6_dnee0")]
 
@@ -1315,11 +1318,11 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Enemies/shark/CharacterBody2D/Area2" to="Enemies/shark/CharacterBody2D" method="_on_area_2_body_entered" flags=18]
 [connection signal="body_entered" from="Enemies/shark/area_det" to="Enemies/shark/CharacterBody2D" method="_on_area_det_body_entered" flags=18]
 [connection signal="body_exited" from="Enemies/shark/area_det" to="Enemies/shark/CharacterBody2D" method="_on_area_det_body_exited" flags=18]
 [connection signal="timeout" from="Enemies/shark/Timer" to="Enemies/shark/CharacterBody2D" method="_on_timer_timeout" flags=18]
+[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://ns2uclnec3ge"]
+[gd_scene load_steps=67 format=3 uid="uid://ns2uclnec3ge"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_51e0w"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_qma0c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://1vcay4nv2q1k" path="res://Sprites/Objects/Timer_placeholder.png" id="6_shwui"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="7_m1grx"]
 [ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="10_a5cl3"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_sa2re"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="18_v52lu"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="19_wqnhb"]
 [ext_resource type="PackedScene" uid="uid://cctb0dww2joqb" path="res://Scenes/Enemies/octopus.tscn" id="20_13gfj"]
@@ -60,44 +61,6 @@ func _ready():
 func _process(_delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_inxqy"]
 radius = 14.5
@@ -312,6 +275,44 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="level_8" type="Node2D"]
 script = SubResource("GDScript_u7ef6")
 
@@ -344,6 +345,85 @@ layer_3/tile_data = PackedInt32Array(1048582, 851974, 3, 1114118, 851974, 4, 117
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 541)
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="octopus" parent="enemies" instance=ExtResource("20_13gfj")]
+position = Vector2(409, 211)
+rect_radius = 500.0
+
+[node name="octopus2" parent="enemies" instance=ExtResource("20_13gfj")]
+position = Vector2(709, 877)
+rect_radius = 500.0
+
+[node name="octopus3" parent="enemies" instance=ExtResource("20_13gfj")]
+position = Vector2(1553, 877)
+rect_radius = 500.0
+
+[node name="octopus4" type="Node2D" parent="enemies"]
+position = Vector2(1275, 310)
+script = ExtResource("21_gaed1")
+ammo = ExtResource("22_ivfl6")
+rect_radius = 500.0
+
+[node name="Area2D" type="Area2D" parent="enemies/octopus4"]
+
+[node name="Sprite2D" type="Sprite2D" parent="enemies/octopus4/Area2D"]
+texture = ExtResource("23_ud08i")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/octopus4/Area2D"]
+position = Vector2(-0.5, -2)
+shape = SubResource("CapsuleShape2D_inxqy")
+
+[node name="RayCast2D" type="RayCast2D" parent="enemies/octopus4/Area2D"]
+collision_mask = 33
+
+[node name="Timer" type="Timer" parent="enemies/octopus4/Area2D"]
+wait_time = 1.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/octopus4/Area2D"]
+libraries = {
+"": SubResource("AnimationLibrary_b1epy")
+}
+
+[node name="det" type="Area2D" parent="enemies/octopus4"]
+
+[node name="col_det" type="CollisionShape2D" parent="enemies/octopus4/det"]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_tw4vd")
+debug_color = Color(0.858824, 0, 0.882353, 0.419608)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(903, 539)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("24_6o7pe")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("25_mjgpc")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_lqptx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("26_uaha5")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="game_manager_world_1-2" parent="." instance=ExtResource("2_qma0c")]
 num_term = 3
@@ -442,84 +522,7 @@ oper = "÷"
 position = Vector2(1321, 187)
 final_answer = 5
 
-[node name="enemies" type="Node2D" parent="."]
-
-[node name="octopus" parent="enemies" instance=ExtResource("20_13gfj")]
-position = Vector2(409, 211)
-rect_radius = 500.0
-
-[node name="octopus2" parent="enemies" instance=ExtResource("20_13gfj")]
-position = Vector2(709, 877)
-rect_radius = 500.0
-
-[node name="octopus3" parent="enemies" instance=ExtResource("20_13gfj")]
-position = Vector2(1553, 877)
-rect_radius = 500.0
-
-[node name="octopus4" type="Node2D" parent="enemies"]
-position = Vector2(1275, 310)
-script = ExtResource("21_gaed1")
-ammo = ExtResource("22_ivfl6")
-rect_radius = 500.0
-
-[node name="Area2D" type="Area2D" parent="enemies/octopus4"]
-
-[node name="Sprite2D" type="Sprite2D" parent="enemies/octopus4/Area2D"]
-texture = ExtResource("23_ud08i")
-hframes = 4
-vframes = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="enemies/octopus4/Area2D"]
-position = Vector2(-0.5, -2)
-shape = SubResource("CapsuleShape2D_inxqy")
-
-[node name="RayCast2D" type="RayCast2D" parent="enemies/octopus4/Area2D"]
-collision_mask = 33
-
-[node name="Timer" type="Timer" parent="enemies/octopus4/Area2D"]
-wait_time = 1.5
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/octopus4/Area2D"]
-libraries = {
-"": SubResource("AnimationLibrary_b1epy")
-}
-
-[node name="det" type="Area2D" parent="enemies/octopus4"]
-
-[node name="col_det" type="CollisionShape2D" parent="enemies/octopus4/det"]
-position = Vector2(-0.5, -2)
-shape = SubResource("RectangleShape2D_tw4vd")
-debug_color = Color(0.858824, 0, 0.882353, 0.419608)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(903, 539)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("24_6o7pe")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("25_mjgpc")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_lqptx")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("26_uaha5")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("11_sa2re")]
 
 [node name="health_buff" parent="." instance=ExtResource("27_oe3hq")]
 offset_left = 1140.0
@@ -940,10 +943,10 @@ theme_override_font_sizes/font_size = 95
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="timeout" from="enemies/octopus4/Area2D/Timer" to="enemies/octopus4" method="_on_timer_timeout" flags=18]
 [connection signal="body_entered" from="enemies/octopus4/det" to="enemies/octopus4" method="_on_det_body_entered" flags=18]
 [connection signal="body_exited" from="enemies/octopus4/det" to="enemies/octopus4" method="_on_det_body_exited" flags=18]
+[connection signal="timeout" from="game_manager_world_1-2/timer/Timer" to="game_manager_world_1-2/timer" method="_on_timer_timeout"]
 [connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/restart_button" to="menus/game_over" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="menus/game_over/game_over_menu/bg/button_holder/home_button" to="menus/game_over" method="_on_home_button_pressed"]

@@ -1,5 +1,8 @@
 extends Node2D
 
+var collected_numbers_dict = {}
+var number_scene = load("res://Scenes/Mechanics/numbers.tscn")
+
 @onready var collected_numbers := []
 @onready var collected_operators := []
 @onready var current_expression := ""
@@ -161,7 +164,24 @@ func restart():
 	var random_scene = scenes[random_index]
 	get_tree().change_scene_to_file(random_scene)
 
+func save_collectible_number(collectible):
+	var collectible_number = {
+		"value": collectible.number,
+		"position": collectible.global_position
+	}
+	collected_numbers_dict[collectible.name] = collectible_number
 
+func clear_eq():
+	collected_numbers.clear()
+	collected_operators.clear()
+	last_item_was_number = true
+	for collectible_name in collected_numbers_dict:
+		var collectible_info = collected_numbers_dict[collectible_name]
+		var new_collectible = number_scene.instantiate()
+		new_collectible.number = collectible_info["value"]
+		new_collectible.global_position = collectible_info["position"]
+		add_child(new_collectible)
+	collected_numbers_dict.clear()
 
 func reset_for_next_level():
 	reset_hp()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://jk6k878a0i60"]
+[gd_scene load_steps=58 format=3 uid="uid://jk6k878a0i60"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_vjsh4"]
 [ext_resource type="PackedScene" uid="uid://c3ptn3115rf3t" path="res://Scenes/Enemies/fox_enemy.tscn" id="2_gccnv"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="15_wnxce"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="16_vsk2o"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="17_ijp4l"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="17_rvqpp"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="18_3ou38"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="19_j5vyc"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="20_m44fu"]
@@ -438,6 +439,8 @@ oper = "+"
 [node name="-" parent="game_manager_world_1-2" instance=ExtResource("16_vsk2o")]
 position = Vector2(187, 709)
 oper = "-"
+
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("17_rvqpp")]
 
 [node name="health_system" parent="." instance=ExtResource("17_ijp4l")]
 

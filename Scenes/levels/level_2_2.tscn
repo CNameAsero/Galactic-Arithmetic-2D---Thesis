@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dyt4s311nquyg"]
+[gd_scene load_steps=52 format=3 uid="uid://dyt4s311nquyg"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_2anyx"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_3q5m8"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="12_ldxds"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="13_gij8j"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="14_0oe86"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="14_8o2aw"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="15_tmnm2"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="16_tikws"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="17_x22xu"]
@@ -217,60 +218,6 @@ layer_5/tile_data = PackedInt32Array(1310773, 720898, 6, 1376309, 720898, 7, 144
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(962, 539)
 
-[node name="game_manager_world_1-2" parent="." instance=ExtResource("2_3q5m8")]
-num_term = 3
-
-[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
-script = ExtResource("3_3f8gx")
-
-[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("4_h7toy")]
-position = Vector2(833, 214)
-scale = Vector2(1.85, 1.85)
-final_answer = 21
-
-[node name="timer" parent="game_manager_world_1-2" instance=ExtResource("5_42yj2")]
-position = Vector2(62, 65)
-
-[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
-offset_left = 576.0
-offset_top = -17.0
-offset_right = 1342.0
-offset_bottom = 122.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("6_sbpx7")
-theme_override_font_sizes/font_size = 100
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="9" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(815, 874)
-number = 9
-
-[node name="8" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(1265, 267)
-number = 8
-
-[node name="4" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(1274, 870)
-number = 4
-
-[node name="3" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(1486, 721)
-number = 3
-
-[node name="6" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(658, 697)
-number = 6
-
-[node name="9_1" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
-position = Vector2(1104, 391)
-number = 9
-
-[node name="+" parent="game_manager_world_1-2" instance=ExtResource("8_vy5a8")]
-position = Vector2(623, 383)
-oper = "+"
-
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Fox_enemy" parent="Enemies" instance=ExtResource("9_wru6f")]
@@ -351,6 +298,62 @@ libraries = {
 [node name="joystick" parent="slime_player_joystick" instance=ExtResource("13_gij8j")]
 position = Vector2(245, 882)
 scale = Vector2(2.2, 2.2)
+
+[node name="game_manager_world_1-2" parent="." instance=ExtResource("2_3q5m8")]
+num_term = 3
+
+[node name="bool_handler" type="Node2D" parent="game_manager_world_1-2"]
+script = ExtResource("3_3f8gx")
+
+[node name="final_answer" parent="game_manager_world_1-2" instance=ExtResource("4_h7toy")]
+position = Vector2(833, 214)
+scale = Vector2(1.85, 1.85)
+final_answer = 21
+
+[node name="timer" parent="game_manager_world_1-2" instance=ExtResource("5_42yj2")]
+position = Vector2(62, 65)
+
+[node name="CurrentExpressionLabel" type="Label" parent="game_manager_world_1-2"]
+offset_left = 576.0
+offset_top = -17.0
+offset_right = 1342.0
+offset_bottom = 122.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_sbpx7")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="9" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(815, 874)
+number = 9
+
+[node name="8" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(1265, 267)
+number = 8
+
+[node name="4" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(1274, 870)
+number = 4
+
+[node name="3" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(1486, 721)
+number = 3
+
+[node name="6" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(658, 697)
+number = 6
+
+[node name="9_1" parent="game_manager_world_1-2" instance=ExtResource("7_0q23x")]
+position = Vector2(1104, 391)
+number = 9
+
+[node name="+" parent="game_manager_world_1-2" instance=ExtResource("8_vy5a8")]
+position = Vector2(623, 383)
+oper = "+"
+
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("14_8o2aw")]
 
 [node name="health_system" parent="." instance=ExtResource("14_0oe86")]
 

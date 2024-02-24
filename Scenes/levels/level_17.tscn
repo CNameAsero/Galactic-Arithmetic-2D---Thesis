@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://duwu1oh33jrpu"]
+[gd_scene load_steps=29 format=3 uid="uid://duwu1oh33jrpu"]
 
 [ext_resource type="TileSet" uid="uid://bru2ps4sjjt66" path="res://World4_Tileset.tres" id="1_ghoto"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_ahdgd"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://20qsvs6f2wea" path="res://Scenes/timer_w4.tscn" id="9_v7vle"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="10_psdog"]
 [ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="11_cerlr"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_ejouo"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="12_0roie"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="13_mqco6"]
 [ext_resource type="PackedScene" uid="uid://bkrwfkw8lyn73" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="14_d42dc"]
@@ -488,6 +489,8 @@ num2 = 8.0
 display = "7over8"
 
 [node name="timer" parent="gamemanager_fraction" instance=ExtResource("9_v7vle")]
+
+[node name="clear_btn" parent="gamemanager_fraction" instance=ExtResource("11_ejouo")]
 
 [node name="health_system" parent="." instance=ExtResource("10_psdog")]
 

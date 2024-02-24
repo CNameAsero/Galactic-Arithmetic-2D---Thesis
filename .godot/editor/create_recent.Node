@@ -1,10 +1,10 @@
+TextureButton
 AnimationPlayer
 Sprite2D
 TextureProgressBar
 Node2D
 RichTextLabel
 Timer
-TextureButton
 Node
 AudioStreamPlayer
 Button

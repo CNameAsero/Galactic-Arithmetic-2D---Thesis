@@ -1,0 +1,950 @@
+[gd_scene load_steps=76 format=3 uid="uid://jcsj21on5e5a"]
+
+[ext_resource type="Script" path="res://Scripts/testing_Numbers.gd" id="1_ut50e"]
+[ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="2_5drtk"]
+[ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="3_pqun8"]
+[ext_resource type="Texture2D" uid="uid://chb3lfrjqf8lv" path="res://Sprites/Collectibles/numbers/Two.png" id="4_cm8ju"]
+[ext_resource type="Texture2D" uid="uid://bh24twa5xyt2e" path="res://Sprites/Collectibles/numbers/Three.png" id="5_yrfd1"]
+[ext_resource type="Texture2D" uid="uid://b6slngqk7c7nv" path="res://Sprites/Collectibles/numbers/Four.png" id="6_i7ra5"]
+[ext_resource type="Texture2D" uid="uid://ddrn8q7lfs3yr" path="res://Sprites/Collectibles/numbers/five.png" id="7_m3dn6"]
+[ext_resource type="Texture2D" uid="uid://d1lnhkml050d2" path="res://Sprites/Collectibles/numbers/Six.png" id="8_o0ouf"]
+[ext_resource type="Texture2D" uid="uid://dmhoy68nrh2mg" path="res://Sprites/Collectibles/numbers/Seven.png" id="9_2fypw"]
+[ext_resource type="Texture2D" uid="uid://dydlvh2lqv3s1" path="res://Sprites/Collectibles/numbers/8.png" id="10_8bdhp"]
+[ext_resource type="Texture2D" uid="uid://c1g5ciwwlkfr5" path="res://Sprites/Collectibles/numbers/Nine.png" id="11_p1ca1"]
+[ext_resource type="Texture2D" uid="uid://cieku7i82y3ix" path="res://Sprites/Collectibles/numbers/Ten.png" id="12_dgnlf"]
+[ext_resource type="Texture2D" uid="uid://cfxgvptx5ly47" path="res://Sprites/Collectibles/numbers/11_collectible.png" id="13_j2ny7"]
+[ext_resource type="Texture2D" uid="uid://dl7v1aqioys4i" path="res://Sprites/Collectibles/numbers/Twelve.png" id="14_h4pyr"]
+[ext_resource type="Texture2D" uid="uid://bsle4qkpsyof4" path="res://Sprites/Collectibles/numbers/Thirteen.png" id="15_awg4e"]
+[ext_resource type="Texture2D" uid="uid://dn80bl04kib27" path="res://Sprites/Collectibles/numbers/Fourteen.png" id="16_8ebim"]
+[ext_resource type="Texture2D" uid="uid://devvcbf4r80kg" path="res://Sprites/Collectibles/numbers/Fifteen.png" id="17_2fmh2"]
+[ext_resource type="Texture2D" uid="uid://bn8wnay60awri" path="res://Sprites/Collectibles/numbers/Sixteen.png" id="18_io0kp"]
+[ext_resource type="Texture2D" uid="uid://c5f7xoq0vnhbo" path="res://Sprites/Collectibles/numbers/Seventeen.png" id="19_ht0gh"]
+[ext_resource type="Texture2D" uid="uid://b2oyjjaeds4p0" path="res://Sprites/Collectibles/numbers/Nineteen.png" id="20_eugj4"]
+[ext_resource type="Texture2D" uid="uid://bd6vxipjlid17" path="res://Sprites/Collectibles/numbers/Twenty.png" id="21_rwieu"]
+[ext_resource type="Texture2D" uid="uid://75s7yrvvev8k" path="res://Sprites/Collectibles/numbers/twenty-four.png" id="22_py3u8"]
+[ext_resource type="Texture2D" uid="uid://dxgvg3rba1bc8" path="res://Sprites/Collectibles/numbers/Thirty.png" id="23_hcjiv"]
+[ext_resource type="Texture2D" uid="uid://cvad01ij51hf4" path="res://Sprites/Collectibles/numbers/Fifty-four.png" id="24_rhqmj"]
+[ext_resource type="Texture2D" uid="uid://c1grv2c33og60" path="res://Sprites/Collectibles/numbers/Fifty-six.png" id="25_4g00g"]
+
+[sub_resource type="GDScript" id="GDScript_s62f4"]
+script/source = "extends Node2D
+
+@export var number : int
+@onready var gamemanager = $\"..\"
+
+"
+
+[sub_resource type="Animation" id="Animation_jcqmo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_gyyyy"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ft7jf"]
+_data = {
+"RESET": SubResource("Animation_jcqmo"),
+"Shining": SubResource("Animation_gyyyy")
+}
+
+[sub_resource type="Animation" id="Animation_lvfvd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_gxp0h"]
+resource_name = "shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qx8ra"]
+_data = {
+"RESET": SubResource("Animation_lvfvd"),
+"Shining": SubResource("Animation_gxp0h")
+}
+
+[sub_resource type="Animation" id="Animation_s6b47"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ysf8r"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qreo"]
+_data = {
+"RESET": SubResource("Animation_s6b47"),
+"Shining": SubResource("Animation_ysf8r")
+}
+
+[sub_resource type="Animation" id="Animation_asxc7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_8ceib"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m7ugx"]
+_data = {
+"RESET": SubResource("Animation_asxc7"),
+"Shining": SubResource("Animation_8ceib")
+}
+
+[sub_resource type="Animation" id="Animation_oop65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_bmykv"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bqc7e"]
+_data = {
+"RESET": SubResource("Animation_oop65"),
+"Shining": SubResource("Animation_bmykv")
+}
+
+[sub_resource type="Animation" id="Animation_pfc6u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_t411h"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qhjx"]
+_data = {
+"RESET": SubResource("Animation_pfc6u"),
+"Shining": SubResource("Animation_t411h")
+}
+
+[sub_resource type="Animation" id="Animation_nqynp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../6:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_vjuy8"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../6:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hifse"]
+_data = {
+"RESET": SubResource("Animation_nqynp"),
+"Shining": SubResource("Animation_vjuy8")
+}
+
+[sub_resource type="Animation" id="Animation_l4cy4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../7:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_55qdc"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../7:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pwse"]
+_data = {
+"RESET": SubResource("Animation_l4cy4"),
+"Shining": SubResource("Animation_55qdc")
+}
+
+[sub_resource type="Animation" id="Animation_0ryhs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../8:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_26k0a"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../8:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qtfe5"]
+_data = {
+"RESET": SubResource("Animation_0ryhs"),
+"Shining": SubResource("Animation_26k0a")
+}
+
+[sub_resource type="Animation" id="Animation_nvo8c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../9:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_rt3m0"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../9:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wbqsg"]
+_data = {
+"RESET": SubResource("Animation_nvo8c"),
+"Shining": SubResource("Animation_rt3m0")
+}
+
+[sub_resource type="Animation" id="Animation_7ytc8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ctgn4"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43xt3"]
+_data = {
+"RESET": SubResource("Animation_7ytc8"),
+"Shining": SubResource("Animation_ctgn4")
+}
+
+[sub_resource type="Animation" id="Animation_wowpd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_mb0su"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v2gw7"]
+_data = {
+"RESET": SubResource("Animation_wowpd"),
+"Shining": SubResource("Animation_mb0su")
+}
+
+[sub_resource type="Animation" id="Animation_1nmhk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_vy57x"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wvhd"]
+_data = {
+"RESET": SubResource("Animation_1nmhk"),
+"Shining": SubResource("Animation_vy57x")
+}
+
+[sub_resource type="Animation" id="Animation_jt8ol"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_tp54i"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tfarb"]
+_data = {
+"RESET": SubResource("Animation_jt8ol"),
+"Shining": SubResource("Animation_tp54i")
+}
+
+[sub_resource type="Animation" id="Animation_tx375"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ftw82"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjcp7"]
+_data = {
+"RESET": SubResource("Animation_tx375"),
+"Shining": SubResource("Animation_ftw82")
+}
+
+[sub_resource type="Animation" id="Animation_u5326"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_cechx"]
+resource_name = "Shining"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_io3y2"]
+_data = {
+"RESET": SubResource("Animation_u5326"),
+"Shining": SubResource("Animation_cechx")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gbrp3"]
+radius = 53.4979
+height = 106.996
+
+[node name="Numbers" type="Node2D" groups=["numbers"]]
+position = Vector2(100, 100)
+scale = Vector2(0.45, 0.45)
+script = SubResource("GDScript_s62f4")
+
+[node name="set_number" type="Area2D" parent="."]
+scale = Vector2(1.08, 1.08)
+collision_layer = 2
+script = ExtResource("1_ut50e")
+
+[node name="0" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("2_5drtk")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/0"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_ft7jf")
+}
+
+[node name="1" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("3_pqun8")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/1"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_qx8ra")
+}
+
+[node name="2" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("4_cm8ju")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/2"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_7qreo")
+}
+
+[node name="3" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("5_yrfd1")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/3"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_m7ugx")
+}
+
+[node name="4" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("6_i7ra5")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/4"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_bqc7e")
+}
+
+[node name="5" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("7_m3dn6")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/5"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_0qhjx")
+}
+
+[node name="6" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("8_o0ouf")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/6"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_hifse")
+}
+
+[node name="7" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("9_2fypw")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/7"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_2pwse")
+}
+
+[node name="8" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("10_8bdhp")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/8"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_qtfe5")
+}
+
+[node name="9" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("11_p1ca1")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/9"]
+root_node = NodePath("../../0")
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_wbqsg")
+}
+
+[node name="10" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("12_dgnlf")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/10"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_43xt3")
+}
+
+[node name="11" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("13_j2ny7")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/11"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_43xt3")
+}
+
+[node name="12" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("14_h4pyr")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/12"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_v2gw7")
+}
+
+[node name="13" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("15_awg4e")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/13"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="14" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("16_8ebim")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/14"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="15" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("17_2fmh2")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/15"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="16" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("18_io0kp")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/16"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_tfarb")
+}
+
+[node name="17" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("19_ht0gh")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/17"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_vjcp7")
+}
+
+[node name="19" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("20_eugj4")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/19"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_io3y2")
+}
+
+[node name="20" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("21_rwieu")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/20"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="24" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("22_py3u8")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/24"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="30" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("23_hcjiv")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/30"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="54" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("24_rhqmj")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/54"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="56" type="Sprite2D" parent="set_number"]
+visible = false
+texture = ExtResource("25_4g00g")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="set_number/56"]
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_4wvhd")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="set_number"]
+shape = SubResource("CapsuleShape2D_gbrp3")
+
+[connection signal="body_entered" from="set_number" to="set_number" method="_on_body_entered"]

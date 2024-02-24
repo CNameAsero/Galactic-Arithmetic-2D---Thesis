@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://c0vjymqhl7r8f"]
+[gd_scene load_steps=57 format=3 uid="uid://c0vjymqhl7r8f"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_mbfyc"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_mhu1r"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://crrhh4r6xn3ue" path="res://Sprites/Character/SlimeWithScuba.png" id="14_d6rc2"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="15_107rh"]
 [ext_resource type="PackedScene" uid="uid://k0molyb4s16e" path="res://Scenes/Mechanics/powerups.tscn" id="16_1aiyp"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="16_bw3md"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="17_805f4"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="18_cfdr7"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="19_2ojh5"]
@@ -58,44 +59,6 @@ func _ready():
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_c1idn"]
 radius = 27.0185
@@ -210,6 +173,44 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="level_9" type="Node2D"]
 script = SubResource("GDScript_xjh7d")
 
@@ -242,6 +243,98 @@ layer_3/tile_data = PackedInt32Array(1835063, 262150, 1, 1900599, 262150, 2, 183
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(960, 539)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="blowfish" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(136, 154)
+
+[node name="blowfish2" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(180, 156)
+
+[node name="blowfish3" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(220, 76)
+
+[node name="blowfish4" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(216, 121)
+
+[node name="blowfish5" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1696, 74)
+
+[node name="blowfish6" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1698, 118)
+
+[node name="blowfish7" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1740, 136)
+
+[node name="blowfish8" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1790, 137)
+
+[node name="blowfish9" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(900, 733)
+
+[node name="blowfish10" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1002, 734)
+
+[node name="blowfish11" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(950, 734)
+
+[node name="blowfish12" parent="Enemies" instance=ExtResource("11_rub04")]
+position = Vector2(1052, 735)
+
+[node name="octopus" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(1241, 849)
+rect_radius = 400.0
+
+[node name="octopus5" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(1425, 188)
+rect_radius = 400.0
+
+[node name="octopus6" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(1428, 497)
+rect_radius = 400.0
+
+[node name="octopus2" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(717, 852)
+rect_radius = 400.0
+
+[node name="octopus3" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(534, 497)
+rect_radius = 400.0
+
+[node name="octopus4" parent="Enemies" instance=ExtResource("12_v7inp")]
+position = Vector2(531, 189)
+rect_radius = 400.0
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(895, 509)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("13_47eai")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("14_d6rc2")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_c1idn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("15_107rh")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="game_manager_world_1-2" parent="." instance=ExtResource("2_mhu1r")]
 num_term = 4
@@ -355,97 +448,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="blowfish" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(136, 154)
-
-[node name="blowfish2" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(180, 156)
-
-[node name="blowfish3" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(220, 76)
-
-[node name="blowfish4" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(216, 121)
-
-[node name="blowfish5" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1696, 74)
-
-[node name="blowfish6" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1698, 118)
-
-[node name="blowfish7" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1740, 136)
-
-[node name="blowfish8" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1790, 137)
-
-[node name="blowfish9" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(900, 733)
-
-[node name="blowfish10" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1002, 734)
-
-[node name="blowfish11" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(950, 734)
-
-[node name="blowfish12" parent="Enemies" instance=ExtResource("11_rub04")]
-position = Vector2(1052, 735)
-
-[node name="octopus" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(1241, 849)
-rect_radius = 400.0
-
-[node name="octopus5" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(1425, 188)
-rect_radius = 400.0
-
-[node name="octopus6" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(1428, 497)
-rect_radius = 400.0
-
-[node name="octopus2" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(717, 852)
-rect_radius = 400.0
-
-[node name="octopus3" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(534, 497)
-rect_radius = 400.0
-
-[node name="octopus4" parent="Enemies" instance=ExtResource("12_v7inp")]
-position = Vector2(531, 189)
-rect_radius = 400.0
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(895, 509)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("13_47eai")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("14_d6rc2")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_c1idn")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("15_107rh")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("16_bw3md")]
 
 [node name="health_buff" parent="." instance=ExtResource("16_1aiyp")]
 offset_left = 1344.0

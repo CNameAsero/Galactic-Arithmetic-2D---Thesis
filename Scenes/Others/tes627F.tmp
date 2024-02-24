@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://dmyl7dmuee7qy"]
+
+[ext_resource type="PackedScene" uid="uid://uid2j5pbua11" path="res://Scenes/Player/slime_player_joystick.tscn" id="1_5j7v1"]
+[ext_resource type="PackedScene" uid="uid://biv2rge0d24lw" path="res://Scenes/Mechanics/gamemanager_algebra.tscn" id="3_ybuag"]
+[ext_resource type="Script" path="res://Scripts/test_gamemanager.gd" id="4_3lqge"]
+[ext_resource type="PackedScene" uid="uid://pyjcudqpnqk5" path="res://Scenes/Mechanics/operators_w5.tscn" id="5_7c88k"]
+[ext_resource type="PackedScene" uid="uid://bpmaiwavs1dc3" path="res://Scenes/Mechanics/variables_w5.tscn" id="6_ixenb"]
+[ext_resource type="PackedScene" uid="uid://btmq1lrhtcp0e" path="res://Scenes/Mechanics/final_answer_w5.tscn" id="7_7b3xw"]
+[ext_resource type="PackedScene" uid="uid://jcsj21on5e5a" path="res://Scenes/Mechanics/testing_numbers.tscn" id="7_20kfs"]
+[ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="7_uvx36"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="9_ck6x8"]
+
+[node name="test" type="Node2D"]
+
+[node name="slime_player_joystick" parent="." instance=ExtResource("1_5j7v1")]
+
+[node name="health_system" parent="." instance=ExtResource("7_uvx36")]
+
+[node name="gamemanager_algebra" parent="." instance=ExtResource("3_ybuag")]
+script = ExtResource("4_3lqge")
+num_term = null
+variable_term = null
+x_value = null
+y_value = null
+
+[node name="operators" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+position = Vector2(77, 323)
+oper = "+"
+
+[node name="operators2" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+position = Vector2(113, 222)
+oper = "-"
+
+[node name="operators3" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+position = Vector2(415, 308)
+oper = "×"
+
+[node name="operators4" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+position = Vector2(260, 386)
+oper = "÷"
+
+[node name="operators5" parent="gamemanager_algebra" instance=ExtResource("5_7c88k")]
+position = Vector2(752, 423)
+oper = "^"
+
+[node name="variables_w5" parent="gamemanager_algebra" instance=ExtResource("6_ixenb")]
+position = Vector2(250, 59)
+variable_to_display = "x"
+
+[node name="variables_w6" parent="gamemanager_algebra" instance=ExtResource("6_ixenb")]
+position = Vector2(339, 64)
+variable_to_display = "x"
+
+[node name="final_answer_w5" parent="gamemanager_algebra" instance=ExtResource("7_7b3xw")]
+position = Vector2(1081, 305)
+x = 4
+integer = 2
+display_chest = "lvl3"
+
+[node name="Numbers" parent="gamemanager_algebra" instance=ExtResource("7_20kfs")]
+number = 1
+
+[node name="Numbers2" parent="gamemanager_algebra" instance=ExtResource("7_20kfs")]
+position = Vector2(304, 178)
+number = 2
+
+[node name="Numbers3" parent="gamemanager_algebra" instance=ExtResource("7_20kfs")]
+position = Vector2(482, 174)
+number = 3
+
+[node name="clear_btn" parent="." instance=ExtResource("9_ck6x8")]

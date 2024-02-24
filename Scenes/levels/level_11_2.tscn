@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cyjd01ox1ynkb"]
+[gd_scene load_steps=39 format=3 uid="uid://cyjd01ox1ynkb"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_di7lm"]
 [ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="2_cl2us"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dweql68le4mvj" path="res://Scenes/Mechanics/parentheses_w3.tscn" id="10_11nmh"]
 [ext_resource type="PackedScene" uid="uid://bbgrhxgrpnqh" path="res://Scenes/timer_w3.tscn" id="11_3wtha"]
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="12_p2kci"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="13_tq8cv"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="13_xevty"]
 [ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="14_xh8fn"]
 [ext_resource type="Texture2D" uid="uid://cwvm7xekef7o" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_1.png" id="15_1upb5"]
@@ -668,6 +669,8 @@ id = 2
 modulate = Color(3.7, 0.55, 0.15, 1)
 position = Vector2(1455, 898)
 id = 2
+
+[node name="clear_btn" parent="gamemanager_pemdas" instance=ExtResource("13_tq8cv")]
 
 [node name="health_system" parent="." instance=ExtResource("13_xevty")]
 

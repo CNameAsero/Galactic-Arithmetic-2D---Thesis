@@ -1,5 +1,11 @@
 extends Node2D
 
+var collected_numbers_dict = {}
+var number_scene = load("res://Scenes/Mechanics/numbers_w5.tscn")
+
+var collected_variables_dict = {}
+var variable_scene = load("res://Scenes/Mechanics/variables_w5.tscn")
+
 var last_item_was_number = false
 var last_item_was_variable = false
 var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "^": 3}
@@ -165,6 +171,45 @@ func restart():
 	var random_index = rng.randi_range(0, scenes.size() - 1)
 	var random_scene = scenes[random_index]
 	get_tree().change_scene_to_file(random_scene)
+
+func save_collectible_number(collectible):
+	var collectible_number = {
+		"value": collectible.number,
+		"position": collectible.global_position
+	}
+	collected_numbers_dict[collectible] = collectible_number
+
+func save_collectible_variable(collectible):
+	var collectible_variable = {
+		"value": collectible.variable_to_display,
+		"position": collectible.global_position
+		
+	}
+	collected_variables_dict[collectible] = collectible_variable
+
+func clear_eq():
+	collected_items.clear()
+	collected_variables.clear()
+	collected_numbers.clear()
+	last_item_was_number = false
+	last_item_was_variable = false
+
+	for collectible_name in collected_numbers_dict:
+		var collectible_info = collected_numbers_dict[collectible_name]
+		var new_collectible = number_scene.instantiate()
+		new_collectible.number = collectible_info["value"]
+		new_collectible.global_position = collectible_info["position"]
+		add_child(new_collectible)
+
+	for collectible_name in collected_variables_dict:
+		var collectible_info = collected_variables_dict[collectible_name]
+		var new_collectible = variable_scene.instantiate()
+		new_collectible.variable_to_display = collectible_info["value"]
+		new_collectible.global_position = collectible_info["position"]
+		add_child(new_collectible)
+
+	collected_numbers_dict.clear()
+	collected_variables_dict.clear()
 
 func reset_for_next_level():
 	GameSettings.player_invulnerable = false

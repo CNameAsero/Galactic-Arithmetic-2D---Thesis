@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cj8erunuow3ld"]
+[gd_scene load_steps=28 format=3 uid="uid://cj8erunuow3ld"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_qjp8g"]
 [ext_resource type="PackedScene" uid="uid://cilquuf1rtf65" path="res://Scenes/Enemies/world_3_enemies.tscn" id="2_3p0q0"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="8_7uhvy"]
 [ext_resource type="PackedScene" uid="uid://s4mb4wtyw15x" path="res://Scenes/Mechanics/final_answer.tscn" id="9_d1fbj"]
 [ext_resource type="PackedScene" uid="uid://bbgrhxgrpnqh" path="res://Scenes/timer_w3.tscn" id="10_7wqpg"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="11_8ufvs"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="11_54wyi"]
 [ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="12_e22p3"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="13_yexig"]
@@ -826,6 +827,8 @@ final_answer = 42
 
 [node name="timer" parent="gamemanager_pemdas" instance=ExtResource("10_7wqpg")]
 position = Vector2(62, 65)
+
+[node name="clear_btn" parent="gamemanager_pemdas" instance=ExtResource("11_8ufvs")]
 
 [node name="health_system" parent="." instance=ExtResource("11_54wyi")]
 

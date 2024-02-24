@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://v7l6ufho5ulk"]
+[gd_scene load_steps=56 format=3 uid="uid://v7l6ufho5ulk"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_qk2v4"]
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="2_18qre"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://brr55dgynt6pf" path="res://Scenes/Enemies/wasp_enemy.tscn" id="11_bwp4h"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="12_ib1s5"]
 [ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="13_fl458"]
+[ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="15_gxas3"]
 [ext_resource type="FontFile" uid="uid://cyd2w1o32jhcd" path="res://Galactic Arithmetic Assets/Fonts/Pixeboy-z8XGD.ttf" id="20_kcd8n"]
 [ext_resource type="Script" path="res://Scripts/timer.gd" id="27_6nhas"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="27_yxl7s"]
@@ -57,44 +58,6 @@ func _ready():
 func _process(delta):
 	pass
 "
-
-[sub_resource type="Animation" id="Animation_sd1pg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-
-[sub_resource type="Animation" id="Animation_820pq"]
-resource_name = "timer"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
-_data = {
-"RESET": SubResource("Animation_sd1pg"),
-"timer": SubResource("Animation_820pq")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yhr4q"]
 radius = 27.0185
@@ -209,6 +172,44 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="Animation" id="Animation_sd1pg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_820pq"]
+resource_name = "timer"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kxgoo"]
+_data = {
+"RESET": SubResource("Animation_sd1pg"),
+"timer": SubResource("Animation_820pq")
+}
+
 [node name="level_3" type="Node2D"]
 script = SubResource("GDScript_8xck3")
 
@@ -255,6 +256,47 @@ layer_5/tile_data = PackedInt32Array(1441804, 262146, 0, 1507340, 262146, 1, 157
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(961, 543)
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Wasp_enemy4" parent="Enemies" instance=ExtResource("11_bwp4h")]
+position = Vector2(957, 461)
+
+[node name="Wasp_enemy5" parent="Enemies" instance=ExtResource("11_bwp4h")]
+position = Vector2(268, 247)
+
+[node name="Wasp_enemy6" parent="Enemies" instance=ExtResource("11_bwp4h")]
+position = Vector2(1654, 828)
+
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(583, 581)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("2_18qre")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("3_t24df")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_yhr4q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_qwug5")]
+position = Vector2(245, 882)
+scale = Vector2(2.2, 2.2)
 
 [node name="game_manager_world_1-2" parent="." instance=ExtResource("2_ehkhw")]
 num_term = 3
@@ -348,46 +390,7 @@ number = 4
 position = Vector2(1544, 925)
 oper = "-"
 
-[node name="Enemies" type="Node2D" parent="."]
-
-[node name="Wasp_enemy4" parent="Enemies" instance=ExtResource("11_bwp4h")]
-position = Vector2(957, 461)
-
-[node name="Wasp_enemy5" parent="Enemies" instance=ExtResource("11_bwp4h")]
-position = Vector2(268, 247)
-
-[node name="Wasp_enemy6" parent="Enemies" instance=ExtResource("11_bwp4h")]
-position = Vector2(1654, 828)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(583, 581)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("2_18qre")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("3_t24df")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_yhr4q")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("4_qwug5")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
+[node name="clear_btn" parent="game_manager_world_1-2" instance=ExtResource("15_gxas3")]
 
 [node name="health_system" parent="." instance=ExtResource("53_81tnv")]
 
