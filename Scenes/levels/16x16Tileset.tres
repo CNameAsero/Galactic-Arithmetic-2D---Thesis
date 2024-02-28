@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://isxa2i7h2d4l"]
+[gd_resource type="TileSet" load_steps=20 format=3 uid="uid://isxa2i7h2d4l"]
 
 [ext_resource type="Texture2D" uid="uid://cvlexuoec6cw4" path="res://Sprites/Tileset/Water+.png" id="1_pg1hn"]
 [ext_resource type="Texture2D" uid="uid://bxk17fxijrha0" path="res://Sprites/Tileset/Spritesheet_UI_Flat.png" id="2_fmoxv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://skpye6eyt3wv" path="res://Sprites/Tileset/tf_B_atlantisA.png" id="6_nugd7"]
 [ext_resource type="Texture2D" uid="uid://dr5u547odic5c" path="res://Sprites/Tileset/tf_B_atlantisB.png" id="7_xciu4"]
 [ext_resource type="Texture2D" uid="uid://cl7ihuq43yymf" path="res://Sprites/Tileset/char_bubbles.png" id="8_30dh1"]
+[ext_resource type="Texture2D" uid="uid://sfs2ousqjpdv" path="res://Sprites/Tileset/World 2 Placeholder.png" id="9_fpfir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sa6hr"]
 texture = ExtResource("1_pg1hn")
@@ -4693,6 +4694,37 @@ texture_region_size = Vector2i(32, 32)
 7:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 7:2/0/physics_layer_0/angular_velocity = 0.0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jlfn1"]
+texture = ExtResource("9_fpfir")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
 [resource]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 16
@@ -4706,3 +4738,4 @@ sources/5 = SubResource("TileSetAtlasSource_yfk15")
 sources/6 = SubResource("TileSetAtlasSource_kfylo")
 sources/7 = SubResource("TileSetAtlasSource_kt1yp")
 sources/8 = SubResource("TileSetAtlasSource_augmi")
+sources/9 = SubResource("TileSetAtlasSource_jlfn1")

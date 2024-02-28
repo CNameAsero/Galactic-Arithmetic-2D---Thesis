@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=26 format=3 uid="uid://vewurj6256fi"]
+[gd_resource type="TileSet" load_steps=28 format=3 uid="uid://vewurj6256fi"]
 
 [ext_resource type="Texture2D" uid="uid://cby1sb62bd48s" path="res://Sprites/Tileset/Tileset-Terrain2.png" id="1_uln0e"]
 [ext_resource type="Texture2D" uid="uid://cuyfh507f3duq" path="res://Sprites/Tileset/Tileset-Animated Terrains-8 frames-.png" id="2_33acy"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cdrpfw0sj0m42" path="res://Sprites/Obstacles/Hay_bale.png" id="4_52obt"]
 [ext_resource type="Texture2D" uid="uid://bgl5lmwpvjg33" path="res://Sprites/Obstacles/big-crate.png" id="4_giao5"]
 [ext_resource type="Texture2D" uid="uid://bcc8e31iimupg" path="res://Sprites/Tileset/Solaria Demo Update 01.png" id="4_kjtp2"]
+[ext_resource type="Texture2D" uid="uid://b2ssss2laha58" path="res://Sprites/Tileset/World 1 Placeholder.png" id="5_b2ker"]
 [ext_resource type="Texture2D" uid="uid://dsikpnrjd4a38" path="res://Sprites/Obstacles/Spike_trap.png" id="5_sfdd6"]
 [ext_resource type="Texture2D" uid="uid://ry350ixhpbd3" path="res://Sprites/Obstacles/Hay Bale_32.png" id="5_w02wr"]
 [ext_resource type="Texture2D" uid="uid://lh38lmrelo7" path="res://Sprites/Tileset/Water+ (1).png" id="8_qp4kd"]
@@ -2408,6 +2409,37 @@ texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rubyr"]
+texture = ExtResource("5_b2ker")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obf6q"]
 texture = ExtResource("3_w4xc7")
@@ -5987,3 +6019,4 @@ sources/7 = SubResource("TileSetAtlasSource_jxo74")
 sources/9 = SubResource("TileSetAtlasSource_c0p13")
 sources/10 = SubResource("TileSetAtlasSource_h2nio")
 sources/11 = SubResource("TileSetAtlasSource_71l34")
+sources/12 = SubResource("TileSetAtlasSource_rubyr")
