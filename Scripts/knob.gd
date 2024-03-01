@@ -19,9 +19,11 @@ func _process(delta):
 			global_position.x = parent.global_position.x + cos(angle) * maxLength
 			global_position.y = parent.global_position.y + sin(angle) * maxLength
 		calculate_vector()
+		parent.modulate = Color(1,1,1,1)
 	else:
 		global_position = lerp(global_position, parent.global_position, delta * 50)
 		parent.pos_vector = Vector2(0, 0)
+		parent.modulate = Color(1,1,1,0.1)
 
 func calculate_vector():
 	if abs((global_position.x - parent.global_position.x)) >= deadzone:

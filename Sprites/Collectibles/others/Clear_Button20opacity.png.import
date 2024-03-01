@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cprmsqvi7eiht"
-path="res://.godot/imported/Clear_Button_65opacity.png-54e49e690a47f3ade6fb2598f504befa.ctex"
+uid="uid://c1tk1p1kcg35e"
+path="res://.godot/imported/Clear_Button20opacity.png-73fda79429b6d0da1f57981c0381e9f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Collectibles/others/Clear_Button_65opacity.png"
-dest_files=["res://.godot/imported/Clear_Button_65opacity.png-54e49e690a47f3ade6fb2598f504befa.ctex"]
+source_file="res://Sprites/Collectibles/others/Clear_Button20opacity.png"
+dest_files=["res://.godot/imported/Clear_Button20opacity.png-73fda79429b6d0da1f57981c0381e9f1.ctex"]
 
 [params]
 

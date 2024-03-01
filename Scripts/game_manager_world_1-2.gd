@@ -165,11 +165,20 @@ func restart():
 	get_tree().change_scene_to_file(random_scene)
 
 func save_collectible_number(collectible):
-	var collectible_number = {
-		"value": collectible.number,
-		"position": collectible.global_position
-	}
-	collected_numbers_dict[collectible.name] = collectible_number
+	if GameSettings.current_level <= 5:
+		var collectible_number = {
+			"value": collectible.number,
+			"position": collectible.global_position,
+			"color": collectible.modulate
+		}
+		collected_numbers_dict[collectible.name] = collectible_number
+	else:
+		var collectible_number = {
+			"value": collectible.number,
+			"position": collectible.global_position,
+			"color": collectible.modulate
+		}
+		collected_numbers_dict[collectible.name] = collectible_number
 
 func clear_eq():
 	collected_numbers.clear()
@@ -180,6 +189,7 @@ func clear_eq():
 		var new_collectible = number_scene.instantiate()
 		new_collectible.number = collectible_info["value"]
 		new_collectible.global_position = collectible_info["position"]
+		new_collectible.modulate = collectible_info["color"]
 		add_child(new_collectible)
 	collected_numbers_dict.clear()
 

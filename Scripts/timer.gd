@@ -7,6 +7,7 @@ extends Node2D
 
 var time_left
 var start_time
+var elapsed_time = 0
 
 func _ready():
 	animation_player.play("timer")
@@ -15,8 +16,9 @@ func _ready():
 	update_timer_label()
 
 func _process(delta):
-	if timer.time_left > 0:
+	if timer.time_left > 0 and not get_tree().paused:
 		time_left -= delta
+		elapsed_time += delta
 		update_timer_label()
 
 func update_timer_label():
@@ -32,7 +34,6 @@ func _on_timer_timeout():
 	game_manager.reset_for_next_level()
 
 func get_elapsed_time():
-	var elapsed_time = (Time.get_ticks_msec() - start_time) / 1000
 	var minutes = int(elapsed_time) / 60
 	var seconds = int(elapsed_time) % 60
 	return "%02d:%02d" % [minutes, seconds]
