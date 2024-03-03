@@ -236,14 +236,12 @@ grow_vertical = 2
 script = ExtResource("1_dkgpi")
 
 [node name="Page1" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_vrqb7")
 
 [node name="txtPage1" type="Label" parent="Page1"]
-visible = false
 layout_mode = 0
 offset_left = 275.0
 offset_top = 940.0
@@ -266,7 +264,6 @@ offset_bottom = 1080.0
 texture = ExtResource("3_xfcd6")
 
 [node name="txtPage2" type="Label" parent="Page2"]
-visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = 478.0
@@ -290,7 +287,6 @@ offset_bottom = 1080.0
 texture = ExtResource("4_js8xx")
 
 [node name="txtPage3" type="Label" parent="Page3"]
-visible = false
 layout_mode = 0
 offset_left = -6.0
 offset_top = 960.0
@@ -314,7 +310,6 @@ offset_bottom = 1080.0
 texture = ExtResource("5_53bn7")
 
 [node name="txtPage4" type="Label" parent="Page4"]
-visible = false
 layout_mode = 0
 offset_top = 930.0
 offset_right = 1915.0
@@ -337,7 +332,6 @@ offset_bottom = 1080.0
 texture = ExtResource("6_ltsln")
 
 [node name="txtPage5" type="Label" parent="Page5"]
-visible = false
 layout_mode = 0
 offset_top = 940.0
 offset_right = 1915.0
@@ -359,7 +353,6 @@ offset_bottom = 1080.0
 texture = ExtResource("7_u88no")
 
 [node name="txtPage6" type="Label" parent="Page6"]
-visible = false
 layout_mode = 0
 offset_top = 930.0
 offset_right = 1915.0
@@ -382,7 +375,6 @@ offset_bottom = 1080.0
 texture = ExtResource("8_q1yuy")
 
 [node name="txtPage7" type="Label" parent="Page7"]
-visible = false
 layout_mode = 0
 offset_top = 930.0
 offset_right = 1915.0

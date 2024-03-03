@@ -262,7 +262,6 @@ _data = {
 [node name="typewriter_text_effect" type="Node2D"]
 
 [node name="sample_text" type="Label" parent="."]
-visible = false
 offset_right = 494.0
 offset_bottom = 48.0
 theme_override_fonts/font = ExtResource("1_oulcl")

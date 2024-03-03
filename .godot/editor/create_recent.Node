@@ -1,5 +1,8 @@
 AnimationPlayer
+<<<<<<< Updated upstream
 AnimationTree
+=======
+>>>>>>> Stashed changes
 Label
 TextureButton
 Sprite2D

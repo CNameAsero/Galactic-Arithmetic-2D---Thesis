@@ -2,9 +2,12 @@ extends Control
 
 var currentPage = 1
 
+@onready var animation_player = $AnimationPlayer
+
 func _ready():
 	AudioManager.level1_music.stop()
 	audio(currentPage)
+	animation_player.play("txtPage" + str(currentPage))
 
 func _on_tap_to_continue_pressed():
 	AudioManager.play_button_sfx()
@@ -17,6 +20,7 @@ func _on_tap_to_continue_pressed():
 			audio_stop(currentPage)
 			get_node("Page" + str(currentPage)).hide()
 			get_node("Page" + str(nextPage)).show()
+			animation_player.play("txtPage" + str(nextPage))
 			currentPage = nextPage
 		if nextPage > 7:
 			audio_stop(currentPage)
@@ -38,7 +42,6 @@ func _on_skip_pressed():
 		AudioManager.background_music.play()
 		AudioManager.level1_music.stop()
 
-
 func audio(num):
 	if num >= 1 and num <= 7:
 		var playvoiceover = "cut" + str(num)
@@ -48,3 +51,5 @@ func audio_stop(num):
 	if num >= 1 and num <= 7:
 		var playvoiceover = "cut" + str(num) + "_stop"
 		AudioManager.call(playvoiceover)
+
+
