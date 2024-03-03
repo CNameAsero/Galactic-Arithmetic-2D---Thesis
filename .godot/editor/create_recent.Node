@@ -1,5 +1,7 @@
-TextureButton
 AnimationPlayer
+AnimationTree
+Label
+TextureButton
 Sprite2D
 TextureProgressBar
 Node2D
@@ -15,7 +17,6 @@ RayCast2D
 Camera2D
 TileMap
 StaticBody2D
-Label
 VisibleOnScreenNotifier2D
 TextureRect
 RigidBody2D

@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dis86h20u008"]
+[gd_scene load_steps=24 format=3 uid="uid://dis86h20u008"]
 
 [ext_resource type="Script" path="res://Scripts/cut_scene_3.gd" id="1_iie0v"]
 [ext_resource type="Texture2D" uid="uid://brfvb0572hi0d" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/1.png" id="2_hgabc"]
 [ext_resource type="Texture2D" uid="uid://cr2vire3acg83" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/2.png" id="3_e2gm0"]
+[ext_resource type="FontFile" uid="uid://dfn6muurjksf" path="res://Sprites/Pixeboy.ttf" id="3_unyxr"]
 [ext_resource type="Texture2D" uid="uid://d3xrk4nphrd2l" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/3.png" id="4_l37h7"]
 [ext_resource type="Texture2D" uid="uid://d17fiq7bcfl6n" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/4.png" id="5_b2kmy"]
 [ext_resource type="Texture2D" uid="uid://urb7p5kpv06q" path="res://Galactic Arithmetic Assets/Story_Board_Assets/lava_cutscene/5.png" id="6_vqfh1"]
@@ -14,6 +15,217 @@
 [ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="12_ble27"]
 [ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="13_cefas"]
 
+[sub_resource type="Animation" id="Animation_7onor"]
+resource_name = "txtPage1"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_wfgms"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Page2/txtPage2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Page3/txtPage3:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Page4/txtPage4:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Page5/txtPage5:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Page6/txtPage6:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Page7/txtPage7:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_751lq"]
+resource_name = "txtPage2"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page2/txtPage2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_7p0e4"]
+resource_name = "txtPage3"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page3/txtPage3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m5g48"]
+resource_name = "txtPage4"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page4/txtPage4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_oknpk"]
+resource_name = "txtPage5"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page5/txtPage5:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_51l2i"]
+resource_name = "txtPage6"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page6/txtPage6:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_48suo"]
+resource_name = "txtPage7"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page7/txtPage7:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2vp8"]
+_data = {
+"RESET": SubResource("Animation_wfgms"),
+"txtPage1": SubResource("Animation_7onor"),
+"txtPage2": SubResource("Animation_751lq"),
+"txtPage3": SubResource("Animation_7p0e4"),
+"txtPage4": SubResource("Animation_m5g48"),
+"txtPage5": SubResource("Animation_oknpk"),
+"txtPage6": SubResource("Animation_51l2i"),
+"txtPage7": SubResource("Animation_48suo")
+}
+
 [node name="cut_scene3" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -24,10 +236,26 @@ grow_vertical = 2
 script = ExtResource("1_iie0v")
 
 [node name="Page1" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_hgabc")
+
+[node name="txtPage1" type="Label" parent="Page1"]
+visible = false
+offset_left = 275.0
+offset_top = 940.0
+offset_right = 1694.0
+offset_bottom = 970.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Upon successfully defeating all the levels, Slimey can now unlock the chest."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Page2" type="TextureRect" parent="."]
 visible = false
@@ -36,12 +264,44 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("3_e2gm0")
 
+[node name="txtPage2" type="Label" parent="Page2"]
+visible = false
+offset_left = 20.0
+offset_top = 475.0
+offset_right = 1914.0
+offset_bottom = 599.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "When Slimey opens it, a moment of revelation occurs as it discovers the third essential 
+piece required for the repair of the Stardust Explorer – The fiery gasoline."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
 [node name="Page3" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("4_l37h7")
+
+[node name="txtPage3" type="Label" parent="Page3"]
+visible = false
+offset_left = 230.0
+offset_top = 930.0
+offset_right = 1649.0
+offset_bottom = 990.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Unable to contain its joy, Slimey's excitement becomes
+apparent, alerting enemies who then chase it."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Page4" type="TextureRect" parent="."]
 visible = false
@@ -50,12 +310,43 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("5_b2kmy")
 
+[node name="txtPage4" type="Label" parent="Page4"]
+visible = false
+offset_left = 230.0
+offset_top = 930.0
+offset_right = 1649.0
+offset_bottom = 990.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Running in the scorching volcano, Slimey comes across
+the familiar portal from the ocean."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
 [node name="Page5" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("6_vqfh1")
+
+[node name="txtPage5" type="Label" parent="Page5"]
+visible = false
+offset_left = 230.0
+offset_top = 940.0
+offset_right = 1649.0
+offset_bottom = 1000.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Without any other choice, Slimey enters it once more."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="Page6" type="TextureRect" parent="."]
 visible = false
@@ -64,19 +355,49 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("7_xvoqd")
 
-[node name="Page7" type="TextureRect" parent="."]
+[node name="txtPage6" type="Label" parent="Page6"]
 visible = false
+offset_left = 230.0
+offset_top = 930.0
+offset_right = 1649.0
+offset_bottom = 990.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Same as before, as soon as slimey enters the portal, 
+it shrinks, making it impossible for the enemies to enter."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Page7" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("8_2p2q0")
 
+[node name="txtPage7" type="Label" parent="Page7"]
+offset_left = 183.0
+offset_top = 930.0
+offset_right = 1736.0
+offset_bottom = 990.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("3_unyxr")
+theme_override_font_sizes/font_size = 45
+text = "Teleported from the scorching volcano, Slimey finds itself in the frosty snowland, 
+embarking on an thrilling adventure."
+horizontal_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
 [node name="Tap_To_Continue" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 1500.0
-offset_top = 875.0
-offset_right = 2035.0
-offset_bottom = 1199.0
+offset_left = 84.0
+offset_top = 75.0
+offset_right = 619.0
+offset_bottom = 399.0
 scale = Vector2(0.653686, 0.463638)
 action_mode = 0
 texture_normal = ExtResource("9_wlb78")
@@ -95,6 +416,11 @@ texture_normal = ExtResource("12_ble27")
 texture_pressed = ExtResource("13_cefas")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a2vp8")
+}
 
 [connection signal="pressed" from="Tap_To_Continue" to="." method="_on_tap_to_continue_pressed"]
 [connection signal="pressed" from="skip" to="." method="_on_skip_pressed"]
