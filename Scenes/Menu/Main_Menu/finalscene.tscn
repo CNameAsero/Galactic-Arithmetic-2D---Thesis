@@ -28,22 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="26_vwajl"]
 [ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="27_l3tbi"]
 
-[sub_resource type="Animation" id="Animation_du76c"]
-resource_name = "txtPage1"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_oxgx3"]
 length = 0.001
 tracks/0/type = "value"
@@ -287,6 +271,182 @@ tracks/19/keys = {
 "values": [0.0]
 }
 
+[sub_resource type="Animation" id="Animation_du76c"]
+resource_name = "txtPage1"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_jgbes"]
+resource_name = "txtPage10"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page10/txtPage10:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_7idps"]
+resource_name = "txtPage11"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page11/txtPage11:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_iwoy7"]
+resource_name = "txtPage12"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page12/txtPage12:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_wpqnr"]
+resource_name = "txtPage13"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page13/txtPage13:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_d2atg"]
+resource_name = "txtPage14"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page14/txtPage14:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_m7ate"]
+resource_name = "txtPage15"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page15/txtPage15:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_uruie"]
+resource_name = "txtPage16"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page16/txtPage16:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_doew3"]
+resource_name = "txtPage17"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page17/txtPage17:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_vlo5b"]
+resource_name = "txtPage18"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page18/txtPage18:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_jlmxe"]
+resource_name = "txtPage19"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page19/txtPage19:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
 [sub_resource type="Animation" id="Animation_vmxpo"]
 resource_name = "txtPage2"
 length = 5.0
@@ -294,6 +454,22 @@ tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/path = NodePath("Page2/txtPage2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_x3y8n"]
+resource_name = "txtPage20"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page20/txtPage20:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -415,182 +591,6 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_jgbes"]
-resource_name = "txtPage10"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page10/txtPage10:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_7idps"]
-resource_name = "txtPage11"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page11/txtPage11:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_iwoy7"]
-resource_name = "txtPage12"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page12/txtPage12:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_wpqnr"]
-resource_name = "txtPage13"
-length = 7.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page13/txtPage13:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_d2atg"]
-resource_name = "txtPage14"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page14/txtPage14:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_m7ate"]
-resource_name = "txtPage15"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page15/txtPage15:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_uruie"]
-resource_name = "txtPage16"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page16/txtPage16:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_doew3"]
-resource_name = "txtPage17"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page17/txtPage17:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_vlo5b"]
-resource_name = "txtPage18"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page18/txtPage18:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_jlmxe"]
-resource_name = "txtPage19"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page19/txtPage19:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="Animation" id="Animation_x3y8n"]
-resource_name = "txtPage20"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page20/txtPage20:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l6ft7"]
 _data = {
 "RESET": SubResource("Animation_oxgx3"),
@@ -626,14 +626,13 @@ grow_vertical = 2
 script = ExtResource("1_u3ef8")
 
 [node name="Page1" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("2_ysi3y")
 
 [node name="txtPage1" type="Label" parent="Page1"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -655,7 +654,7 @@ offset_bottom = 1080.0
 texture = ExtResource("3_i7iny")
 
 [node name="txtPage2" type="Label" parent="Page2"]
-visible = false
+layout_mode = 0
 offset_left = -4.0
 offset_top = 930.0
 offset_right = 1911.0
@@ -679,7 +678,7 @@ offset_bottom = 1080.0
 texture = ExtResource("4_427ol")
 
 [node name="txtPage3" type="Label" parent="Page3"]
-visible = false
+layout_mode = 0
 offset_left = 260.0
 offset_top = 930.0
 offset_right = 1687.0
@@ -702,7 +701,7 @@ offset_bottom = 1080.0
 texture = ExtResource("5_j5rab")
 
 [node name="txtPage4" type="Label" parent="Page4"]
-visible = false
+layout_mode = 0
 offset_left = 255.0
 offset_top = 930.0
 offset_right = 1682.0
@@ -725,7 +724,7 @@ offset_bottom = 1080.0
 texture = ExtResource("6_w8ki6")
 
 [node name="txtPage5" type="Label" parent="Page5"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -747,7 +746,7 @@ offset_bottom = 1080.0
 texture = ExtResource("7_g4kck")
 
 [node name="txtPage6" type="Label" parent="Page6"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -769,7 +768,7 @@ offset_bottom = 1080.0
 texture = ExtResource("8_trwk1")
 
 [node name="txtPage7" type="Label" parent="Page7"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -791,7 +790,7 @@ offset_bottom = 1080.0
 texture = ExtResource("9_6rgip")
 
 [node name="txtPage8" type="Label" parent="Page8"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -813,7 +812,7 @@ offset_bottom = 1080.0
 texture = ExtResource("10_dhvc0")
 
 [node name="txtPage9" type="Label" parent="Page9"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -835,7 +834,7 @@ offset_bottom = 1080.0
 texture = ExtResource("11_jdp3l")
 
 [node name="txtPage10" type="Label" parent="Page10"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -857,7 +856,7 @@ offset_bottom = 1080.0
 texture = ExtResource("12_x3gh3")
 
 [node name="txtPage11" type="Label" parent="Page11"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 930.0
 offset_right = 1692.0
@@ -880,7 +879,7 @@ offset_bottom = 1080.0
 texture = ExtResource("14_2ddru")
 
 [node name="txtPage12" type="Label" parent="Page12"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 930.0
 offset_right = 1692.0
@@ -903,7 +902,7 @@ offset_bottom = 1080.0
 texture = ExtResource("15_al3if")
 
 [node name="txtPage13" type="Label" parent="Page13"]
-visible = false
+layout_mode = 0
 offset_left = 73.0
 offset_top = 930.0
 offset_right = 1881.0
@@ -912,8 +911,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_0v0bl")
 theme_override_font_sizes/font_size = 45
-text = "Without hesitation, Slimey entered and starts the spaceship’s engine. As it ascended, 
-Slimey surveyed the surroundings, reminiscing about the entire journey it had undertaken."
+text = "Without hesitation, Slimey entered and starts the spaceship’s. "
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
@@ -926,16 +924,17 @@ offset_bottom = 1080.0
 texture = ExtResource("16_1eo8s")
 
 [node name="txtPage14" type="Label" parent="Page14"]
-visible = false
-offset_left = 265.0
+layout_mode = 0
+offset_left = 180.0
 offset_top = 940.0
-offset_right = 1692.0
-offset_bottom = 970.0
+offset_right = 1783.0
+offset_bottom = 1000.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_0v0bl")
 theme_override_font_sizes/font_size = 45
-text = "The spaceship ascends higher into the sky"
+text = "As it ascended,  Slimey surveyed the surroundings, reminiscing 
+about the entire journey it had undertaken. "
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
@@ -948,7 +947,7 @@ offset_bottom = 1080.0
 texture = ExtResource("17_8g0pg")
 
 [node name="txtPage15" type="Label" parent="Page15"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -957,7 +956,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_0v0bl")
 theme_override_font_sizes/font_size = 45
-text = "and eventually, Slimey get out on the blue and green planet, Earth."
+text = "The spaceship ascends higher into the sky. "
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
@@ -970,7 +969,7 @@ offset_bottom = 1080.0
 texture = ExtResource("18_pyhg2")
 
 [node name="txtPage16" type="Label" parent="Page16"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -979,7 +978,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("3_0v0bl")
 theme_override_font_sizes/font_size = 45
-text = "Slimey continue in its expedition across the expansive universe."
+text = "and eventually, Slimey get out on the blue and green planet, Earth. "
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
@@ -992,7 +991,7 @@ offset_bottom = 1080.0
 texture = ExtResource("19_xufo3")
 
 [node name="txtPage17" type="Label" parent="Page17"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0
@@ -1014,7 +1013,7 @@ offset_bottom = 1080.0
 texture = ExtResource("20_ehrgw")
 
 [node name="txtPage18" type="Label" parent="Page18"]
-visible = false
+layout_mode = 0
 offset_left = 265.0
 offset_top = 930.0
 offset_right = 1692.0
@@ -1037,7 +1036,7 @@ offset_bottom = 1080.0
 texture = ExtResource("21_xvwst")
 
 [node name="txtPage19" type="Label" parent="Page19"]
-visible = false
+layout_mode = 0
 offset_left = 175.0
 offset_top = 930.0
 offset_right = 1752.0
@@ -1053,12 +1052,14 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Page20" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("22_rt3fa")
 
 [node name="txtPage20" type="Label" parent="Page20"]
+layout_mode = 0
 offset_left = 265.0
 offset_top = 940.0
 offset_right = 1692.0

@@ -15,22 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://dfudyu4y8vbf4" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button.png" id="11_3iul2"]
 [ext_resource type="Texture2D" uid="uid://bloo5wrlk7qhc" path="res://Galactic Arithmetic Assets/Story_Board_Assets/Skip_Button_40Trans.png" id="12_35bgb"]
 
-[sub_resource type="Animation" id="Animation_1xhxf"]
-resource_name = "txtPage1"
-length = 4.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
 [sub_resource type="Animation" id="Animation_1oqyk"]
 length = 0.001
 tracks/0/type = "value"
@@ -116,6 +100,22 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1xhxf"]
+resource_name = "txtPage1"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Page1/txtPage1:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
 }
 
 [sub_resource type="Animation" id="Animation_vbfdj"]
@@ -236,14 +236,13 @@ grow_vertical = 2
 script = ExtResource("1_5f4yr")
 
 [node name="Page1" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_owlyo")
 
 [node name="txtPage1" type="Label" parent="Page1"]
-visible = false
+layout_mode = 0
 offset_left = 275.0
 offset_top = 940.0
 offset_right = 1694.0
@@ -265,7 +264,7 @@ offset_bottom = 1080.0
 texture = ExtResource("2_qkagw")
 
 [node name="txtPage2" type="Label" parent="Page2"]
-visible = false
+layout_mode = 0
 offset_left = -19.0
 offset_top = 813.0
 offset_right = 1896.0
@@ -288,7 +287,7 @@ offset_bottom = 1080.0
 texture = ExtResource("3_spj3g")
 
 [node name="txtPage3" type="Label" parent="Page3"]
-visible = false
+layout_mode = 0
 offset_left = 140.0
 offset_top = 335.0
 offset_right = 1767.0
@@ -311,7 +310,7 @@ offset_bottom = 1080.0
 texture = ExtResource("4_kc8um")
 
 [node name="txtPage4" type="Label" parent="Page4"]
-visible = false
+layout_mode = 0
 offset_left = 140.0
 offset_top = 940.0
 offset_right = 1767.0
@@ -333,7 +332,7 @@ offset_bottom = 1080.0
 texture = ExtResource("5_616rb")
 
 [node name="txtPage5" type="Label" parent="Page5"]
-visible = false
+layout_mode = 0
 offset_left = 140.0
 offset_top = 940.0
 offset_right = 1767.0
@@ -355,7 +354,7 @@ offset_bottom = 1080.0
 texture = ExtResource("6_cqbee")
 
 [node name="txtPage6" type="Label" parent="Page6"]
-visible = false
+layout_mode = 0
 offset_left = 140.0
 offset_top = 940.0
 offset_right = 1767.0
@@ -370,12 +369,14 @@ visible_characters = 0
 visible_ratio = 0.0
 
 [node name="Page7" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("7_5i5u6")
 
 [node name="txtPage7" type="Label" parent="Page7"]
+layout_mode = 0
 offset_left = 120.0
 offset_top = 432.0
 offset_right = 1747.0

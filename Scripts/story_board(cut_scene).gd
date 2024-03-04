@@ -3,8 +3,11 @@ extends Control
 var currentPage = 1
 var storyboardPlayed = false
 
+@onready var animation_player = $AnimationPlayer
+
 func _ready():
 	audio(currentPage)
+	animation_player.play("txtPage" + str(currentPage))
 
 func _on_tap_to_continue_pressed():
 	AudioManager.play_button_sfx()
@@ -17,6 +20,7 @@ func _on_tap_to_continue_pressed():
 			audio_stop(currentPage)
 			get_node("Page" + str(currentPage)).hide()
 			get_node("Page" + str(nextPage)).show()
+			animation_player.play("txtPage" + str(nextPage))
 			currentPage = nextPage
 		if nextPage > 18:
 			AudioManager.background_music.play()

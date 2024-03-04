@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=3 uid="uid://dbwmg2hcatdrj"]
+[gd_scene load_steps=112 format=3 uid="uid://dbwmg2hcatdrj"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_8gj2m"]
 [ext_resource type="Script" path="res://Scenes/levels/tutorial/tutorial.gd" id="1_phcsb"]
@@ -7,7 +7,6 @@
 [ext_resource type="Script" path="res://Scenes/levels/tutorial/spike_tutorial.gd" id="3_v6rdk"]
 [ext_resource type="Script" path="res://Scenes/levels/tutorial/game_manager_tutorial.gd" id="4_2qekw"]
 [ext_resource type="PackedScene" uid="uid://mhcc6jvxkvlt" path="res://Scenes/Mechanics/numbers.tscn" id="5_ny8b2"]
-[ext_resource type="PackedScene" uid="uid://c8wpqokks1cqb" path="res://Scenes/Mechanics/operators.tscn" id="6_5lq7t"]
 [ext_resource type="Script" path="res://Scripts/Numbers.gd" id="6_5tjsj"]
 [ext_resource type="Texture2D" uid="uid://0e0veyagjape" path="res://Sprites/Collectibles/numbers/Zero.png" id="7_8lxio"]
 [ext_resource type="Texture2D" uid="uid://dtm8vkwqftoiv" path="res://Sprites/Collectibles/numbers/One.png" id="8_5gcgu"]
@@ -818,18 +817,6 @@ layer_2/tile_data = PackedInt32Array(0, 1, 1, 65536, 1, 1, 131072, 1, 1, 196608,
 [node name="game_manager" parent="." instance=ExtResource("3_8todj")]
 script = ExtResource("4_2qekw")
 
-[node name="5" parent="game_manager" instance=ExtResource("5_ny8b2")]
-position = Vector2(440, 887)
-number = 5
-
-[node name="4" parent="game_manager" instance=ExtResource("5_ny8b2")]
-position = Vector2(1248, 581)
-number = 4
-
-[node name="6" parent="game_manager" instance=ExtResource("5_ny8b2")]
-position = Vector2(1463, 687)
-number = 6
-
 [node name="9" parent="game_manager" instance=ExtResource("5_ny8b2")]
 position = Vector2(1703, 157)
 number = 9
@@ -1146,18 +1133,6 @@ texture = ExtResource("33_wmmqp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="game_manager/+/set_operator"]
 shape = SubResource("CircleShape2D_ief75")
-
-[node name="-" parent="game_manager" instance=ExtResource("6_5lq7t")]
-position = Vector2(172, 440)
-oper = "-"
-
-[node name="x" parent="game_manager" instance=ExtResource("6_5lq7t")]
-position = Vector2(1451, 334)
-oper = "×"
-
-[node name="d" parent="game_manager" instance=ExtResource("6_5lq7t")]
-position = Vector2(1740, 880)
-oper = "÷"
 
 [node name="final_answer" parent="game_manager" instance=ExtResource("25_uc3k5")]
 position = Vector2(1472, 156)
