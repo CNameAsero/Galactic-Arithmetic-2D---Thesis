@@ -168,7 +168,7 @@ func yeti_aim():
 	ray_cast_2d.target_position = to_local(player.position)
 	var direction = (player.position - global_position).normalized()
 
-	animation_player.speed_scale = 0.18
+	animation_player.speed_scale = 0.27
 
 	var is_horizontal = abs(direction.x) > abs(direction.y)
 	if is_horizontal:
