@@ -28,3 +28,4 @@ res://Scenes/levels/level_21.tscn
 res://Scenes/levels/world5_tileset.tres
 res://Scenes/levels/level_21_1.tscn
 res://Scenes/levels/level_21_2.tscn
+res://Scenes/levels/tutorial/tutorial.gd

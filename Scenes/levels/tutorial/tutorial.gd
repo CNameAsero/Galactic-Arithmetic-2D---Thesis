@@ -1,7 +1,8 @@
 extends Node2D
 @onready var isTrigger = false
 @onready var buttonpress = 0
-
+@onready var isCollected = false
+@onready var isCollected2 = false
 @onready var sample_text = $typewriter_text_effect/sample_text
 
 @onready var step_1 = $"typewriter_text_effect/Step 1"
@@ -43,13 +44,29 @@ func _on_button_1_pressed():
 		AudioManager.tuto3()
 		number_collect.show()
 
+func _on_set_number9_body_entered(body):
+	if body:
+		if !isCollected:
+			number_collect.hide()
+			AudioManager.tuto3_stop()
+			await get_tree().create_timer(0.5).timeout
+			step_2.show()
+			AudioManager.tuto4()
+			isCollected2 = true
+		else:
+			pass
+
 func _on_set_number_body_entered(body):
 	if body:
-		number_collect.hide()
-		AudioManager.tuto3_stop()
-		await get_tree().create_timer(0.5).timeout
-		step_2.show()
-		AudioManager.tuto4()
+		if !isCollected2:
+			number_collect.hide()
+			AudioManager.tuto3_stop()
+			await get_tree().create_timer(0.5).timeout
+			step_2.show()
+			AudioManager.tuto4()
+			isCollected = true
+		else:
+			pass
 
 func _on__plusbody_entered(body):
 	if body:
@@ -73,3 +90,5 @@ func _on_button_3_pressed():
 		await get_tree().create_timer(1).timeout
 		AudioManager.tuto5()
 		press_operator.show()
+
+
