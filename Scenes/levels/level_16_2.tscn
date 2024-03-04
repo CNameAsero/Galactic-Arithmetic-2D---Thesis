@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bxprf7c6and6c"]
+[gd_scene load_steps=52 format=3 uid="uid://bxprf7c6and6c"]
 
 [ext_resource type="TileSet" uid="uid://bru2ps4sjjt66" path="res://World4_Tileset.tres" id="1_uphby"]
 [ext_resource type="PackedScene" uid="uid://dj2o10dru8i3u" path="res://Scenes/Enemies/world_4_enemies.tscn" id="2_cehs4"]
@@ -16,12 +16,16 @@
 [ext_resource type="PackedScene" uid="uid://cm2sgy57dl0pg" path="res://Scenes/Others/portal.tscn" id="13_4vg1k"]
 [ext_resource type="Texture2D" uid="uid://du8bokt8nexnj" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_1.png" id="14_p5sbn"]
 [ext_resource type="Texture2D" uid="uid://gy36a8nfrnkc" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_2.png" id="15_xx87g"]
+[ext_resource type="Texture2D" uid="uid://dr3ni0platsp5" path="res://Sprites/Collectibles/Operators/Front-slash.png" id="16_2p3ev"]
 [ext_resource type="Texture2D" uid="uid://l18rpa4ryo8y" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_3.png" id="16_oc3e4"]
 [ext_resource type="Texture2D" uid="uid://7hmpe7xurkcs" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_4.png" id="17_ehqtv"]
 [ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="18_53pmp"]
 [ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="19_cjq0c"]
 [ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="20_hiell"]
+[ext_resource type="Texture2D" uid="uid://co5wxcy6mqwgy" path="res://Sprites/Enemies/world4_enemies/Melted_ice.png" id="20_rag74"]
 [ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="21_52bm5"]
+[ext_resource type="Texture2D" uid="uid://caxs3tb2qg6hu" path="res://Sprites/Enemies/world4_enemies/PolarBear4x4Top-Walk_4x4Bottom-Attack.png" id="21_g531s"]
+[ext_resource type="Texture2D" uid="uid://dt3ipykirkyss" path="res://Sprites/Enemies/world4_enemies/Yeti.png" id="22_j2voe"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="22_xjv1k"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="23_abl73"]
 [ext_resource type="PackedScene" uid="uid://bkrwfkw8lyn73" path="res://Scenes/Menu/Paused_Menu/paused_menu_w4.tscn" id="24_nppi2"]
@@ -158,7 +162,7 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
-[sub_resource type="GDScript" id="GDScript_03gmu"]
+[sub_resource type="GDScript" id="GDScript_eh54c"]
 script/source = "extends Node2D
 
 @onready var notes = [$notes1, $notes2, $notes3, $notes4]
@@ -194,6 +198,135 @@ func _on_exit_pressed():
 	get_tree().paused = false
 	$\".\".queue_free()
 "
+
+[sub_resource type="GDScript" id="GDScript_68e3l"]
+script/source = "extends Sprite2D
+
+@onready var ice = $ice/AnimationPlayer
+@onready var bear = $bear/AnimationPlayer
+@onready var yeti = $yeti/AnimationPlayer
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	ice.play(\"ice\")
+	bear.play(\"bear\")
+	yeti.play(\"yeti\")
+"
+
+[sub_resource type="Animation" id="Animation_nd8sl"]
+resource_name = "ice"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_e5uui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jiask"]
+_data = {
+"RESET": SubResource("Animation_e5uui"),
+"ice": SubResource("Animation_nd8sl")
+}
+
+[sub_resource type="Animation" id="Animation_l7acy"]
+resource_name = "bear"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_irajp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0rcr"]
+_data = {
+"RESET": SubResource("Animation_irajp"),
+"bear": SubResource("Animation_l7acy")
+}
+
+[sub_resource type="Animation" id="Animation_uanm6"]
+resource_name = "yeti"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 16, 17, 18, 19]
+}
+
+[sub_resource type="Animation" id="Animation_bfs5d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r0fag"]
+_data = {
+"RESET": SubResource("Animation_bfs5d"),
+"yeti": SubResource("Animation_uanm6")
+}
 
 [node name="level_16" type="Node2D"]
 script = SubResource("GDScript_t6ans")
@@ -653,10 +786,14 @@ id = 1
 process_mode = 3
 visible = false
 position = Vector2(960, 540)
-script = SubResource("GDScript_03gmu")
+script = SubResource("GDScript_eh54c")
 
 [node name="notes1" type="Sprite2D" parent="tutorial"]
 texture = ExtResource("14_p5sbn")
+
+[node name="frac" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(341, -9)
+texture = ExtResource("16_2p3ev")
 
 [node name="notes2" type="Sprite2D" parent="tutorial"]
 visible = false
@@ -669,6 +806,45 @@ texture = ExtResource("16_oc3e4")
 [node name="notes4" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("17_ehqtv")
+script = SubResource("GDScript_68e3l")
+
+[node name="ice" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-201, -218)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("20_rag74")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/ice"]
+libraries = {
+"": SubResource("AnimationLibrary_jiask")
+}
+
+[node name="bear" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-339, -63)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("21_g531s")
+hframes = 4
+vframes = 8
+frame = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/bear"]
+libraries = {
+"": SubResource("AnimationLibrary_p0rcr")
+}
+
+[node name="yeti" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-464, 40)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("22_j2voe")
+hframes = 5
+vframes = 4
+frame = 16
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/yeti"]
+libraries = {
+"": SubResource("AnimationLibrary_r0fag")
+}
 
 [node name="next" type="TextureButton" parent="tutorial"]
 offset_left = 500.0

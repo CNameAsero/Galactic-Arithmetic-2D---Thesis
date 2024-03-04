@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bsi037i4tqj23"]
+[gd_scene load_steps=78 format=3 uid="uid://bsi037i4tqj23"]
 
 [ext_resource type="TileSet" uid="uid://isxa2i7h2d4l" path="res://Scenes/levels/16x16Tileset.tres" id="1_311ji"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="2_mmrmy"]
@@ -20,10 +20,15 @@
 [ext_resource type="Texture2D" uid="uid://8nqslimoe6wr" path="res://Galactic Arithmetic Assets/Tutorial/w2/World_2_Notes_1.png" id="17_huotd"]
 [ext_resource type="Texture2D" uid="uid://bpf5uncu56jma" path="res://Galactic Arithmetic Assets/Tutorial/w2/World_2_Notes_2.png" id="18_vc28b"]
 [ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="19_dtau1"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="19_iqkqf"]
 [ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="20_pk82p"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="20_wrl0l"]
 [ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="21_8wqbt"]
+[ext_resource type="Texture2D" uid="uid://du57ju053jre5" path="res://Sprites/Enemies/world2_enemies/Blowfish.png" id="22_3x248"]
 [ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="22_hrsmx"]
+[ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/world2_enemies/ViciousShark.png" id="23_ddnvy"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="23_nyt1g"]
+[ext_resource type="Texture2D" uid="uid://b7cbls0xth6mx" path="res://Sprites/Enemies/world2_enemies/Octopus.png" id="24_8103m"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="24_tg18w"]
 [ext_resource type="PackedScene" uid="uid://cgr14huq7oye2" path="res://Scenes/Menu/Paused_Menu/paused_menu.tscn" id="25_at8vr"]
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="26_17avo"]
@@ -219,7 +224,7 @@ _data = {
 "timer": SubResource("Animation_820pq")
 }
 
-[sub_resource type="GDScript" id="GDScript_xnsw7"]
+[sub_resource type="GDScript" id="GDScript_wxues"]
 script/source = "extends Node2D
 
 @onready var notes = [$notes1, $notes2]
@@ -255,6 +260,132 @@ func _on_exit_pressed():
 	get_tree().paused = false
 	$\".\".queue_free()
 "
+
+[sub_resource type="GDScript" id="GDScript_ga3pj"]
+script/source = "extends Sprite2D
+
+@onready var fish = $fish/AnimationPlayer
+@onready var shark = $shark/AnimationPlayer
+@onready var octopus = $octopus/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	fish.play(\"fish\")
+	shark.play(\"shark\")
+	octopus.play(\"octopus\")
+"
+
+[sub_resource type="Animation" id="Animation_l4puc"]
+resource_name = "fish"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_gj4t0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4o2c"]
+_data = {
+"RESET": SubResource("Animation_gj4t0"),
+"fish": SubResource("Animation_l4puc")
+}
+
+[sub_resource type="Animation" id="Animation_8ukav"]
+resource_name = "shark"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_54bsm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oudog"]
+_data = {
+"RESET": SubResource("Animation_54bsm"),
+"shark": SubResource("Animation_8ukav")
+}
+
+[sub_resource type="Animation" id="Animation_3t2fp"]
+resource_name = "octopus"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_065mo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_27g2e"]
+_data = {
+"RESET": SubResource("Animation_065mo"),
+"octopus": SubResource("Animation_3t2fp")
+}
 
 [node name="world2_lvl1" type="Node2D"]
 script = SubResource("GDScript_2b0rc")
@@ -575,14 +706,58 @@ buff_selected = "time"
 process_mode = 3
 visible = false
 position = Vector2(960, 540)
-script = SubResource("GDScript_xnsw7")
+script = SubResource("GDScript_wxues")
 
 [node name="notes1" type="Sprite2D" parent="tutorial"]
 texture = ExtResource("17_huotd")
 
+[node name="prod" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(428, -178)
+texture = ExtResource("19_iqkqf")
+
+[node name="div" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(606, 12)
+texture = ExtResource("20_wrl0l")
+
 [node name="notes2" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("18_vc28b")
+script = SubResource("GDScript_ga3pj")
+
+[node name="fish" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(-314, -216)
+texture = ExtResource("22_3x248")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/fish"]
+libraries = {
+"": SubResource("AnimationLibrary_f4o2c")
+}
+
+[node name="shark" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(-428, -104)
+texture = ExtResource("23_ddnvy")
+hframes = 4
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/shark"]
+libraries = {
+"": SubResource("AnimationLibrary_oudog")
+}
+
+[node name="octopus" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(-386, 10)
+texture = ExtResource("24_8103m")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/octopus"]
+libraries = {
+"": SubResource("AnimationLibrary_27g2e")
+}
 
 [node name="next" type="TextureButton" parent="tutorial"]
 offset_left = 500.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://b1bkvbpublp12"]
+[gd_scene load_steps=96 format=3 uid="uid://b1bkvbpublp12"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_a0nmm"]
 [ext_resource type="PackedScene" uid="uid://0luol40q6i1b" path="res://Scenes/Mechanics/game_manager_world_1-2.tscn" id="3_ijcpw"]
@@ -19,10 +19,16 @@
 [ext_resource type="Texture2D" uid="uid://cmeqvvlm0ivs3" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_3.png" id="20_s2g6c"]
 [ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="21_ipret"]
 [ext_resource type="Texture2D" uid="uid://d3toxr23cmvq5" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Note_1.png" id="21_q0kug"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="22_jq8kn"]
 [ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="22_ph1rn"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="23_ibfrw"]
 [ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="23_kwlc2"]
+[ext_resource type="Texture2D" uid="uid://dll76vxslqfja" path="res://Sprites/Collectibles/others/Clear_Button.png" id="24_4tv0o"]
 [ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="24_dj5mh"]
+[ext_resource type="Texture2D" uid="uid://dsikpnrjd4a38" path="res://Sprites/Obstacles/Spike_trap.png" id="26_ttu03"]
+[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="27_4ml3f"]
 [ext_resource type="Script" path="res://Scripts/game_over.gd" id="27_ksyb5"]
+[ext_resource type="Texture2D" uid="uid://dypx8mxn57tgv" path="res://Sprites/Enemies/world1_enemies/Fox_last.png" id="28_e8s4o"]
 [ext_resource type="Texture2D" uid="uid://eal07jnthpe" path="res://Galactic Arithmetic Assets/Game_Over_Assets/menu_bg.png" id="28_huo8u"]
 [ext_resource type="Texture2D" uid="uid://bnp2bmj2lsxb7" path="res://Galactic Arithmetic Assets/Game_Over_Assets/planet_destroyed_design.png" id="29_lw3j1"]
 [ext_resource type="Texture2D" uid="uid://be7jutn0xtqjx" path="res://Galactic Arithmetic Assets/Game_Over_Assets/crashed_ufo_design.png" id="30_0dwfn"]
@@ -345,9 +351,6 @@ var currentNoteIndex := 0
 func _ready():
 	show_current_note()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _on_next_pressed():
 	AudioManager.play_button_sfx()
@@ -357,7 +360,7 @@ func _on_next_pressed():
 	show_current_note()
 
 func show_current_note():
-	hide_all_notes()  # Hide all notes before showing the current one
+	hide_all_notes()
 	notes[currentNoteIndex].show()
 
 func hide_all_notes():
@@ -370,7 +373,252 @@ func _on_exit_pressed():
 	GameSettings._autosave()
 	get_tree().paused = false
 	$\".\".queue_free()
+
 "
+
+[sub_resource type="GDScript" id="GDScript_y7w2k"]
+script/source = "extends Sprite2D
+
+@onready var spike = $spike/AnimationPlayer
+@onready var fox = $wasp/AnimationPlayer
+@onready var wasp = $fox/AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	spike.play(\"spike\")
+	fox.play(\"fox\")
+	wasp.play(\"wasp\")
+"
+
+[sub_resource type="Animation" id="Animation_nkqju"]
+resource_name = "spike"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/spike:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_0rrg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/spike:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notes2/wasp:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notes2/fox:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_iox3c"]
+resource_name = "wasp"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/wasp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_ivrrr"]
+resource_name = "fox"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/fox:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aon8u"]
+_data = {
+"RESET": SubResource("Animation_0rrg2"),
+"fox": SubResource("Animation_ivrrr"),
+"spike": SubResource("Animation_nkqju"),
+"wasp": SubResource("Animation_iox3c")
+}
+
+[sub_resource type="GDScript" id="GDScript_6ltls"]
+script/source = "extends Sprite2D
+
+@onready var spd = $speed/AnimationPlayer
+@onready var timer = $time/AnimationPlayer
+@onready var hp = $hp/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	spd.play(\"spd\")
+	timer.play(\"timer\")
+	hp.play(\"hp\")
+"
+
+[sub_resource type="Animation" id="Animation_kmgo3"]
+resource_name = "spd"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_xqk27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omqn4"]
+_data = {
+"RESET": SubResource("Animation_xqk27"),
+"spd": SubResource("Animation_kmgo3")
+}
+
+[sub_resource type="Animation" id="Animation_0mkag"]
+resource_name = "timer"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../time:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_xkhsg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../time:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfi6f"]
+_data = {
+"RESET": SubResource("Animation_xkhsg"),
+"timer": SubResource("Animation_0mkag")
+}
+
+[sub_resource type="Animation" id="Animation_j8p35"]
+resource_name = "hp"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_r0q3c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_63svu"]
+_data = {
+"RESET": SubResource("Animation_r0q3c"),
+"hp": SubResource("Animation_j8p35")
+}
 
 [node name="level_1" type="Node2D"]
 script = SubResource("GDScript_h75cv")
@@ -661,13 +909,107 @@ script = SubResource("GDScript_sdpky")
 [node name="notes1" type="Sprite2D" parent="tutorial"]
 texture = ExtResource("21_q0kug")
 
+[node name="add" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(350, -210)
+texture = ExtResource("22_jq8kn")
+
+[node name="sub" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(412, -55)
+texture = ExtResource("23_ibfrw")
+
+[node name="btnClear" type="Sprite2D" parent="tutorial/notes1"]
+position = Vector2(14, 166)
+scale = Vector2(0.566667, 0.771186)
+texture = ExtResource("24_4tv0o")
+
 [node name="notes2" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("19_nntc1")
+script = SubResource("GDScript_y7w2k")
+
+[node name="spike" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(573, -158)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("26_ttu03")
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/spike"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
+
+[node name="wasp" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(291, -41)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("27_4ml3f")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/wasp"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
+
+[node name="fox" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(453, 74)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("28_e8s4o")
+hframes = 3
+vframes = 4
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/fox"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
 
 [node name="notes3" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("20_s2g6c")
+script = SubResource("GDScript_6ltls")
+
+[node name="speed" type="Sprite2D" parent="tutorial/notes3"]
+position = Vector2(-313, -216)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("33_wcq8o")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes3/speed"]
+libraries = {
+"": SubResource("AnimationLibrary_omqn4")
+}
+
+[node name="time" type="Sprite2D" parent="tutorial/notes3"]
+position = Vector2(-355, -54)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("34_qy447")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes3/time"]
+root_node = NodePath("../../speed")
+libraries = {
+"": SubResource("AnimationLibrary_dfi6f")
+}
+
+[node name="hp" type="Sprite2D" parent="tutorial/notes3"]
+position = Vector2(-299, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("32_0lw40")
+hframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes3/hp"]
+root_node = NodePath("../../speed")
+libraries = {
+"": SubResource("AnimationLibrary_63svu")
+}
 
 [node name="next" type="TextureButton" parent="tutorial"]
 offset_left = 500.0

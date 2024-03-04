@@ -1,11 +1,8 @@
 AnimationPlayer
-<<<<<<< Updated upstream
+Sprite2D
 AnimationTree
-=======
->>>>>>> Stashed changes
 Label
 TextureButton
-Sprite2D
 TextureProgressBar
 Node2D
 RichTextLabel

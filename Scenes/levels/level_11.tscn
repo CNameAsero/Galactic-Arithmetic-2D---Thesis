@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c2qkq2dc455at"]
+[gd_scene load_steps=62 format=3 uid="uid://c2qkq2dc455at"]
 
 [ext_resource type="TileSet" uid="uid://deg85bunwvq35" path="res://Scenes/levels/World_3_Tileset.tres" id="1_cimep"]
 [ext_resource type="PackedScene" uid="uid://dkqj023564c8v" path="res://Scenes/Mechanics/operators_w3.tscn" id="2_jluev"]
@@ -21,13 +21,19 @@
 [ext_resource type="Texture2D" uid="uid://cwvm7xekef7o" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_1.png" id="15_kc348"]
 [ext_resource type="PackedScene" uid="uid://b21nilaolt6qs" path="res://Scenes/Menu/level_complete_menu_w3.tscn" id="15_kewde"]
 [ext_resource type="Texture2D" uid="uid://pq7u3ryw4yj0" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_2.png" id="16_58xgw"]
+[ext_resource type="Texture2D" uid="uid://dol6ek04pgtcl" path="res://Sprites/Collectibles/Operators/^.png" id="17_6yefl"]
 [ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="17_acdpm"]
 [ext_resource type="Texture2D" uid="uid://bl6b46i5wi4pt" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_3.png" id="17_x8fr0"]
+[ext_resource type="Texture2D" uid="uid://dro24qdemkb7q" path="res://Sprites/Collectibles/parentheses/(.png" id="18_0vdec"]
 [ext_resource type="Texture2D" uid="uid://momr41uwm182" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_4.png" id="18_1ho5y"]
 [ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="18_lf3i2"]
 [ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="19_q7bua"]
+[ext_resource type="Texture2D" uid="uid://dnbfgaeo3sklk" path="res://Sprites/Collectibles/parentheses/).png" id="19_swsp7"]
 [ext_resource type="PackedScene" uid="uid://d0sejgnfj1kbf" path="res://Scenes/Mechanics/powerups_w3.tscn" id="19_uei7o"]
 [ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="20_45i5b"]
+[ext_resource type="Texture2D" uid="uid://cjw6ojh6tgq6v" path="res://Sprites/Enemies/world3_enemies/Lava_tile.png" id="23_k6mxo"]
+[ext_resource type="Texture2D" uid="uid://dcego3lve17lg" path="res://Sprites/Enemies/world3_enemies/Bat_cave.png" id="24_y8hei"]
+[ext_resource type="Texture2D" uid="uid://bi68o83hi2tal" path="res://Sprites/Enemies/world3_enemies/Skeleton_enemy.png" id="25_i0ydj"]
 
 [sub_resource type="GDScript" id="GDScript_bokni"]
 script/source = "extends Node2D
@@ -196,6 +202,220 @@ func _on_exit_pressed():
 	get_tree().paused = false
 	$\".\".queue_free()
 "
+
+[sub_resource type="GDScript" id="GDScript_eeqx7"]
+script/source = "extends Sprite2D
+
+@onready var open = $\"(/AnimationPlayer\"
+@onready var close = $\")/AnimationPlayer\"
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	open.play(\"(\")
+	close.play(\")\")
+"
+
+[sub_resource type="Animation" id="Animation_1lpxk"]
+resource_name = "("
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6odt6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytgxu"]
+_data = {
+"(": SubResource("Animation_1lpxk"),
+"RESET": SubResource("Animation_6odt6")
+}
+
+[sub_resource type="Animation" id="Animation_ydjk4"]
+resource_name = ")"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_w3cq1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17su2"]
+_data = {
+")": SubResource("Animation_ydjk4"),
+"RESET": SubResource("Animation_w3cq1")
+}
+
+[sub_resource type="GDScript" id="GDScript_66y46"]
+script/source = "extends Sprite2D
+
+@onready var lava = $lava/AnimationPlayer
+@onready var bat = $bat/AnimationPlayer
+@onready var ske = $skeleton/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	lava.play(\"lava\")
+	bat.play(\"bat\")
+	ske.play(\"ske\")
+"
+
+[sub_resource type="Animation" id="Animation_leptx"]
+resource_name = "lava"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_3h744"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uygjg"]
+_data = {
+"RESET": SubResource("Animation_3h744"),
+"lava": SubResource("Animation_leptx")
+}
+
+[sub_resource type="Animation" id="Animation_ewsnm"]
+resource_name = "bat"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_tislt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wue2b"]
+_data = {
+"RESET": SubResource("Animation_tislt"),
+"bat": SubResource("Animation_ewsnm")
+}
+
+[sub_resource type="Animation" id="Animation_4fhr6"]
+resource_name = "ske"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27]
+}
+
+[sub_resource type="Animation" id="Animation_kgrxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qswhi"]
+_data = {
+"RESET": SubResource("Animation_kgrxr"),
+"ske": SubResource("Animation_4fhr6")
+}
 
 [node name="level_11" type="Node2D"]
 script = SubResource("GDScript_bokni")
@@ -744,14 +964,82 @@ texture = ExtResource("15_kc348")
 [node name="notes2" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("16_58xgw")
+script = SubResource("GDScript_eeqx7")
+
+[node name="(" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(-84, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_0vdec")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/("]
+libraries = {
+"": SubResource("AnimationLibrary_ytgxu")
+}
+
+[node name=")" type="Sprite2D" parent="tutorial/notes2"]
+position = Vector2(-25, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_swsp7")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes2/)"]
+libraries = {
+"": SubResource("AnimationLibrary_17su2")
+}
 
 [node name="notes3" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("17_x8fr0")
 
+[node name="ex" type="Sprite2D" parent="tutorial/notes3"]
+position = Vector2(-494, -77)
+texture = ExtResource("17_6yefl")
+
 [node name="notes4" type="Sprite2D" parent="tutorial"]
 visible = false
 texture = ExtResource("18_1ho5y")
+script = SubResource("GDScript_66y46")
+
+[node name="lava" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-460, -219)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("23_k6mxo")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/lava"]
+libraries = {
+"": SubResource("AnimationLibrary_uygjg")
+}
+
+[node name="bat" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-493, -37)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("24_y8hei")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/bat"]
+libraries = {
+"": SubResource("AnimationLibrary_wue2b")
+}
+
+[node name="skeleton" type="Sprite2D" parent="tutorial/notes4"]
+position = Vector2(-366, 67)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("25_i0ydj")
+hframes = 4
+vframes = 8
+frame = 25
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="tutorial/notes4/skeleton"]
+libraries = {
+"": SubResource("AnimationLibrary_qswhi")
+}
 
 [node name="next" type="TextureButton" parent="tutorial"]
 offset_left = 500.0
