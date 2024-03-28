@@ -2,7 +2,7 @@ extends Area2D
 
 @onready var collision_shape = $CollisionShape2D
 @onready var animationplayer = $AnimationPlayer
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var timer = $Timer
 
 # Called when the node enters the scene tree for the first time.

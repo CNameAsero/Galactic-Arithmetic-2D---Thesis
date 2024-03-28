@@ -1,9 +1,9 @@
 extends Area2D
 
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var animationplayer = $AnimationPlayer
 @onready var collision_shape = $CollisionShape2D
-@onready var game_over = $"../../menus/game_over"
+@onready var game_over = $"../../CanvasLayer/menus/game_over"
 @onready var time_before_hit_again = $Time_before_hit_again
 
 func _process(_delta):

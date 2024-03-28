@@ -4,7 +4,7 @@ var _health = 3
 
 @onready var animation_player_2 = $AnimationPlayer2
 @onready var animation_player = $AnimationPlayer
-@onready var game_over = $"../menus/game_over"
+@onready var game_over = $"../../../../CanvasLayer/menus/game_over"
 
 func _ready():
 	if GameSettings.isHard:

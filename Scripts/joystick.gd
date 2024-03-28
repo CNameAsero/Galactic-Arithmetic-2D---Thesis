@@ -1,3 +1,3 @@
 extends Node2D
 
-var pos_vector: Vector2
+var pos_vector : Vector2

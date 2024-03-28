@@ -7,8 +7,8 @@ var start_position: Vector2
 var target_position: Vector2
 var animation_player: AnimationPlayer
 
-@onready var game_over = $"../../menus/game_over"
-@onready var health_system = $"../../health_system"
+@onready var game_over = $"../../CanvasLayer/menus/game_over"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var timer = $Timer
 
 func _ready():

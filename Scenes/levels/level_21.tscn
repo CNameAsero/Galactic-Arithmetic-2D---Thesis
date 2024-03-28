@@ -212,6 +212,21 @@ func _process(delta):
 	y.play(\"y\")
 "
 
+[sub_resource type="Animation" id="Animation_i80lc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="Animation" id="Animation_dmvko"]
 resource_name = "x"
 loop_mode = 1
@@ -228,7 +243,13 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_i80lc"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fkb6c"]
+_data = {
+"RESET": SubResource("Animation_i80lc"),
+"x": SubResource("Animation_dmvko")
+}
+
+[sub_resource type="Animation" id="Animation_471dg"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -241,12 +262,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_fkb6c"]
-_data = {
-"RESET": SubResource("Animation_i80lc"),
-"x": SubResource("Animation_dmvko")
 }
 
 [sub_resource type="Animation" id="Animation_5hk38"]
@@ -263,21 +278,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_471dg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h53yn"]
@@ -302,6 +302,21 @@ func _process(delta):
 	thief.play(\"thief\")
 "
 
+[sub_resource type="Animation" id="Animation_vtmtl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
 [sub_resource type="Animation" id="Animation_mmp5j"]
 resource_name = "rat"
 loop_mode = 1
@@ -318,7 +333,13 @@ tracks/0/keys = {
 "values": [8, 9]
 }
 
-[sub_resource type="Animation" id="Animation_vtmtl"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lucqe"]
+_data = {
+"RESET": SubResource("Animation_vtmtl"),
+"rat": SubResource("Animation_mmp5j")
+}
+
+[sub_resource type="Animation" id="Animation_8n44e"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -330,13 +351,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [9]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lucqe"]
-_data = {
-"RESET": SubResource("Animation_vtmtl"),
-"rat": SubResource("Animation_mmp5j")
+"values": [5]
 }
 
 [sub_resource type="Animation" id="Animation_s5xtf"]
@@ -356,7 +371,13 @@ tracks/0/keys = {
 "values": [4, 5, 6, 7]
 }
 
-[sub_resource type="Animation" id="Animation_8n44e"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43epk"]
+_data = {
+"RESET": SubResource("Animation_8n44e"),
+"flea": SubResource("Animation_s5xtf")
+}
+
+[sub_resource type="Animation" id="Animation_fh80j"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -368,13 +389,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [5]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_43epk"]
-_data = {
-"RESET": SubResource("Animation_8n44e"),
-"flea": SubResource("Animation_s5xtf")
+"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_bolcb"]
@@ -394,7 +409,13 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3]
 }
 
-[sub_resource type="Animation" id="Animation_fh80j"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_veckr"]
+_data = {
+"RESET": SubResource("Animation_fh80j"),
+"fly": SubResource("Animation_bolcb")
+}
+
+[sub_resource type="Animation" id="Animation_nmok0"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -407,12 +428,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_veckr"]
-_data = {
-"RESET": SubResource("Animation_fh80j"),
-"fly": SubResource("Animation_bolcb")
 }
 
 [sub_resource type="Animation" id="Animation_gw014"]
@@ -430,21 +445,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_nmok0"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_y7irh"]

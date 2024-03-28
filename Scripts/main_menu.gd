@@ -54,20 +54,20 @@ func _on_sfx_slider_value_changed(value) -> void:
 		AudioServer.set_bus_mute(AudioManager.Sfx_bus, false)
 	GameSettings._autosave()
 
-func _on_about_us_button_pressed():
-	AudioManager.play_button_sfx()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about.show()
-
 func _on_x_button_pressed():
 	AudioManager.play_button_sfx()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about.hide()
+	$Main_Menu_Bg/about_us_btn/about.hide()
 
 func about_us_next_pressed():
 	AudioManager.play_button_sfx()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about/about_us_names.hide()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about/about_us_description.show()
+	$Main_Menu_Bg/about_us_btn/about/about_us_names.hide()
+	$Main_Menu_Bg/about_us_btn/about/about_us_description.show()
 
 func about_us_back_pressed():
 	AudioManager.play_button_sfx()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about/about_us_names.show()
-	$Option_Menu_Bg/Inside_BG/About_Us_Button/about/about_us_description.hide()
+	$Main_Menu_Bg/about_us_btn/about/about_us_names.show()
+	$Main_Menu_Bg/about_us_btn/about/about_us_description.hide()
+
+func _on_about_us_btn_pressed():
+	AudioManager.play_button_sfx()
+	$Main_Menu_Bg/about_us_btn/about.show()

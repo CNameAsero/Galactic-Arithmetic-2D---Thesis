@@ -214,6 +214,21 @@ func _process(delta):
 	yeti.play(\"yeti\")
 "
 
+[sub_resource type="Animation" id="Animation_e5uui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="Animation" id="Animation_nd8sl"]
 resource_name = "ice"
 length = 2.5
@@ -231,7 +246,13 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_e5uui"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jiask"]
+_data = {
+"RESET": SubResource("Animation_e5uui"),
+"ice": SubResource("Animation_nd8sl")
+}
+
+[sub_resource type="Animation" id="Animation_irajp"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -243,13 +264,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jiask"]
-_data = {
-"RESET": SubResource("Animation_e5uui"),
-"ice": SubResource("Animation_nd8sl")
+"values": [9]
 }
 
 [sub_resource type="Animation" id="Animation_l7acy"]
@@ -269,7 +284,13 @@ tracks/0/keys = {
 "values": [8, 9, 10, 11]
 }
 
-[sub_resource type="Animation" id="Animation_irajp"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0rcr"]
+_data = {
+"RESET": SubResource("Animation_irajp"),
+"bear": SubResource("Animation_l7acy")
+}
+
+[sub_resource type="Animation" id="Animation_bfs5d"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -281,13 +302,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [9]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0rcr"]
-_data = {
-"RESET": SubResource("Animation_irajp"),
-"bear": SubResource("Animation_l7acy")
+"values": [16]
 }
 
 [sub_resource type="Animation" id="Animation_uanm6"]
@@ -305,21 +320,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [15, 16, 17, 18, 19]
-}
-
-[sub_resource type="Animation" id="Animation_bfs5d"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [16]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r0fag"]

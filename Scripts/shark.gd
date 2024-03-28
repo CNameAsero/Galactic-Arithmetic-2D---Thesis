@@ -6,7 +6,7 @@ extends CharacterBody2D
 @onready var rect_radius_y
 
 @onready var animation_player = $Area2/AnimationPlayer
-@onready var health_system = $"../../../health_system"
+@onready var health_system = $"../../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var shark = $".."
 @onready var timer = $"../Timer"
 

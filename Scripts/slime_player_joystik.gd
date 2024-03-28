@@ -1,7 +1,7 @@
 extends CharacterBody2D
 #class_name slime_player
 #
-@onready var joystick = $"../joystick"
+@onready var joystick = $"../Camera2D/CanvasLayer/joystick"
 @onready var animation_player = $AnimationPlayer
 
 @export var default_speed = 300
@@ -43,3 +43,4 @@ func _on_area_2d_area_entered(area):
 	if (area.is_in_group("portal")):
 		if(not area.lock_portal):
 			do_teleport(area)
+

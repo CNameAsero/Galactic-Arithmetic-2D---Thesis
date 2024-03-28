@@ -6,7 +6,7 @@
 [sub_resource type="GDScript" id="GDScript_opks6"]
 script/source = "extends TextureButton
 
-@onready var gamemanager = $\"..\"
+@onready var gamemanager = $\"../../../../game_manager_world_1-2\"
 
 func _on_pressed():
 	gamemanager.clear_eq()

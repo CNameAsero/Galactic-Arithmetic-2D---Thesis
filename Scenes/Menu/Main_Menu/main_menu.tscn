@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://soo0hsnba7u2"]
+[gd_scene load_steps=32 format=3 uid="uid://soo0hsnba7u2"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_jiph4"]
 [ext_resource type="Texture2D" uid="uid://dhkuasdxhkh50" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Main Menu.png" id="2_mwb3q"]
@@ -9,14 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://i61kidp3lu6l" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/optionfinal_violets.png" id="7_x5xg2"]
 [ext_resource type="Texture2D" uid="uid://rsb0nssuxxl0" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/exitfinal.png" id="8_i3csh"]
 [ext_resource type="Texture2D" uid="uid://d11c8l6qd803n" path="res://Galactic Arithmetic Assets/Main_Menu_Assets/Buttons/exitfinal_Violet.png" id="9_7u05j"]
+[ext_resource type="Texture2D" uid="uid://cwdk520flgid3" path="res://Sprites/Objects/about_us_i_btn.png" id="10_2c35r"]
 [ext_resource type="Texture2D" uid="uid://bvcjw8dmqfcti" path="res://Galactic Arithmetic Assets/Settings_Assets/Settings_Bg.png" id="10_bbp8e"]
 [ext_resource type="Texture2D" uid="uid://cbep5o18tpbwt" path="res://Galactic Arithmetic Assets/Settings_Assets/Setting_centerBGG.png" id="11_7ylra"]
 [ext_resource type="Texture2D" uid="uid://p2ylv4csbhsn" path="res://Sprites/Options.png" id="12_ffdqx"]
-[ext_resource type="Texture2D" uid="uid://dm7c18veqqmwm" path="res://Galactic Arithmetic Assets/Settings_Assets/about_us.png" id="13_xx82o"]
 [ext_resource type="Texture2D" uid="uid://bnkq41m4oi25e" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/Music_Text1.png" id="14_hytc5"]
 [ext_resource type="Texture2D" uid="uid://iylhgtpabd10" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/SliderButton1.png" id="14_lg8po"]
 [ext_resource type="Texture2D" uid="uid://cvcednf1taquc" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/SliderButton.png" id="14_lo177"]
-[ext_resource type="Texture2D" uid="uid://b8551ob4wunv5" path="res://Galactic Arithmetic Assets/Settings_Assets/about us tapped.png" id="14_v1buk"]
 [ext_resource type="Texture2D" uid="uid://drv0ulr4sfgf" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/Bar.png" id="15_owpue"]
 [ext_resource type="Texture2D" uid="uid://cya0mfenptxfa" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/Music_Assets/OutlineSlider.png" id="16_bkasx"]
 [ext_resource type="Texture2D" uid="uid://ckr8hhaw424sk" path="res://Galactic Arithmetic Assets/Settings_Assets/Music_SFX_Assets/SFX_Assets/SFX_Text1.png" id="16_jj6u7"]
@@ -138,6 +137,66 @@ texture_pressed = ExtResource("9_7u05j")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="about_us_btn" type="TextureButton" parent="Main_Menu_Bg"]
+layout_mode = 0
+offset_left = 1835.0
+offset_top = 995.0
+offset_right = 1910.0
+offset_bottom = 1070.0
+texture_normal = ExtResource("10_2c35r")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="about" type="Node2D" parent="Main_Menu_Bg/about_us_btn"]
+visible = false
+position = Vector2(-752, -202)
+
+[node name="block" type="Button" parent="Main_Menu_Bg/about_us_btn/about"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -457.0
+offset_top = -647.0
+offset_right = 222.0
+offset_bottom = 272.0
+
+[node name="about_us_description" type="Sprite2D" parent="Main_Menu_Bg/about_us_btn/about"]
+position = Vector2(-91, -212)
+texture = ExtResource("22_xbp7n")
+
+[node name="about_us_names" type="Sprite2D" parent="Main_Menu_Bg/about_us_btn/about"]
+position = Vector2(-91, -212)
+texture = ExtResource("21_k0ns0")
+
+[node name="next_button" type="TextureButton" parent="Main_Menu_Bg/about_us_btn/about"]
+offset_left = 370.0
+offset_top = 65.0
+offset_right = 450.0
+offset_bottom = 145.0
+texture_normal = ExtResource("22_l5re6")
+texture_pressed = ExtResource("23_3bgxc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="back_button" type="TextureButton" parent="Main_Menu_Bg/about_us_btn/about"]
+offset_left = -625.0
+offset_top = 65.0
+offset_right = -545.0
+offset_bottom = 145.0
+texture_normal = ExtResource("24_v00h7")
+texture_pressed = ExtResource("25_gqwtq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="x button" type="TextureButton" parent="Main_Menu_Bg/about_us_btn/about"]
+offset_left = 435.0
+offset_top = -622.0
+offset_right = 515.0
+offset_bottom = -542.0
+texture_normal = ExtResource("26_ppgcj")
+texture_pressed = ExtResource("27_6xm7p")
+ignore_texture_size = true
+stretch_mode = 0
+
 [node name="Option_Menu_Bg" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
@@ -241,58 +300,6 @@ offset_bottom = 581.0
 texture = ExtResource("16_jj6u7")
 expand_mode = 1
 
-[node name="About_Us_Button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG"]
-layout_mode = 0
-offset_left = 623.0
-offset_top = 603.0
-offset_right = 919.0
-offset_bottom = 666.0
-texture_normal = ExtResource("13_xx82o")
-texture_pressed = ExtResource("14_v1buk")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="about" type="Node2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button"]
-visible = false
-
-[node name="about_us_description" type="Sprite2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-position = Vector2(-91, -212)
-texture = ExtResource("22_xbp7n")
-
-[node name="about_us_names" type="Sprite2D" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-position = Vector2(-91, -212)
-texture = ExtResource("21_k0ns0")
-
-[node name="next_button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-offset_left = 370.0
-offset_top = 65.0
-offset_right = 450.0
-offset_bottom = 145.0
-texture_normal = ExtResource("22_l5re6")
-texture_pressed = ExtResource("23_3bgxc")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="back_button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-offset_left = -625.0
-offset_top = 65.0
-offset_right = -545.0
-offset_bottom = 145.0
-texture_normal = ExtResource("24_v00h7")
-texture_pressed = ExtResource("25_gqwtq")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="x button" type="TextureButton" parent="Option_Menu_Bg/Inside_BG/About_Us_Button/about"]
-offset_left = 435.0
-offset_top = -622.0
-offset_right = 515.0
-offset_bottom = -542.0
-texture_normal = ExtResource("26_ppgcj")
-texture_pressed = ExtResource("27_6xm7p")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="Back_Button_OptionMenu" type="TextureButton" parent="Option_Menu_Bg"]
 layout_mode = 0
 offset_top = 20.0
@@ -306,10 +313,10 @@ stretch_mode = 5
 [connection signal="pressed" from="Main_Menu_Bg/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Main_Menu_Bg/Option_Button" to="." method="_on_option_button_pressed"]
 [connection signal="pressed" from="Main_Menu_Bg/Exit_Button" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/about_us_btn" to="." method="_on_about_us_btn_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/about_us_btn/about/next_button" to="." method="about_us_next_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/about_us_btn/about/back_button" to="." method="about_us_back_pressed"]
+[connection signal="pressed" from="Main_Menu_Bg/about_us_btn/about/x button" to="." method="_on_x_button_pressed"]
 [connection signal="value_changed" from="Option_Menu_Bg/Inside_BG/music_slider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="Option_Menu_Bg/Inside_BG/sfx_slider" to="." method="_on_sfx_slider_value_changed"]
-[connection signal="pressed" from="Option_Menu_Bg/Inside_BG/About_Us_Button" to="." method="_on_about_us_button_pressed"]
-[connection signal="pressed" from="Option_Menu_Bg/Inside_BG/About_Us_Button/about/next_button" to="." method="about_us_next_pressed"]
-[connection signal="pressed" from="Option_Menu_Bg/Inside_BG/About_Us_Button/about/back_button" to="." method="about_us_back_pressed"]
-[connection signal="pressed" from="Option_Menu_Bg/Inside_BG/About_Us_Button/about/x button" to="." method="_on_x_button_pressed"]
 [connection signal="pressed" from="Option_Menu_Bg/Back_Button_OptionMenu" to="." method="_on_back_button_option_menu_pressed"]

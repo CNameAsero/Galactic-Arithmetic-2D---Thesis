@@ -9,7 +9,7 @@ var is_returning_to_original_position = false
 var idle = true
 var x = 0
 var animation_player
-@onready var health_system = $"../../../health_system"
+@onready var health_system = $"../../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var timer = $"../Timer"
 
 var can_be_hurt = true

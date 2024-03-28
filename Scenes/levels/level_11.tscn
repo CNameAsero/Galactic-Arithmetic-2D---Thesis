@@ -303,6 +303,21 @@ func _process(delta):
 	ske.play(\"ske\")
 "
 
+[sub_resource type="Animation" id="Animation_3h744"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
 [sub_resource type="Animation" id="Animation_leptx"]
 resource_name = "lava"
 length = 2.5
@@ -320,7 +335,13 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4]
 }
 
-[sub_resource type="Animation" id="Animation_3h744"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uygjg"]
+_data = {
+"RESET": SubResource("Animation_3h744"),
+"lava": SubResource("Animation_leptx")
+}
+
+[sub_resource type="Animation" id="Animation_tislt"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -333,12 +354,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_uygjg"]
-_data = {
-"RESET": SubResource("Animation_3h744"),
-"lava": SubResource("Animation_leptx")
 }
 
 [sub_resource type="Animation" id="Animation_ewsnm"]
@@ -358,7 +373,13 @@ tracks/0/keys = {
 "values": [0, 1, 2]
 }
 
-[sub_resource type="Animation" id="Animation_tislt"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wue2b"]
+_data = {
+"RESET": SubResource("Animation_tislt"),
+"bat": SubResource("Animation_ewsnm")
+}
+
+[sub_resource type="Animation" id="Animation_kgrxr"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -370,13 +391,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wue2b"]
-_data = {
-"RESET": SubResource("Animation_tislt"),
-"bat": SubResource("Animation_ewsnm")
+"values": [25]
 }
 
 [sub_resource type="Animation" id="Animation_4fhr6"]
@@ -394,21 +409,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [24, 25, 26, 27]
-}
-
-[sub_resource type="Animation" id="Animation_kgrxr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [25]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qswhi"]

@@ -1,6 +1,6 @@
 extends Control
 
-@onready var game_manager = $"../../game_manager_world_1-2"
+@onready var game_manager = $"../../../game_manager_world_1-2"
 
 func _on_restart_button_pressed():
 	game_manager.restart()

@@ -10,15 +10,15 @@ var number_scene = load("res://Scenes/Mechanics/numbers.tscn")
 @onready var last_item_was_number = true
 
 #UI
-@onready var game_over = $"../menus/game_over"
-@onready var level_complete_menu = $"../menus/level_complete_menu"
+@onready var game_over = $"../CanvasLayer/menus/game_over"
+@onready var level_complete_menu = $"../CanvasLayer/menus/level_complete_menu"
 @onready var time_elapsed = ""
 
 #player
-@onready var player_pos = $"../slime_player_joystick/slime_player_joystik".position
+@onready var player_pos = $"../slime_player_joystick".position
 
 #player_health
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 
 #final answer
 @onready var final_answer = $final_answer.final_answer
@@ -118,7 +118,7 @@ func check_final_answer():
 		if GameSettings.currentlevel[GameSettings.current_level - 1] and GameSettings.max_unlocked_level < GameSettings.current_level:
 			GameSettings.max_unlocked_level += 1
 			GameSettings.currentlevel[GameSettings.current_level] = true
-		time_elapsed = $timer.get_elapsed_time()
+		time_elapsed = $CanvasLayer/timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		GameSettings.player_invulnerable = false

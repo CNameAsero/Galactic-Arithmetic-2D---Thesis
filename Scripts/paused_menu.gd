@@ -1,7 +1,7 @@
 extends Control
 
 @onready var paused = $".."
-@onready var gamemanager = $"../../game_manager_world_1-2"
+@onready var gamemanager = $"../../../game_manager_world_1-2"
 
 func _on_resume_button_pressed():
 	AudioManager.play_button_sfx()
