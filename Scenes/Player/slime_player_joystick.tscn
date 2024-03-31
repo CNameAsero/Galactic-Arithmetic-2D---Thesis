@@ -1398,7 +1398,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="joystick" parent="Camera2D/CanvasLayer" instance=ExtResource("3_vw6rq")]
-position = Vector2(189, 896)
+position = Vector2(200, 900)
 scale = Vector2(1.85, 1.85)
 
 [node name="notes_btn" type="TextureButton" parent="Camera2D/CanvasLayer"]

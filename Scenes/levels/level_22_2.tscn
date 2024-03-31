@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://fp82tc2igx42"]
+[gd_scene load_steps=163 format=3 uid="uid://fp82tc2igx42"]
 
 [ext_resource type="TileSet" uid="uid://d2frb8bdxrodn" path="res://Scenes/levels/world5_tileset.tres" id="1_qle8e"]
 [ext_resource type="Texture2D" uid="uid://b16pv0nrv8j1b" path="res://Sprites/Tileset/Level_22_Var_Value.png" id="2_70iht"]
@@ -12,14 +12,68 @@
 [ext_resource type="Script" path="res://Scripts/slime_player_joystik.gd" id="10_14bmh"]
 [ext_resource type="Texture2D" uid="uid://b7gxf0arvvb46" path="res://Sprites/Slime-sprite4.png" id="11_w42qj"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="12_jjukg"]
+[ext_resource type="Texture2D" uid="uid://3adu8benrxhq" path="res://Sprites/Objects/zoom_in_30opa.png" id="13_0hb0j"]
 [ext_resource type="PackedScene" uid="uid://bt60nuifqmoq8" path="res://Scenes/Others/clear_btn.tscn" id="13_j1vx4"]
 [ext_resource type="PackedScene" uid="uid://dyvtdhajlwyx8" path="res://Scenes/Mechanics/health_system.tscn" id="13_wx8bf"]
+[ext_resource type="Texture2D" uid="uid://d0qmj5t3usqaj" path="res://Sprites/Objects/zoom_in.png" id="14_fuejq"]
 [ext_resource type="PackedScene" uid="uid://c75jlhtaiccoj" path="res://Scenes/Mechanics/powerups_w5.tscn" id="14_khkb4"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="15_8p84d"]
+[ext_resource type="Texture2D" uid="uid://c2f0aiy31qnas" path="res://Sprites/Objects/zoom_out_30opa.png" id="15_ukwy1"]
+[ext_resource type="Texture2D" uid="uid://nd1avtpnoe5q" path="res://Sprites/Objects/zoom_out.png" id="16_76b8l"]
 [ext_resource type="Script" path="res://Scripts/paused_menu_button.gd" id="16_syham"]
 [ext_resource type="PackedScene" uid="uid://dmu5vulghw42o" path="res://Scenes/Menu/Game_Over/game_over_w5.tscn" id="17_coabu"]
 [ext_resource type="PackedScene" uid="uid://gw2eueqfp0mu" path="res://Scenes/Menu/level_complete_menu_w5.tscn" id="18_s4sf1"]
+[ext_resource type="Texture2D" uid="uid://8j7jgnwww3kv" path="res://Sprites/Objects/Notes.png" id="18_uuam0"]
 [ext_resource type="PackedScene" uid="uid://ch8q5858jk70l" path="res://Scenes/Menu/Paused_Menu/paused_menu_w5.tscn" id="19_4ax5c"]
+[ext_resource type="Texture2D" uid="uid://d3toxr23cmvq5" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Note_1.png" id="19_tgtpg"]
+[ext_resource type="Texture2D" uid="uid://b25yamwf862bs" path="res://Sprites/Collectibles/Operators/Add.png" id="20_rjxf5"]
+[ext_resource type="Texture2D" uid="uid://d33cxt7ex41dh" path="res://Sprites/Collectibles/Operators/Minus.png" id="21_1kwpf"]
+[ext_resource type="Texture2D" uid="uid://dll76vxslqfja" path="res://Sprites/Collectibles/others/Clear_Button.png" id="22_p6ysk"]
+[ext_resource type="Texture2D" uid="uid://be124105b26ii" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_2.png" id="23_mh3mo"]
+[ext_resource type="Texture2D" uid="uid://dsikpnrjd4a38" path="res://Sprites/Obstacles/Spike_trap.png" id="24_740ri"]
+[ext_resource type="Texture2D" uid="uid://ccb8ilujifnhp" path="res://Sprites/Enemies/world1_enemies/Wasp.png" id="25_hi4xt"]
+[ext_resource type="Texture2D" uid="uid://dypx8mxn57tgv" path="res://Sprites/Enemies/world1_enemies/Fox_last.png" id="26_4pw4v"]
+[ext_resource type="Texture2D" uid="uid://cmeqvvlm0ivs3" path="res://Galactic Arithmetic Assets/Tutorial/w1/World_1_Notes_3.png" id="27_crjbn"]
+[ext_resource type="Texture2D" uid="uid://0qtxb85mrqqt" path="res://Sprites/Collectibles/power up/Movement Speed.png" id="28_f5x5v"]
+[ext_resource type="Texture2D" uid="uid://bb3t0wih6d0r0" path="res://Sprites/Collectibles/power up/AddedTime.png" id="29_c7fj0"]
+[ext_resource type="Texture2D" uid="uid://b0o71u5mjnwqc" path="res://Sprites/Collectibles/power up/HeartCollectible.png" id="30_810g2"]
+[ext_resource type="Texture2D" uid="uid://m4hav2e8lpfp" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow.png" id="31_5is4j"]
+[ext_resource type="Texture2D" uid="uid://ussx4g40w8ep" path="res://Galactic Arithmetic Assets/Tutorial/Right_arrow_tp.png" id="32_au88h"]
+[ext_resource type="Texture2D" uid="uid://dfvrrd2rohxdx" path="res://Galactic Arithmetic Assets/Tutorial/X-button.png" id="33_em88f"]
+[ext_resource type="Texture2D" uid="uid://jb8ttuivh41t" path="res://Galactic Arithmetic Assets/Tutorial/X-button_65opacity.png" id="34_kb557"]
+[ext_resource type="Texture2D" uid="uid://8nqslimoe6wr" path="res://Galactic Arithmetic Assets/Tutorial/w2/World_2_Notes_1.png" id="35_s3cqn"]
+[ext_resource type="Texture2D" uid="uid://c670wgwnhgxxu" path="res://Sprites/Collectibles/Operators/Multiplication.png" id="36_u8mf5"]
+[ext_resource type="Texture2D" uid="uid://cgctwmavqc4ue" path="res://Sprites/Collectibles/Operators/Division.png" id="37_1trqg"]
+[ext_resource type="Texture2D" uid="uid://bpf5uncu56jma" path="res://Galactic Arithmetic Assets/Tutorial/w2/World_2_Notes_2.png" id="38_x14qb"]
+[ext_resource type="Texture2D" uid="uid://du57ju053jre5" path="res://Sprites/Enemies/world2_enemies/Blowfish.png" id="39_m0bv8"]
+[ext_resource type="Texture2D" uid="uid://4k7v6bfckk1y" path="res://Sprites/Enemies/world2_enemies/ViciousShark.png" id="40_tt21t"]
+[ext_resource type="Texture2D" uid="uid://b7cbls0xth6mx" path="res://Sprites/Enemies/world2_enemies/Octopus.png" id="41_rtnhj"]
+[ext_resource type="Texture2D" uid="uid://cwvm7xekef7o" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_1.png" id="42_mwl5o"]
+[ext_resource type="Texture2D" uid="uid://pq7u3ryw4yj0" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_2.png" id="43_4tabx"]
+[ext_resource type="Texture2D" uid="uid://dro24qdemkb7q" path="res://Sprites/Collectibles/parentheses/(.png" id="44_henh3"]
+[ext_resource type="Texture2D" uid="uid://dnbfgaeo3sklk" path="res://Sprites/Collectibles/parentheses/).png" id="45_kfaqi"]
+[ext_resource type="Texture2D" uid="uid://bl6b46i5wi4pt" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_3.png" id="46_ve3nn"]
+[ext_resource type="Texture2D" uid="uid://dol6ek04pgtcl" path="res://Sprites/Collectibles/Operators/^.png" id="47_5ksxf"]
+[ext_resource type="Texture2D" uid="uid://momr41uwm182" path="res://Galactic Arithmetic Assets/Tutorial/w3/World_3_Notes_4.png" id="48_af8kl"]
+[ext_resource type="Texture2D" uid="uid://cjw6ojh6tgq6v" path="res://Sprites/Enemies/world3_enemies/Lava_tile.png" id="49_2md3p"]
+[ext_resource type="Texture2D" uid="uid://dcego3lve17lg" path="res://Sprites/Enemies/world3_enemies/Bat_cave.png" id="50_valbl"]
+[ext_resource type="Texture2D" uid="uid://bi68o83hi2tal" path="res://Sprites/Enemies/world3_enemies/Skeleton_enemy.png" id="51_f6m8l"]
+[ext_resource type="Texture2D" uid="uid://du8bokt8nexnj" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_1.png" id="52_ncjyd"]
+[ext_resource type="Texture2D" uid="uid://dr3ni0platsp5" path="res://Sprites/Collectibles/Operators/Front-slash.png" id="53_caxd6"]
+[ext_resource type="Texture2D" uid="uid://gy36a8nfrnkc" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_2.png" id="54_64ljh"]
+[ext_resource type="Texture2D" uid="uid://l18rpa4ryo8y" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_3.png" id="55_yirfk"]
+[ext_resource type="Texture2D" uid="uid://7hmpe7xurkcs" path="res://Galactic Arithmetic Assets/Tutorial/w4/World_4_Notes_4.png" id="56_7tp6v"]
+[ext_resource type="Texture2D" uid="uid://co5wxcy6mqwgy" path="res://Sprites/Enemies/world4_enemies/Melted_ice.png" id="57_tykap"]
+[ext_resource type="Texture2D" uid="uid://caxs3tb2qg6hu" path="res://Sprites/Enemies/world4_enemies/PolarBear4x4Top-Walk_4x4Bottom-Attack.png" id="58_fttb0"]
+[ext_resource type="Texture2D" uid="uid://dt3ipykirkyss" path="res://Sprites/Enemies/world4_enemies/Yeti.png" id="59_pdhfl"]
+[ext_resource type="Texture2D" uid="uid://ccpcwvop5pgkn" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_1.png" id="60_ajsk4"]
+[ext_resource type="Texture2D" uid="uid://d2v2cq7s1oijb" path="res://Sprites/Collectibles/variables/x.png" id="61_l4736"]
+[ext_resource type="Texture2D" uid="uid://ckvflqnuif3hd" path="res://Sprites/Collectibles/variables/y.png" id="62_dyt3w"]
+[ext_resource type="Texture2D" uid="uid://c3no2jvmsgvoh" path="res://Galactic Arithmetic Assets/Tutorial/w5/World_5_Notes_2.png" id="63_v0pj5"]
+[ext_resource type="Texture2D" uid="uid://cvtfvyhhw8xyg" path="res://Sprites/Enemies/world5_enemies/RatMovement_Attack.png" id="64_hr83g"]
+[ext_resource type="Texture2D" uid="uid://cghnkenifmeve" path="res://Sprites/Enemies/world5_enemies/fleaspawn.png" id="65_w4j6k"]
+[ext_resource type="Texture2D" uid="uid://djlslkfagox0i" path="res://Sprites/Enemies/world5_enemies/Fly.png" id="66_wwnxv"]
+[ext_resource type="Texture2D" uid="uid://83lp7i4efe3x" path="res://Sprites/Enemies/world5_enemies/Thief.png" id="67_h3h1m"]
 
 [sub_resource type="GDScript" id="GDScript_ttvii"]
 script/source = "extends Node2D
@@ -36,7 +90,7 @@ func _process(delta):
 	pass
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ue1f4"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2wwm"]
 radius = 27.0185
 
 [sub_resource type="Animation" id="Animation_f0vww"]
@@ -149,6 +203,1157 @@ _data = {
 "up": SubResource("Animation_g04ig")
 }
 
+[sub_resource type="GDScript" id="GDScript_5pdjj"]
+script/source = "extends Node2D
+
+@onready var player = $\"../slime_player_joystik\"
+@onready var cam = $\".\"
+@onready var default_zoom = cam.zoom
+@onready var default_pos = cam.position
+
+var pressed
+var speed = 2.0
+
+func _process(delta):
+	if pressed:
+		var new_cam_pos = lerp(cam.global_position, player.global_position, speed * delta)
+		if is_within_bounds(new_cam_pos):
+			cam.global_position = new_cam_pos
+
+func _on_zoomin_btn_pressed():
+	cam.zoom = Vector2(1.5,1.5)
+	pressed = true
+
+func _on_zoomout_btn_pressed():
+	cam.zoom = default_zoom
+	cam.position = default_pos
+	pressed = false
+
+func is_within_bounds(pos):
+	var world_bounds = Rect2(Vector2(0, 0), Vector2(1920, 1080))
+	return world_bounds.has_point(pos)
+
+func _on_notes_btn_pressed():
+	AudioManager.play_button_sfx()
+	if GameSettings.current_level <= 5:
+		$CanvasLayer/notes_btn/notes_w1.show()
+	elif  GameSettings.current_level <= 10 && GameSettings.current_level > 5:
+		$CanvasLayer/notes_btn/notes_w2.show()
+	elif  GameSettings.current_level <= 15 && GameSettings.current_level > 10:
+		$CanvasLayer/notes_btn/notes_w3.show()
+	elif  GameSettings.current_level <= 20 && GameSettings.current_level > 15:
+		$CanvasLayer/notes_btn/notes_w4.show()
+	elif  GameSettings.current_level <= 25 && GameSettings.current_level > 20:
+		$CanvasLayer/notes_btn/notes_w5.show()
+"
+
+[sub_resource type="GDScript" id="GDScript_u5vcf"]
+script/source = "extends Node2D
+@onready var notes = [$notes1, $notes2, $notes3]
+var currentNoteIndex := 0
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	GameSettings._autosave()
+	get_tree().paused = false
+	$\".\".hide()
+"
+
+[sub_resource type="GDScript" id="GDScript_uhluh"]
+script/source = "extends Sprite2D
+
+@onready var spike = $spike/AnimationPlayer
+@onready var fox = $wasp/AnimationPlayer
+@onready var wasp = $fox/AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	spike.play(\"spike\")
+	fox.play(\"fox\")
+	wasp.play(\"wasp\")
+
+"
+
+[sub_resource type="Animation" id="Animation_0rrg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/spike:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("notes2/wasp:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("notes2/fox:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_ivrrr"]
+resource_name = "fox"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/fox:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="Animation" id="Animation_nkqju"]
+resource_name = "spike"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/spike:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_iox3c"]
+resource_name = "wasp"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("notes2/wasp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aon8u"]
+_data = {
+"RESET": SubResource("Animation_0rrg2"),
+"fox": SubResource("Animation_ivrrr"),
+"spike": SubResource("Animation_nkqju"),
+"wasp": SubResource("Animation_iox3c")
+}
+
+[sub_resource type="GDScript" id="GDScript_csqww"]
+script/source = "extends Sprite2D
+
+@onready var spd = $speed/AnimationPlayer
+@onready var timer = $time/AnimationPlayer
+@onready var hp = $hp/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	spd.play(\"spd\")
+	timer.play(\"timer\")
+	hp.play(\"hp\")
+"
+
+[sub_resource type="Animation" id="Animation_xqk27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_kmgo3"]
+resource_name = "spd"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_omqn4"]
+_data = {
+"RESET": SubResource("Animation_xqk27"),
+"spd": SubResource("Animation_kmgo3")
+}
+
+[sub_resource type="Animation" id="Animation_xkhsg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../time:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_0mkag"]
+resource_name = "timer"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../time:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfi6f"]
+_data = {
+"RESET": SubResource("Animation_xkhsg"),
+"timer": SubResource("Animation_0mkag")
+}
+
+[sub_resource type="Animation" id="Animation_r0q3c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_j8p35"]
+resource_name = "hp"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../hp:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_63svu"]
+_data = {
+"RESET": SubResource("Animation_r0q3c"),
+"hp": SubResource("Animation_j8p35")
+}
+
+[sub_resource type="GDScript" id="GDScript_bol4d"]
+script/source = "extends Node2D
+@onready var notes = [$notes1, $notes2]
+var currentNoteIndex := 0
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	GameSettings._autosave()
+	get_tree().paused = false
+	$\".\".hide()
+"
+
+[sub_resource type="GDScript" id="GDScript_cn03k"]
+script/source = "extends Sprite2D
+
+@onready var fish = $fish/AnimationPlayer
+@onready var shark = $shark/AnimationPlayer
+@onready var octopus = $octopus/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	fish.play(\"fish\")
+	shark.play(\"shark\")
+	octopus.play(\"octopus\")
+"
+
+[sub_resource type="Animation" id="Animation_gj4t0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_l4puc"]
+resource_name = "fish"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4o2c"]
+_data = {
+"RESET": SubResource("Animation_gj4t0"),
+"fish": SubResource("Animation_l4puc")
+}
+
+[sub_resource type="Animation" id="Animation_54bsm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_8ukav"]
+resource_name = "shark"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oudog"]
+_data = {
+"RESET": SubResource("Animation_54bsm"),
+"shark": SubResource("Animation_8ukav")
+}
+
+[sub_resource type="Animation" id="Animation_065mo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_3t2fp"]
+resource_name = "octopus"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_27g2e"]
+_data = {
+"RESET": SubResource("Animation_065mo"),
+"octopus": SubResource("Animation_3t2fp")
+}
+
+[sub_resource type="GDScript" id="GDScript_ep4kw"]
+script/source = "extends Node2D
+@onready var notes = [$notes1, $notes2, $notes3, $notes4]
+var currentNoteIndex := 0
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	GameSettings._autosave()
+	get_tree().paused = false
+	$\".\".hide()
+"
+
+[sub_resource type="GDScript" id="GDScript_djl3s"]
+script/source = "extends Sprite2D
+
+@onready var open = $\"(/AnimationPlayer\"
+@onready var close = $\")/AnimationPlayer\"
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	open.play(\"(\")
+	close.play(\")\")
+"
+
+[sub_resource type="Animation" id="Animation_1lpxk"]
+resource_name = "("
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_6odt6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ytgxu"]
+_data = {
+"(": SubResource("Animation_1lpxk"),
+"RESET": SubResource("Animation_6odt6")
+}
+
+[sub_resource type="Animation" id="Animation_ydjk4"]
+resource_name = ")"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_w3cq1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_17su2"]
+_data = {
+")": SubResource("Animation_ydjk4"),
+"RESET": SubResource("Animation_w3cq1")
+}
+
+[sub_resource type="GDScript" id="GDScript_78tyq"]
+script/source = "extends Sprite2D
+
+@onready var lava = $lava/AnimationPlayer
+@onready var bat = $bat/AnimationPlayer
+@onready var ske = $skeleton/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	lava.play(\"lava\")
+	bat.play(\"bat\")
+	ske.play(\"ske\")
+"
+
+[sub_resource type="Animation" id="Animation_3h744"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_leptx"]
+resource_name = "lava"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uygjg"]
+_data = {
+"RESET": SubResource("Animation_3h744"),
+"lava": SubResource("Animation_leptx")
+}
+
+[sub_resource type="Animation" id="Animation_tislt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_ewsnm"]
+resource_name = "bat"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wue2b"]
+_data = {
+"RESET": SubResource("Animation_tislt"),
+"bat": SubResource("Animation_ewsnm")
+}
+
+[sub_resource type="Animation" id="Animation_kgrxr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [25]
+}
+
+[sub_resource type="Animation" id="Animation_4fhr6"]
+resource_name = "ske"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [24, 25, 26, 27]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qswhi"]
+_data = {
+"RESET": SubResource("Animation_kgrxr"),
+"ske": SubResource("Animation_4fhr6")
+}
+
+[sub_resource type="GDScript" id="GDScript_g7wcb"]
+script/source = "extends Node2D
+@onready var notes = [$notes1, $notes2, $notes3, $notes4]
+var currentNoteIndex := 0
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	GameSettings._autosave()
+	get_tree().paused = false
+	$\".\".hide()
+"
+
+[sub_resource type="GDScript" id="GDScript_4l1sq"]
+script/source = "extends Sprite2D
+
+@onready var ice = $ice/AnimationPlayer
+@onready var bear = $bear/AnimationPlayer
+@onready var yeti = $yeti/AnimationPlayer
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	ice.play(\"ice\")
+	bear.play(\"bear\")
+	yeti.play(\"yeti\")
+"
+
+[sub_resource type="Animation" id="Animation_e5uui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_nd8sl"]
+resource_name = "ice"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jiask"]
+_data = {
+"RESET": SubResource("Animation_e5uui"),
+"ice": SubResource("Animation_nd8sl")
+}
+
+[sub_resource type="Animation" id="Animation_irajp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_l7acy"]
+resource_name = "bear"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p0rcr"]
+_data = {
+"RESET": SubResource("Animation_irajp"),
+"bear": SubResource("Animation_l7acy")
+}
+
+[sub_resource type="Animation" id="Animation_bfs5d"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [16]
+}
+
+[sub_resource type="Animation" id="Animation_uanm6"]
+resource_name = "yeti"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 16, 17, 18, 19]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r0fag"]
+_data = {
+"RESET": SubResource("Animation_bfs5d"),
+"yeti": SubResource("Animation_uanm6")
+}
+
+[sub_resource type="GDScript" id="GDScript_vjbgw"]
+script/source = "extends Node2D
+@onready var notes = [$notes1, $notes2]
+var currentNoteIndex := 0
+
+func _on_next_pressed():
+	AudioManager.play_button_sfx()
+	currentNoteIndex += 1
+	if currentNoteIndex >= notes.size():
+		currentNoteIndex = 0
+	show_current_note()
+
+func show_current_note():
+	hide_all_notes()
+	notes[currentNoteIndex].show()
+
+func hide_all_notes():
+	for note in notes:
+		note.hide()
+
+func _on_exit_pressed():
+	AudioManager.play_button_sfx()
+	GameSettings.isTuto1 = true
+	GameSettings._autosave()
+	get_tree().paused = false
+	$\".\".hide()
+"
+
+[sub_resource type="GDScript" id="GDScript_egsm2"]
+script/source = "extends Sprite2D
+
+@onready var x = $x/AnimationPlayer
+@onready var y = $y/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	x.play(\"x\")
+	y.play(\"y\")
+"
+
+[sub_resource type="Animation" id="Animation_i80lc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_dmvko"]
+resource_name = "x"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fkb6c"]
+_data = {
+"RESET": SubResource("Animation_i80lc"),
+"x": SubResource("Animation_dmvko")
+}
+
+[sub_resource type="Animation" id="Animation_471dg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_5hk38"]
+resource_name = "y"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h53yn"]
+_data = {
+"RESET": SubResource("Animation_471dg"),
+"y": SubResource("Animation_5hk38")
+}
+
+[sub_resource type="GDScript" id="GDScript_mij4r"]
+script/source = "extends Sprite2D
+
+@onready var rat = $rat/AnimationPlayer
+@onready var flea = $flea/AnimationPlayer
+@onready var fly = $fly/AnimationPlayer
+@onready var thief = $thief/AnimationPlayer
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta):
+	rat.play(\"rat\")
+	flea.play(\"flea\")
+	fly.play(\"fly\")
+	thief.play(\"thief\")
+"
+
+[sub_resource type="Animation" id="Animation_vtmtl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_mmp5j"]
+resource_name = "rat"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lucqe"]
+_data = {
+"RESET": SubResource("Animation_vtmtl"),
+"rat": SubResource("Animation_mmp5j")
+}
+
+[sub_resource type="Animation" id="Animation_8n44e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_s5xtf"]
+resource_name = "flea"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_43epk"]
+_data = {
+"RESET": SubResource("Animation_8n44e"),
+"flea": SubResource("Animation_s5xtf")
+}
+
+[sub_resource type="Animation" id="Animation_fh80j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_bolcb"]
+resource_name = "fly"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_veckr"]
+_data = {
+"RESET": SubResource("Animation_fh80j"),
+"fly": SubResource("Animation_bolcb")
+}
+
+[sub_resource type="Animation" id="Animation_nmok0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_gw014"]
+resource_name = "thief"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y7irh"]
+_data = {
+"RESET": SubResource("Animation_nmok0"),
+"thief": SubResource("Animation_gw014")
+}
+
 [node name="level_22" type="Node2D"]
 script = SubResource("GDScript_ttvii")
 
@@ -183,9 +1388,6 @@ layer_3/tile_data = PackedInt32Array(851997, 1507329, 35, 851998, 1507329, 35, 7
 self_modulate = Color(1, 1, 1, 0.784314)
 position = Vector2(960, 1033)
 texture = ExtResource("2_70iht")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(964, 541)
 
 [node name="enemies" type="Node2D" parent="."]
 
@@ -228,47 +1430,6 @@ position = Vector2(1223, 1020)
 enemy_type = "rat"
 rat_speed = 70.0
 rat_move_direction = Vector2(600, 0)
-
-[node name="slime_player_joystick" type="Node2D" parent="."]
-
-[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
-position = Vector2(613, 1011)
-scale = Vector2(0.57, 0.57)
-collision_mask = 28
-platform_on_leave = 2
-script = ExtResource("10_14bmh")
-
-[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
-scale = Vector2(1.15, 1.15)
-texture = ExtResource("11_w42qj")
-hframes = 4
-vframes = 6
-frame = 9
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
-visibility_layer = 5
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_ue1f4")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
-speed_scale = 0.7
-libraries = {
-"": SubResource("AnimationLibrary_26ojo")
-}
-
-[node name="Area2D" type="Area2D" parent="slime_player_joystick/slime_player_joystik"]
-position = Vector2(0, -1)
-collision_layer = 0
-collision_mask = 32
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik/Area2D"]
-visibility_layer = 5
-position = Vector2(0, 3)
-shape = SubResource("CircleShape2D_ue1f4")
-
-[node name="joystick" parent="slime_player_joystick" instance=ExtResource("12_jjukg")]
-position = Vector2(245, 882)
-scale = Vector2(2.2, 2.2)
 
 [node name="gamemanager_algebra" parent="." instance=ExtResource("3_a35hj")]
 num_term = 3
@@ -327,11 +1488,580 @@ yplus = 12
 integer = 13
 display_chest = "lvl2_2"
 
-[node name="timer" parent="gamemanager_algebra" instance=ExtResource("8_ljan0")]
+[node name="CanvasLayer" type="CanvasLayer" parent="gamemanager_algebra"]
 
-[node name="clear_btn" parent="gamemanager_algebra" instance=ExtResource("13_j1vx4")]
+[node name="timer" parent="gamemanager_algebra/CanvasLayer" instance=ExtResource("8_ljan0")]
+position = Vector2(60, 77)
 
-[node name="health_system" parent="." instance=ExtResource("13_wx8bf")]
+[node name="slime_player_joystick" type="Node2D" parent="."]
+
+[node name="slime_player_joystik" type="CharacterBody2D" parent="slime_player_joystick" groups=["player"]]
+position = Vector2(613, 1011)
+scale = Vector2(0.57, 0.57)
+collision_mask = 28
+platform_on_leave = 2
+script = ExtResource("10_14bmh")
+
+[node name="Sprite2D" type="Sprite2D" parent="slime_player_joystick/slime_player_joystik"]
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("11_w42qj")
+hframes = 4
+vframes = 6
+frame = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik"]
+visibility_layer = 5
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_c2wwm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/slime_player_joystik" groups=["player"]]
+speed_scale = 0.7
+libraries = {
+"": SubResource("AnimationLibrary_26ojo")
+}
+
+[node name="Area2D" type="Area2D" parent="slime_player_joystick/slime_player_joystik"]
+position = Vector2(0, -1)
+collision_layer = 0
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="slime_player_joystick/slime_player_joystik/Area2D"]
+visibility_layer = 5
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_c2wwm")
+
+[node name="Camera2D" type="Camera2D" parent="slime_player_joystick"]
+position = Vector2(960, 538)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+editor_draw_limits = true
+script = SubResource("GDScript_5pdjj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="slime_player_joystick/Camera2D"]
+layer = 0
+
+[node name="health_system" parent="slime_player_joystick/Camera2D/CanvasLayer" instance=ExtResource("13_wx8bf")]
+offset_top = -2.0
+offset_bottom = -2.0
+
+[node name="zoomin_btn" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer"]
+offset_left = 1640.0
+offset_top = 715.0
+offset_right = 1715.0
+offset_bottom = 790.0
+texture_normal = ExtResource("13_0hb0j")
+texture_pressed = ExtResource("14_fuejq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="zoomout_btn" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer"]
+offset_left = 1740.0
+offset_top = 715.0
+offset_right = 1815.0
+offset_bottom = 790.0
+texture_normal = ExtResource("15_ukwy1")
+texture_pressed = ExtResource("16_76b8l")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="joystick" parent="slime_player_joystick/Camera2D/CanvasLayer" instance=ExtResource("12_jjukg")]
+position = Vector2(200, 900)
+scale = Vector2(1.85, 1.85)
+
+[node name="notes_btn" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer"]
+offset_left = 20.0
+offset_top = 175.0
+offset_right = 95.0
+offset_bottom = 250.0
+texture_normal = ExtResource("18_uuam0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="notes_w1" type="Node2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn"]
+visible = false
+position = Vector2(940, 363)
+script = SubResource("GDScript_u5vcf")
+
+[node name="notes1" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1"]
+texture = ExtResource("19_tgtpg")
+
+[node name="add" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes1"]
+position = Vector2(350, -210)
+texture = ExtResource("20_rjxf5")
+
+[node name="sub" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes1"]
+position = Vector2(412, -55)
+texture = ExtResource("21_1kwpf")
+
+[node name="btnClear" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes1"]
+position = Vector2(14, 166)
+scale = Vector2(0.566667, 0.771186)
+texture = ExtResource("22_p6ysk")
+
+[node name="notes2" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1"]
+visible = false
+texture = ExtResource("23_mh3mo")
+script = SubResource("GDScript_uhluh")
+
+[node name="spike" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2"]
+position = Vector2(573, -158)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("24_740ri")
+hframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2/spike"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
+
+[node name="wasp" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2"]
+position = Vector2(291, -41)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("25_hi4xt")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2/wasp"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
+
+[node name="fox" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2"]
+position = Vector2(453, 74)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("26_4pw4v")
+hframes = 3
+vframes = 4
+frame = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes2/fox"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_aon8u")
+}
+
+[node name="notes3" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1"]
+visible = false
+texture = ExtResource("27_crjbn")
+script = SubResource("GDScript_csqww")
+
+[node name="speed" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3"]
+position = Vector2(-313, -216)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("28_f5x5v")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3/speed"]
+libraries = {
+"": SubResource("AnimationLibrary_omqn4")
+}
+
+[node name="time" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3"]
+position = Vector2(-355, -54)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("29_c7fj0")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3/time"]
+root_node = NodePath("../../speed")
+libraries = {
+"": SubResource("AnimationLibrary_dfi6f")
+}
+
+[node name="hp" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3"]
+position = Vector2(-299, 55)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("30_810g2")
+hframes = 3
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/notes3/hp"]
+root_node = NodePath("../../speed")
+libraries = {
+"": SubResource("AnimationLibrary_63svu")
+}
+
+[node name="next" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("31_5is4j")
+texture_pressed = ExtResource("32_au88h")
+
+[node name="exit" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("33_em88f")
+texture_pressed = ExtResource("34_kb557")
+
+[node name="notes_w2" type="Node2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn"]
+visible = false
+position = Vector2(940, 363)
+script = SubResource("GDScript_bol4d")
+
+[node name="notes1" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2"]
+texture = ExtResource("35_s3cqn")
+
+[node name="prod" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes1"]
+position = Vector2(428, -178)
+texture = ExtResource("36_u8mf5")
+
+[node name="div" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes1"]
+position = Vector2(606, 12)
+texture = ExtResource("37_1trqg")
+
+[node name="notes2" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2"]
+visible = false
+texture = ExtResource("38_x14qb")
+script = SubResource("GDScript_cn03k")
+
+[node name="fish" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2"]
+position = Vector2(-314, -216)
+texture = ExtResource("39_m0bv8")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2/fish"]
+libraries = {
+"": SubResource("AnimationLibrary_f4o2c")
+}
+
+[node name="shark" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2"]
+position = Vector2(-428, -104)
+texture = ExtResource("40_tt21t")
+hframes = 4
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2/shark"]
+libraries = {
+"": SubResource("AnimationLibrary_oudog")
+}
+
+[node name="octopus" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2"]
+position = Vector2(-386, 10)
+texture = ExtResource("41_rtnhj")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/notes2/octopus"]
+libraries = {
+"": SubResource("AnimationLibrary_27g2e")
+}
+
+[node name="next" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("31_5is4j")
+texture_pressed = ExtResource("32_au88h")
+
+[node name="exit" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("33_em88f")
+texture_pressed = ExtResource("34_kb557")
+
+[node name="notes_w3" type="Node2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn"]
+visible = false
+position = Vector2(940, 363)
+script = SubResource("GDScript_ep4kw")
+
+[node name="notes1" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+texture = ExtResource("42_mwl5o")
+
+[node name="notes2" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+visible = false
+texture = ExtResource("43_4tabx")
+script = SubResource("GDScript_djl3s")
+
+[node name="(" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes2"]
+position = Vector2(-84, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("44_henh3")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes2/("]
+libraries = {
+"": SubResource("AnimationLibrary_ytgxu")
+}
+
+[node name=")" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes2"]
+position = Vector2(-25, -51)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("45_kfaqi")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes2/)"]
+libraries = {
+"": SubResource("AnimationLibrary_17su2")
+}
+
+[node name="notes3" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+visible = false
+texture = ExtResource("46_ve3nn")
+
+[node name="ex" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes3"]
+position = Vector2(-494, -77)
+texture = ExtResource("47_5ksxf")
+
+[node name="notes4" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+visible = false
+texture = ExtResource("48_af8kl")
+script = SubResource("GDScript_78tyq")
+
+[node name="lava" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4"]
+position = Vector2(-460, -219)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("49_2md3p")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4/lava"]
+libraries = {
+"": SubResource("AnimationLibrary_uygjg")
+}
+
+[node name="bat" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4"]
+position = Vector2(-493, -37)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("50_valbl")
+hframes = 3
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4/bat"]
+libraries = {
+"": SubResource("AnimationLibrary_wue2b")
+}
+
+[node name="skeleton" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4"]
+position = Vector2(-366, 67)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("51_f6m8l")
+hframes = 4
+vframes = 8
+frame = 25
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/notes4/skeleton"]
+libraries = {
+"": SubResource("AnimationLibrary_qswhi")
+}
+
+[node name="next" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("31_5is4j")
+texture_pressed = ExtResource("32_au88h")
+
+[node name="exit" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("33_em88f")
+texture_pressed = ExtResource("34_kb557")
+
+[node name="notes_w4" type="Node2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn"]
+visible = false
+position = Vector2(940, 363)
+script = SubResource("GDScript_g7wcb")
+
+[node name="notes1" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+texture = ExtResource("52_ncjyd")
+
+[node name="frac" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes1"]
+position = Vector2(341, -9)
+texture = ExtResource("53_caxd6")
+
+[node name="notes2" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+visible = false
+texture = ExtResource("54_64ljh")
+
+[node name="notes3" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+visible = false
+texture = ExtResource("55_yirfk")
+
+[node name="notes4" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+visible = false
+texture = ExtResource("56_7tp6v")
+script = SubResource("GDScript_4l1sq")
+
+[node name="ice" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4"]
+position = Vector2(-201, -218)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("57_tykap")
+hframes = 5
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4/ice"]
+libraries = {
+"": SubResource("AnimationLibrary_jiask")
+}
+
+[node name="bear" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4"]
+position = Vector2(-339, -63)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("58_fttb0")
+hframes = 4
+vframes = 8
+frame = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4/bear"]
+libraries = {
+"": SubResource("AnimationLibrary_p0rcr")
+}
+
+[node name="yeti" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4"]
+position = Vector2(-464, 40)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("59_pdhfl")
+hframes = 5
+vframes = 4
+frame = 16
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/notes4/yeti"]
+libraries = {
+"": SubResource("AnimationLibrary_r0fag")
+}
+
+[node name="next" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("31_5is4j")
+texture_pressed = ExtResource("32_au88h")
+
+[node name="exit" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("33_em88f")
+texture_pressed = ExtResource("34_kb557")
+
+[node name="notes_w5" type="Node2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn"]
+visible = false
+position = Vector2(940, 363)
+script = SubResource("GDScript_vjbgw")
+
+[node name="notes1" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5"]
+texture = ExtResource("60_ajsk4")
+script = SubResource("GDScript_egsm2")
+
+[node name="x" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes1"]
+position = Vector2(33, -119)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("61_l4736")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes1/x"]
+libraries = {
+"": SubResource("AnimationLibrary_fkb6c")
+}
+
+[node name="y" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes1"]
+position = Vector2(-26, -119)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("62_dyt3w")
+hframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes1/y"]
+libraries = {
+"": SubResource("AnimationLibrary_h53yn")
+}
+
+[node name="notes2" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5"]
+texture = ExtResource("63_v0pj5")
+script = SubResource("GDScript_mij4r")
+
+[node name="rat" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2"]
+position = Vector2(-489, -239)
+texture = ExtResource("64_hr83g")
+hframes = 4
+vframes = 4
+frame = 9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2/rat"]
+libraries = {
+"": SubResource("AnimationLibrary_lucqe")
+}
+
+[node name="flea" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2"]
+position = Vector2(-467, -94)
+texture = ExtResource("65_w4j6k")
+hframes = 4
+vframes = 4
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2/flea"]
+libraries = {
+"": SubResource("AnimationLibrary_43epk")
+}
+
+[node name="fly" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2"]
+position = Vector2(-476, -13)
+texture = ExtResource("66_wwnxv")
+hframes = 4
+vframes = 2
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2/fly"]
+libraries = {
+"": SubResource("AnimationLibrary_veckr")
+}
+
+[node name="thief" type="Sprite2D" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2"]
+position = Vector2(-459, 76)
+texture = ExtResource("67_h3h1m")
+hframes = 4
+vframes = 4
+frame = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/notes2/thief"]
+libraries = {
+"": SubResource("AnimationLibrary_y7irh")
+}
+
+[node name="next" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5"]
+offset_left = 500.0
+offset_top = 220.0
+offset_right = 615.0
+offset_bottom = 303.0
+texture_normal = ExtResource("31_5is4j")
+texture_pressed = ExtResource("32_au88h")
+
+[node name="exit" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5"]
+offset_left = 585.0
+offset_top = -371.0
+offset_right = 713.0
+offset_bottom = -243.0
+texture_normal = ExtResource("33_em88f")
+texture_pressed = ExtResource("34_kb557")
+
+[node name="clear_btn" parent="slime_player_joystick/Camera2D/CanvasLayer" instance=ExtResource("13_j1vx4")]
 
 [node name="time_buff" parent="." instance=ExtResource("14_khkb4")]
 offset_left = 1090.0
@@ -402,7 +2132,9 @@ buff_selected = "speed"
 speed_buff = 200.0
 time_buff = 15.0
 
-[node name="menus" type="TextureButton" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="menus" type="TextureButton" parent="CanvasLayer"]
 offset_left = 1838.0
 offset_top = 8.0
 offset_right = 1913.0
@@ -412,7 +2144,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("16_syham")
 
-[node name="game_over" parent="menus" instance=ExtResource("17_coabu")]
+[node name="game_over" parent="CanvasLayer/menus" instance=ExtResource("17_coabu")]
 visible = false
 layout_mode = 1
 offset_left = -916.5
@@ -420,7 +2152,7 @@ offset_top = 493.5
 offset_right = -916.5
 offset_bottom = 493.5
 
-[node name="level_complete_menu" parent="menus" instance=ExtResource("18_s4sf1")]
+[node name="level_complete_menu" parent="CanvasLayer/menus" instance=ExtResource("18_s4sf1")]
 visible = false
 layout_mode = 1
 offset_left = -916.5
@@ -428,7 +2160,7 @@ offset_top = 493.5
 offset_right = -916.5
 offset_bottom = 493.5
 
-[node name="game_paused" parent="menus" instance=ExtResource("19_4ax5c")]
+[node name="game_paused" parent="CanvasLayer/menus" instance=ExtResource("19_4ax5c")]
 visible = false
 layout_mode = 1
 offset_left = -916.0
@@ -437,4 +2169,18 @@ offset_right = -916.0
 offset_bottom = 494.0
 
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
-[connection signal="pressed" from="menus" to="menus" method="_on_pressed"]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/zoomin_btn" to="slime_player_joystick/Camera2D" method="_on_zoomin_btn_pressed" flags=18]
+[connection signal="toggled" from="slime_player_joystick/Camera2D/CanvasLayer/zoomin_btn" to="slime_player_joystick/Camera2D" method="_on_btn_camera_toggled" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/zoomout_btn" to="slime_player_joystick/Camera2D" method="_on_zoomout_btn_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn" to="slime_player_joystick/Camera2D" method="_on_notes_btn_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/next" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1" method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1/exit" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w1" method="_on_exit_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/next" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2" method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2/exit" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w2" method="_on_exit_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/next" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3" method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3/exit" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w3" method="_on_exit_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/next" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4" method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4/exit" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w4" method="_on_exit_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/next" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5" method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5/exit" to="slime_player_joystick/Camera2D/CanvasLayer/notes_btn/notes_w5" method="_on_exit_pressed" flags=18]
+[connection signal="pressed" from="CanvasLayer/menus" to="CanvasLayer/menus" method="_on_pressed"]

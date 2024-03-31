@@ -5,7 +5,7 @@ extends Node2D
 
 #ice
 @onready var col = $ice/CollisionShape2D
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 
 var angle = 50
 var speed = 0.09 * PI / 180

@@ -3,7 +3,7 @@ extends Node2D
 @onready var timer = $Timer
 @onready var timer_label = $timer_placeholder/timer_label
 @onready var animation_player = $AnimationPlayer
-@onready var game_manager = $".."
+@onready var game_manager = $"../.."
 
 var time_left
 var start_time

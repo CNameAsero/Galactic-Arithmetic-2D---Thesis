@@ -1,8 +1,8 @@
 extends Control
 
 @onready var label = $bg/timer/Label
-@onready var timer = $"../../gamemanager_pemdas/timer"
-@onready var game_manager = $"../../gamemanager_pemdas"
+@onready var timer = $"../../../gamemanager_pemdas/CanvasLayer/timer"
+@onready var game_manager = $"../../../gamemanager_pemdas"
 
 func _on_next_level_button_pressed():
 	AudioManager.play_button_sfx()

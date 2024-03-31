@@ -2,7 +2,7 @@ extends Area2D
 
 var direction : Vector2 = Vector2.RIGHT
 @export var speed : float = 450
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var sprite1 = $"../slime_player_joystick/slime_player_joystik/Sprite2D"
 
 func _ready():

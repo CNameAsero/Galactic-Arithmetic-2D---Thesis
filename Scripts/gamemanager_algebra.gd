@@ -26,10 +26,10 @@ var precedence = {"+": 1, "-": 1, "×": 2, "÷": 2, "^": 3}
 @export var y_value : int
 
 @onready var  variables = {"x": x_value, "y": y_value}
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var final_answer = $final_answer_w5.final_answer
-@onready var level_complete_menu = $"../menus/level_complete_menu"
-@onready var game_over = $"../menus/game_over"
+@onready var level_complete_menu = $"../CanvasLayer/menus/level_complete_menu"
+@onready var game_over = $"../CanvasLayer/menus/game_over"
 
 func collect_number(num):
 	if isDestroy && !last_item_was_number:
@@ -135,7 +135,7 @@ func check_final_answer():
 			GameSettings.max_unlocked_level += 1
 			GameSettings.currentlevel[GameSettings.current_level] = true
 		reset_for_next_level()
-		var time_elapsed = $timer.get_elapsed_time()
+		var time_elapsed = $CanvasLayer/timer.get_elapsed_time()
 		level_complete_menu.label.text = time_elapsed
 		level_complete_menu.show()
 		GameSettings.player_invulnerable = false

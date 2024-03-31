@@ -39,7 +39,7 @@ var target = null
 var chasing = false
 var patrol = true
 
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

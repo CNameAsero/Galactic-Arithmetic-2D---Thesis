@@ -41,7 +41,7 @@ var speed = 0.09 * PI / 180
 @export var bullet : PackedScene
 
 @onready var animation_player = $AnimationPlayer
-@onready var health_system = $"../../health_system"
+@onready var health_system = $"../../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

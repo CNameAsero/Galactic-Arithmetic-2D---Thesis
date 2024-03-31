@@ -1,4 +1,4 @@
-[gd_scene load_steps=175 format=3 uid="uid://dbwmg2hcatdrj"]
+[gd_scene load_steps=171 format=3 uid="uid://dbwmg2hcatdrj"]
 
 [ext_resource type="TileSet" uid="uid://vewurj6256fi" path="res://Scenes/levels/level1_TileSet2dPixel.tres" id="1_8gj2m"]
 [ext_resource type="Script" path="res://Scenes/levels/tutorial/tutorial.gd" id="1_phcsb"]
@@ -49,14 +49,10 @@
 [ext_resource type="Texture2D" uid="uid://c8y04ro4lu1e3" path="res://Sprites/Collectibles/numbers/80_dia.png" id="35_nqaao"]
 [ext_resource type="Texture2D" uid="uid://cm55wcwnnqt12" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial.png" id="46_6groa"]
 [ext_resource type="Texture2D" uid="uid://043mm14r63br" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_2.png" id="47_htxf3"]
-[ext_resource type="Texture2D" uid="uid://3adu8benrxhq" path="res://Sprites/Objects/zoom_in_30opa.png" id="48_2j5oj"]
 [ext_resource type="Texture2D" uid="uid://c12jbqymds573" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_3.png" id="48_78ljp"]
-[ext_resource type="Texture2D" uid="uid://d0qmj5t3usqaj" path="res://Sprites/Objects/zoom_in.png" id="49_8yocx"]
 [ext_resource type="Texture2D" uid="uid://b1eavgsoucdut" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_4.png" id="49_mujyo"]
 [ext_resource type="Texture2D" uid="uid://chmhquaxlr7sh" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_5.png" id="49_wgqao"]
-[ext_resource type="Texture2D" uid="uid://c2f0aiy31qnas" path="res://Sprites/Objects/zoom_out_30opa.png" id="50_7yrl0"]
 [ext_resource type="Texture2D" uid="uid://cod0a3lh0ujls" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_6.png" id="50_ba4ym"]
-[ext_resource type="Texture2D" uid="uid://nd1avtpnoe5q" path="res://Sprites/Objects/zoom_out.png" id="51_icoc8"]
 [ext_resource type="Texture2D" uid="uid://bhvwkhmh75xjj" path="res://Galactic Arithmetic Assets/Tutorial/tutorial_1/Tutorial_7.png" id="51_uskvk"]
 [ext_resource type="PackedScene" uid="uid://dcdiv8v3vcj14" path="res://Scenes/Player/joystick.tscn" id="52_diuis"]
 [ext_resource type="Texture2D" uid="uid://dq5ixgt07t2ww" path="res://Galactic Arithmetic Assets/In-Game_Menu_Assets/Pause_Button.png" id="52_pqgfj"]
@@ -2323,26 +2319,6 @@ script = SubResource("GDScript_2678o")
 [node name="CanvasLayer" type="CanvasLayer" parent="slime_player_joystick/Camera2D"]
 layer = 0
 
-[node name="zoomin_btn" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer"]
-offset_left = 1640.0
-offset_top = 715.0
-offset_right = 1715.0
-offset_bottom = 790.0
-texture_normal = ExtResource("48_2j5oj")
-texture_pressed = ExtResource("49_8yocx")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="zoomout_btn" type="TextureButton" parent="slime_player_joystick/Camera2D/CanvasLayer"]
-offset_left = 1740.0
-offset_top = 715.0
-offset_right = 1815.0
-offset_bottom = 790.0
-texture_normal = ExtResource("50_7yrl0")
-texture_pressed = ExtResource("51_icoc8")
-ignore_texture_size = true
-stretch_mode = 0
-
 [node name="joystick" parent="slime_player_joystick/Camera2D/CanvasLayer" instance=ExtResource("52_diuis")]
 position = Vector2(189, 896)
 scale = Vector2(1.85, 1.85)
@@ -2438,9 +2414,6 @@ script = ExtResource("55_5pmkj")
 [connection signal="body_entered" from="game_manager/+/set_operator" to="." method="_on__plusbody_entered"]
 [connection signal="body_entered" from="game_manager/+/set_operator" to="game_manager/+/set_operator" method="_on_body_entered" flags=18]
 [connection signal="area_entered" from="slime_player_joystick/slime_player_joystik/Area2D" to="slime_player_joystick/slime_player_joystik" method="_on_area_2d_area_entered" flags=18]
-[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/zoomin_btn" to="slime_player_joystick/Camera2D" method="_on_zoomin_btn_pressed" flags=18]
-[connection signal="toggled" from="slime_player_joystick/Camera2D/CanvasLayer/zoomin_btn" to="slime_player_joystick/Camera2D" method="_on_btn_camera_toggled" flags=18]
-[connection signal="pressed" from="slime_player_joystick/Camera2D/CanvasLayer/zoomout_btn" to="slime_player_joystick/Camera2D" method="_on_zoomout_btn_pressed" flags=18]
 [connection signal="pressed" from="typewriter_text_effect/sample_text/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="typewriter_text_effect/Step 1/Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="typewriter_text_effect/Step 2/Button3" to="." method="_on_button_3_pressed"]

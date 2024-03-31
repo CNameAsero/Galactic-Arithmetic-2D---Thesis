@@ -8,7 +8,7 @@ extends CharacterBody2D
 
 @onready var timer = $Timer
 var current_timer 
-@onready var health_system = $"../health_system"
+@onready var health_system = $"../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var animation_player = $AnimationPlayer
 @onready var  isChasing = false
 var target = null

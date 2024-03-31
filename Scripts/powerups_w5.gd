@@ -6,11 +6,11 @@ extends Control
 @export var speed_buff : float
 @export var time_buff : float
 #access hp system/movespeed/timer
-@onready var hp_system = $"../health_system"
+@onready var hp_system = $"../slime_player_joystick/Camera2D/CanvasLayer/health_system"
 @onready var player = $"../slime_player_joystick/slime_player_joystik"
 
-@onready var timer = $"../gamemanager_algebra/timer/Timer"
-@onready var timer_ui = $"../gamemanager_algebra/timer"
+@onready var timer = $"../gamemanager_algebra/CanvasLayer/timer/Timer"
+@onready var timer_ui = $"../gamemanager_algebra/CanvasLayer/timer"
 
 @onready var speed_buff_timer = $Area2D/speed/speed_buff_timer
 @onready var animation_player = $Area2D/AnimationPlayer
